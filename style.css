@@ -1,0 +1,395 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Montserrat:wght@700&display=swap');
+
+/* Globale Stile & Variablen */
+:root {
+    --text-color: #333333;
+    --background-color: #f8f8f8;
+    --primary-color: #8B4513; /* Sattelbraun */
+    --accent-color: #28a745; /* Grün */
+    --link-color: var(--accent-color);
+    --link-hover-color: #218838; /* Dunkleres Grün */
+    --header-footer-bg: var(--primary-color);
+    --header-footer-text: #ffffff;
+    --nav-bg: #e9ecef; /* Helles Grau */
+    --nav-link-color: var(--text-color);
+    --nav-link-hover-bg: #dee2e6; /* Dunkleres Grau */
+
+    --font-body: 'Lato', sans-serif;
+    --font-heading: 'Montserrat', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-body);
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    max-width: 1200px; /* Maximale Breite für den Inhalt */
+    margin: 0 auto; /* Zentriert den Body im Viewport */
+    padding: 2rem; /* Mehr Weißraum um den Inhalt */
+}
+
+/* Struktur-Elemente */
+/* Struktur-Elemente - Padding/Margin wird jetzt spezifischer gesetzt */
+/* header, nav, main, section, footer {
+    padding: 1rem;
+    margin-bottom: 1rem;
+} */
+
+header {
+    background-color: var(--background-color); /* Heller Hintergrund */
+    color: var(--text-color); /* Dunkler Text */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 2rem; /* Mehr vertikales Padding */
+    margin-bottom: 2.5rem; /* Mehr Abstand nach unten */
+    border-bottom: 1px solid #eee; /* Dezente Trennlinie */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--text-color); /* Überschriften in Standard-Textfarbe für Minimalismus */
+    margin-bottom: 0.75rem; /* Einheitlicher Abstand */
+}
+
+h1 {
+    font-size: 2.8rem; /* Größer */
+    /* margin-bottom: 0.5rem; entfernt, da align-items: center verwendet wird */
+    /* Die Farbe wird bereits von h1-h6 geerbt, aber wir können sie hier explizit setzen, falls gewünscht */
+    /* color: var(--primary-color); */
+}
+
+/* Navigation */
+nav { /* Styling für den nav-Container selbst */
+    padding: 0; /* Kein extra Padding/Margin, da im Header enthalten */
+    margin-bottom: 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    /* text-align: center; entfernt */
+    gap: 1.5rem; /* Abstand zwischen den Flex-Items (li) */
+    padding: 0; /* Kein Padding für die ul selbst */
+    margin: 0; /* Kein Margin für die ul selbst */
+    /* background-color: var(--nav-bg); Entfernt, Header hat Hintergrund */
+}
+
+
+nav a {
+    text-decoration: none;
+    color: var(--text-color); /* Standard-Textfarbe */
+    padding: 0.5rem 1rem;
+    border-radius: 4px; /* Leichte Abrundung */
+    transition: color 0.2s ease-in-out, text-decoration 0.2s ease-in-out; /* Übergang für Hover (Farbe/Unterstreichung) */
+}
+
+nav a:hover {
+    color: var(--accent-color); /* Akzentfarbe beim Hover */
+    text-decoration: underline; /* Unterstreichung beim Hover */
+}
+
+/* Hauptinhalt */
+main {
+    padding: 2rem; /* Mehr Padding für Hauptinhalt */
+    margin-bottom: 2.5rem; /* Mehr Abstand */
+}
+
+section {
+    padding: 2rem; /* Mehr Padding für Sektionen */
+    margin-bottom: 2.5rem; /* Mehr Abstand */
+}
+
+h2 {
+    font-size: 2rem; /* Größer */
+    margin-bottom: 1rem; /* Mehr Abstand */
+    /* Farbe wurde oben bei h1-h6 definiert */
+}
+
+/* Footer */
+/* Allgemeine Link-Stile */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--background-color); /* Heller Hintergrund wie Header */
+    color: var(--text-color); /* Dunkler Text */
+    text-align: center;
+    margin-top: 3rem; /* Noch mehr Abstand nach oben */
+    padding: 2rem; /* Einheitliches Padding */
+    font-size: 0.9rem;
+    border-top: 1px solid #eee; /* Dezente Trennlinie wie Header */
+}
+
+footer a {
+    color: var(--link-color); /* Standard-Linkfarbe */
+}
+
+footer a:hover {
+    color: var(--link-hover-color); /* Standard-Link-Hover-Farbe */
+    text-decoration: underline;
+}
+
+/* Bildergalerie */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    padding: 1rem 0; /* Etwas vertikaler Abstand */
+}
+
+.gallery figure {
+    border: 1px solid #eee;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    padding: 10px;
+    margin: 0; /* Entfernt Standard-Margin von figure */
+    flex-basis: calc(33.333% - 20px); /* Ca. 3 Bilder pro Reihe, abzüglich Gap */
+    max-width: 350px; /* Maximale Breite pro Bild */
+    text-align: center;
+}
+
+.gallery img {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Verhindert extra Leerraum unter dem Bild */
+}
+
+.gallery figcaption {
+    font-size: 0.9rem;
+    margin-top: 8px;
+    color: #555;
+}
+
+
+/* Kategorie-Filter */
+.category-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 2rem; /* Abstand zur Projektanzeige */
+    padding-bottom: 1rem; /* Etwas Platz unter den Buttons */
+    border-bottom: 1px solid #eee; /* Trennlinie */
+}
+
+.category-button {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+    font-family: var(--font-body);
+    background-color: #e9ecef; /* Helles Grau, passend zur alten Nav */
+    color: var(--text-color);
+    border: 1px solid #dee2e6; /* Passender Rand */
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.category-button:hover {
+    background-color: #dee2e6; /* Dunkleres Grau beim Hover */
+    border-color: #adb5bd;
+}
+
+.category-button.active {
+    background-color: var(--primary-color); /* Hauptfarbe für aktiven Button */
+    color: var(--header-footer-text); /* Heller Text */
+    border-color: var(--primary-color);
+}
+
+/* Projekt-Anzeige */
+.project-display {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Abstand zwischen den Projekt-Figuren */
+    justify-content: flex-start; /* Startet linksbündig */
+}
+
+.project-display figure {
+    border: 1px solid #eee;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    padding: 10px;
+    margin: 0; /* Entfernt Standard-Margin von figure */
+    flex-basis: calc(33.333% - 20px); /* Ca. 3 Bilder pro Reihe, abzüglich Gap */
+    max-width: 300px; /* Maximale Breite pro Bild, wie gewünscht */
+    text-align: center;
+    background-color: #fff; /* Weißer Hintergrund für die Figuren */
+}
+
+.project-display img {
+    max-width: 100%; /* Bild passt sich der Figure-Breite an */
+    height: auto;
+    display: block; /* Verhindert extra Leerraum unter dem Bild */
+}
+
+.project-display figcaption {
+    font-size: 0.9rem;
+    margin-top: 8px;
+    color: #555;
+}
+
+/* --- Unterkategorie-Filterung --- */
+
+.category-content {
+    margin-top: 1.5rem; /* Abstand über dem Inhalt einer Kategorie */
+    padding-top: 1rem;
+    /* Optional: Leichte Trennung zum Hauptfilter */
+    /* border-top: 1px dashed #ddd; */ 
+}
+
+.category-content h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: var(--primary-color); /* Hauptfarbe für die Unterkategorie-Überschrift */
+}
+
+.subcategory-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px; /* Etwas kleinerer Abstand */
+    margin-bottom: 1.5rem; /* Abstand zur Anzeige der Unterkategorie-Projekte */
+    padding-bottom: 0.5rem;
+}
+
+.subcategory-button {
+    padding: 0.5rem 1rem; /* Etwas kleiner */
+    font-size: 0.9rem;
+    font-family: var(--font-body);
+    background-color: #f1f3f5; /* Noch helleres Grau */
+    color: var(--text-color);
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.subcategory-button:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+}
+
+.subcategory-button.active {
+    background-color: var(--accent-color); /* Akzentfarbe für aktive Unterkategorie */
+    color: var(--header-footer-text);
+    border-color: var(--accent-color);
+}
+
+.subcategory-display {
+    /* Enthält jetzt die .subcategory-content Divs */
+    display: block; /* Kein Flex-Container mehr für Figuren */
+    margin-top: 1rem; /* Abstand zu den Subkategorie-Buttons */
+}
+
+/* Stile für Figuren innerhalb der Unterkategorie-Anzeige */
+/* (Angepasst von .project-display figure) */
+.project-gallery-display figure { /* Figuren sind jetzt hier drin */
+    border: 1px solid #eee;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+    padding: 10px;
+    margin: 0;
+    flex-basis: calc(33.333% - 15px); /* Anpassung an den Gap */
+    max-width: 300px;
+    text-align: center;
+    background-color: #fff;
+}
+
+.project-gallery-display img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+.project-gallery-display figcaption {
+    font-size: 0.9rem;
+    margin-top: 8px;
+    color: #555;
+}
+
+/* Anpassung für den Haupt-Projekt-Display-Container */
+.project-display {
+    display: block; /* Ändern von flex zu block, da er jetzt die category-content Divs enthält */
+    /* flex-wrap, gap, justify-content werden hier nicht mehr benötigt */
+}
+
+
+
+/* --- Projekt-Filterung (Dritte Ebene) --- */
+
+.subcategory-content {
+    /* Dieser Container wird per JS ein-/ausgeblendet */
+    /* Kein spezifisches Styling nötig, außer vielleicht Margin/Padding, falls gewünscht */
+    margin-top: 1rem; /* Abstand zum Unterkategorie-Filter */
+    padding-top: 1rem;
+    border-top: 1px dashed #ddd; /* Leichte Trennung */
+}
+
+.subcategory-content h5 {
+    font-size: 1.2rem; /* Etwas kleiner als h4 */
+    margin-bottom: 1rem;
+    color: #555; /* Etwas dezenter */
+}
+
+.project-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 1.5rem; /* Abstand zur Projekt-Galerie */
+    padding-bottom: 0.5rem;
+}
+
+.project-button {
+    padding: 0.4rem 0.8rem; /* Noch etwas kleiner */
+    font-size: 0.85rem;
+    font-family: var(--font-body);
+    background-color: #f8f9fa; /* Sehr helles Grau */
+    color: var(--text-color);
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.project-button:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+}
+
+.project-button.active {
+    background-color: #6c757d; /* Sekundärfarbe (Grau) für aktive Projekte */
+    color: var(--header-footer-text);
+    border-color: #6c757d;
+}
+
+.project-gallery-display {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px; /* Gleicher Abstand wie vorher */
+    justify-content: flex-start;
+    margin-top: 1rem; /* Abstand zu den Projekt-Buttons */
+}
+
+/* Die Stile für figure, img, figcaption innerhalb von .project-gallery-display wurden bereits angepasst */
+
+/* Styling für Projekt-Beschreibung */
+.project-description {
+    margin-top: 1em;
+    padding: 1em;
+    background-color: #f9f9f9;
+    border-left: 4px solid var(--accent-color);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+

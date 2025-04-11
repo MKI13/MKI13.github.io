@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekte - Schreinerei Ef-sin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Schreinerei Ef-sin</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Startseite</a></li>
+            <li><a href="#">Über uns</a></li>
+            <li><a href="#">Leistungen</a></li>
+            <li><a href="projekte.html">Projekte</a></li>
+            <li><a href="#">Kontakt</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Ausgewählte Projekte</h2>
+            <div class="category-filters">
+                <button class="category-button" data-category="moebelbau">Möbelbau</button>
+                <button class="category-button" data-category="innenausbau">Innenausbau</button>
+                <button class="category-button" data-category="fenster-tueren">Fenster & Türen</button>
+                <button class="category-button active" data-category="aussenbereich">Außenbereich</button>
+                <button class="category-button" data-category="kuechen">Küchen</button>
+                <button class="category-button" data-category="badmoebel">Badmöbel</button>
+                <button class="category-button" data-category="ladenbau">Ladenbau</button>
+                <button class="category-button" data-category="reparaturen">Reparaturen</button>
+            </div>
+            <div class="project-display">
+                <!-- Container für Möbelbau -->
+                <div class="category-content" id="content-moebelbau" style="display: none;">
+                    <h4>Projekte im Möbelbau</h4>
+                    <p>Hier könnten Unterkategorien oder direkt Projekte angezeigt werden.</p>
+                    <!-- Beispiel: <figure data-project-category="moebelbau">...</figure> -->
+                </div>
+                <!-- Container für Innenausbau -->
+                <div class="category-content" id="content-innenausbau" style="display: none;">
+                    <h4>Projekte im Innenausbau</h4>
+                    <p>Hier könnten Unterkategorien oder direkt Projekte angezeigt werden.</p>
+                </div>
+                <!-- Container für Fenster & Türen -->
+                <div class="category-content" id="content-fenster-tueren" style="display: none;">
+                    <h4>Projekte für Fenster & Türen</h4>
+                    <p>Hier könnten Unterkategorien oder direkt Projekte angezeigt werden.</p>
+                </div>
+                <!-- Container für Außenbereich -->
+                <div class="category-content" id="content-aussenbereich" style="display: block;"> <!-- Initial anzeigen, da Button active ist -->
+                    <h4>Unterkategorien für Außenbereich:</h4>
+                    <div class="subcategory-filters">
+                        <button class="subcategory-button" data-subcategory="holzterrassen">Holzterrassen</button>
+                        <!-- Weitere Buttons für Zäune, Carports etc. -->
+                    </div>
+                    <div class="subcategory-display">
+                        <!-- Container für die Unterkategorie Holzterrassen -->
+                        <div class="subcategory-content" id="content-holzterrassen" style="display: none;"> <!-- Initial ausblenden -->
+                            <h5>Spezifische Projekte für Holzterrassen:</h5>
+                            <div class="project-filters">
+                                <button class="project-button" data-project="garapa">Garapa Holzterrassen Galerie</button>
+                                <button class="project-button" data-project="teak">Teak Holzterrassen Galerie</button>
+                                <button class="project-button" data-project="cumaru">Cumaru Holzterrassen Galerie</button>
+                                <button class="project-button" data-project="laerche">Lärche Holzterrassen Galerie</button>
+                                <!-- Hier könnten später weitere Projekte (Douglasie etc.) hin -->
+                            </div>
+                            <div class="project-gallery-display">
+                                <!-- Galerie für Garapa Holzterrassen -->
+                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="garapa" style="display: none;">
+                                    <img src="images/1/20200409_191525.jpg" alt="Garapa Holzterrasse Bild 20200409_191525.jpg">
+                                    <figcaption>Detailansicht Garapa</figcaption>
+                                </figure>
+                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="garapa" style="display: none;">
+                                    <img src="images/1/20200414_155059.jpg" alt="Garapa Holzterrasse Bild 20200414_155059.jpg">
+                                    <figcaption>Detailansicht Garapa</figcaption>
+                                </figure>
+                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="garapa" style="display: none;">
+                                    <img src="images/1/20200414_155116.jpg" alt="Garapa Holzterrasse Bild 20200414_155116.jpg">
+                                    <figcaption>Detailansicht Garapa</figcaption>
+                                </figure>
+                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="garapa" style="display: none;">
+                                    <img src="images/1/20200414_155129.jpg" alt="Garapa Holzterrasse Bild 20200414_155129.jpg">
+                                    <figcaption>Detailansicht Garapa</figcaption>
+                                </figure>
+                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="garapa" style="display: none;">
+                                    <img src="images/1/20200414_155236.jpg" alt="Garapa Holzterrasse Bild 20200414_155236.jpg">
+                                    <figcaption>Detailansicht Garapa</figcaption>
+                                </figure>
+                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="garapa" style="display: none;">
+                                    <img src="images/1/20200414_160314.jpg" alt="Garapa Holzterrasse Bild 20200414_160314.jpg">
+                                    <figcaption>Detailansicht Garapa</figcaption>
+                                </figure>
+                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="garapa" style="display: none;">
+                                    <img src="images/1/20200414_160347.jpg" alt="Garapa Holzterrasse Bild 20200414_160347.jpg">
+                                    <figcaption>Detailansicht Garapa</figcaption>
+                                </figure>
+                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="garapa" style="display: none;">
+                                    <img src="images/1/20200414_165345.jpg" alt="Garapa Holzterrasse Bild 20200414_165345.jpg">
+                                    <figcaption>Detailansicht Garapa</figcaption>
+                                </figure>
+                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="garapa" style="display: none;">
+                                    <img src="images/1/Screenshot_20190819-173623_Gallery.jpg" alt="Garapa Holzterrasse Bild Screenshot_20190819-173623_Gallery.jpg">
+                                    <figcaption>Detailansicht Garapa</figcaption>
+                                </figure>
+                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="garapa" style="display: none;">
+                                    <img src="images/1/Screenshot_20190819-173633_Gallery.jpg" alt="Garapa Holzterrasse Bild Screenshot_20190819-173633_Gallery.jpg">
+                                    <figcaption>Detailansicht Garapa</figcaption>
+                                </figure>
+                                <!-- Hier könnten später Bilder anderer Projekte (Douglasie etc.) hin -->
+
+                                <!-- Neu generierte Galerie für Teak Holzterrassen -->
+                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="teak" style="display: none;">
+                                    <img src="images/2/IMAG0719.jpg" alt="Teak Holzterrasse Bild: IMAG0719.jpg">
+                                    <figcaption>Detailansicht Teak</figcaption>
+                                </figure>
+                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="teak" style="display: none;">
+                                    <img src="images/2/IMAG0739.jpg" alt="Teak Holzterrasse Bild: IMAG0739.jpg">
+                                    <figcaption>Detailansicht Teak</figcaption>
+                                </figure>
+                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="teak" style="display: none;">
+                                    <img src="images/2/IMAG1578.jpg" alt="Teak Holzterrasse Bild: IMAG1578.jpg">
+                                    <figcaption>Detailansicht Teak</figcaption>
+                                </figure>
+                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="teak" style="display: none;">
+                                    <img src="images/2/IMAG1579.jpg" alt="Teak Holzterrasse Bild: IMAG1579.jpg">
+                                    <figcaption>Detailansicht Teak</figcaption>
+                                </figure>
+                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="teak" style="display: none;">
+                                    <img src="images/2/IMAG1580.jpg" alt="Teak Holzterrasse Bild: IMAG1580.jpg">
+                                    <figcaption>Detailansicht Teak</figcaption>
+                                </figure>
+                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="teak" style="display: none;">
+                                    <img src="images/2/IMAG3085.jpg" alt="Teak Holzterrasse Bild: IMAG3085.jpg">
+                                    <figcaption>Detailansicht Teak</figcaption>
+                                </figure>
+                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="teak" style="display: none;">
+                                    <img src="images/2/IMAG3100.jpg" alt="Teak Holzterrasse Bild: IMAG3100.jpg">
+                                    <figcaption>Detailansicht Teak</figcaption>
+                                </figure>
+                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="teak" style="display: none;">
+                                    <img src="images/2/IMAG3102.jpg" alt="Teak Holzterrasse Bild: IMAG3102.jpg">
+                                    <figcaption>Detailansicht Teak</figcaption>
+                                </figure>
+                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="teak" style="display: none;">
+                                    <img src="images/2/IMG-20161022-WA0005.jpg" alt="Teak Holzterrasse Bild: IMG-20161022-WA0005.jpg">
+                                    <figcaption>Detailansicht Teak</figcaption>
+                                </figure>
+                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="teak" style="display: none;">
+                                    <img src="images/2/IMG-20161028-WA0028.jpg" alt="Teak Holzterrasse Bild: IMG-20161028-WA0028.jpg">
+                                    <figcaption>Detailansicht Teak</figcaption>
+                                </figure>
+                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="teak" style="display: none;">
+                                    <img src="images/2/IMG-20161028-WA0032.jpg" alt="Teak Holzterrasse Bild: IMG-20161028-WA0032.jpg">
+                                    <figcaption>Detailansicht Teak</figcaption>
+                                </figure>
+
+                                <!-- Leere Container für Cumaru -->
+                               <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="cumaru" style="display: none;">
+                                   <!-- Bilder für Cumaru kommen hier rein -->
+                               </figure>
+
+                               <!-- Leere Container für Lärche -->
+                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="laerche" style="display: none;">
+                                    <!-- Bilder für Lärche kommen hier rein -->
+                                </figure>
+                            </div>
+                            <p class="project-description" data-project="garapa" style="display: none;"> <!-- Initial ausblenden -->
+                                Garapa ist ein widerstandsfähiges und langlebiges Hartholz aus Südamerika mit einer schönen, gleichmäßigen goldbraunen Farbe, die mit der Zeit silbergrau verwittert. Es eignet sich hervorragend für Terrassen, da es sehr witterungsbeständig und resistent gegen Insektenbefall ist. Diese Terrasse wurde sorgfältig geplant und fachmännisch verlegt, um eine einladende und dauerhafte Erweiterung des Wohnraums im Freien zu schaffen.
+                            </p>
+                            <p class="project-description" data-project="teak" style="display: none;">Teakholz ist weltweit bekannt für seine außergewöhnliche Haltbarkeit und natürliche Schönheit, was es zu einer erstklassigen Wahl für hochwertige Holzterrassen macht. Ursprünglich aus Südostasien stammend, enthält Teak einen hohen Anteil an natürlichen Ölen und Harzen. Diese Inhaltsstoffe verleihen dem Holz eine bemerkenswerte Resistenz gegen Feuchtigkeit, Fäulnis, Termiten und andere Holzschädlinge, selbst unter extremen Witterungsbedingungen. Die charakteristische goldbraune Farbe von Teak entwickelt im Laufe der Zeit eine attraktive silbergraue Patina, wenn es unbehandelt bleibt. Alternativ kann die ursprüngliche Farbe durch regelmäßige Pflege mit speziellen Ölen erhalten werden. Neben seiner Langlebigkeit überzeugt Teak durch seine angenehme Haptik und geringe Splitterneigung, was es barfußfreundlich macht. Die hohe Dichte und Stabilität des Holzes sorgen dafür, dass sich die Dielen kaum verziehen oder reißen. Eine Teakholzterrasse ist somit nicht nur ein optisches Highlight für jeden Außenbereich, sondern auch eine Investition in dauerhafte Qualität und zeitlose Eleganz, die über Jahrzehnte Freude bereitet und nur minimalen Pflegeaufwand erfordert. Die Verarbeitung erfordert zwar Fachkenntnis, das Ergebnis ist jedoch eine unvergleichlich edle und beständige Terrasse.</p>
+                            <p class="project-description" data-project="cumaru" style="display: none;">Beschreibung für Cumaru Holzterrassen folgt...</p>
+                            <p class="project-description" data-project="laerche" style="display: none;">Beschreibung für Lärche Holzterrassen folgt...</p>
+                        </div>
+                        <!-- Hier könnten später Container für andere Unterkategorien (Zäune etc.) hin -->
+                    </div>
+                </div>
+                <!-- Container für Küchen -->
+                <div class="category-content" id="content-kuechen" style="display: none;">
+                    <h4>Projekte für Küchen</h4>
+                    <p>Hier könnten Unterkategorien oder direkt Projekte angezeigt werden.</p>
+                </div>
+                <!-- Container für Badmöbel -->
+                <div class="category-content" id="content-badmoebel" style="display: none;">
+                    <h4>Projekte für Badmöbel</h4>
+                    <p>Hier könnten Unterkategorien oder direkt Projekte angezeigt werden.</p>
+                </div>
+                <!-- Container für Ladenbau -->
+                <div class="category-content" id="content-ladenbau" style="display: none;">
+                    <h4>Projekte im Ladenbau</h4>
+                    <p>Hier könnten Unterkategorien oder direkt Projekte angezeigt werden.</p>
+                </div>
+                <!-- Container für Reparaturen -->
+                <div class="category-content" id="content-reparaturen" style="display: none;">
+                    <h4>Durchgeführte Reparaturen</h4>
+                    <p>Hier könnten Unterkategorien oder direkt Projekte angezeigt werden.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Schreinerei Ef-sin | <a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
+    </footer>
+    <script src="script.js"></script>
+
+</body>
+</html>
