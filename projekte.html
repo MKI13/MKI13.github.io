@@ -3,210 +3,429 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projekte - Schreinerei Ef-sin</title>
+    <title>Projekte & Referenzen | Schreinerei Ef-sin - Hochwertige Holzarbeiten</title>
+    <meta name="description" content="Entdecken Sie unsere Projekte: Holzterrassen, Möbelbau, Innenausbau & mehr. Sehen Sie die Qualität unserer Schreinerarbeiten in [Region]. ✓ Hochwertig ✓ Maßgefertigt">
+    <meta name="keywords" content="Schreinerei Projekte, Holzterrassen, Garapa, Teak, Cumaru, Lärche, Möbelbau, Innenausbau, Referenzen, Schreinerarbeiten, [Ort], [Region]">
+    <meta name="author" content="Schreinerei Ef-sin">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Projekte & Referenzen | Schreinerei Ef-sin">
+    <meta property="og:description" content="Entdecken Sie unsere handwerklichen Meisterwerke: Holzterrassen, Möbel, Innenausbau und mehr. Qualität, die überzeugt!">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.ef-sin.de/projekte.html">
+    <meta property="og:image" content="images/og-projekte.jpg">
+    
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Schreinerei Ef-sin</h1>
+    <header id="header">
+        <div class="logo-container">
+            <img src="images/logo.png" alt="Schreinerei Ef-sin Logo" class="logo">
+            <h1>Schreinerei Ef-sin</h1>
+        </div>
+        <div class="contact-info">
+            <p><i class="phone-icon"></i> <a href="tel:+49XXXXXXXXXX">+49 XXXX XXXXXX</a></p>
+            <p><i class="email-icon"></i> <a href="mailto:info@ef-sin.de">info@ef-sin.de</a></p>
+        </div>
+        <button id="mobile-menu-toggle" aria-label="Menü öffnen">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </header>
 
-    <nav>
+    <nav id="main-nav">
         <ul>
             <li><a href="index.html">Startseite</a></li>
-            <li><a href="#">Über uns</a></li>
-            <li><a href="#">Leistungen</a></li>
-            <li><a href="projekte.html">Projekte</a></li>
-            <li><a href="#">Kontakt</a></li>
+            <li><a href="ueber-uns.html">Über uns</a></li>
+            <li><a href="leistungen.html">Leistungen</a></li>
+            <li><a href="projekte.html" aria-current="page">Projekte</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
     </nav>
 
     <main>
-        <section>
-            <h2>Ausgewählte Projekte</h2>
-            <div class="category-filters">
-                <button class="category-button" data-category="moebelbau">Möbelbau</button>
-                <button class="category-button" data-category="innenausbau">Innenausbau</button>
-                <button class="category-button" data-category="fenster-tueren">Fenster & Türen</button>
-                <button class="category-button active" data-category="aussenbereich">Außenbereich</button>
-                <button class="category-button" data-category="kuechen">Küchen</button>
-                <button class="category-button" data-category="badmoebel">Badmöbel</button>
-                <button class="category-button" data-category="ladenbau">Ladenbau</button>
-                <button class="category-button" data-category="reparaturen">Reparaturen</button>
+        <section class="projects-hero">
+            <div class="projects-hero-content">
+                <h1>Unsere Projekte & Referenzen</h1>
+                <p>Entdecken Sie hier eine Auswahl unserer realisierten Arbeiten – von exklusiven Holzterrassen über maßgefertigte Möbel bis hin zu kompletten Innenausbauten.</p>
             </div>
+        </section>
+
+        <section id="projekt-kategorien" class="project-categories">
+            <h2>Ausgewählte Projekte nach Kategorien</h2>
+            <p>Wählen Sie eine Kategorie, um unsere Referenzprojekte zu entdecken:</p>
+            
+            <div class="category-filters" role="tablist" aria-label="Projektkategorien">
+                <button class="category-button" data-category="moebelbau" role="tab" aria-selected="false" aria-controls="content-moebelbau">Möbelbau</button>
+                <button class="category-button" data-category="innenausbau" role="tab" aria-selected="false" aria-controls="content-innenausbau">Innenausbau</button>
+                <button class="category-button" data-category="fenster-tueren" role="tab" aria-selected="false" aria-controls="content-fenster-tueren">Fenster & Türen</button>
+                <button class="category-button active" data-category="aussenbereich" role="tab" aria-selected="true" aria-controls="content-aussenbereich">Außenbereich</button>
+                <button class="category-button" data-category="kuechen" role="tab" aria-selected="false" aria-controls="content-kuechen">Küchen</button>
+                <button class="category-button" data-category="badmoebel" role="tab" aria-selected="false" aria-controls="content-badmoebel">Badmöbel</button>
+                <button class="category-button" data-category="ladenbau" role="tab" aria-selected="false" aria-controls="content-ladenbau">Ladenbau</button>
+                <button class="category-button" data-category="reparaturen" role="tab" aria-selected="false" aria-controls="content-reparaturen">Reparaturen</button>
+            </div>
+            
             <div class="project-display">
                 <!-- Container für Möbelbau -->
-                <div class="category-content" id="content-moebelbau" style="display: none;">
-                    <h4>Projekte im Möbelbau</h4>
-                    <p>Hier könnten Unterkategorien oder direkt Projekte angezeigt werden.</p>
-                    <!-- Beispiel: <figure data-project-category="moebelbau">...</figure> -->
-                </div>
-                <!-- Container für Innenausbau -->
-                <div class="category-content" id="content-innenausbau" style="display: none;">
-                    <h4>Projekte im Innenausbau</h4>
-                    <p>Hier könnten Unterkategorien oder direkt Projekte angezeigt werden.</p>
-                </div>
-                <!-- Container für Fenster & Türen -->
-                <div class="category-content" id="content-fenster-tueren" style="display: none;">
-                    <h4>Projekte für Fenster & Türen</h4>
-                    <p>Hier könnten Unterkategorien oder direkt Projekte angezeigt werden.</p>
-                </div>
-                <!-- Container für Außenbereich -->
-                <div class="category-content" id="content-aussenbereich" style="display: block;"> <!-- Initial anzeigen, da Button active ist -->
-                    <h4>Unterkategorien für Außenbereich:</h4>
+                <div class="category-content" id="content-moebelbau" role="tabpanel" aria-labelledby="tab-moebelbau" hidden>
+                    <h3>Individuelle Möbel nach Maß</h3>
+                    <p>Entdecken Sie unsere maßgefertigten Möbelstücke – jedes Stück ein Unikat, perfekt auf die Bedürfnisse und den Stil unserer Kunden abgestimmt.</p>
+                    
                     <div class="subcategory-filters">
-                        <button class="subcategory-button" data-subcategory="holzterrassen">Holzterrassen</button>
-                        <!-- Weitere Buttons für Zäune, Carports etc. -->
+                        <button class="subcategory-button" data-subcategory="einbauschraenke">Einbauschränke</button>
+                        <button class="subcategory-button" data-subcategory="tische">Tische & Esstische</button>
+                        <button class="subcategory-button" data-subcategory="sideboards">Sideboards</button>
+                        <button class="subcategory-button" data-subcategory="regale">Bücherregale</button>
                     </div>
+                    
+                    <!-- Platzhalter für Möbelbau-Unterkategorien -->
+                    <div class="subcategory-display">
+                        <p class="info-message">Bitte wählen Sie eine Unterkategorie, um die entsprechenden Projekte anzuzeigen.</p>
+                    </div>
+                </div>
+                
+                <!-- Container für Innenausbau -->
+                <div class="category-content" id="content-innenausbau" role="tabpanel" aria-labelledby="tab-innenausbau" hidden>
+                    <h3>Hochwertiger Innenausbau</h3>
+                    <p>Von einzelnen Elementen bis hin zum kompletten Raumkonzept – wir gestalten Wohnräume nach Ihren individuellen Wünschen.</p>
+                    
+                    <div class="subcategory-filters">
+                        <button class="subcategory-button" data-subcategory="dachgeschoss">Dachgeschossausbau</button>
+                        <button class="subcategory-button" data-subcategory="wandverkleidungen">Wandverkleidungen</button>
+                        <button class="subcategory-button" data-subcategory="raumteiler">Raumteiler</button>
+                    </div>
+                    
+                    <!-- Platzhalter für Innenausbau-Unterkategorien -->
+                    <div class="subcategory-display">
+                        <p class="info-message">Bitte wählen Sie eine Unterkategorie, um die entsprechenden Projekte anzuzeigen.</p>
+                    </div>
+                </div>
+                
+                <!-- Container für Fenster & Türen -->
+                <div class="category-content" id="content-fenster-tueren" role="tabpanel" aria-labelledby="tab-fenster-tueren" hidden>
+                    <h3>Maßgefertigte Fenster & Türen</h3>
+                    <p>Hochwertige Fenster und Türen aus ausgesuchten Hölzern – für optimalen Wärmeschutz und ein harmonisches Erscheinungsbild.</p>
+                    
+                    <div class="subcategory-filters">
+                        <button class="subcategory-button" data-subcategory="haustüren">Haustüren</button>
+                        <button class="subcategory-button" data-subcategory="innentüren">Innentüren</button>
+                        <button class="subcategory-button" data-subcategory="holzfenster">Holzfenster</button>
+                    </div>
+                    
+                    <!-- Platzhalter für Fenster & Türen-Unterkategorien -->
+                    <div class="subcategory-display">
+                        <p class="info-message">Bitte wählen Sie eine Unterkategorie, um die entsprechenden Projekte anzuzeigen.</p>
+                    </div>
+                </div>
+                
+                <!-- Container für Außenbereich -->
+                <div class="category-content" id="content-aussenbereich" role="tabpanel" aria-labelledby="tab-aussenbereich">
+                    <h3>Projekte für den Außenbereich</h3>
+                    <p>Mit unseren hochwertigen Holzarbeiten für den Außenbereich schaffen wir langlebige und attraktive Erweiterungen Ihres Wohnraums.</p>
+                    
+                    <div class="subcategory-filters" role="tablist" aria-label="Außenbereich Unterkategorien">
+                        <button class="subcategory-button" data-subcategory="holzterrassen" role="tab" aria-selected="false" aria-controls="content-holzterrassen">Holzterrassen</button>
+                        <button class="subcategory-button" data-subcategory="carports" role="tab" aria-selected="false" aria-controls="content-carports">Carports</button>
+                        <button class="subcategory-button" data-subcategory="zaune" role="tab" aria-selected="false" aria-controls="content-zaune">Zäune & Sichtschutz</button>
+                        <button class="subcategory-button" data-subcategory="gartenmoebel" role="tab" aria-selected="false" aria-controls="content-gartenmoebel">Gartenmöbel</button>
+                    </div>
+                    
                     <div class="subcategory-display">
                         <!-- Container für die Unterkategorie Holzterrassen -->
-                        <div class="subcategory-content" id="content-holzterrassen" style="display: none;"> <!-- Initial ausblenden -->
-                            <h5>Spezifische Projekte für Holzterrassen:</h5>
-                            <div class="project-filters">
-                                <button class="project-button" data-project="garapa">Garapa Holzterrassen Galerie</button>
-                                <button class="project-button" data-project="teak">Teak Holzterrassen Galerie</button>
-                                <button class="project-button" data-project="cumaru">Cumaru Holzterrassen Galerie</button>
-                                <button class="project-button" data-project="laerche">Lärche Holzterrassen Galerie</button>
-                                <!-- Hier könnten später weitere Projekte (Douglasie etc.) hin -->
+                        <div class="subcategory-content" id="content-holzterrassen" role="tabpanel" aria-labelledby="tab-holzterrassen" hidden>
+                            <h4>Hochwertige Holzterrassen</h4>
+                            <p>Unsere Holzterrassen werden aus sorgfältig ausgewählten Hölzern gefertigt und fachmännisch verlegt – für lang anhaltende Freude und ein stilvolles Ambiente im Freien.</p>
+                            
+                            <div class="project-filters" role="tablist" aria-label="Holzterrassen Projekte">
+                                <button class="project-button" data-project="garapa" role="tab" aria-selected="false" aria-controls="project-garapa">Garapa Holzterrassen</button>
+                                <button class="project-button" data-project="teak" role="tab" aria-selected="false" aria-controls="project-teak">Teak Holzterrassen</button>
+                                <button class="project-button" data-project="cumaru" role="tab" aria-selected="false" aria-controls="project-cumaru">Cumaru Holzterrassen</button>
+                                <button class="project-button" data-project="laerche" role="tab" aria-selected="false" aria-controls="project-laerche">Lärche Holzterrassen</button>
                             </div>
-                            <div class="project-gallery-display">
-                                <!-- Galerie für Garapa Holzterrassen -->
-                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="garapa" style="display: none;">
-                                    <img src="images/1/20200409_191525.jpg" alt="Garapa Holzterrasse Bild 20200409_191525.jpg">
-                                    <figcaption>Detailansicht Garapa</figcaption>
-                                </figure>
-                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="garapa" style="display: none;">
-                                    <img src="images/1/20200414_155059.jpg" alt="Garapa Holzterrasse Bild 20200414_155059.jpg">
-                                    <figcaption>Detailansicht Garapa</figcaption>
-                                </figure>
-                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="garapa" style="display: none;">
-                                    <img src="images/1/20200414_155116.jpg" alt="Garapa Holzterrasse Bild 20200414_155116.jpg">
-                                    <figcaption>Detailansicht Garapa</figcaption>
-                                </figure>
-                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="garapa" style="display: none;">
-                                    <img src="images/1/20200414_155129.jpg" alt="Garapa Holzterrasse Bild 20200414_155129.jpg">
-                                    <figcaption>Detailansicht Garapa</figcaption>
-                                </figure>
-                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="garapa" style="display: none;">
-                                    <img src="images/1/20200414_155236.jpg" alt="Garapa Holzterrasse Bild 20200414_155236.jpg">
-                                    <figcaption>Detailansicht Garapa</figcaption>
-                                </figure>
-                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="garapa" style="display: none;">
-                                    <img src="images/1/20200414_160314.jpg" alt="Garapa Holzterrasse Bild 20200414_160314.jpg">
-                                    <figcaption>Detailansicht Garapa</figcaption>
-                                </figure>
-                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="garapa" style="display: none;">
-                                    <img src="images/1/20200414_160347.jpg" alt="Garapa Holzterrasse Bild 20200414_160347.jpg">
-                                    <figcaption>Detailansicht Garapa</figcaption>
-                                </figure>
-                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="garapa" style="display: none;">
-                                    <img src="images/1/20200414_165345.jpg" alt="Garapa Holzterrasse Bild 20200414_165345.jpg">
-                                    <figcaption>Detailansicht Garapa</figcaption>
-                                </figure>
-                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="garapa" style="display: none;">
-                                    <img src="images/1/Screenshot_20190819-173623_Gallery.jpg" alt="Garapa Holzterrasse Bild Screenshot_20190819-173623_Gallery.jpg">
-                                    <figcaption>Detailansicht Garapa</figcaption>
-                                </figure>
-                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="garapa" style="display: none;">
-                                    <img src="images/1/Screenshot_20190819-173633_Gallery.jpg" alt="Garapa Holzterrasse Bild Screenshot_20190819-173633_Gallery.jpg">
-                                    <figcaption>Detailansicht Garapa</figcaption>
-                                </figure>
-                                <!-- Hier könnten später Bilder anderer Projekte (Douglasie etc.) hin -->
-
-                                <!-- Neu generierte Galerie für Teak Holzterrassen -->
-                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="teak" style="display: none;">
-                                    <img src="images/2/IMAG0719.jpg" alt="Teak Holzterrasse Bild: IMAG0719.jpg">
-                                    <figcaption>Detailansicht Teak</figcaption>
-                                </figure>
-                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="teak" style="display: none;">
-                                    <img src="images/2/IMAG0739.jpg" alt="Teak Holzterrasse Bild: IMAG0739.jpg">
-                                    <figcaption>Detailansicht Teak</figcaption>
-                                </figure>
-                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="teak" style="display: none;">
-                                    <img src="images/2/IMAG1578.jpg" alt="Teak Holzterrasse Bild: IMAG1578.jpg">
-                                    <figcaption>Detailansicht Teak</figcaption>
-                                </figure>
-                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="teak" style="display: none;">
-                                    <img src="images/2/IMAG1579.jpg" alt="Teak Holzterrasse Bild: IMAG1579.jpg">
-                                    <figcaption>Detailansicht Teak</figcaption>
-                                </figure>
-                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="teak" style="display: none;">
-                                    <img src="images/2/IMAG1580.jpg" alt="Teak Holzterrasse Bild: IMAG1580.jpg">
-                                    <figcaption>Detailansicht Teak</figcaption>
-                                </figure>
-                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="teak" style="display: none;">
-                                    <img src="images/2/IMAG3085.jpg" alt="Teak Holzterrasse Bild: IMAG3085.jpg">
-                                    <figcaption>Detailansicht Teak</figcaption>
-                                </figure>
-                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="teak" style="display: none;">
-                                    <img src="images/2/IMAG3100.jpg" alt="Teak Holzterrasse Bild: IMAG3100.jpg">
-                                    <figcaption>Detailansicht Teak</figcaption>
-                                </figure>
-                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="teak" style="display: none;">
-                                    <img src="images/2/IMAG3102.jpg" alt="Teak Holzterrasse Bild: IMAG3102.jpg">
-                                    <figcaption>Detailansicht Teak</figcaption>
-                                </figure>
-                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="teak" style="display: none;">
-                                    <img src="images/2/IMG-20161022-WA0005.jpg" alt="Teak Holzterrasse Bild: IMG-20161022-WA0005.jpg">
-                                    <figcaption>Detailansicht Teak</figcaption>
-                                </figure>
-                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="teak" style="display: none;">
-                                    <img src="images/2/IMG-20161028-WA0028.jpg" alt="Teak Holzterrasse Bild: IMG-20161028-WA0028.jpg">
-                                    <figcaption>Detailansicht Teak</figcaption>
-                                </figure>
-                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="teak" style="display: none;">
-                                    <img src="images/2/IMG-20161028-WA0032.jpg" alt="Teak Holzterrasse Bild: IMG-20161028-WA0032.jpg">
-                                    <figcaption>Detailansicht Teak</figcaption>
-                                </figure>
-
-                                <!-- Leere Container für Cumaru -->
-                               <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="cumaru" style="display: none;">
-                                   <!-- Bilder für Cumaru kommen hier rein -->
-                               </figure>
-
-                               <!-- Leere Container für Lärche -->
-                                <figure data-project-category="aussenbereich" data-subcategory="holzterrassen" data-project="laerche" style="display: none;">
-                                    <!-- Bilder für Lärche kommen hier rein -->
-                                </figure>
+                            
+                            <div class="project-info-container">
+                                <p class="project-description" id="project-garapa" data-project="garapa" role="tabpanel" aria-labelledby="tab-garapa" hidden>
+                                    <h5>Garapa Holzterrassen – Natürliche Eleganz</h5>
+                                    <p>Garapa-Holz besticht durch seine hell-goldene Farbe und exzellente Witterungsbeständigkeit. Unsere Garapa-Terrassen sind die perfekte Wahl für einen eleganten, natürlichen Look.</p>
+                                    
+                                    <div class="project-gallery">
+                                        <figure>
+                                            <img src="images/projekte/terrassen/garapa-terrasse-1.jpg" alt="Garapa Holzterrasse in einem modernen Garten" loading="lazy">
+                                            <figcaption>Garapa-Terrasse mit moderner Umrandung in München</figcaption>
+                                        </figure>
+                                        <figure>
+                                            <img src="images/projekte/terrassen/garapa-terrasse-2.jpg" alt="Detailansicht einer Garapa Holzterrasse" loading="lazy">
+                                            <figcaption>Detailansicht der Holzmaserung und Verbindungstechnik</figcaption>
+                                        </figure>
+                                        <figure>
+                                            <img src="images/projekte/terrassen/garapa-terrasse-3.jpg" alt="Große Garapa Terrasse mit Poolbereich" loading="lazy">
+                                            <figcaption>Großflächige Garapa-Terrasse mit integriertem Poolbereich</figcaption>
+                                        </figure>
+                                    </div>
+                                    
+                                    <div class="project-details">
+                                        <h6>Projektdetails:</h6>
+                                        <ul>
+                                            <li><strong>Holzart:</strong> Garapa (Apuleia leiocarpa)</li>
+                                            <li><strong>Herkunft:</strong> Südamerika</li>
+                                            <li><strong>Eigenschaften:</strong> Witterungsbeständig, splitterfrei, hohe Härte (Brinell 4,0)</li>
+                                            <li><strong>Farbe:</strong> Hell-golden bis honigfarben</li>
+                                            <li><strong>Haltbarkeit:</strong> Resistenzklasse 2 (25+ Jahre)</li>
+                                        </ul>
+                                    </div>
+                                </p>
+                                
+                                <p class="project-description" id="project-teak" data-project="teak" role="tabpanel" aria-labelledby="tab-teak" hidden>
+                                    <h5>Teak Holzterrassen – Zeitlose Schönheit</h5>
+                                    <p>Teak ist seit Jahrhunderten für seine außergewöhnliche Beständigkeit und elegante Optik bekannt. Unsere Teak-Terrassen strahlen Exklusivität und zeitlose Schönheit aus.</p>
+                                    
+                                    <div class="project-gallery">
+                                        <figure>
+                                            <img src="images/projekte/terrassen/teak-terrasse-1.jpg" alt="Elegante Teak Holzterrasse mit Loungebereich" loading="lazy">
+                                            <figcaption>Exklusive Teak-Terrasse mit integriertem Loungebereich</figcaption>
+                                        </figure>
+                                        <figure>
+                                            <img src="images/projekte/terrassen/teak-terrasse-2.jpg" alt="Detailansicht einer Teak Holzterrasse" loading="lazy">
+                                            <figcaption>Detailansicht der klassischen Teak-Maserung</figcaption>
+                                        </figure>
+                                    </div>
+                                    
+                                    <div class="project-details">
+                                        <h6>Projektdetails:</h6>
+                                        <ul>
+                                            <li><strong>Holzart:</strong> Teak (Tectona grandis)</li>
+                                            <li><strong>Herkunft:</strong> Plantagenanbau in Südostasien</li>
+                                            <li><strong>Eigenschaften:</strong> Extrem witterungsbeständig, hoher natürlicher Ölgehalt</li>
+                                            <li><strong>Farbe:</strong> Goldbraun, vergraut mit der Zeit zu silbergrau</li>
+                                            <li><strong>Haltbarkeit:</strong> Resistenzklasse 1-2 (30+ Jahre)</li>
+                                        </ul>
+                                    </div>
+                                </p>
+                                
+                                <p class="project-description" id="project-cumaru" data-project="cumaru" role="tabpanel" aria-labelledby="tab-cumaru" hidden>
+                                    <h5>Cumaru Holzterrassen – Robuste Schönheit</h5>
+                                    <p>Cumaru überzeugt durch seine außergewöhnliche Härte und widerstandsfähige Eigenschaften. Ideal für stark frequentierte Terrassen und anspruchsvolle Umgebungen.</p>
+                                    
+                                    <div class="project-gallery">
+                                        <figure>
+                                            <img src="images/projekte/terrassen/cumaru-terrasse-1.jpg" alt="Cumaru Holzterrasse an einem Stadthaus" loading="lazy">
+                                            <figcaption>Cumaru-Terrasse mit integrierten Pflanzbeeten</figcaption>
+                                        </figure>
+                                        <figure>
+                                            <img src="images/projekte/terrassen/cumaru-terrasse-2.jpg" alt="Detailansicht einer Cumaru Holzterrasse" loading="lazy">
+                                            <figcaption>Nahaufnahme der charakteristischen Cumaru-Maserung</figcaption>
+                                        </figure>
+                                    </div>
+                                    
+                                    <div class="project-details">
+                                        <h6>Projektdetails:</h6>
+                                        <ul>
+                                            <li><strong>Holzart:</strong> Cumaru (Dipteryx odorata)</li>
+                                            <li><strong>Herkunft:</strong> Südamerika</li>
+                                            <li><strong>Eigenschaften:</strong> Extrem hart (Brinell 9,5), sehr witterungsbeständig</li>
+                                            <li><strong>Farbe:</strong> Rötlich-braun bis dunkelbraun</li>
+                                            <li><strong>Haltbarkeit:</strong> Resistenzklasse 1 (30+ Jahre)</li>
+                                        </ul>
+                                    </div>
+                                </p>
+                                
+                                <p class="project-description" id="project-laerche" data-project="laerche" role="tabpanel" aria-labelledby="tab-laerche" hidden>
+                                    <h5>Lärche Holzterrassen – Heimische Qualität</h5>
+                                    <p>Lärche ist ein heimisches Holz mit hervorragenden Eigenschaften für den Außenbereich. Nachhaltig und ökologisch – die perfekte Wahl für umweltbewusste Bauherren.</p>
+                                    
+                                    <div class="project-gallery">
+                                        <figure>
+                                            <img src="images/projekte/terrassen/laerche-terrasse-1.jpg" alt="Naturbelassene Lärche Holzterrasse" loading="lazy">
+                                            <figcaption>Naturbelassene Lärchen-Terrasse mit spezieller Stegverlegung</figcaption>
+                                        </figure>
+                                        <figure>
+                                            <img src="images/projekte/terrassen/laerche-terrasse-2.jpg" alt="Lärche Holzterrasse im Landhausstil" loading="lazy">
+                                            <figcaption>Lärchen-Terrasse im Landhausstil mit integrierter Treppe</figcaption>
+                                        </figure>
+                                    </div>
+                                    
+                                    <div class="project-details">
+                                        <h6>Projektdetails:</h6>
+                                        <ul>
+                                            <li><strong>Holzart:</strong> Sibirische Lärche (Larix sibirica)</li>
+                                            <li><strong>Herkunft:</strong> Nordeuropa/Sibirien</li>
+                                            <li><strong>Eigenschaften:</strong> Hoher Harzgehalt, gute Witterungsbeständigkeit</li>
+                                            <li><strong>Farbe:</strong> Honiggelb bis rötlich, vergraut natürlich</li>
+                                            <li><strong>Haltbarkeit:</strong> Resistenzklasse 3-4 (15-20 Jahre)</li>
+                                        </ul>
+                                    </div>
+                                </p>
                             </div>
-                            <p class="project-description" data-project="garapa" style="display: none;"> <!-- Initial ausblenden -->
-                                Garapa ist ein widerstandsfähiges und langlebiges Hartholz aus Südamerika mit einer schönen, gleichmäßigen goldbraunen Farbe, die mit der Zeit silbergrau verwittert. Es eignet sich hervorragend für Terrassen, da es sehr witterungsbeständig und resistent gegen Insektenbefall ist. Diese Terrasse wurde sorgfältig geplant und fachmännisch verlegt, um eine einladende und dauerhafte Erweiterung des Wohnraums im Freien zu schaffen.
-                            </p>
-                            <p class="project-description" data-project="teak" style="display: none;">Teakholz ist weltweit bekannt für seine außergewöhnliche Haltbarkeit und natürliche Schönheit, was es zu einer erstklassigen Wahl für hochwertige Holzterrassen macht. Ursprünglich aus Südostasien stammend, enthält Teak einen hohen Anteil an natürlichen Ölen und Harzen. Diese Inhaltsstoffe verleihen dem Holz eine bemerkenswerte Resistenz gegen Feuchtigkeit, Fäulnis, Termiten und andere Holzschädlinge, selbst unter extremen Witterungsbedingungen. Die charakteristische goldbraune Farbe von Teak entwickelt im Laufe der Zeit eine attraktive silbergraue Patina, wenn es unbehandelt bleibt. Alternativ kann die ursprüngliche Farbe durch regelmäßige Pflege mit speziellen Ölen erhalten werden. Neben seiner Langlebigkeit überzeugt Teak durch seine angenehme Haptik und geringe Splitterneigung, was es barfußfreundlich macht. Die hohe Dichte und Stabilität des Holzes sorgen dafür, dass sich die Dielen kaum verziehen oder reißen. Eine Teakholzterrasse ist somit nicht nur ein optisches Highlight für jeden Außenbereich, sondern auch eine Investition in dauerhafte Qualität und zeitlose Eleganz, die über Jahrzehnte Freude bereitet und nur minimalen Pflegeaufwand erfordert. Die Verarbeitung erfordert zwar Fachkenntnis, das Ergebnis ist jedoch eine unvergleichlich edle und beständige Terrasse.</p>
-                            <p class="project-description" data-project="cumaru" style="display: none;">Beschreibung für Cumaru Holzterrassen folgt...</p>
-                            <p class="project-description" data-project="laerche" style="display: none;">Beschreibung für Lärche Holzterrassen folgt...</p>
                         </div>
-                        <!-- Hier könnten später Container für andere Unterkategorien (Zäune etc.) hin -->
+                        
+                        <!-- Container für die Unterkategorie Carports -->
+                        <div class="subcategory-content" id="content-carports" role="tabpanel" aria-labelledby="tab-carports" hidden>
+                            <h4>Individuelle Carports</h4>
+                            <p>Unsere maßgefertigten Carports aus hochwertigem Holz bieten optimalen Schutz für Ihr Fahrzeug und sind gleichzeitig ein attraktives Gestaltungselement für Ihr Grundstück.</p>
+                            
+                            <div class="project-gallery large-gallery">
+                                <figure>
+                                    <img src="images/projekte/carports/carport-1.jpg" alt="Moderner Carport aus Lärchenholz" loading="lazy">
+                                    <figcaption>Moderner Doppel-Carport aus sibirischer Lärche mit Abstellraum</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/projekte/carports/carport-2.jpg" alt="Carport im Landhausstil" loading="lazy">
+                                    <figcaption>Carport im Landhausstil mit integriertem Geräteraum</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/projekte/carports/carport-3.jpg" alt="Minimalistischer Carport mit Flachdach" loading="lazy">
+                                    <figcaption>Minimalistischer Carport mit Flachdach und spezieller Holzverkleidung</figcaption>
+                                </figure>
+                            </div>
+                            
+                            <div class="project-info">
+                                <h5>Unsere Carport-Angebote:</h5>
+                                <ul>
+                                    <li>Individuelle Planung und Fertigung nach Maß</li>
+                                    <li>Verschiedene Holzarten: Lärche, Douglasie, Eiche</li>
+                                    <li>Unterschiedliche Dachformen: Flachdach, Satteldach, Pultdach</li>
+                                    <li>Optional mit Geräteraum oder Abstellkammer</li>
+                                    <li>Auf Wunsch mit integrierter Beleuchtung oder Regenwasserableitung</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <!-- Container für die Unterkategorie Zäune & Sichtschutz -->
+                        <div class="subcategory-content" id="content-zaune" role="tabpanel" aria-labelledby="tab-zaune" hidden>
+                            <h4>Zäune & Sichtschutz</h4>
+                            <p>Mit unseren individuell gefertigten Holzzäunen und Sichtschutzelementen schaffen wir Privatsphäre und gestalten gleichzeitig Ihren Außenbereich attraktiv und natürlich.</p>
+                            
+                            <div class="project-gallery">
+                                <figure>
+                                    <img src="images/projekte/zaune/sichtschutz-1.jpg" alt="Moderner Holz-Sichtschutz" loading="lazy">
+                                    <figcaption>Moderner Lamellen-Sichtschutz aus Lärchenholz</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/projekte/zaune/zaun-1.jpg" alt="Klassischer Holzzaun" loading="lazy">
+                                    <figcaption>Klassischer Lattenzaun aus druckimprägnierter Kiefer</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/projekte/zaune/sichtschutz-2.jpg" alt="Sichtschutz mit Rankgitter" loading="lazy">
+                                    <figcaption>Kombinierter Sichtschutz mit integriertem Rankgitter</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        
+                        <!-- Container für die Unterkategorie Gartenmöbel -->
+                        <div class="subcategory-content" id="content-gartenmoebel" role="tabpanel" aria-labelledby="tab-gartenmoebel" hidden>
+                            <h4>Maßgefertigte Gartenmöbel</h4>
+                            <p>Unsere Gartenmöbel werden aus hochwertigen, witterungsbeständigen Hölzern gefertigt und sind perfekt auf Ihre Bedürfnisse und Ihren Außenbereich abgestimmt.</p>
+                            
+                            <div class="project-gallery">
+                                <figure>
+                                    <img src="images/projekte/gartenmoebel/gartenmoebel-1.jpg" alt="Massive Gartenbank aus Eichenholz" loading="lazy">
+                                    <figcaption>Massive Gartenbank aus heimischer Eiche</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/projekte/gartenmoebel/gartenmoebel-2.jpg" alt="Gartentisch mit passenden Stühlen aus Teak" loading="lazy">
+                                    <figcaption>Gartentisch mit passenden Stühlen aus Teakholz</figcaption>
+                                </figure>
+                                <figure>
+                                    <img src="images/projekte/gartenmoebel/gartenmoebel-3.jpg" alt="Moderne Loungemöbel für den Außenbereich" loading="lazy">
+                                    <figcaption>Moderne Lounge-Sitzgruppe aus wetterfestem Robinienholz</figcaption>
+                                </figure>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                
                 <!-- Container für Küchen -->
-                <div class="category-content" id="content-kuechen" style="display: none;">
-                    <h4>Projekte für Küchen</h4>
-                    <p>Hier könnten Unterkategorien oder direkt Projekte angezeigt werden.</p>
+                <div class="category-content" id="content-kuechen" role="tabpanel" aria-labelledby="tab-kuechen" hidden>
+                    <h3>Individuelle Küchen</h3>
+                    <p>Unsere maßgefertigten Küchen verbinden Funktionalität mit Ästhetik und werden exakt nach Ihren Wünschen und Raumbedingungen gefertigt.</p>
+                    
+                    <!-- Inhalt folgt -->
+                    <p class="info-message">Diese Kategorie wird derzeit aktualisiert. Bitte schauen Sie in Kürze wieder vorbei.</p>
                 </div>
+                
                 <!-- Container für Badmöbel -->
-                <div class="category-content" id="content-badmoebel" style="display: none;">
-                    <h4>Projekte für Badmöbel</h4>
-                    <p>Hier könnten Unterkategorien oder direkt Projekte angezeigt werden.</p>
+                <div class="category-content" id="content-badmoebel" role="tabpanel" aria-labelledby="tab-badmoebel" hidden>
+                    <h3>Badmöbel nach Maß</h3>
+                    <p>Unsere Badmöbel werden individuell nach Maß gefertigt und optimal an Ihren Raum angepasst – für maximale Funktionalität und ein harmonisches Ambiente.</p>
+                    
+                    <!-- Inhalt folgt -->
+                    <p class="info-message">Diese Kategorie wird derzeit aktualisiert. Bitte schauen Sie in Kürze wieder vorbei.</p>
                 </div>
+                
                 <!-- Container für Ladenbau -->
-                <div class="category-content" id="content-ladenbau" style="display: none;">
-                    <h4>Projekte im Ladenbau</h4>
-                    <p>Hier könnten Unterkategorien oder direkt Projekte angezeigt werden.</p>
+                <div class="category-content" id="content-ladenbau" role="tabpanel" aria-labelledby="tab-ladenbau" hidden>
+                    <h3>Exklusiver Ladenbau</h3>
+                    <p>Wir gestalten und fertigen hochwertige Ladeneinrichtungen, die Ihre Produkte optimal in Szene setzen und Ihr Unternehmensimage unterstreichen.</p>
+                    
+                    <!-- Inhalt folgt -->
+                    <p class="info-message">Diese Kategorie wird derzeit aktualisiert. Bitte schauen Sie in Kürze wieder vorbei.</p>
                 </div>
+                
                 <!-- Container für Reparaturen -->
-                <div class="category-content" id="content-reparaturen" style="display: none;">
-                    <h4>Durchgeführte Reparaturen</h4>
-                    <p>Hier könnten Unterkategorien oder direkt Projekte angezeigt werden.</p>
+                <div class="category-content" id="content-reparaturen" role="tabpanel" aria-labelledby="tab-reparaturen" hidden>
+                    <h3>Fachgerechte Reparaturen</h3>
+                    <p>Wir führen fachgerechte Reparaturen an Holzbauteilen, Möbeln und anderen Holzprodukten durch – für eine lange Lebensdauer Ihrer Holzwerte.</p>
+                    
+                    <!-- Inhalt folgt -->
+                    <p class="info-message">Diese Kategorie wird derzeit aktualisiert. Bitte schauen Sie in Kürze wieder vorbei.</p>
                 </div>
             </div>
+        </section>
+
+        <section class="project-request">
+            <h2>Haben Sie ein Projekt im Sinn?</h2>
+            <p>Wir beraten Sie gerne zu Ihrem individuellen Projekt. Kontaktieren Sie uns für ein unverbindliches Angebot oder einen Beratungstermin.</p>
+            <a href="kontakt.html" class="cta-button">Kontakt aufnehmen</a>
         </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Schreinerei Ef-sin | <a href="#">Impressum</a> | <a href="#">Datenschutz</a></p>
+        <div class="footer-content">
+            <div class="footer-contact">
+                <h3>Kontakt</h3>
+                <p>Schreinerei Ef-sin</p>
+                <p>Musterstraße 123</p>
+                <p>12345 Musterstadt</p>
+                <p>Tel: <a href="tel:+49XXXXXXXXXX">+49 XXXX XXXXXX</a></p>
+                <p>E-Mail: <a href="mailto:info@ef-sin.de">info@ef-sin.de</a></p>
+            </div>
+            
+            <div class="footer-nav">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><a href="index.html">Startseite</a></li>
+                    <li><a href="ueber-uns.html">Über uns</a></li>
+                    <li><a href="leistungen.html">Leistungen</a></li>
+                    <li><a href="projekte.html">Projekte</a></li>
+                    <li><a href="kontakt.html">Kontakt</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-hours">
+                <h3>Öffnungszeiten</h3>
+                <p>Mo - Fr: 8:00 - 17:00 Uhr</p>
+                <p>Sa: Nach Vereinbarung</p>
+                <p>So: Geschlossen</p>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>&copy; 2025 Schreinerei Ef-sin. Alle Rechte vorbehalten.</p>
+            <ul class="footer-legal">
+                <li><a href="impressum.html">Impressum</a></li>
+                <li><a href="datenschutz.html">Datenschutz</a></li>
+            </ul>
+        </div>
     </footer>
-    <script src="script.js"></script>
 
+    <script src="script.js"></script>
 </body>
 </html>
+Made with
