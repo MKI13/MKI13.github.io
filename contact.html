@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <!--
+    SICHERHEITS- UND DATENSCHUTZ-ENTSCHEIDUNGEN:
+    
+    Kontaktformular:
+    - Nutzt action="https://formspree.io/..." als Platzhalter
+    - KEINE direkte E-Mail-Anzeige (Schutz vor Spam-Bots)
+    - KEIN JavaScript für Validierung (Server-seitig handhaben)
+    - method="POST" für sichere Datenübertragung
+    - honeypot-Feld als Spam-Schutz (versteckt per CSS)
+    
+    Alternative Backends:
+    - Formspree.io (einfach, DSGVO-konform)
+    - Netlify Forms (wenn auf Netlify gehostet)
+    - Eigener PHP/Python Backend-Endpoint
+    
+    WICHTIG: action-URL muss vor Deployment angepasst werden!
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Kontaktieren Sie ef-sin für Ihr maßgefertigtes Holzprojekt. Wir freuen uns auf Ihre Anfrage.">
+    <title>Kontakt - ef-sin</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Hauptnavigation">
+            <div class="container nav-container">
+                <div class="logo">
+                    <a href="index.html" aria-label="Zur Startseite">ef-sin</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link">Start</a></li>
+                    <li><a href="about.html" class="nav-link">Über uns</a></li>
+                    <li><a href="konfigurator.html" class="nav-link">Konfigurator</a></li>
+                    <li><a href="contact.html" class="nav-link active">Kontakt</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1 class="page-title fade-in">Kontakt</h1>
+            <p class="page-subtitle fade-in-delay">Lassen Sie uns über Ihr Projekt sprechen</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="contact-section">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2 class="section-title">Kontaktinformationen</h2>
+                    <p class="contact-intro">
+                        Sie haben eine Idee oder ein konkretes Projekt? 
+                        Kontaktieren Sie mich gerne für ein unverbindliches Beratungsgespräch.
+                    </p>
+                    
+                    <div class="info-block">
+                        <h3 class="info-title">Büro</h3>
+                        <p class="info-text">
+                            ef-sin<br>
+                            Schmorellstraße 6<br>
+                            82008 Unterhaching
+                        </p>
+                    </div>
+
+                    <div class="info-block">
+                        <h3 class="info-title">Werkstatt</h3>
+                        <p class="info-text">
+                            Germeringerweg 3c<br>
+                            81245 München
+                        </p>
+                    </div>
+                    
+                    <div class="info-block">
+                        <h3 class="info-title">Telefon</h3>
+                        <p class="info-text">
+                            <a href="tel:+4900000000000" class="contact-link">+49 (0) 000 - 000 000</a>
+                        </p>
+                        <p class="info-note">
+                            <strong>Öffnungszeiten:</strong><br>
+                            Montag - Freitag: 08:00 - 18:00 Uhr<br>
+                            Samstag: 08:00 - 12:00 Uhr<br>
+                            Sonntag: Geschlossen
+                        </p>
+                    </div>
+                    
+                    <div class="info-block">
+                        <h3 class="info-title">Erreichbarkeit</h3>
+                        <p class="info-text">
+                            Nutzen Sie gerne das Kontaktformular oder unseren 
+                            <a href="konfigurator.html" class="contact-link">Online-Konfigurator</a>. 
+                            Ich melde mich in der Regel innerhalb von 24 Stunden bei Ihnen zurück.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="contact-form-wrapper">
+                    <h2 class="section-title">Anfrage senden</h2>
+                    
+                    <!--
+                    WICHTIG: Vor Deployment die action-URL anpassen!
+                    
+                    Optionen:
+                    1. Formspree: https://formspree.io/f/YOUR_FORM_ID
+                    2. Netlify Forms: Einfach data-netlify="true" hinzufügen
+                    3. Eigener Backend-Endpoint: https://ihre-domain.de/api/contact
+                    
+                    Das Formular funktioniert OHNE JavaScript.
+                    Browser-native Validierung durch required, type="email" etc.
+                    -->
+                    <form 
+                        action="https://formspree.io/f/IHRE_FORM_ID_HIER" 
+                        method="POST" 
+                        class="contact-form"
+                        aria-label="Kontaktformular"
+                    >
+                        <!-- Honeypot gegen Spam-Bots (versteckt per CSS) -->
+                        <input 
+                            type="text" 
+                            name="_gotcha" 
+                            class="honeypot" 
+                            tabindex="-1" 
+                            autocomplete="off"
+                            aria-hidden="true"
+                        >
+                        
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name *</label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                class="form-input"
+                                required
+                                aria-required="true"
+                                placeholder="Ihr Name"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email" class="form-label">E-Mail *</label>
+                            <input 
+                                type="email" 
+                                id="email" 
+                                name="email" 
+                                class="form-input"
+                                required
+                                aria-required="true"
+                                placeholder="ihre@email.de"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone" class="form-label">Telefon (optional)</label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone" 
+                                class="form-input"
+                                placeholder="+49 000 000000"
+                            >
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Betreff *</label>
+                            <select 
+                                id="subject" 
+                                name="subject" 
+                                class="form-input"
+                                required
+                                aria-required="true"
+                            >
+                                <option value="">Bitte wählen...</option>
+                                <option value="moebel">Möbelbau nach Maß</option>
+                                <option value="kueche">Küche / Schränke</option>
+                                <option value="innenausbau">Innenausbau</option>
+                                <option value="reparatur">Reparatur / Restaurierung</option>
+                                <option value="beratung">Allgemeine Beratung</option>
+                                <option value="sonstiges">Sonstiges</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Nachricht *</label>
+                            <textarea 
+                                id="message" 
+                                name="message" 
+                                class="form-input form-textarea"
+                                required
+                                aria-required="true"
+                                rows="6"
+                                placeholder="Beschreiben Sie Ihr Projekt oder Ihre Anfrage..."
+                            ></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input 
+                                    type="checkbox" 
+                                    name="privacy" 
+                                    required
+                                    aria-required="true"
+                                >
+                                <span>
+                                    Ich habe die 
+                                    <a href="datenschutz.html" class="form-link" target="_blank">Datenschutzerklärung</a> 
+                                    zur Kenntnis genommen. Ich stimme zu, dass meine Angaben zur Kontaktaufnahme 
+                                    und für Rückfragen gespeichert werden. *
+                                </span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">
+                            Nachricht senden
+                        </button>
+
+                        <p class="form-note">
+                            * Pflichtfelder
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Placeholder -->
+    <section class="map-section">
+        <div class="map-placeholder" role="img" aria-label="Standort-Karte Platzhalter">
+            <div class="map-overlay">
+                <p class="map-text">
+                    <strong>Standort-Karte</strong><br>
+                    Hier kann optional eine statische Karte (z.B. OpenStreetMap-Screenshot) 
+                    eingefügt werden.<br>
+                    Keine externen Karten-APIs verwenden (DSGVO).
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-title">ef-sin</h3>
+                    <p class="footer-text">
+                        Qualität und Handwerkskunst seit Jahren.<br>
+                        Ihr Partner für maßgefertigte Holzarbeiten.<br><br>
+                        <strong>Büro:</strong> Schmorellstraße 6, 82008 Unterhaching<br>
+                        <strong>Werkstatt:</strong> Germeringerweg 3c, 81245 München
+                    </p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Start</a></li>
+                        <li><a href="about.html">Über uns</a></li>
+                        <li><a href="konfigurator.html">Konfigurator</a></li>
+                        <li><a href="contact.html">Kontakt</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Rechtliches</h3>
+                    <ul class="footer-links">
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 ef-sin. Alle Rechte vorbehalten.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+Sitemap für Holzbau Karampas
+Hilft Suchmaschinen, alle Seiten zu finden und zu indexieren.
+
+WICHTIG: Ersetzen Sie "https://ihre-domain.de" mit Ihrer echten Domain!
+Aktualisieren Sie die <lastmod> Daten bei Änderungen.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
+    <!-- Startseite - Höchste Priorität -->
+    <url>
+        <loc>https://ef-sin.de/</loc>
+        <lastmod>2024-11-02</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Über uns Seite -->
+    <url>
+        <loc>https://ef-sin.de/about.html</loc>
+        <lastmod>2024-11-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Konfigurator - Wichtig für Conversions! -->
+    <url>
+        <loc>https://ef-sin.de/konfigurator.html</loc>
+        <lastmod>2024-11-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Kontakt Seite -->
+    <url>
+        <loc>https://ef-sin.de/contact.html</loc>
+        <lastmod>2024-11-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+
+    <!-- Impressum -->
+    <url>
+        <loc>https://ef-sin.de/impressum.html</loc>
+        <lastmod>2024-11-02</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <!-- Datenschutzerklärung -->
+    <url>
+        <loc>https://ef-sin.de/datenschutz.html</loc>
+        <lastmod>2024-11-02</lastmod>
+        <changefreq>yearly</changefreq>
+        <priority>0.3</priority>
+    </url>
+
+    <!-- 
+    Weitere Seiten hier hinzufügen, wenn Sie später mehr Seiten erstellen:
+    
+    <url>
+        <loc>https://ihre-domain.de/portfolio.html</loc>
+        <lastmod>2024-01-01</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    -->
+
+</urlset>
+
+<!-- 
+HINWEISE:
+
+1. changefreq-Werte:
+   - always: Seite ändert sich bei jedem Zugriff
+   - hourly: Stündliche Updates
+   - daily: Tägliche Updates
+   - weekly: Wöchentliche Updates
+   - monthly: Monatliche Updates
+   - yearly: Jährliche Updates
+   - never: Archivierte Inhalte
+
+2. priority-Werte (0.0 bis 1.0):
+   - 1.0: Wichtigste Seiten (Startseite)
+   - 0.8-0.9: Sehr wichtige Seiten (Hauptnavigation)
+   - 0.5-0.7: Mittlere Priorität (Unterseiten)
+   - 0.3-0.4: Niedrige Priorität (Footer-Links)
+
+3. Nach Deployment:
+   - Sitemap bei Google Search Console einreichen
+   - URL in robots.txt prüfen
+   - Bei Änderungen Sitemap aktualisieren und erneut einreichen
+
+4. Automatische Sitemap-Generierung (optional):
+   - Online-Tools: xml-sitemaps.com
+   - CMS-Plugins (falls Sie später ein CMS nutzen)
+-->

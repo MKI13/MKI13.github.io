@@ -1,0 +1,345 @@
+========================================
+ef-sin WEBSEITE - UBUNTU BEFEHLE
+========================================
+
+Diese Datei enthält ALLE Befehle, die Sie brauchen!
+Kopieren Sie die Befehle einfach in Ihr Terminal.
+
+========================================
+1. BILDSTRUKTUR ERSTELLEN
+========================================
+
+# Terminal öffnen (Strg + Alt + T)
+
+# Zum Projekt-Ordner navigieren (passen Sie den Pfad an!)
+cd ~/ef-sin
+
+# Ordnerstruktur erstellen
+mkdir -p bilder/{hero,portfolio,werkstatt,portrait,icons}
+
+# Prüfen ob Ordner erstellt wurden
+ls -la bilder/
+
+# Erwartete Ausgabe:
+# bilder/
+# ├── hero/
+# ├── portfolio/
+# ├── werkstatt/
+# ├── portrait/
+# └── icons/
+
+========================================
+2. IMAGEMAGICK INSTALLIEREN (für Optimierung)
+========================================
+
+# System aktualisieren
+sudo apt update
+
+# ImageMagick installieren
+sudo apt install imagemagick -y
+
+# Installation prüfen
+convert --version
+
+========================================
+3. BILDER OPTIMIEREN
+========================================
+
+# EINZELNES BILD OPTIMIEREN:
+
+# Hero-Bild (1920x1080px) - Für Startseite Hintergrund
+convert ORIGINAL.jpg -resize 1920x1080^ -gravity center -extent 1920x1080 -quality 85 -strip bilder/hero/hero-hauptbild.jpg
+
+# Portfolio-Bild (800x600px)
+convert ORIGINAL.jpg -resize 800x600 -quality 85 -strip bilder/portfolio/NAME.jpg
+
+# Werkstatt-Bild (1200x800px)
+convert ORIGINAL.jpg -resize 1200x800 -quality 85 -strip bilder/werkstatt/NAME.jpg
+
+# Portrait (800x600px)
+convert ORIGINAL.jpg -resize 800x600 -quality 85 -strip bilder/portrait/portrait.jpg
+
+
+# MEHRERE BILDER AUF EINMAL:
+
+# Alle JPG-Bilder im aktuellen Ordner für Portfolio optimieren
+for img in *.jpg; do 
+    convert "$img" -resize 800x600 -quality 85 -strip "bilder/portfolio/$img"
+done
+
+# Nur bestimmte Bilder (mit Namen)
+for img in kueche*.jpg tisch*.jpg schrank*.jpg; do 
+    convert "$img" -resize 800x600 -quality 85 -strip "bilder/portfolio/$img"
+done
+
+========================================
+4. BILDER KOPIEREN (ohne Optimierung)
+========================================
+
+# Wenn Ihre Bilder bereits optimiert sind oder in ~/Bilder/ liegen:
+
+# Hero-Bild
+cp ~/Bilder/werkstatt-draussen.jpg bilder/hero/hero-hauptbild.jpg
+
+# Portfolio-Bilder (8 Stück minimum)
+cp ~/Bilder/kueche1.jpg bilder/portfolio/kueche-01.jpg
+cp ~/Bilder/tisch1.jpg bilder/portfolio/tisch-01.jpg
+cp ~/Bilder/schrank1.jpg bilder/portfolio/schrank-01.jpg
+cp ~/Bilder/kleiderschrank1.jpg bilder/portfolio/kleiderschrank-01.jpg
+cp ~/Bilder/treppe1.jpg bilder/portfolio/treppe-01.jpg
+cp ~/Bilder/terrasse1.jpg bilder/portfolio/terrasse-01.jpg
+cp ~/Bilder/terrasse2.jpg bilder/portfolio/terrasse-02.jpg
+cp ~/Bilder/bad1.jpg bilder/portfolio/badmoebel-01.jpg
+
+# Werkstatt-Bilder
+cp ~/Bilder/werkstatt-front.jpg bilder/werkstatt/werkstatt-aussen.jpg
+cp ~/Bilder/werkstatt-innen.jpg bilder/werkstatt/werkstatt-innen.jpg
+
+# Portrait (optional)
+cp ~/Bilder/portrait.jpg bilder/portrait/portrait.jpg
+
+========================================
+5. DATEINAMEN & STRUKTUR PRÜFEN
+========================================
+
+# Alle Bilder auflisten
+find bilder -type f -name '*.jpg' -o -name '*.png'
+
+# Erwartete Dateien:
+# bilder/hero/hero-hauptbild.jpg
+# bilder/portfolio/kueche-01.jpg
+# bilder/portfolio/tisch-01.jpg
+# bilder/portfolio/schrank-01.jpg
+# bilder/portfolio/kleiderschrank-01.jpg
+# bilder/portfolio/treppe-01.jpg
+# bilder/portfolio/terrasse-01.jpg
+# bilder/portfolio/terrasse-02.jpg
+# bilder/portfolio/badmoebel-01.jpg
+# bilder/werkstatt/werkstatt-aussen.jpg
+# bilder/werkstatt/werkstatt-innen.jpg
+# bilder/portrait/portrait.jpg (optional)
+
+# Bildgrößen prüfen (Pixel-Dimensionen)
+identify bilder/portfolio/*.jpg
+
+# Dateigröße prüfen (sollte < 500 KB sein)
+du -h bilder/portfolio/*.jpg
+
+# Zu große Dateien finden (> 500 KB)
+find bilder -type f -size +500k
+
+========================================
+6. BILDER UMBENENNEN (falls nötig)
+========================================
+
+# Einzelne Datei umbenennen
+mv bilder/portfolio/alte-name.jpg bilder/portfolio/kueche-01.jpg
+
+# Mehrere Dateien umbenennen mit rename
+# rename installieren falls nicht vorhanden:
+sudo apt install rename
+
+# Beispiele:
+rename 's/ /-/g' bilder/portfolio/*.jpg        # Leerzeichen durch Bindestriche
+rename 'y/A-Z/a-z/' bilder/portfolio/*.jpg     # Großbuchstaben zu Kleinbuchstaben
+
+========================================
+7. FAVICON ERSTELLEN
+========================================
+
+# Favicon aus Bild erstellen (32x32 px)
+convert logo.png -resize 32x32 bilder/icons/favicon.ico
+
+# Mehrere Größen in einer ICO-Datei
+convert logo.png -resize 16x16 -resize 32x32 bilder/icons/favicon.ico
+
+========================================
+8. WEBSEITE TESTEN
+========================================
+
+# Lokalen Webserver starten (im Projekt-Ordner!)
+python3 -m http.server 8000
+
+# Oder mit Python 2:
+python -m SimpleHTTPServer 8000
+
+# Ausgabe sollte sein:
+# Serving HTTP on 0.0.0.0 port 8000 (http://0.0.0.0:8000/) ...
+
+# Browser öffnen:
+firefox http://localhost:8000
+
+# ODER direkt Firefox mit Datei öffnen:
+firefox index.html
+
+# Webserver stoppen:
+# Drücken Sie Strg + C im Terminal
+
+========================================
+9. BILDQUALITÄT PRÜFEN
+========================================
+
+# Details eines Bildes anzeigen
+identify -verbose bilder/hero/hero-hauptbild.jpg
+
+# Nur wichtige Infos
+identify -format "%f: %wx%h %b\n" bilder/portfolio/*.jpg
+
+# Ausgabe Beispiel:
+# kueche-01.jpg: 800x600 245KB
+
+========================================
+10. BATCH-OPERATIONEN
+========================================
+
+# Alle Bilder in einem Ordner verkleinern (Backup machen!)
+mkdir backup
+cp bilder/portfolio/*.jpg backup/
+
+for img in bilder/portfolio/*.jpg; do
+    convert "$img" -quality 85 -strip "$img"
+done
+
+# Wasserzeichen hinzufügen (optional)
+for img in bilder/portfolio/*.jpg; do
+    convert "$img" -gravity southeast -pointsize 20 -fill white \
+    -annotate +10+10 "ef-sin" "$img"
+done
+
+========================================
+11. HÄUFIGE PROBLEME LÖSEN
+========================================
+
+# Problem: "Permission denied"
+# Lösung: Dateiberechtigungen korrigieren
+chmod 644 bilder/**/*.jpg
+chmod 755 bilder bilder/*
+
+# Problem: Bild wird nicht angezeigt
+# Lösung: Pfad prüfen (relativ!)
+# ✅ Richtig: bilder/portfolio/kueche-01.jpg
+# ❌ Falsch: /bilder/portfolio/kueche-01.jpg
+# ❌ Falsch: ~/ef-sin/bilder/portfolio/kueche-01.jpg
+
+# Problem: ImageMagick Fehler "not authorized"
+# Lösung: ImageMagick Policy anpassen
+sudo nano /etc/ImageMagick-6/policy.xml
+# Suchen Sie: <policy domain="coder" rights="none" pattern="PDF" />
+# Ändern zu:  <policy domain="coder" rights="read|write" pattern="PDF" />
+
+========================================
+12. GIT VORBEREITEN (für GitLab Upload)
+========================================
+
+# Git installieren (falls nicht vorhanden)
+sudo apt install git -y
+
+# Im Projekt-Ordner Git initialisieren
+git init
+
+# Alle Dateien hinzufügen
+git add .
+
+# Commit erstellen
+git commit -m "ef-sin Webseite mit Bildern"
+
+# Mit GitLab verbinden (URL von GitLab kopieren)
+git remote add origin https://gitlab.com/IHR-USERNAME/ef-sin.git
+
+# Hochladen
+git push -u origin main
+
+# Falls "main" nicht existiert:
+git branch -M main
+git push -u origin main
+
+========================================
+13. NÜTZLICHE TOOLS
+========================================
+
+# Nautilus (Dateimanager) mit Bilder-Ordner öffnen
+nautilus bilder/
+
+# Bild-Viewer öffnen
+eog bilder/portfolio/kueche-01.jpg
+
+# Mehrere Bilder gleichzeitig anschauen
+eog bilder/portfolio/*.jpg
+
+# GIMP öffnen (falls installiert)
+gimp bilder/portfolio/kueche-01.jpg
+
+========================================
+14. PROJEKT-BEREINIGUNG
+========================================
+
+# Temporäre Dateien löschen
+find bilder -name "*~" -delete
+find bilder -name ".DS_Store" -delete
+
+# Leere Ordner löschen
+find bilder -type d -empty -delete
+
+# Backup löschen (VORSICHT!)
+rm -rf backup/
+
+========================================
+15. VOLLSTÄNDIGER WORKFLOW
+========================================
+
+# KOMPLETT-ABLAUF (Kopieren & Ausführen):
+
+# 1. Ordner erstellen
+mkdir -p bilder/{hero,portfolio,werkstatt,portrait,icons}
+
+# 2. Ihre Originalbilder in temporären Ordner kopieren
+mkdir ~/temp-bilder
+# HIER: Kopieren Sie Ihre Bilder nach ~/temp-bilder/
+
+# 3. Bilder optimieren und umbenennen
+cd ~/temp-bilder
+
+# Hero-Bild
+convert werkstatt-beste-aufnahme.jpg -resize 1920x1080^ -gravity center -extent 1920x1080 -quality 85 ~/ef-sin/bilder/hero/hero-hauptbild.jpg
+
+# Portfolio-Bilder (passen Sie Namen an!)
+convert kueche.jpg -resize 800x600 -quality 85 ~/ef-sin/bilder/portfolio/kueche-01.jpg
+convert tisch.jpg -resize 800x600 -quality 85 ~/ef-sin/bilder/portfolio/tisch-01.jpg
+convert schrank.jpg -resize 800x600 -quality 85 ~/ef-sin/bilder/portfolio/schrank-01.jpg
+convert kleiderschrank.jpg -resize 800x600 -quality 85 ~/ef-sin/bilder/portfolio/kleiderschrank-01.jpg
+convert treppe.jpg -resize 800x600 -quality 85 ~/ef-sin/bilder/portfolio/treppe-01.jpg
+convert terrasse1.jpg -resize 800x600 -quality 85 ~/ef-sin/bilder/portfolio/terrasse-01.jpg
+convert terrasse2.jpg -resize 800x600 -quality 85 ~/ef-sin/bilder/portfolio/terrasse-02.jpg
+convert bad.jpg -resize 800x600 -quality 85 ~/ef-sin/bilder/portfolio/badmoebel-01.jpg
+
+# Werkstatt
+convert werkstatt-aussen.jpg -resize 1200x800 -quality 85 ~/ef-sin/bilder/werkstatt/werkstatt-aussen.jpg
+convert werkstatt-innen.jpg -resize 1200x800 -quality 85 ~/ef-sin/bilder/werkstatt/werkstatt-innen.jpg
+
+# 4. Zurück zum Projekt
+cd ~/ef-sin
+
+# 5. Prüfen
+find bilder -type f -name '*.jpg'
+
+# 6. Testen
+firefox index.html
+
+========================================
+FERTIG! 🎉
+========================================
+
+Ihre Webseite sollte jetzt mit allen Bildern laufen!
+
+Nächste Schritte:
+1. Formular-Backend einrichten (siehe README.md)
+2. Impressum & Datenschutz vervollständigen
+3. Zu GitLab hochladen
+4. Domain verbinden
+
+Bei Problemen:
+- Siehe README.md
+- Siehe DEPLOYMENT-GUIDE.md
+- Siehe BILDER-STRUKTUR.md
+
+Stand: 2. November 2024
