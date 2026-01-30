@@ -1,11 +1,11 @@
-# 📸 Bildstruktur und Speicheranleitung für ef-sin Webseite
+# 📸 Bildstruktur und Speicheranleitung für ef-sinn Webseite
 
 ## Ordnerstruktur
 
 Erstellen Sie folgende Ordnerstruktur in Ihrem Projekt:
 
 ```
-ef-sin/
+ef-sinn/
 ├── index.html
 ├── about.html
 ├── contact.html

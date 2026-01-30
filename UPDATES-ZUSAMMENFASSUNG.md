@@ -1,19 +1,19 @@
-# ✅ ef-sin Webseite - Updates Zusammenfassung
+# ✅ ef-sinn Webseite - Updates Zusammenfassung
 
 ## Was wurde aktualisiert
 
 ### ✅ FERTIG - Folgende Dateien sind aktualisiert:
 
 1. **index.html** ✅
-   - Firmenname: ef-sin
-   - Domain: ef-sin.de
+   - Firmenname: ef-sinn
+   - Domain: ef-sinn.de
    - Navigation mit Konfigurator-Link
    - 8 Portfolio-Bilder inkl. Holzterrassen
    - Footer mit beiden Adressen
    - Erweiterte Services (6 Kategorien)
 
 2. **about.html** ✅
-   - Firmenname: ef-sin
+   - Firmenname: ef-sinn
    - Navigation mit Konfigurator-Link
    - Footer mit beiden Adressen
 
@@ -39,8 +39,8 @@
    - Responsive Design
 
 6. **impressum.html** ⚠️ TEILWEISE
-   - Firmenname auf ef-sin geändert
-   - E-Mail auf @ef-sin.de geändert
+   - Firmenname auf ef-sinn geändert
+   - E-Mail auf @ef-sinn.de geändert
    - ⚠️ **NOCH ZU TUN**: Vollständiger Name des Inhabers
    - ⚠️ **NOCH ZU TUN**: Telefonnummer
    - ⚠️ **NOCH ZU TUN**: Handwerkskammer prüfen (München?)
@@ -48,8 +48,8 @@
    - ⚠️ **NOCH ZU TUN**: Navigation & Footer mit Konfigurator-Link
 
 7. **datenschutz.html** ⚠️ TEILWEISE
-   - Firmenname auf ef-sin geändert
-   - E-Mail auf @ef-sin.de geändert
+   - Firmenname auf ef-sinn geändert
+   - E-Mail auf @ef-sinn.de geändert
    - ⚠️ **NOCH ZU TUN**: Name des Verantwortlichen
    - ⚠️ **NOCH ZU TUN**: Hosting-Anbieter eintragen
    - ⚠️ **NOCH ZU TUN**: Formular-Backend eintragen (Formspree/Netlify/etc.)
@@ -57,12 +57,12 @@
    - ⚠️ **NOCH ZU TUN**: Navigation & Footer mit Konfigurator-Link
 
 8. **sitemap.xml** ⚠️
-   - ⚠️ **NOCH ZU TUN**: Domain auf ef-sin.de ändern
+   - ⚠️ **NOCH ZU TUN**: Domain auf ef-sinn.de ändern
    - ⚠️ **NOCH ZU TUN**: konfigurator.html hinzufügen
    - ⚠️ **NOCH ZU TUN**: Datum aktualisieren
 
 9. **robots.txt** ⚠️
-   - ⚠️ **NOCH ZU TUN**: Sitemap-URL auf ef-sin.de ändern
+   - ⚠️ **NOCH ZU TUN**: Sitemap-URL auf ef-sinn.de ändern
 
 10. **BILDER-STRUKTUR.md** ✅ NEU!
     - Komplette Anleitung zur Bildorganisation
@@ -74,8 +74,8 @@
     - Keine Änderungen nötig (Universal)
 
 12. **README.md** ⚠️
-    - ⚠️ **NOCH ZU TUN**: Firmenname auf ef-sin ändern
-    - ⚠️ **NOCH ZU TUN**: Domain auf ef-sin.de ändern
+    - ⚠️ **NOCH ZU TUN**: Firmenname auf ef-sinn ändern
+    - ⚠️ **NOCH ZU TUN**: Domain auf ef-sinn.de ändern
 
 ---
 
@@ -130,7 +130,7 @@
 
 6. **Domain & Hosting**
    ```
-   - [ ] Domain ef-sin.de registriert?
+   - [ ] Domain ef-sinn.de registriert?
    - [ ] DNS konfiguriert?
    - [ ] SSL-Zertifikat eingerichtet?
    ```
@@ -140,7 +140,7 @@
 ## 📋 VOLLSTÄNDIGE CHECKLISTE:
 
 ### Inhalte
-- [x] Firmenname auf ef-sin geändert
+- [x] Firmenname auf ef-sinn geändert
 - [x] Büro-Adresse: Schmorellstraße 6, 82008 Unterhaching
 - [x] Werkstatt-Adresse: Germeringerweg 3c, 81245 München
 - [x] Öffnungszeiten eingefügt
@@ -190,7 +190,7 @@
 1. Alle Dateien zu GitLab hochladen
 2. Bildordner anlegen und Bilder hochladen
 3. Deployment abwarten (2-5 Minuten)
-4. Webseite unter [username].gitlab.io/ef-sin testen
+4. Webseite unter [username].gitlab.io/ef-sinn testen
 ```
 
 ### 3. Nach erstem Deployment:

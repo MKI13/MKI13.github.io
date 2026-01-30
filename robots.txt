@@ -1,21 +1,7 @@
-# robots.txt für Holzbau Karampas
-# Anleitung für Suchmaschinen-Crawler
+# robots.txt für ef-sinn.de
+# Alle Suchmaschinen erlaubt, rechtliche Seiten indexierbar
 
-# Alle Crawler erlauben
 User-agent: *
 Allow: /
 
-# Sitemap-Verweis
-Sitemap: https://ef-sin.de/sitemap.xml
-
-# Optional: Crawl-Verzögerung für schonenderes Crawling
-# Crawl-delay: 10
-
-# Spezielle Anweisungen für einzelne Bots (optional)
-# User-agent: Googlebot
-# Allow: /
-
-# Keine Bereiche sperren, da vollständig öffentliche Seite
-# Falls Sie später Login-Bereiche oder Admin-Panels haben:
-# Disallow: /admin/
-# Disallow: /private/
+Sitemap: https://www.ef-sinn.de/sitemap.xml

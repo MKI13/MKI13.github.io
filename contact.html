@@ -4,24 +4,21 @@
     <!--
     SICHERHEITS- UND DATENSCHUTZ-ENTSCHEIDUNGEN:
     
-    Kontaktformular:
-    - Nutzt action="https://formspree.io/..." als Platzhalter
-    - KEINE direkte E-Mail-Anzeige (Schutz vor Spam-Bots)
-    - KEIN JavaScript für Validierung (Server-seitig handhaben)
-    - method="POST" für sichere Datenübertragung
-    - honeypot-Feld als Spam-Schutz (versteckt per CSS)
-    
-    Alternative Backends:
-    - Formspree.io (einfach, DSGVO-konform)
-    - Netlify Forms (wenn auf Netlify gehostet)
-    - Eigener PHP/Python Backend-Endpoint
-    
-    WICHTIG: action-URL muss vor Deployment angepasst werden!
+    Kontakt:
+    - KEIN Kontaktformular → Kein JavaScript, kein Backend, keine Datenverarbeitung
+    - Direkter mailto:-Link für E-Mail-Kontakt
+    - Telefonnummer als tel:-Link
+    - Maximale Privatsphäre für Besucher
     -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Kontaktieren Sie ef-sin für Ihr maßgefertigtes Holzprojekt. Wir freuen uns auf Ihre Anfrage.">
-    <title>Kontakt - ef-sin</title>
+    <meta name="description" content="Kontaktieren Sie ef-sinn für Ihr maßgefertigtes Holzprojekt. Wir freuen uns auf Ihre Anfrage.">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kontakt - ef-sinn Schreinerwerkstatt">
+    <meta property="og:description" content="Kontaktieren Sie ef-sinn für Ihr individuelles Holzprojekt in München und Unterhaching.">
+    <meta property="og:url" content="https://www.ef-sinn.de/contact.html">
+    <meta property="og:locale" content="de_DE">
+    <title>Kontakt - ef-sinn</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -30,7 +27,7 @@
         <nav class="navbar" role="navigation" aria-label="Hauptnavigation">
             <div class="container nav-container">
                 <div class="logo">
-                    <a href="index.html" aria-label="Zur Startseite">ef-sin</a>
+                    <a href="index.html" aria-label="Zur Startseite">ef-sinn</a>
                 </div>
                 <ul class="nav-menu">
                     <li><a href="index.html" class="nav-link">Start</a></li>
@@ -64,7 +61,7 @@
                     <div class="info-block">
                         <h3 class="info-title">Büro</h3>
                         <p class="info-text">
-                            ef-sin<br>
+                            ef-sinn<br>
                             Schmorellstraße 6<br>
                             82008 Unterhaching
                         </p>
@@ -92,6 +89,13 @@
                     </div>
                     
                     <div class="info-block">
+                        <h3 class="info-title">E-Mail</h3>
+                        <p class="info-text">
+                            <a href="mailto:info@ef-sinn.de" class="contact-link">info@ef-sinn.de</a>
+                        </p>
+                    </div>
+
+                    <div class="info-block">
                         <h3 class="info-title">Erreichbarkeit</h3>
                         <p class="info-text">
                             Sie erreichen mich am besten per E-Mail oder Telefon. 
@@ -100,45 +104,35 @@
                     </div>
                 </div>
 
-                <!-- Contact Form -->
+                <!-- Kein Kontaktformular – kein JavaScript, kein Tracking, maximale Privatsphäre -->
                 <div class="contact-form-wrapper">
-                    
-                    <!--
-                    WICHTIG: Vor Deployment die action-URL anpassen!
-                    
-                    Optionen:
-                    1. Formspree: https://formspree.io/f/YOUR_FORM_ID
-                    2. Netlify Forms: Einfach data-netlify="true" hinzufügen
-                    3. Eigener Backend-Endpoint: https://ihre-domain.de/api/contact
-                    
-                    Das Formular funktioniert OHNE JavaScript.
-                    Browser-native Validierung durch required, type="email" etc.
-                    -->
+                    <div class="contact-form" style="text-align: center; padding: 3rem 2rem;">
+                        <h2 class="section-title" style="margin-bottom: 1rem;">Schreiben Sie uns</h2>
+                        <p style="margin-bottom: 2rem; line-height: 1.8; color: var(--color-text-light);">
+                            Senden Sie uns eine E-Mail mit Ihrem Anliegen. 
+                            Wir melden uns schnellstmöglich bei Ihnen zurück.
+                        </p>
+                        <a href="mailto:info@ef-sinn.de?subject=Projektanfrage" class="btn btn-secondary">
+                            E-Mail senden
+                        </a>
+                        <p style="margin-top: 2rem; font-size: 0.875rem; color: var(--color-text-light);">
+                            Oder rufen Sie uns direkt an:<br>
+                            <a href="tel:+4917687186451" class="contact-link" style="font-size: 1.125rem; font-weight: 600;">+49 176 8718 6451</a>
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Map Placeholder -->
-    <section class="map-section">
-        <div class="map-placeholder" role="img" aria-label="Standort-Karte Platzhalter">
-            <div class="map-overlay">
-                <p class="map-text">
-                    <strong>Standort-Karte</strong><br>
-                    Hier kann optional eine statische Karte (z.B. OpenStreetMap-Screenshot) 
-                    eingefügt werden.<br>
-                    Keine externen Karten-APIs verwenden (DSGVO).
-                </p>
-            </div>
-        </div>
-    </section>
+    <!-- Karte: Bewusst nicht eingebunden (Datenschutz). Kann optional als statisches Bild ergänzt werden. -->
 
     <!-- Footer -->
     <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-column">
-                    <h3 class="footer-title">ef-sin</h3>
+                    <h3 class="footer-title">ef-sinn</h3>
                     <p class="footer-text">
                         Qualität und Handwerkskunst seit Jahren.<br>
                         Ihr Partner für maßgefertigte Holzarbeiten.<br><br>
@@ -166,7 +160,7 @@
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2024 ef-sin. Alle Rechte vorbehalten.</p>
+                <p>&copy; 2026 ef-sinn. Alle Rechte vorbehalten.</p>
             </div>
         </div>
     </footer>
