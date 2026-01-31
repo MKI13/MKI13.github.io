@@ -1226,3 +1226,17 @@ img {
         border-width: 3px;
     }
 }
+
+/* Logo Image Styling */
+.logo a {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.logo a img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
