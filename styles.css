@@ -80,17 +80,20 @@ textarea {
 
 /* ===== CSS VARIABLEN ===== */
 :root {
-    /* Farbpalette - Holz-inspiriert */
-    --color-primary: #8b5a3c;        /* Warmes Braun (Holz) */
-    --color-primary-dark: #6d4530;   /* Dunkleres Holz */
-    --color-primary-light: #a67c52;  /* Helles Holz */
-    --color-secondary: #3d3d3d;      /* Anthrazit */
-    --color-accent: #c9a87c;         /* Gold/Beige */
+    /* Farbpalette - Logo-basiert (Holz + Stahl + Blau) */
+    --color-primary: #1890C0;        /* Tiefblau (Logo-Akzent) */
+    --color-primary-dark: #106890;   /* Dunkles Blau */
+    --color-primary-light: #3CC8F0;  /* Helles Cyan (Logo-Highlight) */
+    --color-secondary: #3C3C40;      /* Gunmetal (Logo-Stahl) */
+    --color-accent: #D4A010;         /* Gold (Logo-Funken/Unterstrich) */
+    --color-wood: #A87432;           /* Holz-Mittelton (Logo-Zahnrad) */
+    --color-wood-light: #C4944A;     /* Helles Holz */
+    --color-wood-dark: #6B4420;      /* Dunkles Holz */
     --color-text: #2c2c2c;           /* Fast-Schwarz */
-    --color-text-light: #666666;     /* Grau */
+    --color-text-light: #5C5C60;     /* Stahlgrau (Logo) */
     --color-background: #ffffff;     /* Weiß */
-    --color-background-alt: #f8f5f0; /* Beige */
-    --color-border: #e0d5c7;         /* Hellbraun */
+    --color-background-alt: #f4f5f7; /* Kühles Hellgrau */
+    --color-border: #d8d8da;         /* Silber (Logo-Stahl) */
     
     /* Abstände */
     --spacing-xs: 0.5rem;
@@ -224,6 +227,7 @@ textarea {
     box-shadow: var(--shadow-sm);
     z-index: 1000;
     transition: all var(--transition-speed) var(--transition-timing);
+    border-bottom: 2px solid var(--color-accent);
 }
 
 .navbar {
@@ -295,7 +299,7 @@ textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #8b5a3c 0%, #6d4530 100%);
+    background: linear-gradient(135deg, #3C3C40 0%, #1890C0 50%, #106890 100%);
     overflow: hidden;
 }
 
@@ -307,14 +311,9 @@ textarea {
     right: 0;
     bottom: 0;
     background-image: 
-        repeating-linear-gradient(
-            90deg,
-            transparent,
-            transparent 2px,
-            rgba(0, 0, 0, 0.03) 2px,
-            rgba(0, 0, 0, 0.03) 4px
-        );
-    opacity: 0.5;
+        radial-gradient(circle at 20% 80%, rgba(212, 160, 16, 0.15) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(60, 200, 240, 0.1) 0%, transparent 50%);
+    opacity: 1;
 }
 
 .hero-overlay {
@@ -404,6 +403,7 @@ textarea {
     background-color: var(--color-primary);
     color: white;
     border-color: var(--color-primary);
+    box-shadow: 0 4px 12px rgba(24, 144, 192, 0.25);
 }
 
 .btn-secondary:hover,
@@ -411,6 +411,7 @@ textarea {
     background-color: var(--color-primary-dark);
     border-color: var(--color-primary-dark);
     transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(24, 144, 192, 0.35);
 }
 
 .btn-full {
@@ -446,6 +447,19 @@ section {
     color: var(--color-secondary);
     margin-bottom: 1rem;
     line-height: 1.3;
+    position: relative;
+    display: inline-block;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--color-accent), var(--color-primary-light));
+    border-radius: 2px;
 }
 
 .section-subtitle {
@@ -479,7 +493,7 @@ section {
 /* ===== IMAGE PLACEHOLDERS ===== */
 .image-placeholder,
 .intro-image .image-placeholder {
-    background: linear-gradient(135deg, var(--color-background-alt) 0%, #e8dfd5 100%);
+    background: linear-gradient(135deg, var(--color-background-alt) 0%, #e0e2e6 100%);
     border: 2px dashed var(--color-border);
     border-radius: 8px;
     display: flex;
@@ -576,6 +590,7 @@ img {
 .service-card:hover {
     transform: translateY(-8px);
     box-shadow: var(--shadow-lg);
+    border-top: 3px solid var(--color-primary-light);
 }
 
 .service-icon {
@@ -585,7 +600,7 @@ img {
 .icon-placeholder {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, var(--color-primary-light), var(--color-primary));
+    background: linear-gradient(135deg, var(--color-wood-light), var(--color-wood));
     border-radius: 50%;
 }
 
@@ -663,7 +678,7 @@ img {
 
 /* ===== CTA SECTION ===== */
 .cta-section {
-    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+    background: linear-gradient(135deg, var(--color-wood-dark) 0%, var(--color-secondary) 60%, var(--color-primary-dark) 100%);
     color: white;
     text-align: center;
     padding: var(--spacing-xl) 0;
@@ -715,7 +730,7 @@ img {
     background-color: white;
     padding: var(--spacing-md);
     border-radius: 8px;
-    border-left: 4px solid var(--color-primary);
+    border-left: 4px solid var(--color-wood);
     animation: slideInFromLeft 0.6s var(--transition-timing) both;
 }
 
@@ -726,7 +741,7 @@ img {
 
 .value-title {
     font-size: 1.5rem;
-    color: var(--color-primary);
+    color: var(--color-wood);
     margin-bottom: var(--spacing-sm);
 }
 
@@ -782,6 +797,7 @@ img {
     font-weight: 700;
     position: relative;
     z-index: 1;
+    box-shadow: 0 4px 12px rgba(24, 144, 192, 0.3);
 }
 
 .timeline-content {
@@ -895,7 +911,7 @@ img {
 .form-textarea:focus {
     outline: none;
     border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(139, 90, 60, 0.1);
+    box-shadow: 0 0 0 3px rgba(24, 144, 192, 0.15);
 }
 
 .form-input:invalid:not(:placeholder-shown) {
@@ -949,7 +965,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #e8dfd5 0%, #d4c4b0 100%);
+    background: linear-gradient(135deg, #e0e2e6 0%, #c8ccd2 100%);
 }
 
 .map-overlay {
@@ -964,7 +980,7 @@ img {
 
 /* ===== FOOTER ===== */
 .footer {
-    background-color: var(--color-secondary);
+    background-color: #2a2a2e;
     color: white;
     padding: var(--spacing-lg) 0 var(--spacing-md);
 }
@@ -980,6 +996,7 @@ img {
     font-size: 1.25rem;
     margin-bottom: var(--spacing-sm);
     color: var(--color-accent);
+    letter-spacing: 0.5px;
 }
 
 .footer-text {
@@ -1217,7 +1234,7 @@ img {
 /* High Contrast Mode Support */
 @media (prefers-contrast: high) {
     :root {
-        --color-primary: #6d4530;
+        --color-primary: #106890;
         --color-text: #000000;
         --color-border: #333333;
     }
