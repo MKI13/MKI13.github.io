@@ -747,9 +747,8 @@ img {
 }
 
 .service-gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: var(--spacing-md);
+    columns: 3;
+    column-gap: var(--spacing-md);
     margin-top: var(--spacing-lg);
 }
 
@@ -758,6 +757,8 @@ img {
     overflow: hidden;
     border-radius: 8px;
     box-shadow: var(--shadow-sm);
+    break-inside: avoid;
+    margin-bottom: var(--spacing-md);
     animation: scaleIn 0.6s var(--transition-timing) both;
 }
 
@@ -860,9 +861,10 @@ img {
     margin: 0 0.5rem;
 }
 
-/* Responsive Portfolio */
+/* Responsive Portfolio & Galerie */
 @media (max-width: 900px) {
-    .portfolio-grid {
+    .portfolio-grid,
+    .service-gallery-grid {
         columns: 2;
     }
 }
@@ -873,8 +875,9 @@ img {
         grid-template-columns: 1fr;
     }
 
-    .service-gallery-grid {
-        grid-template-columns: 1fr;
+    .service-gallery-grid,
+    .portfolio-grid {
+        columns: 1;
     }
 
     .service-nav-grid {
