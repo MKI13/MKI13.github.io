@@ -535,7 +535,9 @@ img {
 
 .portfolio-item img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
     border-radius: 8px;
 }
 
