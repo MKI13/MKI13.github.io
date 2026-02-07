@@ -686,9 +686,23 @@ img {
 
 .service-detail-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 3fr 2fr;
     gap: var(--spacing-lg);
     align-items: start;
+}
+
+.service-detail-images img {
+    width: 100%;
+    height: auto;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: var(--shadow-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.gallery-item img {
+    max-height: 280px;
 }
 
 .service-detail-text h3 {
