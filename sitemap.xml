@@ -36,4 +36,46 @@
         <priority>0.3</priority>
     </url>
 
+    <url>
+        <loc>https://www.ef-sinn.de/leistungen/moebelbau.html</loc>
+        <lastmod>2026-02-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.ef-sinn.de/leistungen/kuechen.html</loc>
+        <lastmod>2026-02-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.ef-sinn.de/leistungen/treppen.html</loc>
+        <lastmod>2026-02-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.ef-sinn.de/leistungen/terrassen.html</loc>
+        <lastmod>2026-02-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.ef-sinn.de/leistungen/innenausbau.html</loc>
+        <lastmod>2026-02-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://www.ef-sinn.de/leistungen/restaurierung.html</loc>
+        <lastmod>2026-02-07</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
 </urlset>
