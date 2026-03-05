@@ -6,7 +6,7 @@ ROOT = Path(__file__).resolve().parents[1]
 I18N = ROOT / "i18n"
 SOURCE_LANG = "de"
 TARGETS = ["en", "fr", "el", "it", "es", "de-AT"]
-MODEL = "qwen3.5:cloud"
+MODEL = "glm-5:cloud"
 
 
 def load(lang):
@@ -29,7 +29,7 @@ def translate_batch(lang, pairs):
         "Return ONLY valid JSON object, no markdown, no comments.\n" + payload
     )
     cmd = ["ollama", "run", MODEL, prompt]
-    out = subprocess.check_output(cmd, text=True, stderr=subprocess.STDOUT, timeout=120)
+    out = subprocess.check_output(cmd, text=True, stderr=subprocess.STDOUT, timeout=300)
     # find first { ... }
     start = out.find("{")
     end = out.rfind("}")
