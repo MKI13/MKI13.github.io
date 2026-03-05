@@ -533,3 +533,21 @@ Alle Rechte vorbehalten.
 ---
 
 **Viel Erfolg mit Ihrer neuen Webseite!**
+
+---
+
+## 🌍 Mehrsprachigkeit (i18n) – Auto-Sync Setup
+
+Neue i18n-Struktur ist vorbereitet:
+- `i18n/de.json` (Master)
+- `i18n/en.json`, `fr.json`, `el.json`, `it.json`, `es.json`, `de-AT.json`
+- `scripts/i18n_sync.py` (automatische Key-Erkennung + Übersetzung fehlender Werte)
+- `.github/workflows/i18n-sync.yml` (manueller Workflow)
+- `I18N-ROADMAP.md` (Rollout-Plan)
+
+### Ziel-Workflow
+1. Nur `de.json` bearbeiten
+2. `python3 scripts/i18n_sync.py` ausführen
+3. Übersetzungen werden automatisch ergänzt
+4. Review + Deploy
+
