@@ -1,1 +1,11 @@
-{}
+{
+  "site.name": "ef-sinn",
+  "nav.home": "Inicio",
+  "nav.services": "Servicios",
+  "nav.about": "Sobre nosotros",
+  "nav.contact": "Contacto",
+  "cta.request": "Solicitar ahora",
+  "cta.contact_now": "Contáctanos ahora",
+  "footer.rights": "Todos los derechos reservados.",
+  "footer.copyright": "© 2026 ef-sinn. Todos los derechos reservados."
+}
