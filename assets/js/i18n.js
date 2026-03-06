@@ -42,12 +42,19 @@
 
   function switcher(cur){
     if(document.getElementById('lang-sw')) return;
+    var container=document.querySelector('.nav-container');
     var menu=document.querySelector('.nav-menu');
-    if(!menu) return;
+    if(!container||!menu) return;
 
-    var w=document.createElement('div');
-    w.id='lang-sw';
-    w.style.cssText='display:flex;align-items:center;gap:4px;';
+    /* Wrap nav-menu in #nav-right so flags sit above nav links */
+    var navRight=document.createElement('div');
+    navRight.id='nav-right';
+    container.insertBefore(navRight,menu);
+    navRight.appendChild(menu);
+
+    /* Build flag bar */
+    var bar=document.createElement('div');
+    bar.id='lang-sw';
 
     for(var i=0;i<LANGS.length;i++){
       (function(l){
@@ -56,25 +63,20 @@
         b.textContent=l.flag;
         b.title=l.code;
         b.setAttribute('aria-label','Language '+l.code);
-        b.style.cssText='font-size:18px;background:none;border:'+(l.code===cur?'2px solid #00C5E8':'2px solid transparent')+';border-radius:4px;cursor:pointer;padding:2px 4px;line-height:1;';
+        b.className='lang-btn'+(l.code===cur?' lang-btn-active':'');
         b.addEventListener('click',function(){
           localStorage.setItem('site_lang',l.code);
           load(l.code,function(d){apply(d,l.code)});
-          var bs=w.querySelectorAll('button');
-          for(var j=0;j<bs.length;j++) bs[j].style.borderColor='transparent';
-          b.style.borderColor='#00C5E8';
+          var bs=bar.querySelectorAll('.lang-btn');
+          for(var j=0;j<bs.length;j++) bs[j].classList.remove('lang-btn-active');
+          b.classList.add('lang-btn-active');
         });
-        w.appendChild(b);
+        bar.appendChild(b);
       })(LANGS[i]);
     }
 
-    var li=document.createElement('li');
-    li.style.cssText='display:flex;align-items:center;';
-    li.appendChild(w);
-
-    // Desktop: rechts, Mobile: oben
-    if(window.innerWidth <= 520 && menu.firstChild) menu.insertBefore(li, menu.firstChild);
-    else menu.appendChild(li);
+    /* Flags ABOVE nav-menu */
+    navRight.insertBefore(bar,menu);
   }
 
   function boot(){
