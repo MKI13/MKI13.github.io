@@ -846,6 +846,10 @@ img {
     padding: 0.75rem 0;
     font-size: 0.9rem;
     color: var(--color-text-light);
+    line-height: 1.5;
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0.2rem;
 }
 
 .breadcrumb a {
@@ -885,7 +889,11 @@ img {
     }
 
     .service-detail-header {
-        padding: 8rem 0 3rem;
+        padding: 13rem 0 3rem;
+    }
+
+    .breadcrumb {
+        font-size: 0.85rem;
     }
 }
 
@@ -1360,6 +1368,10 @@ img {
     .nav-menu {
         flex-direction: column;
         gap: 0.5rem;
+    }
+
+    .service-detail-header {
+        padding: 15rem 0 2.5rem;
     }
     
     .logo a {
