@@ -387,59 +387,155 @@
 
 
     <!-- Portfolio Preview -->
-    <section class="portfolio-section">
+    <section class="portfolio-section" id="portfolio">
         <div class="container">
             <h2 class="section-title centered"> <span data-i18n="home.portfolio.title">Unsere Arbeiten</span></h2>
             <p class="section-subtitle centered"> <span data-i18n="home.portfolio.subtitle">Einblicke in unsere handwerklichen Kreationen</span></p>
-            
+
+            <!-- Category Filter -->
+            <div class="portfolio-filters">
+                <button class="portfolio-filter active" data-filter="all" data-i18n="home.portfolio.filter.all">Alle</button>
+                <button class="portfolio-filter" data-filter="treppen" data-i18n="home.portfolio.filter.treppen">Treppen</button>
+                <button class="portfolio-filter" data-filter="terrassen" data-i18n="home.portfolio.filter.terrassen">Terrassen</button>
+                <button class="portfolio-filter" data-filter="moebel" data-i18n="home.portfolio.filter.moebel">Möbel</button>
+                <button class="portfolio-filter" data-filter="innenausbau" data-i18n="home.portfolio.filter.innenausbau">Innenausbau</button>
+            </div>
+
             <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="bilder/portfolio/treppe-02.jpg"
-                         alt="Elegante Holztreppe"
-                         loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3 data-i18n="home.portfolio.i1">Elegante Treppe</h3>
-                    </div>
+                <!-- Featured item (large) -->
+                <div class="portfolio-item portfolio-featured" data-category="treppen">
+                    <a href="#lightbox-1" aria-label="Elegante Treppe vergrößern">
+                        <img src="bilder/portfolio/treppe-02.jpg"
+                             alt="Elegante Holztreppe"
+                             loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category" data-i18n="home.portfolio.filter.treppen">Treppen</span>
+                            <h3 data-i18n="home.portfolio.i1">Elegante Treppe</h3>
+                            <p class="portfolio-desc" data-i18n="home.portfolio.i1.desc">Maßgefertigte Treppe mit edlem Geländer</p>
+                        </div>
+                    </a>
                 </div>
 
-
-                <div class="portfolio-item">
-                    <img src="bilder/portfolio/treppe-01.jpg"
-                         alt="Holztreppe mit Geländer"
-                         loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3 data-i18n="home.portfolio.i2">Holztreppe</h3>
-                    </div>
+                <div class="portfolio-item" data-category="treppen">
+                    <a href="#lightbox-2" aria-label="Holztreppe vergrößern">
+                        <img src="bilder/portfolio/treppe-01.jpg"
+                             alt="Holztreppe mit Geländer"
+                             loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category" data-i18n="home.portfolio.filter.treppen">Treppen</span>
+                            <h3 data-i18n="home.portfolio.i2">Holztreppe</h3>
+                            <p class="portfolio-desc" data-i18n="home.portfolio.i2.desc">Klassische Holztreppe mit handgefertigtem Geländer</p>
+                        </div>
+                    </a>
                 </div>
 
-                <div class="portfolio-item">
-                    <img src="bilder/portfolio/terrasse-02.jpg"
-                         alt="Terrasse mit Holz-Pool"
-                         loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3 data-i18n="home.portfolio.i3">Terrasse mit Pool</h3>
-                    </div>
+                <div class="portfolio-item" data-category="terrassen">
+                    <a href="#lightbox-3" aria-label="Terrasse mit Pool vergrößern">
+                        <img src="bilder/portfolio/terrasse-02.jpg"
+                             alt="Terrasse mit Holz-Pool"
+                             loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category" data-i18n="home.portfolio.filter.terrassen">Terrassen</span>
+                            <h3 data-i18n="home.portfolio.i3">Terrasse mit Pool</h3>
+                            <p class="portfolio-desc" data-i18n="home.portfolio.i3.desc">Holzterrasse mit integrierter Poolumrandung</p>
+                        </div>
+                    </a>
                 </div>
 
-                <div class="portfolio-item">
-                    <img src="bilder/portfolio/terrasse-01.jpg"
-                         alt="Holzterrasse im Garten"
-                         loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3 data-i18n="home.portfolio.i4">Holzterrasse</h3>
-                    </div>
+                <div class="portfolio-item" data-category="terrassen">
+                    <a href="#lightbox-4" aria-label="Holzterrasse vergrößern">
+                        <img src="bilder/portfolio/terrasse-01.jpg"
+                             alt="Holzterrasse im Garten"
+                             loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category" data-i18n="home.portfolio.filter.terrassen">Terrassen</span>
+                            <h3 data-i18n="home.portfolio.i4">Holzterrasse</h3>
+                            <p class="portfolio-desc" data-i18n="home.portfolio.i4.desc">Natürliche Gartengestaltung mit Holzdeck</p>
+                        </div>
+                    </a>
                 </div>
 
-                <div class="portfolio-item">
-                    <img src="bilder/portfolio/badmoebel-01.jpg"
-                         alt="Badezimmermöbel aus Holz"
-                         loading="lazy">
-                    <div class="portfolio-overlay">
-                        <h3 data-i18n="home.portfolio.i5">Badezimmermöbel</h3>
-                    </div>
+                <div class="portfolio-item" data-category="moebel">
+                    <a href="#lightbox-5" aria-label="Badezimmermöbel vergrößern">
+                        <img src="bilder/portfolio/badmoebel-01.jpg"
+                             alt="Badezimmermöbel aus Holz"
+                             loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category" data-i18n="home.portfolio.filter.moebel">Möbel</span>
+                            <h3 data-i18n="home.portfolio.i5">Badezimmermöbel</h3>
+                            <p class="portfolio-desc" data-i18n="home.portfolio.i5.desc">Waschtisch aus feuchtigkeitsbeständigem Holz</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="portfolio-item" data-category="moebel">
+                    <a href="#lightbox-6" aria-label="Esstisch vergrößern">
+                        <img src="bilder/leistungen/moebelbau/esstisch-01.jpg"
+                             alt="Massiver Esstisch aus Holz"
+                             loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category" data-i18n="home.portfolio.filter.moebel">Möbel</span>
+                            <h3 data-i18n="home.portfolio.i6">Massiver Esstisch</h3>
+                            <p class="portfolio-desc" data-i18n="home.portfolio.i6.desc">Handgefertigter Esstisch aus Massivholz</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="portfolio-item" data-category="innenausbau">
+                    <a href="#lightbox-7" aria-label="Garderobe vergrößern">
+                        <img src="bilder/leistungen/innenausbau/innenausbau-garderobe-flur.jpg"
+                             alt="Maßgefertigte Garderobe im Flur"
+                             loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category" data-i18n="home.portfolio.filter.innenausbau">Innenausbau</span>
+                            <h3 data-i18n="home.portfolio.i7">Einbaugarderobe</h3>
+                            <p class="portfolio-desc" data-i18n="home.portfolio.i7.desc">Maßgefertigte Garderobe für den Flur</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="portfolio-item" data-category="innenausbau">
+                    <a href="#lightbox-8" aria-label="Parkettboden vergrößern">
+                        <img src="bilder/leistungen/innenausbau/parkettboden-details.jpg"
+                             alt="Parkettboden Detailansicht"
+                             loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category" data-i18n="home.portfolio.filter.innenausbau">Innenausbau</span>
+                            <h3 data-i18n="home.portfolio.i8">Parkettboden</h3>
+                            <p class="portfolio-desc" data-i18n="home.portfolio.i8.desc">Professionell verlegter Parkettboden</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="portfolio-item" data-category="terrassen">
+                    <a href="#lightbox-9" aria-label="Teak-Terrasse vergrößern">
+                        <img src="bilder/leistungen/terrassen/holzterrasse-teak-01.jpg"
+                             alt="Teak-Holzterrasse"
+                             loading="lazy">
+                        <div class="portfolio-overlay">
+                            <span class="portfolio-category" data-i18n="home.portfolio.filter.terrassen">Terrassen</span>
+                            <h3 data-i18n="home.portfolio.i9">Teak-Terrasse</h3>
+                            <p class="portfolio-desc" data-i18n="home.portfolio.i9.desc">Edle Terrasse aus Teakholz</p>
+                        </div>
+                    </a>
                 </div>
             </div>
+
+            <div class="portfolio-cta">
+                <a href="contact.html" class="btn btn-primary" data-i18n="home.portfolio.cta">Ihr Projekt besprechen</a>
+            </div>
         </div>
+
+        <!-- Lightbox overlays (CSS-only) -->
+        <div id="lightbox-1" class="lightbox"><a href="#portfolio" class="lightbox-close" aria-label="Schließen">&times;</a><img src="bilder/portfolio/treppe-02.jpg" alt="Elegante Holztreppe"></div>
+        <div id="lightbox-2" class="lightbox"><a href="#portfolio" class="lightbox-close" aria-label="Schließen">&times;</a><img src="bilder/portfolio/treppe-01.jpg" alt="Holztreppe"></div>
+        <div id="lightbox-3" class="lightbox"><a href="#portfolio" class="lightbox-close" aria-label="Schließen">&times;</a><img src="bilder/portfolio/terrasse-02.jpg" alt="Terrasse mit Pool"></div>
+        <div id="lightbox-4" class="lightbox"><a href="#portfolio" class="lightbox-close" aria-label="Schließen">&times;</a><img src="bilder/portfolio/terrasse-01.jpg" alt="Holzterrasse"></div>
+        <div id="lightbox-5" class="lightbox"><a href="#portfolio" class="lightbox-close" aria-label="Schließen">&times;</a><img src="bilder/portfolio/badmoebel-01.jpg" alt="Badezimmermöbel"></div>
+        <div id="lightbox-6" class="lightbox"><a href="#portfolio" class="lightbox-close" aria-label="Schließen">&times;</a><img src="bilder/leistungen/moebelbau/esstisch-01.jpg" alt="Esstisch"></div>
+        <div id="lightbox-7" class="lightbox"><a href="#portfolio" class="lightbox-close" aria-label="Schließen">&times;</a><img src="bilder/leistungen/innenausbau/innenausbau-garderobe-flur.jpg" alt="Einbaugarderobe"></div>
+        <div id="lightbox-8" class="lightbox"><a href="#portfolio" class="lightbox-close" aria-label="Schließen">&times;</a><img src="bilder/leistungen/innenausbau/parkettboden-details.jpg" alt="Parkettboden"></div>
+        <div id="lightbox-9" class="lightbox"><a href="#portfolio" class="lightbox-close" aria-label="Schließen">&times;</a><img src="bilder/leistungen/terrassen/holzterrasse-teak-01.jpg" alt="Teak-Terrasse"></div>
     </section>
 
     <!-- FAQ Section (SEO + AI Optimization) -->
@@ -554,5 +650,22 @@
         </div>
     </footer>
     <script src="assets/js/i18n.js"></script>
+    <script>
+    /* Portfolio filter */
+    (function(){
+      var btns=document.querySelectorAll('.portfolio-filter');
+      var items=document.querySelectorAll('.portfolio-item[data-category]');
+      btns.forEach(function(btn){
+        btn.addEventListener('click',function(){
+          var f=btn.getAttribute('data-filter');
+          btns.forEach(function(b){b.classList.remove('active')});
+          btn.classList.add('active');
+          items.forEach(function(item){
+            item.setAttribute('data-hidden', f!=='all' && item.getAttribute('data-category')!==f ? 'true' : 'false');
+          });
+        });
+      });
+    })();
+    </script>
 </body>
 </html>
