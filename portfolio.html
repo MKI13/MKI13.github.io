@@ -1,0 +1,1570 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <!--
+    SICHERHEITS- UND DATENSCHUTZ-ENTSCHEIDUNGEN:
+    Siehe index.html für vollständige Dokumentation der Security-Architektur.
+    -->
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio & Referenzen von ef-sinn – Schreiner Werkstatt München. Treppen, Terrassen, Möbel, Innenausbau & mehr. Maßgefertigte Holzarbeiten in höchster Qualität.">
+    <meta name="keywords" content="Portfolio Schreiner München, Referenzen Tischler München, Holztreppe München Referenz, Holzterrasse München Referenz, Badmöbel nach Maß, Akustikpaneel Holz, Garderobe Einbau München, Schreiner Arbeiten Beispiele">
+    <link rel="canonical" href="https://www.ef-sinn.de/portfolio.html">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Portfolio & Referenzen – ef-sinn Schreiner Werkstatt München">
+    <meta property="og:description" content="Einblicke in unsere handwerklichen Projekte: Treppen, Terrassen, Badmöbel, Akustikpaneele, Garderoben und mehr. Maßarbeit aus München.">
+    <meta property="og:url" content="https://www.ef-sinn.de/portfolio.html">
+    <meta property="og:image" content="https://www.ef-sinn.de/bilder/portfolio/treppe-02.jpg">
+    <meta property="og:locale" content="de_DE">
+    <meta property="og:site_name" content="ef-sinn">
+    <title>Portfolio & Referenzen – ef-sinn Schreiner Werkstatt München</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* ===== PORTFOLIO PAGE SPECIFIC STYLES ===== */
+
+        /* Hero Section */
+        .portfolio-hero {
+            background: linear-gradient(135deg, #0e4a6e 0%, #1890C0 55%, #00C5E8 100%);
+            padding: 6rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .portfolio-hero::before {
+            content: '';
+            position: absolute;
+            right: -80px;
+            top: -80px;
+            width: 300px;
+            height: 300px;
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .portfolio-hero::after {
+            content: '';
+            position: absolute;
+            left: -50px;
+            bottom: -40px;
+            width: 200px;
+            height: 200px;
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .portfolio-hero h1 {
+            font-size: 2.8rem;
+            color: #fff;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.02em;
+            animation: fadeInUp 0.8s ease both;
+        }
+        .portfolio-hero .hero-subtitle {
+            color: rgba(255,255,255,0.85);
+            font-size: 1.15rem;
+            font-weight: 300;
+            letter-spacing: 0.04em;
+            animation: fadeInUp 0.8s ease 0.15s both;
+        }
+        .portfolio-hero .hero-divider {
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #00C5E8, #D4A010);
+            margin: 1.2rem auto 0;
+            animation: fadeInUp 0.8s ease 0.3s both;
+        }
+
+        /* Intro Section */
+        .portfolio-intro {
+            padding: 3.5rem 0 2rem;
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto;
+        }
+        .portfolio-intro p {
+            font-size: 1.05rem;
+            color: var(--color-text-light);
+            line-height: 1.8;
+        }
+        .portfolio-intro .highlight {
+            color: var(--color-primary);
+            font-weight: 600;
+        }
+
+        /* Category Filter - Full Page Version */
+        .portfolio-page-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin: 0 0 2.5rem;
+            padding: 0 1rem;
+        }
+        .portfolio-page-filter {
+            background: transparent;
+            border: 2px solid var(--color-border);
+            border-radius: 100px;
+            padding: 0.55rem 1.4rem;
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: var(--color-text-light);
+            transition: all 0.3s ease;
+            font-family: inherit;
+        }
+        .portfolio-page-filter:hover {
+            border-color: var(--color-primary);
+            color: var(--color-primary);
+        }
+        .portfolio-page-filter.active {
+            background: var(--color-primary);
+            border-color: var(--color-primary);
+            color: white;
+        }
+
+        /* Project Count */
+        .project-count {
+            text-align: center;
+            color: var(--color-text-light);
+            font-size: 0.85rem;
+            margin-bottom: 2rem;
+            opacity: 0.7;
+        }
+
+        /* Projects Section */
+        .portfolio-projects {
+            padding: 0 0 4rem;
+        }
+
+        /* Individual Project Card */
+        .project-card {
+            background: #fff;
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            margin-bottom: 3rem;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.7s ease, transform 0.7s ease, box-shadow 0.4s ease;
+        }
+        .project-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .project-card:hover {
+            box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+        }
+        .project-card[data-hidden="true"] {
+            display: none;
+        }
+
+        /* Project Card Header */
+        .project-card-header {
+            padding: 2rem 2rem 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        .project-card-header .project-label {
+            font-size: 0.7rem;
+            color: var(--color-primary);
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+        .project-card-header h2 {
+            font-size: 1.6rem;
+            color: var(--color-text);
+            font-weight: 700;
+            line-height: 1.2;
+        }
+        .project-card-header .project-divider {
+            width: 44px;
+            height: 3px;
+            background: linear-gradient(90deg, #00C5E8, #D4A010);
+            margin-top: 0.6rem;
+        }
+
+        /* Project Meta Chips */
+        .project-meta-grid {
+            display: flex;
+            gap: 0.6rem;
+            flex-wrap: wrap;
+            padding: 0 2rem 1rem;
+        }
+        .project-meta-chip {
+            background: var(--color-background-alt);
+            border-left: 3px solid var(--color-primary);
+            padding: 0.5rem 0.8rem;
+            flex: 1;
+            min-width: 140px;
+        }
+        .project-meta-chip .chip-label {
+            font-size: 0.65rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--color-primary);
+            font-weight: 700;
+        }
+        .project-meta-chip .chip-value {
+            font-size: 0.85rem;
+            color: var(--color-text);
+            margin-top: 2px;
+            line-height: 1.4;
+        }
+
+        /* Project Image Gallery */
+        .project-gallery {
+            padding: 0 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .project-gallery-grid {
+            display: grid;
+            gap: 0.5rem;
+        }
+        .project-gallery-grid.single {
+            grid-template-columns: 1fr;
+        }
+        .project-gallery-grid.double {
+            grid-template-columns: 1fr 1fr;
+        }
+        .project-gallery-grid.triple {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+        .project-gallery-grid.quad {
+            grid-template-columns: 1fr 1fr;
+        }
+        .project-img-wrap {
+            overflow: hidden;
+            border-radius: 8px;
+            background: var(--color-background-alt);
+            cursor: pointer;
+            position: relative;
+        }
+        .project-img-wrap img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+            display: block;
+        }
+        .project-gallery-grid.single .project-img-wrap img {
+            height: 420px;
+        }
+        .project-img-wrap:hover img {
+            transform: scale(1.05);
+        }
+        .project-img-wrap .img-zoom-icon {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            width: 32px;
+            height: 32px;
+            background: rgba(0,0,0,0.5);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            color: #fff;
+            font-size: 14px;
+        }
+        .project-img-wrap:hover .img-zoom-icon {
+            opacity: 1;
+        }
+
+        /* Project Description */
+        .project-description {
+            padding: 0 2rem;
+        }
+        .project-description .caption {
+            font-size: 0.75rem;
+            color: var(--color-primary);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+        }
+        .project-description .caption.gold {
+            color: var(--color-accent);
+        }
+        .project-description .desc-text {
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            line-height: 1.75;
+            margin-bottom: 1rem;
+        }
+
+        /* Project Bullet Features */
+        .project-features {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.8rem;
+            padding: 0 2rem 2rem;
+        }
+        .feature-box {
+            background: var(--color-background-alt);
+            border: 1px solid var(--color-border);
+            padding: 1rem;
+            border-radius: 8px;
+            transition: border-color 0.3s ease;
+        }
+        .feature-box:hover {
+            border-color: var(--color-primary-light);
+        }
+        .feature-box h4 {
+            font-size: 0.7rem;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+            color: var(--color-primary);
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        .feature-box ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .feature-box li {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+            line-height: 1.5;
+            padding: 0.15rem 0;
+            padding-left: 1rem;
+            position: relative;
+        }
+        .feature-box li::before {
+            content: '✦';
+            position: absolute;
+            left: 0;
+            color: var(--color-primary);
+            font-size: 0.6rem;
+            top: 0.3rem;
+        }
+
+        /* Werkstatt Section */
+        .werkstatt-section {
+            background: var(--color-background-alt);
+            padding: 3.5rem 0;
+        }
+        .werkstatt-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        .werkstatt-img {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+        }
+        .werkstatt-img img {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            display: block;
+        }
+        .werkstatt-text h2 {
+            font-size: 1.6rem;
+            color: var(--color-text);
+            margin-bottom: 0.3rem;
+        }
+        .werkstatt-text .label {
+            font-size: 0.7rem;
+            color: var(--color-primary);
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+            margin-bottom: 0.4rem;
+        }
+        .werkstatt-text .divider {
+            width: 44px;
+            height: 3px;
+            background: linear-gradient(90deg, #00C5E8, #D4A010);
+            margin: 0.8rem 0 1rem;
+        }
+        .werkstatt-text p {
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            line-height: 1.75;
+            margin-bottom: 1rem;
+        }
+        .werkstatt-chips {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.6rem;
+            margin-top: 1rem;
+        }
+        .werkstatt-chip {
+            background: #fff;
+            border-left: 3px solid var(--color-primary);
+            padding: 0.7rem 0.9rem;
+            border-radius: 4px;
+        }
+        .werkstatt-chip h5 {
+            font-size: 0.65rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--color-primary);
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+        .werkstatt-chip ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .werkstatt-chip li {
+            font-size: 0.8rem;
+            color: var(--color-text-light);
+            line-height: 1.4;
+        }
+
+        /* Services Overview */
+        .services-overview {
+            padding: 3.5rem 0;
+        }
+        .services-overview .section-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .services-overview .section-header .label {
+            font-size: 0.7rem;
+            color: var(--color-primary);
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .services-overview .section-header h2 {
+            font-size: 1.6rem;
+            margin-top: 0.3rem;
+        }
+        .services-overview .section-header .divider {
+            width: 44px;
+            height: 3px;
+            background: linear-gradient(90deg, #00C5E8, #D4A010);
+            margin: 0.8rem auto 0;
+        }
+        .services-grid-overview {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        .service-overview-card {
+            background: var(--color-background-alt);
+            border-left: 3px solid var(--color-primary);
+            padding: 1.2rem 1rem;
+            border-radius: 4px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-overview-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+        }
+        .service-overview-card .service-icon {
+            font-size: 1.4rem;
+            margin-bottom: 0.4rem;
+        }
+        .service-overview-card h3 {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            font-weight: 700;
+            color: var(--color-text);
+            letter-spacing: 0.02em;
+            margin-bottom: 0.3rem;
+        }
+        .service-overview-card p {
+            font-size: 0.85rem;
+            color: var(--color-text-light);
+            line-height: 1.5;
+        }
+
+        /* Promise Section */
+        .promise-section {
+            background: var(--color-background-alt);
+            padding: 3.5rem 0;
+        }
+        .promise-section .section-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        .promise-section .section-header .label {
+            font-size: 0.7rem;
+            color: var(--color-primary);
+            letter-spacing: 2.5px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .promise-section .section-header h2 {
+            font-size: 1.6rem;
+            margin-top: 0.3rem;
+        }
+        .promise-section .section-header .divider {
+            width: 44px;
+            height: 3px;
+            background: linear-gradient(90deg, #00C5E8, #D4A010);
+            margin: 0.8rem auto 0;
+        }
+        .promise-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        .promise-card {
+            background: #fff;
+            border: 1px solid var(--color-border);
+            border-top: 3px solid var(--color-primary);
+            padding: 1.5rem;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .promise-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+        }
+        .promise-card:last-child {
+            border-top-color: var(--color-accent);
+        }
+        .promise-card h4 {
+            font-size: 0.8rem;
+            color: var(--color-primary);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+        .promise-card:last-child h4 {
+            color: var(--color-accent);
+        }
+        .promise-card p {
+            font-size: 0.9rem;
+            color: var(--color-text-light);
+            line-height: 1.7;
+        }
+
+        /* CTA Section */
+        .portfolio-cta-section {
+            padding: 4rem 0;
+            text-align: center;
+        }
+        .cta-inner {
+            max-width: 480px;
+            margin: 0 auto;
+        }
+        .cta-logo {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #00C5E8, #1890C0);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 6px 20px rgba(0,197,232,0.25);
+            margin: 0 auto 1rem;
+            font-size: 1.6rem;
+            color: #fff;
+            font-weight: 700;
+            letter-spacing: 2px;
+            font-style: italic;
+        }
+        .cta-inner h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .cta-divider {
+            width: 50px;
+            height: 3px;
+            background: linear-gradient(90deg, #00C5E8, #D4A010);
+            margin: 0.8rem auto 1rem;
+        }
+        .cta-inner p {
+            font-size: 0.95rem;
+            color: var(--color-text-light);
+            line-height: 1.75;
+            margin-bottom: 1.5rem;
+        }
+        .cta-highlights {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+            margin-bottom: 1.5rem;
+        }
+        .cta-highlights span {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+        .cta-highlights span.primary {
+            color: var(--color-primary);
+        }
+        .cta-highlights span.gold {
+            color: var(--color-accent);
+        }
+
+        /* Lightbox Overlay */
+        .portfolio-lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.92);
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: zoom-out;
+            animation: fadeIn 0.3s ease;
+        }
+        .portfolio-lightbox.active {
+            display: flex;
+        }
+        .portfolio-lightbox img {
+            max-width: 90vw;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 8px;
+            box-shadow: 0 0 60px rgba(0,0,0,0.5);
+        }
+        .portfolio-lightbox .lb-close {
+            position: absolute;
+            top: 20px;
+            right: 24px;
+            color: #fff;
+            font-size: 2rem;
+            cursor: pointer;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.1);
+            transition: background 0.3s ease;
+        }
+        .portfolio-lightbox .lb-close:hover {
+            background: rgba(255,255,255,0.2);
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .portfolio-hero {
+                padding: 5rem 1rem 3rem;
+            }
+            .portfolio-hero h1 {
+                font-size: 2rem;
+            }
+            .portfolio-intro {
+                padding: 2.5rem 1.5rem 1.5rem;
+            }
+            .project-card-header {
+                padding: 1.5rem 1.5rem 0.8rem;
+            }
+            .project-meta-grid {
+                padding: 0 1.5rem 0.8rem;
+            }
+            .project-gallery {
+                padding: 0 1.5rem;
+            }
+            .project-gallery-grid.double,
+            .project-gallery-grid.triple,
+            .project-gallery-grid.quad {
+                grid-template-columns: 1fr;
+            }
+            .project-gallery-grid img {
+                height: 260px !important;
+            }
+            .project-description {
+                padding: 0 1.5rem;
+            }
+            .project-features {
+                grid-template-columns: 1fr;
+                padding: 0 1.5rem 1.5rem;
+            }
+            .werkstatt-content {
+                grid-template-columns: 1fr;
+            }
+            .services-grid-overview {
+                grid-template-columns: 1fr;
+            }
+            .promise-grid {
+                grid-template-columns: 1fr;
+            }
+            .werkstatt-chips {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 480px) {
+            .portfolio-hero h1 {
+                font-size: 1.7rem;
+            }
+            .project-card-header h2 {
+                font-size: 1.3rem;
+            }
+            .project-meta-chip {
+                min-width: 100%;
+            }
+        }
+    </style>
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "CollectionPage",
+      "name": "Portfolio & Referenzen – ef-sinn",
+      "description": "Referenzprojekte der Schreiner Werkstatt ef-sinn in München: Treppen, Terrassen, Badmöbel, Akustikpaneele, Garderoben und mehr.",
+      "url": "https://www.ef-sinn.de/portfolio.html",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "ef-sinn",
+        "url": "https://www.ef-sinn.de"
+      },
+      "mainEntity": {
+        "@type": "ItemList",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Holztreppe I – Eichenholz-Treppe"},
+          {"@type": "ListItem", "position": 2, "name": "Holztreppe II – Glasgeländer-Integration"},
+          {"@type": "ListItem", "position": 3, "name": "Holzterrasse I – Teakholz-Terrasse"},
+          {"@type": "ListItem", "position": 4, "name": "Holzterrasse II – Poolumrandung"},
+          {"@type": "ListItem", "position": 5, "name": "Massivholztisch – Eiche"},
+          {"@type": "ListItem", "position": 6, "name": "Badmöbel nach Maß"},
+          {"@type": "ListItem", "position": 7, "name": "Akustik-Designpaneel"},
+          {"@type": "ListItem", "position": 8, "name": "Nischenregal & Wandlösung"},
+          {"@type": "ListItem", "position": 9, "name": "Garderobe mit Sitzbank"}
+        ]
+      }
+    }
+    </script>
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Hauptnavigation">
+            <div class="container nav-container">
+                <div class="logo">
+                    <a href="index.html" aria-label="Zur Startseite"><img src="assets/logo-ef-sinn.png" alt="EF-Sinn Logo" style="height: 50px; width: auto;"> ef-sinn</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link" data-i18n="nav.home">Start</a></li>
+                    <li><a href="about.html" class="nav-link" data-i18n="nav.about">Über uns</a></li>
+                    <li><a href="portfolio.html" class="nav-link active" data-i18n="nav.portfolio">Portfolio</a></li>
+                    <li><a href="contact.html" class="nav-link" data-i18n="nav.contact">Kontakt</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="portfolio-hero">
+        <div class="container">
+            <h1>Portfolio & Referenzen</h1>
+            <p class="hero-subtitle">Maßgefertigte Holzarbeiten · Leidenschaft · Präzision · Qualität</p>
+            <div class="hero-divider"></div>
+        </div>
+    </section>
+
+    <!-- Intro -->
+    <section class="portfolio-intro">
+        <div class="container">
+            <p>
+                Vom ersten Beratungsgespräch bis zur finalen Montage begleitet <span class="highlight">Marios Karampas</span> jedes Projekt persönlich.
+                Das Ergebnis sind maßgefertigte Lösungen, die nicht nur funktional sind, sondern Räume sichtbar aufwerten.
+                Hier zeigen wir Ihnen eine Auswahl unserer Referenzprojekte.
+            </p>
+        </div>
+    </section>
+
+    <!-- Filter -->
+    <div class="container">
+        <div class="portfolio-page-filters">
+            <button class="portfolio-page-filter active" data-filter="all">Alle</button>
+            <button class="portfolio-page-filter" data-filter="treppen">Treppen</button>
+            <button class="portfolio-page-filter" data-filter="terrassen">Terrassen</button>
+            <button class="portfolio-page-filter" data-filter="moebel">Möbel</button>
+            <button class="portfolio-page-filter" data-filter="innenausbau">Innenausbau</button>
+        </div>
+        <div class="project-count"><span id="visible-count">9</span> Projekte</div>
+    </div>
+
+    <!-- Projects -->
+    <section class="portfolio-projects">
+        <div class="container">
+
+            <!-- Project 1: Holztreppe I -->
+            <article class="project-card" data-category="treppen">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label">Referenzprojekt</div>
+                        <h2>Holztreppe I</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label">Projektart</div>
+                        <div class="chip-value">Eichenholz-Treppe</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label">Ort</div>
+                        <div class="chip-value">München</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid single">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/portfolio/treppe-01.jpg" alt="Massive Eichenholz-Trittstufen mit modernem Aufbau" loading="lazy">
+                            <span class="img-zoom-icon">🔍</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption">Massive Eichenholz-Trittstufen mit modernem Aufbau</div>
+                    <p class="desc-text">Gewendelte Treppenkonstruktion mit präziser Anpassung an den Bestand. Kombination aus Stabilität, klarer Linienführung und warmem Holzbild.</p>
+                </div>
+                <div class="project-features">
+                    <div class="feature-box">
+                        <h4>Leistung</h4>
+                        <ul>
+                            <li>Aufmaß vor Ort</li>
+                            <li>Materialauswahl</li>
+                            <li>Montage</li>
+                        </ul>
+                    </div>
+                    <div class="feature-box">
+                        <h4>Vorteil</h4>
+                        <ul>
+                            <li>Passgenau</li>
+                            <li>Langlebig</li>
+                            <li>Zeitloses Design</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 2: Holztreppe II -->
+            <article class="project-card" data-category="treppen">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label">Referenzprojekt</div>
+                        <h2>Holztreppe II</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label">Besonderheit</div>
+                        <div class="chip-value">Glasgeländer-Integration</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label">Material</div>
+                        <div class="chip-value">Eiche + Glas + Metall</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid single">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/portfolio/treppe-02.jpg" alt="Holztreppe mit Glasgeländer – Draufsicht" loading="lazy">
+                            <span class="img-zoom-icon">🔍</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption">Draufsicht mit hochwertiger Detailwirkung</div>
+                    <p class="desc-text">Die Perspektive zeigt die ruhige Linienführung und die harmonische Abstimmung zwischen Holzton, Geländer und Architektur.</p>
+                </div>
+                <div class="project-features">
+                    <div class="feature-box">
+                        <h4>Fokus</h4>
+                        <ul>
+                            <li>Sicherheit</li>
+                            <li>Stabilität</li>
+                            <li>Designwirkung</li>
+                        </ul>
+                    </div>
+                    <div class="feature-box">
+                        <h4>Ergebnis</h4>
+                        <ul>
+                            <li>Aufwertung des Raums</li>
+                            <li>Heller Gesamteindruck</li>
+                            <li>Pflegeleicht</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 3: Holzterrasse I -->
+            <article class="project-card" data-category="terrassen">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label">Referenzprojekt</div>
+                        <h2>Holzterrasse I</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label">Projektart</div>
+                        <div class="chip-value">Teakholz-Terrasse</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label">Nutzung</div>
+                        <div class="chip-value">Außenbereich & Pool</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid single">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/portfolio/terrasse-01.jpg" alt="Teakholz-Terrasse im Außenbereich" loading="lazy">
+                            <span class="img-zoom-icon">🔍</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption">Langlebige Außenlösung mit klarer Struktur</div>
+                    <p class="desc-text">Großzügige Terrassenfläche aus Teakholz-Dielen mit sauberem Übergang zur Fassade und hoher Alltagstauglichkeit. Teakholz gilt als König unter den Terrassenhölzern.</p>
+                </div>
+                <div class="project-features">
+                    <div class="feature-box">
+                        <h4>Materialvorteile</h4>
+                        <ul>
+                            <li>Witterungsbeständig</li>
+                            <li>Formstabil</li>
+                            <li>Natürliche Optik</li>
+                        </ul>
+                    </div>
+                    <div class="feature-box">
+                        <h4>Ausführung</h4>
+                        <ul>
+                            <li>Unterkonstruktion</li>
+                            <li>Dielenverlegung</li>
+                            <li>Detailabschluss</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 4: Holzterrasse II -->
+            <article class="project-card" data-category="terrassen">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label">Referenzprojekt</div>
+                        <h2>Holzterrasse II</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label">Besonderheit</div>
+                        <div class="chip-value">Poolumrandung</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label">Optik</div>
+                        <div class="chip-value">Holz + Stein + Wasser</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid single">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/portfolio/terrasse-02.jpg" alt="Teakholz-Terrasse am Pool" loading="lazy">
+                            <span class="img-zoom-icon">🔍</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption">Harmonische Teakholz-Komposition im Gartenbereich</div>
+                    <p class="desc-text">Die Ausführung verbindet Funktion und Ästhetik: sicherer Tritt, hochwertige Haptik und ein ruhiges, modernes Erscheinungsbild. Auf Wunsch realisieren wir vergleichbare Teakholz-Terrassen auch in ganz Bayern und deutschlandweit nach Absprache.</p>
+                </div>
+                <div class="project-features">
+                    <div class="feature-box">
+                        <h4>Geeignet für</h4>
+                        <ul>
+                            <li>Familiengärten</li>
+                            <li>Poolbereiche</li>
+                            <li>Premium-Objekte</li>
+                        </ul>
+                    </div>
+                    <div class="feature-box">
+                        <h4>Qualität</h4>
+                        <ul>
+                            <li>Saubere Fugen</li>
+                            <li>Saubere Kanten</li>
+                            <li>Lange Haltbarkeit</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 5: Massivholztisch -->
+            <article class="project-card" data-category="moebel">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label">Referenzprojekt</div>
+                        <h2>Massivholztisch</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label">Möbeltyp</div>
+                        <div class="chip-value">Esstisch Eiche</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label">Stil</div>
+                        <div class="chip-value">Zeitlos / Rustikal Modern</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid single">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/portfolio/tisch-holz.jpg" alt="Massiver Esstisch aus Eichenholz" loading="lazy">
+                            <span class="img-zoom-icon">🔍</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption gold">Einzelstück mit charakterstarker Maserung</div>
+                    <p class="desc-text">Massiver Esstisch mit klassischem Balkengestell. Natürliche Oberfläche, robuste Verarbeitung und hoher Nutzwert im Alltag.</p>
+                </div>
+                <div class="project-features">
+                    <div class="feature-box">
+                        <h4>Fertigung</h4>
+                        <ul>
+                            <li>Massivholz-Auswahl</li>
+                            <li>Kantenbearbeitung</li>
+                            <li>Oberflächenfinish</li>
+                        </ul>
+                    </div>
+                    <div class="feature-box">
+                        <h4>Einsatz</h4>
+                        <ul>
+                            <li>Essbereich</li>
+                            <li>Wohnküche</li>
+                            <li>Objektbereich</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 6: Badmöbel -->
+            <article class="project-card" data-category="moebel">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label">Referenzprojekt</div>
+                        <h2>Badmöbel nach Maß</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label">Möbeltyp</div>
+                        <div class="chip-value">Waschtischunterschrank</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label">Konzept</div>
+                        <div class="chip-value">Maßgenau + funktional</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid single">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/portfolio/badmoebel-01.jpg" alt="Maßgefertigter Waschtischunterschrank" loading="lazy">
+                            <span class="img-zoom-icon">🔍</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption">Kompakte Lösung mit hochwertiger Materialwirkung</div>
+                    <p class="desc-text">Maßgefertigter Unterschrank mit geschwungener Massivholzplatte und abgestimmter Integration in den vorhandenen Raum.</p>
+                </div>
+                <div class="project-features">
+                    <div class="feature-box">
+                        <h4>Vorteile</h4>
+                        <ul>
+                            <li>Raumoptimal</li>
+                            <li>Pflegeleicht</li>
+                            <li>Langlebig</li>
+                        </ul>
+                    </div>
+                    <div class="feature-box">
+                        <h4>Optional</h4>
+                        <ul>
+                            <li>Spiegelschrank</li>
+                            <li>Zusatzfächer</li>
+                            <li>Sondermaße</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 7: Akustik-Designpaneel -->
+            <article class="project-card" data-category="innenausbau">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label">Referenzprojekt</div>
+                        <h2>Akustik-Designpaneel</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label">Projektart</div>
+                        <div class="chip-value">3D Akustik-/Design-Element</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label">Einsatz</div>
+                        <div class="chip-value">Innenraum / Studio / Wohnbereich</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid single">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/portfolio/akustik-panel-01.jpg" alt="3D Akustik-Designpaneel aus Holz" loading="lazy">
+                            <span class="img-zoom-icon">🔍</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption">Skulpturale Oberfläche mit räumlicher Tiefenwirkung</div>
+                    <p class="desc-text">Individuelles Designpaneel mit geometrischer 3D-Struktur. Das Element setzt starke visuelle Akzente und kann je nach Aufbau auch die Raumakustik unterstützen.</p>
+                </div>
+                <div class="project-features">
+                    <div class="feature-box">
+                        <h4>Merkmale</h4>
+                        <ul>
+                            <li>Handwerkliche Einzelanfertigung</li>
+                            <li>Reliefstruktur</li>
+                            <li>Licht-/Schatteneffekt</li>
+                        </ul>
+                    </div>
+                    <div class="feature-box">
+                        <h4>Geeignet für</h4>
+                        <ul>
+                            <li>Wohnräume</li>
+                            <li>Büros</li>
+                            <li>Empfangsbereiche</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 8: Nischenregal -->
+            <article class="project-card" data-category="innenausbau">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label">Referenzprojekt</div>
+                        <h2>Nischenregal & Wandlösung</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label">Projektart</div>
+                        <div class="chip-value">Maßgefertigte Nischenlösung</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label">Look</div>
+                        <div class="chip-value">Weiß matt mit Farbkonzept</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid double">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/portfolio/garderobe-nische-01.jpg" alt="Nischenregal mit gelber Rückwand" loading="lazy">
+                            <span class="img-zoom-icon">🔍</span>
+                        </div>
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/portfolio/garderobe-nische-02.jpg" alt="Nischenregal Detailansicht" loading="lazy">
+                            <span class="img-zoom-icon">🔍</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption">Integriertes Regal mit Arbeitsplatzfläche</div>
+                    <p class="desc-text">Eine passgenaue Kombination aus Regal, Ablagefläche und architektonischer Rahmung. Die gelbe Rückwand setzt einen lebendigen Kontrast und gibt dem Raum Charakter.</p>
+                </div>
+                <div class="project-features">
+                    <div class="feature-box">
+                        <h4>Vorteile</h4>
+                        <ul>
+                            <li>Perfekte Raumnutzung</li>
+                            <li>Klare Linien</li>
+                            <li>Leicht zu reinigen</li>
+                        </ul>
+                    </div>
+                    <div class="feature-box">
+                        <h4>Optionen</h4>
+                        <ul>
+                            <li>Farbakzente frei wählbar</li>
+                            <li>LED-Beleuchtung</li>
+                            <li>Mehr Regalfächer</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Project 9: Garderobe mit Sitzbank -->
+            <article class="project-card" data-category="innenausbau">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label">Referenzprojekt</div>
+                        <h2>Garderobe mit Sitzbank</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label">Projektart</div>
+                        <div class="chip-value">Schrank + Sitzbank + Stauraum</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label">Material</div>
+                        <div class="chip-value">Weiß matt + Echtholz-Sitzfläche</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid triple">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/portfolio/garderobe-schrank-01.jpg" alt="Garderobenschrank geschlossen" loading="lazy">
+                            <span class="img-zoom-icon">🔍</span>
+                        </div>
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/portfolio/garderobe-schrank-innen-01.jpg" alt="Garderobenschrank Innenansicht" loading="lazy">
+                            <span class="img-zoom-icon">🔍</span>
+                        </div>
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/portfolio/garderobe-bank-01.jpg" alt="Sitzbank mit Echtholz-Auflage" loading="lazy">
+                            <span class="img-zoom-icon">🔍</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption">Flurlösung mit Stauraum, Sitzkomfort und klarer Optik</div>
+                    <p class="desc-text">Platzsparende Garderobenlösung für den Eingangsbereich: geschlossener Schrank, Sitzbank mit Echtholzauflage und sinnvoll gegliederter Innenraum mit Fächern, Kleiderstange und Staumöglichkeiten.</p>
+                </div>
+                <div class="project-features">
+                    <div class="feature-box">
+                        <h4>Funktion</h4>
+                        <ul>
+                            <li>Jacken & Schuhe</li>
+                            <li>Sitzmöglichkeit</li>
+                            <li>Ordnung im Flur</li>
+                        </ul>
+                    </div>
+                    <div class="feature-box">
+                        <h4>Ausführung</h4>
+                        <ul>
+                            <li>Maßgenau eingebaut</li>
+                            <li>Hochwertige Beschläge</li>
+                            <li>Nach Wunsch konfigurierbar</li>
+                        </ul>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- Werkstatt Section -->
+    <section class="werkstatt-section">
+        <div class="container">
+            <div class="werkstatt-content">
+                <div class="werkstatt-img">
+                    <img src="bilder/portfolio/werkstatt-innen-01.jpg" alt="EF-Sinn Werkstatt in Aubing" loading="lazy">
+                </div>
+                <div class="werkstatt-text">
+                    <div class="label">Werkstatt & Arbeitsweise</div>
+                    <h2>Wo Ideen entstehen</h2>
+                    <div class="divider"></div>
+                    <p>Die Werkstatt ist das Zentrum jedes Projekts: hier werden Maße geprüft, Details abgestimmt und Holzoberflächen mit Präzision bearbeitet.</p>
+                    <div class="werkstatt-chips">
+                        <div class="werkstatt-chip">
+                            <h5>Schwerpunkte</h5>
+                            <ul>
+                                <li>Maßanfertigung</li>
+                                <li>Montage vor Ort</li>
+                                <li>Sanierung & Reparatur</li>
+                            </ul>
+                        </div>
+                        <div class="werkstatt-chip">
+                            <h5>Einsatzgebiet</h5>
+                            <ul>
+                                <li>München & Umland</li>
+                                <li>Ganz Bayern</li>
+                                <li>Deutschlandweit</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Overview -->
+    <section class="services-overview">
+        <div class="container">
+            <div class="section-header">
+                <div class="label">Was wir bieten</div>
+                <h2>Leistungen</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="services-grid-overview">
+                <div class="service-overview-card">
+                    <div class="service-icon">🪵</div>
+                    <h3>Parkett verlegen & schleifen</h3>
+                    <p>Massivparkett, Fertigparkett, Aufarbeitung</p>
+                </div>
+                <div class="service-overview-card">
+                    <div class="service-icon">🍳</div>
+                    <h3>Einbauküchen nach Maß</h3>
+                    <p>Planung, Fertigung und Montage</p>
+                </div>
+                <div class="service-overview-card">
+                    <div class="service-icon">🪜</div>
+                    <h3>Holztreppen</h3>
+                    <p>Modern, klassisch, mit Glas/Kombinationen</p>
+                </div>
+                <div class="service-overview-card">
+                    <div class="service-icon">🌿</div>
+                    <h3>Holzterrassen</h3>
+                    <p>Teakholz-Terrassen, Poolbereiche</p>
+                </div>
+                <div class="service-overview-card">
+                    <div class="service-icon">🚿</div>
+                    <h3>Badmöbel nach Maß</h3>
+                    <p>Unterschränke, Waschtische, Spiegelmöbel</p>
+                </div>
+                <div class="service-overview-card">
+                    <div class="service-icon">🏠</div>
+                    <h3>Innenausbau & Schränke</h3>
+                    <p>Einbauschränke, Nischenlösungen, Reparaturen</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promise Section -->
+    <section class="promise-section">
+        <div class="container">
+            <div class="section-header">
+                <div class="label">Qualität & Verlässlichkeit</div>
+                <h2>Unser Versprechen</h2>
+                <div class="divider"></div>
+            </div>
+            <div class="promise-grid">
+                <div class="promise-card">
+                    <h4>✦ Maßarbeit</h4>
+                    <p>Jedes Möbelstück und jede Konstruktion wird individuell nach Kundenwunsch geplant und gefertigt.</p>
+                </div>
+                <div class="promise-card">
+                    <h4>✦ Qualitätsmaterialien</h4>
+                    <p>Wir arbeiten mit hochwertigen Hölzern, Beschlägen und Oberflächen für Langlebigkeit und Komfort.</p>
+                </div>
+                <div class="promise-card">
+                    <h4>✦ Persönliche Betreuung</h4>
+                    <p>Von der ersten Beratung bis zur Abnahme haben Sie einen direkten Ansprechpartner.</p>
+                </div>
+                <div class="promise-card">
+                    <h4>✦ Faire Preise</h4>
+                    <p>Transparente Angebote, klare Positionen und realistische Zeitplanung ohne Überraschungen.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="portfolio-cta-section">
+        <div class="container">
+            <div class="cta-inner">
+                <div class="cta-logo">ef</div>
+                <h2>Ihr nächstes Projekt</h2>
+                <div class="cta-divider"></div>
+                <p>Schreiben Sie uns oder rufen Sie direkt an — wir freuen uns auf Ihre Anfrage und beraten Sie persönlich.</p>
+                <div class="cta-highlights">
+                    <span class="primary">✦ Kostenlose Erstberatung</span>
+                    <span class="primary">✦ Individuelle Planung</span>
+                    <span class="gold">✦ Präzise Ausführung</span>
+                </div>
+                <a href="contact.html" class="btn btn-primary">Projekt besprechen</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="portfolio-lightbox" id="portfolio-lightbox">
+        <div class="lb-close" aria-label="Schließen">&times;</div>
+        <img src="" alt="Vergrößerte Ansicht" id="lightbox-img">
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-column">
+                    <h3 class="footer-title">ef-sinn</h3>
+                    <p class="footer-text">
+                        <span data-i18n="footer.tagline">Qualität und Handwerkskunst seit Jahren.<br>Ihr Partner für maßgefertigte Holzarbeiten.</span><br><br>
+                        <strong>Büro:</strong> Schmorellstraße 6, 82008 Unterhaching<br>
+                        <strong>Werkstatt:</strong> Germeringerweg 3c, 81245 München
+                    </p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Navigation</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-i18n="nav.home">Start</a></li>
+                        <li><a href="about.html" data-i18n="nav.about">Über uns</a></li>
+                        <li><a href="portfolio.html" data-i18n="nav.portfolio">Portfolio</a></li>
+                        <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3 class="footer-title">Rechtliches</h3>
+                    <ul class="footer-links">
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p><span data-i18n="footer.copyright">© 2026 ef-sinn. Alle Rechte vorbehalten.</span></p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="assets/js/i18n.js"></script>
+    <script>
+    /* ===== Portfolio Page Interactions ===== */
+    (function() {
+        'use strict';
+
+        /* --- Category Filter --- */
+        var filterBtns = document.querySelectorAll('.portfolio-page-filter');
+        var projectCards = document.querySelectorAll('.project-card[data-category]');
+        var countEl = document.getElementById('visible-count');
+
+        function updateCount() {
+            var visible = 0;
+            projectCards.forEach(function(c) {
+                if (c.getAttribute('data-hidden') !== 'true') visible++;
+            });
+            if (countEl) countEl.textContent = visible;
+        }
+
+        filterBtns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                filterBtns.forEach(function(b) { b.classList.remove('active'); });
+                btn.classList.add('active');
+                var filter = btn.getAttribute('data-filter');
+                projectCards.forEach(function(card) {
+                    if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                        card.removeAttribute('data-hidden');
+                    } else {
+                        card.setAttribute('data-hidden', 'true');
+                    }
+                });
+                updateCount();
+            });
+        });
+
+        /* --- Scroll Reveal (Intersection Observer) --- */
+        if ('IntersectionObserver' in window) {
+            var observer = new IntersectionObserver(function(entries) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+            projectCards.forEach(function(card) {
+                observer.observe(card);
+            });
+        } else {
+            projectCards.forEach(function(card) {
+                card.classList.add('visible');
+            });
+        }
+
+        /* --- Lightbox --- */
+        var lightbox = document.getElementById('portfolio-lightbox');
+        var lightboxImg = document.getElementById('lightbox-img');
+        var lbClose = lightbox ? lightbox.querySelector('.lb-close') : null;
+
+        document.querySelectorAll('[data-lightbox]').forEach(function(wrap) {
+            wrap.addEventListener('click', function() {
+                var img = wrap.querySelector('img');
+                if (img && lightbox && lightboxImg) {
+                    lightboxImg.src = img.src;
+                    lightboxImg.alt = img.alt;
+                    lightbox.classList.add('active');
+                    document.body.style.overflow = 'hidden';
+                }
+            });
+        });
+
+        function closeLightbox() {
+            if (lightbox) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        }
+
+        if (lbClose) lbClose.addEventListener('click', closeLightbox);
+        if (lightbox) lightbox.addEventListener('click', function(e) {
+            if (e.target === lightbox) closeLightbox();
+        });
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeLightbox();
+        });
+
+        /* --- Subtle Interaction Sound (only on user click) --- */
+        var audioCtx = null;
+        function playSubtleClick() {
+            try {
+                if (!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+                var osc = audioCtx.createOscillator();
+                var gain = audioCtx.createGain();
+                osc.type = 'sine';
+                osc.frequency.setValueAtTime(800, audioCtx.currentTime);
+                osc.frequency.exponentialRampToValueAtTime(400, audioCtx.currentTime + 0.08);
+                gain.gain.setValueAtTime(0.04, audioCtx.currentTime);
+                gain.gain.exponentialRampToValueAtTime(0.001, audioCtx.currentTime + 0.12);
+                osc.connect(gain);
+                gain.connect(audioCtx.destination);
+                osc.start(audioCtx.currentTime);
+                osc.stop(audioCtx.currentTime + 0.12);
+            } catch(e) {}
+        }
+
+        filterBtns.forEach(function(btn) {
+            btn.addEventListener('click', playSubtleClick);
+        });
+
+        document.querySelectorAll('[data-lightbox]').forEach(function(wrap) {
+            wrap.addEventListener('click', playSubtleClick);
+        });
+
+    })();
+    </script>
+</body>
+</html>
