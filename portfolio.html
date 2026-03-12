@@ -469,8 +469,12 @@
             box-shadow: 0 4px 16px rgba(0,0,0,0.06);
         }
         .service-overview-card .service-icon {
-            font-size: 1.4rem;
             margin-bottom: 0.4rem;
+        }
+        .service-overview-card .service-icon img {
+            width: 36px;
+            height: 36px;
+            display: block;
         }
         .service-overview-card h3 {
             font-size: 0.9rem;
@@ -774,8 +778,8 @@
     <!-- Hero -->
     <section class="portfolio-hero">
         <div class="container">
-            <h1>Portfolio & Referenzen</h1>
-            <p class="hero-subtitle">Maßgefertigte Holzarbeiten · Leidenschaft · Präzision · Qualität</p>
+            <h1 data-i18n="portfolio.hero.title">Portfolio & Referenzen</h1>
+            <p class="hero-subtitle" data-i18n="portfolio.hero.subtitle">Maßgefertigte Holzarbeiten · Leidenschaft · Präzision · Qualität</p>
             <div class="hero-divider"></div>
         </div>
     </section>
@@ -783,7 +787,7 @@
     <!-- Intro -->
     <section class="portfolio-intro">
         <div class="container">
-            <p>
+            <p data-i18n="portfolio.intro.text">
                 Vom ersten Beratungsgespräch bis zur finalen Montage begleitet <span class="highlight">Marios Karampas</span> jedes Projekt persönlich.
                 Das Ergebnis sind maßgefertigte Lösungen, die nicht nur funktional sind, sondern Räume sichtbar aufwerten.
                 Hier zeigen wir Ihnen eine Auswahl unserer Referenzprojekte.
@@ -794,13 +798,13 @@
     <!-- Filter -->
     <div class="container">
         <div class="portfolio-page-filters">
-            <button class="portfolio-page-filter active" data-filter="all">Alle</button>
-            <button class="portfolio-page-filter" data-filter="treppen">Treppen</button>
-            <button class="portfolio-page-filter" data-filter="terrassen">Terrassen</button>
-            <button class="portfolio-page-filter" data-filter="moebel">Möbel</button>
-            <button class="portfolio-page-filter" data-filter="innenausbau">Innenausbau</button>
+            <button class="portfolio-page-filter active" data-filter="all" data-i18n="home.portfolio.filter.all">Alle</button>
+            <button class="portfolio-page-filter" data-filter="treppen" data-i18n="home.portfolio.filter.treppen">Treppen</button>
+            <button class="portfolio-page-filter" data-filter="terrassen" data-i18n="home.portfolio.filter.terrassen">Terrassen</button>
+            <button class="portfolio-page-filter" data-filter="moebel" data-i18n="home.portfolio.filter.moebel">Möbel</button>
+            <button class="portfolio-page-filter" data-filter="innenausbau" data-i18n="home.portfolio.filter.innenausbau">Innenausbau</button>
         </div>
-        <div class="project-count"><span id="visible-count">9</span> Projekte</div>
+        <div class="project-count"><span id="visible-count">9</span> <span data-i18n="portfolio.projects.count">Projekte</span></div>
     </div>
 
     <!-- Projects -->
@@ -811,48 +815,48 @@
             <article class="project-card" data-category="treppen">
                 <div class="project-card-header">
                     <div>
-                        <div class="project-label">Referenzprojekt</div>
-                        <h2>Holztreppe I</h2>
+                        <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
+                        <h2 data-i18n="portfolio.p1.title">Holztreppe I</h2>
                         <div class="project-divider"></div>
                     </div>
                 </div>
                 <div class="project-meta-grid">
                     <div class="project-meta-chip">
-                        <div class="chip-label">Projektart</div>
-                        <div class="chip-value">Eichenholz-Treppe</div>
+                        <div class="chip-label" data-i18n="portfolio.meta.type">Projektart</div>
+                        <div class="chip-value" data-i18n="portfolio.p1.meta1">Eichenholz-Treppe</div>
                     </div>
                     <div class="project-meta-chip">
-                        <div class="chip-label">Ort</div>
-                        <div class="chip-value">München</div>
+                        <div class="chip-label" data-i18n="portfolio.meta.location">Ort</div>
+                        <div class="chip-value" data-i18n="portfolio.p1.meta2">München</div>
                     </div>
                 </div>
                 <div class="project-gallery">
                     <div class="project-gallery-grid single">
                         <div class="project-img-wrap" data-lightbox>
                             <img src="bilder/portfolio/treppe-01.jpg" alt="Massive Eichenholz-Trittstufen mit modernem Aufbau" loading="lazy">
-                            <span class="img-zoom-icon">🔍</span>
+                            <span class="img-zoom-icon">✦</span>
                         </div>
                     </div>
                 </div>
                 <div class="project-description">
-                    <div class="caption">Massive Eichenholz-Trittstufen mit modernem Aufbau</div>
-                    <p class="desc-text">Gewendelte Treppenkonstruktion mit präziser Anpassung an den Bestand. Kombination aus Stabilität, klarer Linienführung und warmem Holzbild.</p>
+                    <div class="caption" data-i18n="portfolio.p1.caption">Massive Eichenholz-Trittstufen mit modernem Aufbau</div>
+                    <p class="desc-text" data-i18n="portfolio.p1.desc">Gewendelte Treppenkonstruktion mit präziser Anpassung an den Bestand. Kombination aus Stabilität, klarer Linienführung und warmem Holzbild.</p>
                 </div>
                 <div class="project-features">
                     <div class="feature-box">
-                        <h4>Leistung</h4>
+                        <h4 data-i18n="portfolio.p1.feat1.title">Leistung</h4>
                         <ul>
-                            <li>Aufmaß vor Ort</li>
-                            <li>Materialauswahl</li>
-                            <li>Montage</li>
+                            <li data-i18n="portfolio.p1.feat1.li1">Aufmaß vor Ort</li>
+                            <li data-i18n="portfolio.p1.feat1.li2">Materialauswahl</li>
+                            <li data-i18n="portfolio.p1.feat1.li3">Montage</li>
                         </ul>
                     </div>
                     <div class="feature-box">
-                        <h4>Vorteil</h4>
+                        <h4 data-i18n="portfolio.p1.feat2.title">Vorteil</h4>
                         <ul>
-                            <li>Passgenau</li>
-                            <li>Langlebig</li>
-                            <li>Zeitloses Design</li>
+                            <li data-i18n="portfolio.p1.feat2.li1">Passgenau</li>
+                            <li data-i18n="portfolio.p1.feat2.li2">Langlebig</li>
+                            <li data-i18n="portfolio.p1.feat2.li3">Zeitloses Design</li>
                         </ul>
                     </div>
                 </div>
@@ -862,48 +866,48 @@
             <article class="project-card" data-category="treppen">
                 <div class="project-card-header">
                     <div>
-                        <div class="project-label">Referenzprojekt</div>
-                        <h2>Holztreppe II</h2>
+                        <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
+                        <h2 data-i18n="portfolio.p2.title">Holztreppe II</h2>
                         <div class="project-divider"></div>
                     </div>
                 </div>
                 <div class="project-meta-grid">
                     <div class="project-meta-chip">
-                        <div class="chip-label">Besonderheit</div>
-                        <div class="chip-value">Glasgeländer-Integration</div>
+                        <div class="chip-label" data-i18n="portfolio.meta.highlight">Besonderheit</div>
+                        <div class="chip-value" data-i18n="portfolio.p2.meta1">Glasgeländer-Integration</div>
                     </div>
                     <div class="project-meta-chip">
-                        <div class="chip-label">Material</div>
-                        <div class="chip-value">Eiche + Glas + Metall</div>
+                        <div class="chip-label" data-i18n="portfolio.meta.material">Material</div>
+                        <div class="chip-value" data-i18n="portfolio.p2.meta2">Eiche + Glas + Metall</div>
                     </div>
                 </div>
                 <div class="project-gallery">
                     <div class="project-gallery-grid single">
                         <div class="project-img-wrap" data-lightbox>
                             <img src="bilder/portfolio/treppe-02.jpg" alt="Holztreppe mit Glasgeländer – Draufsicht" loading="lazy">
-                            <span class="img-zoom-icon">🔍</span>
+                            <span class="img-zoom-icon">✦</span>
                         </div>
                     </div>
                 </div>
                 <div class="project-description">
-                    <div class="caption">Draufsicht mit hochwertiger Detailwirkung</div>
-                    <p class="desc-text">Die Perspektive zeigt die ruhige Linienführung und die harmonische Abstimmung zwischen Holzton, Geländer und Architektur.</p>
+                    <div class="caption" data-i18n="portfolio.p2.caption">Draufsicht mit hochwertiger Detailwirkung</div>
+                    <p class="desc-text" data-i18n="portfolio.p2.desc">Die Perspektive zeigt die ruhige Linienführung und die harmonische Abstimmung zwischen Holzton, Geländer und Architektur.</p>
                 </div>
                 <div class="project-features">
                     <div class="feature-box">
-                        <h4>Fokus</h4>
+                        <h4 data-i18n="portfolio.p2.feat1.title">Fokus</h4>
                         <ul>
-                            <li>Sicherheit</li>
-                            <li>Stabilität</li>
-                            <li>Designwirkung</li>
+                            <li data-i18n="portfolio.p2.feat1.li1">Sicherheit</li>
+                            <li data-i18n="portfolio.p2.feat1.li2">Stabilität</li>
+                            <li data-i18n="portfolio.p2.feat1.li3">Designwirkung</li>
                         </ul>
                     </div>
                     <div class="feature-box">
-                        <h4>Ergebnis</h4>
+                        <h4 data-i18n="portfolio.p2.feat2.title">Ergebnis</h4>
                         <ul>
-                            <li>Aufwertung des Raums</li>
-                            <li>Heller Gesamteindruck</li>
-                            <li>Pflegeleicht</li>
+                            <li data-i18n="portfolio.p2.feat2.li1">Aufwertung des Raums</li>
+                            <li data-i18n="portfolio.p2.feat2.li2">Heller Gesamteindruck</li>
+                            <li data-i18n="portfolio.p2.feat2.li3">Pflegeleicht</li>
                         </ul>
                     </div>
                 </div>
@@ -913,48 +917,48 @@
             <article class="project-card" data-category="terrassen">
                 <div class="project-card-header">
                     <div>
-                        <div class="project-label">Referenzprojekt</div>
-                        <h2>Holzterrasse I</h2>
+                        <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
+                        <h2 data-i18n="portfolio.p3.title">Holzterrasse I</h2>
                         <div class="project-divider"></div>
                     </div>
                 </div>
                 <div class="project-meta-grid">
                     <div class="project-meta-chip">
-                        <div class="chip-label">Projektart</div>
-                        <div class="chip-value">Teakholz-Terrasse</div>
+                        <div class="chip-label" data-i18n="portfolio.meta.type">Projektart</div>
+                        <div class="chip-value" data-i18n="portfolio.p3.meta1">Teakholz-Terrasse</div>
                     </div>
                     <div class="project-meta-chip">
-                        <div class="chip-label">Nutzung</div>
-                        <div class="chip-value">Außenbereich & Pool</div>
+                        <div class="chip-label" data-i18n="portfolio.meta.usage">Nutzung</div>
+                        <div class="chip-value" data-i18n="portfolio.p3.meta2">Außenbereich & Pool</div>
                     </div>
                 </div>
                 <div class="project-gallery">
                     <div class="project-gallery-grid single">
                         <div class="project-img-wrap" data-lightbox>
                             <img src="bilder/portfolio/terrasse-01.jpg" alt="Teakholz-Terrasse im Außenbereich" loading="lazy">
-                            <span class="img-zoom-icon">🔍</span>
+                            <span class="img-zoom-icon">✦</span>
                         </div>
                     </div>
                 </div>
                 <div class="project-description">
-                    <div class="caption">Langlebige Außenlösung mit klarer Struktur</div>
-                    <p class="desc-text">Großzügige Terrassenfläche aus Teakholz-Dielen mit sauberem Übergang zur Fassade und hoher Alltagstauglichkeit. Teakholz gilt als König unter den Terrassenhölzern.</p>
+                    <div class="caption" data-i18n="portfolio.p3.caption">Langlebige Außenlösung mit klarer Struktur</div>
+                    <p class="desc-text" data-i18n="portfolio.p3.desc">Großzügige Terrassenfläche aus Teakholz-Dielen mit sauberem Übergang zur Fassade und hoher Alltagstauglichkeit. Teakholz gilt als König unter den Terrassenhölzern.</p>
                 </div>
                 <div class="project-features">
                     <div class="feature-box">
-                        <h4>Materialvorteile</h4>
+                        <h4 data-i18n="portfolio.p3.feat1.title">Materialvorteile</h4>
                         <ul>
-                            <li>Witterungsbeständig</li>
-                            <li>Formstabil</li>
-                            <li>Natürliche Optik</li>
+                            <li data-i18n="portfolio.p3.feat1.li1">Witterungsbeständig</li>
+                            <li data-i18n="portfolio.p3.feat1.li2">Formstabil</li>
+                            <li data-i18n="portfolio.p3.feat1.li3">Natürliche Optik</li>
                         </ul>
                     </div>
                     <div class="feature-box">
-                        <h4>Ausführung</h4>
+                        <h4 data-i18n="portfolio.p3.feat2.title">Ausführung</h4>
                         <ul>
-                            <li>Unterkonstruktion</li>
-                            <li>Dielenverlegung</li>
-                            <li>Detailabschluss</li>
+                            <li data-i18n="portfolio.p3.feat2.li1">Unterkonstruktion</li>
+                            <li data-i18n="portfolio.p3.feat2.li2">Dielenverlegung</li>
+                            <li data-i18n="portfolio.p3.feat2.li3">Detailabschluss</li>
                         </ul>
                     </div>
                 </div>
@@ -964,48 +968,48 @@
             <article class="project-card" data-category="terrassen">
                 <div class="project-card-header">
                     <div>
-                        <div class="project-label">Referenzprojekt</div>
-                        <h2>Holzterrasse II</h2>
+                        <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
+                        <h2 data-i18n="portfolio.p4.title">Holzterrasse II</h2>
                         <div class="project-divider"></div>
                     </div>
                 </div>
                 <div class="project-meta-grid">
                     <div class="project-meta-chip">
-                        <div class="chip-label">Besonderheit</div>
-                        <div class="chip-value">Poolumrandung</div>
+                        <div class="chip-label" data-i18n="portfolio.meta.highlight">Besonderheit</div>
+                        <div class="chip-value" data-i18n="portfolio.p4.meta1">Poolumrandung</div>
                     </div>
                     <div class="project-meta-chip">
-                        <div class="chip-label">Optik</div>
-                        <div class="chip-value">Holz + Stein + Wasser</div>
+                        <div class="chip-label" data-i18n="portfolio.meta.look">Optik</div>
+                        <div class="chip-value" data-i18n="portfolio.p4.meta2">Holz + Stein + Wasser</div>
                     </div>
                 </div>
                 <div class="project-gallery">
                     <div class="project-gallery-grid single">
                         <div class="project-img-wrap" data-lightbox>
                             <img src="bilder/portfolio/terrasse-02.jpg" alt="Teakholz-Terrasse am Pool" loading="lazy">
-                            <span class="img-zoom-icon">🔍</span>
+                            <span class="img-zoom-icon">✦</span>
                         </div>
                     </div>
                 </div>
                 <div class="project-description">
-                    <div class="caption">Harmonische Teakholz-Komposition im Gartenbereich</div>
-                    <p class="desc-text">Die Ausführung verbindet Funktion und Ästhetik: sicherer Tritt, hochwertige Haptik und ein ruhiges, modernes Erscheinungsbild. Auf Wunsch realisieren wir vergleichbare Teakholz-Terrassen auch in ganz Bayern und deutschlandweit nach Absprache.</p>
+                    <div class="caption" data-i18n="portfolio.p4.caption">Harmonische Teakholz-Komposition im Gartenbereich</div>
+                    <p class="desc-text" data-i18n="portfolio.p4.desc">Die Ausführung verbindet Funktion und Ästhetik: sicherer Tritt, hochwertige Haptik und ein ruhiges, modernes Erscheinungsbild. Auf Wunsch realisieren wir vergleichbare Teakholz-Terrassen auch in ganz Bayern und deutschlandweit nach Absprache.</p>
                 </div>
                 <div class="project-features">
                     <div class="feature-box">
-                        <h4>Geeignet für</h4>
+                        <h4 data-i18n="portfolio.p4.feat1.title">Geeignet für</h4>
                         <ul>
-                            <li>Familiengärten</li>
-                            <li>Poolbereiche</li>
-                            <li>Premium-Objekte</li>
+                            <li data-i18n="portfolio.p4.feat1.li1">Familiengärten</li>
+                            <li data-i18n="portfolio.p4.feat1.li2">Poolbereiche</li>
+                            <li data-i18n="portfolio.p4.feat1.li3">Premium-Objekte</li>
                         </ul>
                     </div>
                     <div class="feature-box">
-                        <h4>Qualität</h4>
+                        <h4 data-i18n="portfolio.p4.feat2.title">Qualität</h4>
                         <ul>
-                            <li>Saubere Fugen</li>
-                            <li>Saubere Kanten</li>
-                            <li>Lange Haltbarkeit</li>
+                            <li data-i18n="portfolio.p4.feat2.li1">Saubere Fugen</li>
+                            <li data-i18n="portfolio.p4.feat2.li2">Saubere Kanten</li>
+                            <li data-i18n="portfolio.p4.feat2.li3">Lange Haltbarkeit</li>
                         </ul>
                     </div>
                 </div>
@@ -1015,48 +1019,48 @@
             <article class="project-card" data-category="moebel">
                 <div class="project-card-header">
                     <div>
-                        <div class="project-label">Referenzprojekt</div>
-                        <h2>Massivholztisch</h2>
+                        <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
+                        <h2 data-i18n="portfolio.p5.title">Massivholztisch</h2>
                         <div class="project-divider"></div>
                     </div>
                 </div>
                 <div class="project-meta-grid">
                     <div class="project-meta-chip">
-                        <div class="chip-label">Möbeltyp</div>
-                        <div class="chip-value">Esstisch Eiche</div>
+                        <div class="chip-label" data-i18n="portfolio.meta.furnituretype">Möbeltyp</div>
+                        <div class="chip-value" data-i18n="portfolio.p5.meta1">Esstisch Eiche</div>
                     </div>
                     <div class="project-meta-chip">
-                        <div class="chip-label">Stil</div>
-                        <div class="chip-value">Zeitlos / Rustikal Modern</div>
+                        <div class="chip-label" data-i18n="portfolio.meta.style">Stil</div>
+                        <div class="chip-value" data-i18n="portfolio.p5.meta2">Zeitlos / Rustikal Modern</div>
                     </div>
                 </div>
                 <div class="project-gallery">
                     <div class="project-gallery-grid single">
                         <div class="project-img-wrap" data-lightbox>
                             <img src="bilder/portfolio/tisch-holz.jpg" alt="Massiver Esstisch aus Eichenholz" loading="lazy">
-                            <span class="img-zoom-icon">🔍</span>
+                            <span class="img-zoom-icon">✦</span>
                         </div>
                     </div>
                 </div>
                 <div class="project-description">
-                    <div class="caption gold">Einzelstück mit charakterstarker Maserung</div>
-                    <p class="desc-text">Massiver Esstisch mit klassischem Balkengestell. Natürliche Oberfläche, robuste Verarbeitung und hoher Nutzwert im Alltag.</p>
+                    <div class="caption gold" data-i18n="portfolio.p5.caption">Einzelstück mit charakterstarker Maserung</div>
+                    <p class="desc-text" data-i18n="portfolio.p5.desc">Massiver Esstisch mit klassischem Balkengestell. Natürliche Oberfläche, robuste Verarbeitung und hoher Nutzwert im Alltag.</p>
                 </div>
                 <div class="project-features">
                     <div class="feature-box">
-                        <h4>Fertigung</h4>
+                        <h4 data-i18n="portfolio.p5.feat1.title">Fertigung</h4>
                         <ul>
-                            <li>Massivholz-Auswahl</li>
-                            <li>Kantenbearbeitung</li>
-                            <li>Oberflächenfinish</li>
+                            <li data-i18n="portfolio.p5.feat1.li1">Massivholz-Auswahl</li>
+                            <li data-i18n="portfolio.p5.feat1.li2">Kantenbearbeitung</li>
+                            <li data-i18n="portfolio.p5.feat1.li3">Oberflächenfinish</li>
                         </ul>
                     </div>
                     <div class="feature-box">
-                        <h4>Einsatz</h4>
+                        <h4 data-i18n="portfolio.p5.feat2.title">Einsatz</h4>
                         <ul>
-                            <li>Essbereich</li>
-                            <li>Wohnküche</li>
-                            <li>Objektbereich</li>
+                            <li data-i18n="portfolio.p5.feat2.li1">Essbereich</li>
+                            <li data-i18n="portfolio.p5.feat2.li2">Wohnküche</li>
+                            <li data-i18n="portfolio.p5.feat2.li3">Objektbereich</li>
                         </ul>
                     </div>
                 </div>
@@ -1066,48 +1070,48 @@
             <article class="project-card" data-category="moebel">
                 <div class="project-card-header">
                     <div>
-                        <div class="project-label">Referenzprojekt</div>
-                        <h2>Badmöbel nach Maß</h2>
+                        <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
+                        <h2 data-i18n="portfolio.p6.title">Badmöbel nach Maß</h2>
                         <div class="project-divider"></div>
                     </div>
                 </div>
                 <div class="project-meta-grid">
                     <div class="project-meta-chip">
-                        <div class="chip-label">Möbeltyp</div>
-                        <div class="chip-value">Waschtischunterschrank</div>
+                        <div class="chip-label" data-i18n="portfolio.meta.furnituretype">Möbeltyp</div>
+                        <div class="chip-value" data-i18n="portfolio.p6.meta1">Waschtischunterschrank</div>
                     </div>
                     <div class="project-meta-chip">
-                        <div class="chip-label">Konzept</div>
-                        <div class="chip-value">Maßgenau + funktional</div>
+                        <div class="chip-label" data-i18n="portfolio.meta.concept">Konzept</div>
+                        <div class="chip-value" data-i18n="portfolio.p6.meta2">Maßgenau + funktional</div>
                     </div>
                 </div>
                 <div class="project-gallery">
                     <div class="project-gallery-grid single">
                         <div class="project-img-wrap" data-lightbox>
                             <img src="bilder/portfolio/badmoebel-01.jpg" alt="Maßgefertigter Waschtischunterschrank" loading="lazy">
-                            <span class="img-zoom-icon">🔍</span>
+                            <span class="img-zoom-icon">✦</span>
                         </div>
                     </div>
                 </div>
                 <div class="project-description">
-                    <div class="caption">Kompakte Lösung mit hochwertiger Materialwirkung</div>
-                    <p class="desc-text">Maßgefertigter Unterschrank mit geschwungener Massivholzplatte und abgestimmter Integration in den vorhandenen Raum.</p>
+                    <div class="caption" data-i18n="portfolio.p6.caption">Kompakte Lösung mit hochwertiger Materialwirkung</div>
+                    <p class="desc-text" data-i18n="portfolio.p6.desc">Maßgefertigter Unterschrank mit geschwungener Massivholzplatte und abgestimmter Integration in den vorhandenen Raum.</p>
                 </div>
                 <div class="project-features">
                     <div class="feature-box">
-                        <h4>Vorteile</h4>
+                        <h4 data-i18n="portfolio.p6.feat1.title">Vorteile</h4>
                         <ul>
-                            <li>Raumoptimal</li>
-                            <li>Pflegeleicht</li>
-                            <li>Langlebig</li>
+                            <li data-i18n="portfolio.p6.feat1.li1">Raumoptimal</li>
+                            <li data-i18n="portfolio.p6.feat1.li2">Pflegeleicht</li>
+                            <li data-i18n="portfolio.p6.feat1.li3">Langlebig</li>
                         </ul>
                     </div>
                     <div class="feature-box">
-                        <h4>Optional</h4>
+                        <h4 data-i18n="portfolio.p6.feat2.title">Optional</h4>
                         <ul>
-                            <li>Spiegelschrank</li>
-                            <li>Zusatzfächer</li>
-                            <li>Sondermaße</li>
+                            <li data-i18n="portfolio.p6.feat2.li1">Spiegelschrank</li>
+                            <li data-i18n="portfolio.p6.feat2.li2">Zusatzfächer</li>
+                            <li data-i18n="portfolio.p6.feat2.li3">Sondermaße</li>
                         </ul>
                     </div>
                 </div>
@@ -1117,48 +1121,48 @@
             <article class="project-card" data-category="innenausbau">
                 <div class="project-card-header">
                     <div>
-                        <div class="project-label">Referenzprojekt</div>
-                        <h2>Akustik-Designpaneel</h2>
+                        <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
+                        <h2 data-i18n="portfolio.p7.title">Akustik-Designpaneel</h2>
                         <div class="project-divider"></div>
                     </div>
                 </div>
                 <div class="project-meta-grid">
                     <div class="project-meta-chip">
-                        <div class="chip-label">Projektart</div>
-                        <div class="chip-value">3D Akustik-/Design-Element</div>
+                        <div class="chip-label" data-i18n="portfolio.meta.type">Projektart</div>
+                        <div class="chip-value" data-i18n="portfolio.p7.meta1">3D Akustik-/Design-Element</div>
                     </div>
                     <div class="project-meta-chip">
-                        <div class="chip-label">Einsatz</div>
-                        <div class="chip-value">Innenraum / Studio / Wohnbereich</div>
+                        <div class="chip-label" data-i18n="portfolio.meta.usage">Nutzung</div>
+                        <div class="chip-value" data-i18n="portfolio.p7.meta2">Innenraum / Studio / Wohnbereich</div>
                     </div>
                 </div>
                 <div class="project-gallery">
                     <div class="project-gallery-grid single">
                         <div class="project-img-wrap" data-lightbox>
                             <img src="bilder/portfolio/akustik-panel-01.jpg" alt="3D Akustik-Designpaneel aus Holz" loading="lazy">
-                            <span class="img-zoom-icon">🔍</span>
+                            <span class="img-zoom-icon">✦</span>
                         </div>
                     </div>
                 </div>
                 <div class="project-description">
-                    <div class="caption">Skulpturale Oberfläche mit räumlicher Tiefenwirkung</div>
-                    <p class="desc-text">Individuelles Designpaneel mit geometrischer 3D-Struktur. Das Element setzt starke visuelle Akzente und kann je nach Aufbau auch die Raumakustik unterstützen.</p>
+                    <div class="caption" data-i18n="portfolio.p7.caption">Skulpturale Oberfläche mit räumlicher Tiefenwirkung</div>
+                    <p class="desc-text" data-i18n="portfolio.p7.desc">Individuelles Designpaneel mit geometrischer 3D-Struktur. Das Element setzt starke visuelle Akzente und kann je nach Aufbau auch die Raumakustik unterstützen.</p>
                 </div>
                 <div class="project-features">
                     <div class="feature-box">
-                        <h4>Merkmale</h4>
+                        <h4 data-i18n="portfolio.p7.feat1.title">Merkmale</h4>
                         <ul>
-                            <li>Handwerkliche Einzelanfertigung</li>
-                            <li>Reliefstruktur</li>
-                            <li>Licht-/Schatteneffekt</li>
+                            <li data-i18n="portfolio.p7.feat1.li1">Handwerkliche Einzelanfertigung</li>
+                            <li data-i18n="portfolio.p7.feat1.li2">Reliefstruktur</li>
+                            <li data-i18n="portfolio.p7.feat1.li3">Licht-/Schatteneffekt</li>
                         </ul>
                     </div>
                     <div class="feature-box">
-                        <h4>Geeignet für</h4>
+                        <h4 data-i18n="portfolio.p7.feat2.title">Geeignet für</h4>
                         <ul>
-                            <li>Wohnräume</li>
-                            <li>Büros</li>
-                            <li>Empfangsbereiche</li>
+                            <li data-i18n="portfolio.p7.feat2.li1">Wohnräume</li>
+                            <li data-i18n="portfolio.p7.feat2.li2">Büros</li>
+                            <li data-i18n="portfolio.p7.feat2.li3">Empfangsbereiche</li>
                         </ul>
                     </div>
                 </div>
@@ -1168,52 +1172,52 @@
             <article class="project-card" data-category="innenausbau">
                 <div class="project-card-header">
                     <div>
-                        <div class="project-label">Referenzprojekt</div>
-                        <h2>Nischenregal & Wandlösung</h2>
+                        <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
+                        <h2 data-i18n="portfolio.p8.title">Nischenregal & Wandlösung</h2>
                         <div class="project-divider"></div>
                     </div>
                 </div>
                 <div class="project-meta-grid">
                     <div class="project-meta-chip">
-                        <div class="chip-label">Projektart</div>
-                        <div class="chip-value">Maßgefertigte Nischenlösung</div>
+                        <div class="chip-label" data-i18n="portfolio.meta.type">Projektart</div>
+                        <div class="chip-value" data-i18n="portfolio.p8.meta1">Maßgefertigte Nischenlösung</div>
                     </div>
                     <div class="project-meta-chip">
-                        <div class="chip-label">Look</div>
-                        <div class="chip-value">Weiß matt mit Farbkonzept</div>
+                        <div class="chip-label" data-i18n="portfolio.meta.look">Optik</div>
+                        <div class="chip-value" data-i18n="portfolio.p8.meta2">Weiß matt mit Farbkonzept</div>
                     </div>
                 </div>
                 <div class="project-gallery">
                     <div class="project-gallery-grid double">
                         <div class="project-img-wrap" data-lightbox>
                             <img src="bilder/portfolio/garderobe-nische-01.jpg" alt="Nischenregal mit gelber Rückwand" loading="lazy">
-                            <span class="img-zoom-icon">🔍</span>
+                            <span class="img-zoom-icon">✦</span>
                         </div>
                         <div class="project-img-wrap" data-lightbox>
                             <img src="bilder/portfolio/garderobe-nische-02.jpg" alt="Nischenregal Detailansicht" loading="lazy">
-                            <span class="img-zoom-icon">🔍</span>
+                            <span class="img-zoom-icon">✦</span>
                         </div>
                     </div>
                 </div>
                 <div class="project-description">
-                    <div class="caption">Integriertes Regal mit Arbeitsplatzfläche</div>
-                    <p class="desc-text">Eine passgenaue Kombination aus Regal, Ablagefläche und architektonischer Rahmung. Die gelbe Rückwand setzt einen lebendigen Kontrast und gibt dem Raum Charakter.</p>
+                    <div class="caption" data-i18n="portfolio.p8.caption">Integriertes Regal mit Arbeitsplatzfläche</div>
+                    <p class="desc-text" data-i18n="portfolio.p8.desc">Eine passgenaue Kombination aus Regal, Ablagefläche und architektonischer Rahmung. Die gelbe Rückwand setzt einen lebendigen Kontrast und gibt dem Raum Charakter.</p>
                 </div>
                 <div class="project-features">
                     <div class="feature-box">
-                        <h4>Vorteile</h4>
+                        <h4 data-i18n="portfolio.p8.feat1.title">Vorteile</h4>
                         <ul>
-                            <li>Perfekte Raumnutzung</li>
-                            <li>Klare Linien</li>
-                            <li>Leicht zu reinigen</li>
+                            <li data-i18n="portfolio.p8.feat1.li1">Perfekte Raumnutzung</li>
+                            <li data-i18n="portfolio.p8.feat1.li2">Klare Linien</li>
+                            <li data-i18n="portfolio.p8.feat1.li3">Leicht zu reinigen</li>
                         </ul>
                     </div>
                     <div class="feature-box">
-                        <h4>Optionen</h4>
+                        <h4 data-i18n="portfolio.p8.feat2.title">Optionen</h4>
                         <ul>
-                            <li>Farbakzente frei wählbar</li>
-                            <li>LED-Beleuchtung</li>
-                            <li>Mehr Regalfächer</li>
+                            <li data-i18n="portfolio.p8.feat2.li1">Farbakzente frei wählbar</li>
+                            <li data-i18n="portfolio.p8.feat2.li2">LED-Beleuchtung</li>
+                            <li data-i18n="portfolio.p8.feat2.li3">Mehr Regalfächer</li>
                         </ul>
                     </div>
                 </div>
@@ -1223,56 +1227,56 @@
             <article class="project-card" data-category="innenausbau">
                 <div class="project-card-header">
                     <div>
-                        <div class="project-label">Referenzprojekt</div>
-                        <h2>Garderobe mit Sitzbank</h2>
+                        <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
+                        <h2 data-i18n="portfolio.p9.title">Garderobe mit Sitzbank</h2>
                         <div class="project-divider"></div>
                     </div>
                 </div>
                 <div class="project-meta-grid">
                     <div class="project-meta-chip">
-                        <div class="chip-label">Projektart</div>
-                        <div class="chip-value">Schrank + Sitzbank + Stauraum</div>
+                        <div class="chip-label" data-i18n="portfolio.meta.type">Projektart</div>
+                        <div class="chip-value" data-i18n="portfolio.p9.meta1">Schrank + Sitzbank + Stauraum</div>
                     </div>
                     <div class="project-meta-chip">
-                        <div class="chip-label">Material</div>
-                        <div class="chip-value">Weiß matt + Echtholz-Sitzfläche</div>
+                        <div class="chip-label" data-i18n="portfolio.meta.material">Material</div>
+                        <div class="chip-value" data-i18n="portfolio.p9.meta2">Weiß matt + Echtholz-Sitzfläche</div>
                     </div>
                 </div>
                 <div class="project-gallery">
                     <div class="project-gallery-grid triple">
                         <div class="project-img-wrap" data-lightbox>
                             <img src="bilder/portfolio/garderobe-schrank-01.jpg" alt="Garderobenschrank geschlossen" loading="lazy">
-                            <span class="img-zoom-icon">🔍</span>
+                            <span class="img-zoom-icon">✦</span>
                         </div>
                         <div class="project-img-wrap" data-lightbox>
                             <img src="bilder/portfolio/garderobe-schrank-innen-01.jpg" alt="Garderobenschrank Innenansicht" loading="lazy">
-                            <span class="img-zoom-icon">🔍</span>
+                            <span class="img-zoom-icon">✦</span>
                         </div>
                         <div class="project-img-wrap" data-lightbox>
                             <img src="bilder/portfolio/garderobe-bank-01.jpg" alt="Sitzbank mit Echtholz-Auflage" loading="lazy">
-                            <span class="img-zoom-icon">🔍</span>
+                            <span class="img-zoom-icon">✦</span>
                         </div>
                     </div>
                 </div>
                 <div class="project-description">
-                    <div class="caption">Flurlösung mit Stauraum, Sitzkomfort und klarer Optik</div>
-                    <p class="desc-text">Platzsparende Garderobenlösung für den Eingangsbereich: geschlossener Schrank, Sitzbank mit Echtholzauflage und sinnvoll gegliederter Innenraum mit Fächern, Kleiderstange und Staumöglichkeiten.</p>
+                    <div class="caption" data-i18n="portfolio.p9.caption">Flurlösung mit Stauraum, Sitzkomfort und klarer Optik</div>
+                    <p class="desc-text" data-i18n="portfolio.p9.desc">Platzsparende Garderobenlösung für den Eingangsbereich: geschlossener Schrank, Sitzbank mit Echtholzauflage und sinnvoll gegliederter Innenraum mit Fächern, Kleiderstange und Staumöglichkeiten.</p>
                 </div>
                 <div class="project-features">
                     <div class="feature-box">
-                        <h4>Funktion</h4>
+                        <h4 data-i18n="portfolio.p9.feat1.title">Funktion</h4>
                         <ul>
-                            <li>Jacken & Schuhe</li>
-                            <li>Sitzmöglichkeit</li>
-                            <li>Ordnung im Flur</li>
+                            <li data-i18n="portfolio.p9.feat1.li1">Jacken & Schuhe</li>
+                            <li data-i18n="portfolio.p9.feat1.li2">Sitzmöglichkeit</li>
+                            <li data-i18n="portfolio.p9.feat1.li3">Ordnung im Flur</li>
                         </ul>
                     </div>
                     <div class="feature-box">
-                        <h4>Ausführung</h4>
+                        <h4 data-i18n="portfolio.p9.feat2.title">Ausführung</h4>
                         <ul>
-                            <li>Maßgenau eingebaut</li>
-                            <li>Hochwertige Beschläge</li>
-                            <li>Nach Wunsch konfigurierbar</li>
+                            <li data-i18n="portfolio.p9.feat2.li1">Maßgenau eingebaut</li>
+                            <li data-i18n="portfolio.p9.feat2.li2">Hochwertige Beschläge</li>
+                            <li data-i18n="portfolio.p9.feat2.li3">Nach Wunsch konfigurierbar</li>
                         </ul>
                     </div>
                 </div>
@@ -1289,25 +1293,25 @@
                     <img src="bilder/portfolio/werkstatt-innen-01.jpg" alt="EF-Sinn Werkstatt in Aubing" loading="lazy">
                 </div>
                 <div class="werkstatt-text">
-                    <div class="label">Werkstatt & Arbeitsweise</div>
-                    <h2>Wo Ideen entstehen</h2>
+                    <div class="label" data-i18n="portfolio.werkstatt.label">Werkstatt & Arbeitsweise</div>
+                    <h2 data-i18n="portfolio.werkstatt.title">Wo Ideen entstehen</h2>
                     <div class="divider"></div>
-                    <p>Die Werkstatt ist das Zentrum jedes Projekts: hier werden Maße geprüft, Details abgestimmt und Holzoberflächen mit Präzision bearbeitet.</p>
+                    <p data-i18n="portfolio.werkstatt.text">Die Werkstatt ist das Zentrum jedes Projekts: hier werden Maße geprüft, Details abgestimmt und Holzoberflächen mit Präzision bearbeitet.</p>
                     <div class="werkstatt-chips">
                         <div class="werkstatt-chip">
-                            <h5>Schwerpunkte</h5>
+                            <h5 data-i18n="portfolio.werkstatt.chip1.title">Schwerpunkte</h5>
                             <ul>
-                                <li>Maßanfertigung</li>
-                                <li>Montage vor Ort</li>
-                                <li>Sanierung & Reparatur</li>
+                                <li data-i18n="portfolio.werkstatt.chip1.li1">Maßanfertigung</li>
+                                <li data-i18n="portfolio.werkstatt.chip1.li2">Montage vor Ort</li>
+                                <li data-i18n="portfolio.werkstatt.chip1.li3">Sanierung & Reparatur</li>
                             </ul>
                         </div>
                         <div class="werkstatt-chip">
-                            <h5>Einsatzgebiet</h5>
+                            <h5 data-i18n="portfolio.werkstatt.chip2.title">Einsatzgebiet</h5>
                             <ul>
-                                <li>München & Umland</li>
-                                <li>Ganz Bayern</li>
-                                <li>Deutschlandweit</li>
+                                <li data-i18n="portfolio.werkstatt.chip2.li1">München & Umland</li>
+                                <li data-i18n="portfolio.werkstatt.chip2.li2">Ganz Bayern</li>
+                                <li data-i18n="portfolio.werkstatt.chip2.li3">Deutschlandweit</li>
                             </ul>
                         </div>
                     </div>
@@ -1320,40 +1324,40 @@
     <section class="services-overview">
         <div class="container">
             <div class="section-header">
-                <div class="label">Was wir bieten</div>
-                <h2>Leistungen</h2>
+                <div class="label" data-i18n="portfolio.services.label">Was wir bieten</div>
+                <h2 data-i18n="portfolio.services.title">Leistungen</h2>
                 <div class="divider"></div>
             </div>
             <div class="services-grid-overview">
                 <div class="service-overview-card">
-                    <div class="service-icon">🪵</div>
-                    <h3>Parkett verlegen & schleifen</h3>
-                    <p>Massivparkett, Fertigparkett, Aufarbeitung</p>
+                    <div class="service-icon"><img src="assets/icons/icon-innenausbau.png" alt="" width="36" height="36"></div>
+                    <h3 data-i18n="portfolio.services.s1.title">Parkett verlegen & schleifen</h3>
+                    <p data-i18n="portfolio.services.s1.desc">Massivparkett, Fertigparkett, Aufarbeitung</p>
                 </div>
                 <div class="service-overview-card">
-                    <div class="service-icon">🍳</div>
-                    <h3>Einbauküchen nach Maß</h3>
-                    <p>Planung, Fertigung und Montage</p>
+                    <div class="service-icon"><img src="assets/icons/icon-kueche.png" alt="" width="36" height="36"></div>
+                    <h3 data-i18n="portfolio.services.s2.title">Einbauküchen nach Maß</h3>
+                    <p data-i18n="portfolio.services.s2.desc">Planung, Fertigung und Montage</p>
                 </div>
                 <div class="service-overview-card">
-                    <div class="service-icon">🪜</div>
-                    <h3>Holztreppen</h3>
-                    <p>Modern, klassisch, mit Glas/Kombinationen</p>
+                    <div class="service-icon"><img src="assets/icons/icon-treppe.png" alt="" width="36" height="36"></div>
+                    <h3 data-i18n="portfolio.services.s3.title">Holztreppen</h3>
+                    <p data-i18n="portfolio.services.s3.desc">Modern, klassisch, mit Glas/Kombinationen</p>
                 </div>
                 <div class="service-overview-card">
-                    <div class="service-icon">🌿</div>
-                    <h3>Holzterrassen</h3>
-                    <p>Teakholz-Terrassen, Poolbereiche</p>
+                    <div class="service-icon"><img src="assets/icons/icon-terrasse.png" alt="" width="36" height="36"></div>
+                    <h3 data-i18n="portfolio.services.s4.title">Holzterrassen</h3>
+                    <p data-i18n="portfolio.services.s4.desc">Teakholz-Terrassen, Poolbereiche</p>
                 </div>
                 <div class="service-overview-card">
-                    <div class="service-icon">🚿</div>
-                    <h3>Badmöbel nach Maß</h3>
-                    <p>Unterschränke, Waschtische, Spiegelmöbel</p>
+                    <div class="service-icon"><img src="assets/icons/icon-moebelbau.png" alt="" width="36" height="36"></div>
+                    <h3 data-i18n="portfolio.services.s5.title">Badmöbel nach Maß</h3>
+                    <p data-i18n="portfolio.services.s5.desc">Unterschränke, Waschtische, Spiegelmöbel</p>
                 </div>
                 <div class="service-overview-card">
-                    <div class="service-icon">🏠</div>
-                    <h3>Innenausbau & Schränke</h3>
-                    <p>Einbauschränke, Nischenlösungen, Reparaturen</p>
+                    <div class="service-icon"><img src="assets/icons/icon-reparatur.png" alt="" width="36" height="36"></div>
+                    <h3 data-i18n="portfolio.services.s6.title">Innenausbau & Schränke</h3>
+                    <p data-i18n="portfolio.services.s6.desc">Einbauschränke, Nischenlösungen, Reparaturen</p>
                 </div>
             </div>
         </div>
@@ -1363,26 +1367,26 @@
     <section class="promise-section">
         <div class="container">
             <div class="section-header">
-                <div class="label">Qualität & Verlässlichkeit</div>
-                <h2>Unser Versprechen</h2>
+                <div class="label" data-i18n="portfolio.promise.label">Qualität & Verlässlichkeit</div>
+                <h2 data-i18n="portfolio.promise.title">Unser Versprechen</h2>
                 <div class="divider"></div>
             </div>
             <div class="promise-grid">
                 <div class="promise-card">
-                    <h4>✦ Maßarbeit</h4>
-                    <p>Jedes Möbelstück und jede Konstruktion wird individuell nach Kundenwunsch geplant und gefertigt.</p>
+                    <h4 data-i18n="portfolio.promise.p1.title">✦ Maßarbeit</h4>
+                    <p data-i18n="portfolio.promise.p1.text">Jedes Möbelstück und jede Konstruktion wird individuell nach Kundenwunsch geplant und gefertigt.</p>
                 </div>
                 <div class="promise-card">
-                    <h4>✦ Qualitätsmaterialien</h4>
-                    <p>Wir arbeiten mit hochwertigen Hölzern, Beschlägen und Oberflächen für Langlebigkeit und Komfort.</p>
+                    <h4 data-i18n="portfolio.promise.p2.title">✦ Qualitätsmaterialien</h4>
+                    <p data-i18n="portfolio.promise.p2.text">Wir arbeiten mit hochwertigen Hölzern, Beschlägen und Oberflächen für Langlebigkeit und Komfort.</p>
                 </div>
                 <div class="promise-card">
-                    <h4>✦ Persönliche Betreuung</h4>
-                    <p>Von der ersten Beratung bis zur Abnahme haben Sie einen direkten Ansprechpartner.</p>
+                    <h4 data-i18n="portfolio.promise.p3.title">✦ Persönliche Betreuung</h4>
+                    <p data-i18n="portfolio.promise.p3.text">Von der ersten Beratung bis zur Abnahme haben Sie einen direkten Ansprechpartner.</p>
                 </div>
                 <div class="promise-card">
-                    <h4>✦ Faire Preise</h4>
-                    <p>Transparente Angebote, klare Positionen und realistische Zeitplanung ohne Überraschungen.</p>
+                    <h4 data-i18n="portfolio.promise.p4.title">✦ Faire Preise</h4>
+                    <p data-i18n="portfolio.promise.p4.text">Transparente Angebote, klare Positionen und realistische Zeitplanung ohne Überraschungen.</p>
                 </div>
             </div>
         </div>
@@ -1393,15 +1397,15 @@
         <div class="container">
             <div class="cta-inner">
                 <div class="cta-logo">ef</div>
-                <h2>Ihr nächstes Projekt</h2>
+                <h2 data-i18n="portfolio.cta.title">Ihr nächstes Projekt</h2>
                 <div class="cta-divider"></div>
-                <p>Schreiben Sie uns oder rufen Sie direkt an — wir freuen uns auf Ihre Anfrage und beraten Sie persönlich.</p>
+                <p data-i18n="portfolio.cta.text">Schreiben Sie uns oder rufen Sie direkt an — wir freuen uns auf Ihre Anfrage und beraten Sie persönlich.</p>
                 <div class="cta-highlights">
-                    <span class="primary">✦ Kostenlose Erstberatung</span>
-                    <span class="primary">✦ Individuelle Planung</span>
-                    <span class="gold">✦ Präzise Ausführung</span>
+                    <span class="primary" data-i18n="portfolio.cta.hl1">✦ Kostenlose Erstberatung</span>
+                    <span class="primary" data-i18n="portfolio.cta.hl2">✦ Individuelle Planung</span>
+                    <span class="gold" data-i18n="portfolio.cta.hl3">✦ Präzise Ausführung</span>
                 </div>
-                <a href="contact.html" class="btn btn-primary">Projekt besprechen</a>
+                <a href="contact.html" class="btn btn-primary" data-i18n="portfolio.cta.btn">Projekt besprechen</a>
             </div>
         </div>
     </section>
