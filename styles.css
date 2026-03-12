@@ -219,11 +219,12 @@ textarea {
 
 /* ===== NAVIGATION ===== */
 .header {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     right: 0;
-    background-color: rgba(255, 255, 255, 0.98);
+    background-color: rgba(255, 255, 255, 0.96);
+    backdrop-filter: blur(8px);
     box-shadow: var(--shadow-sm);
     z-index: 1000;
     transition: all var(--transition-speed) var(--transition-timing);
@@ -231,7 +232,7 @@ textarea {
 }
 
 .navbar {
-    padding: 1rem 0;
+    padding: 0.9rem 0;
 }
 
 .nav-container {
@@ -251,6 +252,9 @@ textarea {
     display: flex;
     list-style: none;
     gap: 2rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    row-gap: 0.45rem;
 }
 
 .nav-link {
@@ -1496,9 +1500,20 @@ img {
         --spacing-lg: 3rem;
         --spacing-xl: 4rem;
     }
-    
+
+    .nav-container {
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.65rem;
+    }
+
     .nav-menu {
+        justify-content: center;
         gap: 1rem;
+    }
+
+    .nav-link {
+        padding: 0.25rem 0.2rem;
     }
     
     .hero {
@@ -1542,8 +1557,12 @@ img {
 
 @media (max-width: 480px) {
     .nav-menu {
-        flex-direction: column;
-        gap: 0.5rem;
+        justify-content: center;
+        gap: 0.75rem;
+    }
+
+    .nav-link {
+        font-size: 0.95rem;
     }
 
     .service-detail-header {
