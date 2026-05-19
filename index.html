@@ -291,10 +291,19 @@
     <!-- Hero Section -->
     <section class="hero" role="main" style="background-image: url('bilder/hero/hero-hauptbild.jpg'); background-size: cover; background-position: center;">
         <div class="hero-overlay"></div>
-        <div class="hero-content">
+        <div class="hero-content hero-content-strong">
+            <p class="hero-kicker fade-in">Schreinerwerkstatt München · Unterhaching · Maßarbeit aus Holz</p>
             <h1 class="hero-title fade-in"> <span data-i18n="home.hero.title">Wo Kunst auf Handwerk trifft</span></h1>
             <p class="hero-subtitle fade-in-delay"> <span data-i18n="home.hero.subtitle">Maßgefertigte Holzarbeiten mit Leidenschaft und Präzision</span></p>
-            <a href="contact.html" class="btn btn-primary fade-in-delay-2"> <span data-i18n="home.hero.cta">Projekt besprechen</span></a>
+            <div class="hero-actions fade-in-delay-2">
+                <a href="contact.html" class="btn btn-primary"> <span data-i18n="home.hero.cta">Projekt besprechen</span></a>
+                <a href="portfolio.html" class="btn btn-ghost-light">Arbeiten ansehen</a>
+            </div>
+            <div class="hero-trust" aria-label="Stärken von ef-sinn">
+                <span>✓ Persönliche Beratung</span>
+                <span>✓ Maßgefertigt in München</span>
+                <span>✓ Saubere Planung & Montage</span>
+            </div>
         </div>
         <div class="scroll-indicator">
             <span class="scroll-arrow"></span>
@@ -314,11 +323,43 @@
                         <span data-i18n="home.intro.p2">Von Parkettboden verlegen über maßgefertigte Einbauschränke und Küchen bis hin zu Möbeln für besondere Anforderungen – Tische, Betten, Badmöbel und vieles mehr. Jedes Projekt wird mit höchster Sorgfalt und handwerklichem Können umgesetzt. Ob Standardmaße oder spezielle Sonderwünsche: Wir finden die perfekte Lösung.</span>
                     </p>
                 </div>
-                <div class="intro-image">
+                <div class="intro-image intro-card-stack">
                     <img src="bilder/intro/tisch-holz.jpg"
                          alt="Massivholz-Esstisch aus Eiche – handgefertigt von ef-sinn"
                          loading="lazy">
+                    <div class="craft-proof-card" aria-label="Handwerkliche Zusage">
+                        <strong>Maß statt Masse</strong>
+                        <span>Ein Ansprechpartner, echte Werkstattarbeit und Lösungen, die zum Raum passen.</span>
+                    </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Strong Value Section -->
+    <section class="strength-section" aria-labelledby="strength-title">
+        <div class="container">
+            <div class="strength-header">
+                <p class="section-kicker">Warum ef-sinn?</p>
+                <h2 class="section-title centered" id="strength-title">Starke Schreinerarbeit für Räume, die bleiben</h2>
+                <p class="section-subtitle centered">Von der ersten Idee bis zur Montage: klar beraten, sauber geplant, präzise gefertigt.</p>
+            </div>
+            <div class="strength-grid">
+                <article class="strength-card">
+                    <span class="strength-number">01</span>
+                    <h3>Beratung mit ehrlicher Einschätzung</h3>
+                    <p>Wir prüfen Raum, Nutzung, Budget und Material – damit aus einer Idee eine langlebige Lösung wird.</p>
+                </article>
+                <article class="strength-card">
+                    <span class="strength-number">02</span>
+                    <h3>Maßarbeit aus der Werkstatt</h3>
+                    <p>Einbauten, Möbel, Küchen, Parkett und Innenausbau werden passend zum Objekt geplant und umgesetzt.</p>
+                </article>
+                <article class="strength-card">
+                    <span class="strength-number">03</span>
+                    <h3>Saubere Montage vor Ort</h3>
+                    <p>Termintreu, sorgfältig und mit Blick auf Details – damit das Ergebnis nicht nur schön aussieht, sondern funktioniert.</p>
+                </article>
             </div>
         </div>
     </section>
@@ -602,6 +643,29 @@
                         <p data-i18n="home.faq.a8">Wir arbeiten mit einer Vielzahl hochwertiger Holzarten – <strong>Eiche, Buche, Esche, Nussbaum, Kirsche</strong> und viele mehr. Wir bevorzugen regionale und nachhaltig bewirtschaftete Hölzer und beraten Sie gerne zur idealen Holzwahl für Ihr Projekt.</p>
                     </div>
                 </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Local / Google Maps Section -->
+    <section class="location-section" aria-labelledby="location-title">
+        <div class="container">
+            <div class="location-panel">
+                <div class="location-copy">
+                    <p class="section-kicker">Vor Ort in München & Unterhaching</p>
+                    <h2 class="section-title" id="location-title">Werkstatt nah am Projekt – Beratung direkt im Großraum München</h2>
+                    <p>ef-sinn arbeitet für Privatkunden, Architekten und Betriebe in München, Unterhaching und Umgebung. Für Ihre Anfahrt öffnen Sie die Adresse direkt in Google Maps – ohne Tracking-Karte auf der Seite.</p>
+                </div>
+                <div class="location-actions">
+                    <a class="map-link-card" href="https://www.google.com/maps/search/?api=1&query=Germeringerweg%203c%2C%2081245%20M%C3%BCnchen" target="_blank" rel="noopener noreferrer">
+                        <strong>Werkstatt in Google Maps</strong>
+                        <span>Germeringerweg 3c, 81245 München</span>
+                    </a>
+                    <a class="map-link-card" href="https://www.google.com/maps/search/?api=1&query=Schmorellstra%C3%9Fe%206%2C%2082008%20Unterhaching" target="_blank" rel="noopener noreferrer">
+                        <strong>Büro in Google Maps</strong>
+                        <span>Schmorellstraße 6, 82008 Unterhaching</span>
+                    </a>
+                </div>
             </div>
         </div>
     </section>
