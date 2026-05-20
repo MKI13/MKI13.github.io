@@ -413,6 +413,21 @@ textarea {
     box-shadow: 0 8px 24px rgba(0,0,0,0.18);
 }
 
+
+.hero-microcopy {
+    max-width: 720px;
+    margin: -0.5rem auto 1.25rem;
+    color: rgba(255,255,255,0.94);
+    font-weight: 600;
+    text-shadow: 0 2px 12px rgba(0,0,0,0.35);
+}
+
+.hero-microcopy a {
+    color: #ffffff;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
 /* Scroll Indicator */
 .scroll-indicator {
     position: absolute;
@@ -2415,4 +2430,24 @@ img {
     .project-template-grid {
         grid-template-columns: 1fr;
     }
+}
+
+#anfrage-assistent,
+.contact-form-wrapper {
+    scroll-margin-top: 7rem;
+}
+
+.inquiry-checklist {
+    margin: -0.25rem 0 1.25rem 1.2rem;
+    color: var(--color-text);
+    line-height: 1.7;
+}
+
+.inquiry-checklist li::marker {
+    color: var(--color-primary);
+}
+
+@supports (padding: env(safe-area-inset-bottom)) {
+  body { padding-bottom: calc(70px + env(safe-area-inset-bottom)); }
+  .mobile-contact-bar { padding-bottom: env(safe-area-inset-bottom); }
 }

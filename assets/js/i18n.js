@@ -19,7 +19,7 @@
 
   function load(lang,cb){
     var x=new XMLHttpRequest();
-    x.open('GET',prefix()+'i18n/'+lang+'.json?v='+Date.now());
+    x.open('GET',prefix()+'i18n/'+lang+'.json?v=20260520');
     x.onload=function(){if(x.status===200){try{cb(JSON.parse(x.responseText))}catch(e){cb({})}}else cb({})};
     x.onerror=function(){cb({})};
     x.send();
