@@ -148,8 +148,10 @@
                         <ul class="inquiry-checklist" aria-label="Was für die erste Einschätzung hilft">
                             <li>Maße oder grobe Raumgröße</li>
                             <li>Ort oder Stadtteil im Großraum München</li>
+                            <li>Zwei Terminvorschläge für die kommende Woche, falls eine Besichtigung vor Ort gewünscht ist</li>
                             <li>Fotos können Sie danach in der E-Mail anhängen</li>
                         </ul>
+                        <p class="inquiry-note small"><strong>Kostenlos und unverbindlich:</strong> Die erste Besichtigung und Ersteinschätzung ist kostenlos. Danach besprechen wir Planung, Angebot und nächste Schritte transparent mit Ihnen.</p>
 
                         <label for="inq-name">Name</label>
                         <input id="inq-name" name="name" type="text" autocomplete="name" placeholder="Ihr Name">
@@ -183,6 +185,13 @@
 
                         <label for="inq-location">Ort / Stadtteil</label>
                         <input id="inq-location" name="location" type="text" placeholder="z. B. München, Unterhaching, Ottobrunn">
+
+                        <label for="inq-appointment-1">Terminvorschlag 1 für Besichtigung</label>
+                        <input id="inq-appointment-1" name="appointment-1" type="text" placeholder="z. B. Dienstag nächste Woche, 17:30 Uhr">
+
+                        <label for="inq-appointment-2">Terminvorschlag 2 für Besichtigung</label>
+                        <input id="inq-appointment-2" name="appointment-2" type="text" placeholder="z. B. Donnerstag nächste Woche, 8:30 Uhr">
+                        <p class="inquiry-note small">Wenn Sie eine Besichtigung wünschen, nennen Sie bitte zwei passende Zeiten für die kommende Woche. Wir prüfen den Kalender und bestätigen einen Termin persönlich oder schlagen eine Alternative vor.</p>
 
                         <label for="inq-message">Kurze Beschreibung</label>
                         <textarea id="inq-message" name="message" rows="5" placeholder="Was soll gebaut, repariert oder geplant werden? Maße, Materialwunsch oder Fotos können Sie danach in der E-Mail anhängen."></textarea>
@@ -298,11 +307,14 @@
           'E-Mail: ' + get('inq-email'),
           'Projektart: ' + typeValue,
           'Ort / Stadtteil: ' + get('inq-location'),
+          'Terminvorschlag 1 für Besichtigung: ' + get('inq-appointment-1'),
+          'Terminvorschlag 2 für Besichtigung: ' + get('inq-appointment-2'),
           '',
           'Beschreibung:',
           get('inq-message'),
           '',
-          'Bitte melden Sie sich für eine kostenlose Erstberatung bei mir.',
+          'Hinweis: Ich habe gelesen, dass die erste Besichtigung und Ersteinschätzung kostenlos und unverbindlich ist.',
+          'Bitte prüfen Sie meine Terminvorschläge und melden Sie sich für eine kostenlose Erstberatung bei mir.',
           '',
           'Viele Grüße'
         ].join('\n');
