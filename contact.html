@@ -26,7 +26,7 @@
     <meta name="twitter:title" content="Kontakt – ef-sinn Schreiner Werkstatt München">
     <meta name="twitter:description" content="Kostenlose Erstberatung für Maßmöbel, Parkettboden, Küchen & Innenausbau.">
     <title>Kontakt – ef-sinn | Schreiner Werkstatt München & Unterhaching</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css?v=20260605">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -65,9 +65,9 @@
                     <li><a href="portfolio.html" class="nav-link" data-i18n="nav.portfolio">Portfolio</a></li>
                     <li><a href="contact.html" class="nav-link active" data-i18n="nav.contact">Kontakt</a></li>
                 </ul>
-                <div class="nav-actions" aria-label="Schnellkontakt">
-                    <a href="tel:+4917687186451" class="nav-phone" aria-label="ef-sinn telefonisch kontaktieren">+49 176 8718 6451</a>
-                    <a href="contact.html#anfrage-assistent" class="nav-cta">Kostenlose Erstberatung</a>
+                <div class="nav-actions" aria-label="Schnellkontakt" data-i18n-aria-label="nav.quickContact">
+                    <a href="tel:+4917687186451" class="nav-phone" aria-label="ef-sinn telefonisch kontaktieren" data-i18n-aria-label="nav.callAria">+49 176 8718 6451</a>
+                    <a href="contact.html#anfrage-assistent" class="nav-cta" data-i18n="nav.cta.consultation">Kostenlose Erstberatung</a>
                 </div>
             </div>
         </nav>
@@ -142,62 +142,62 @@
                 <!-- Anfrage-Assistent: statisch, kein Backend, keine Speicherung -->
                 <div class="contact-form-wrapper" id="anfrage-assistent">
                     <form class="contact-form inquiry-form" id="inquiry-form">
-                        <p class="section-kicker">Schnelle Projektanfrage</p>
+                        <p class="section-kicker" data-i18n="contact.inquiry.kicker">Schnelle Projektanfrage</p>
                         <h2 class="section-title" data-i18n="contact.write.title">Anfrage per E-Mail vorbereiten</h2>
-                        <p class="inquiry-note">Füllen Sie kurz aus, worum es geht. Die Webseite speichert nichts und sendet nichts automatisch. Beim Klick öffnet sich nur Ihr E-Mail-Programm mit einer vorbereiteten Nachricht.</p>
-                        <ul class="inquiry-checklist" aria-label="Was für die erste Einschätzung hilft">
-                            <li>Maße oder grobe Raumgröße</li>
-                            <li>Ort oder Stadtteil im Großraum München</li>
-                            <li>Zwei Terminvorschläge für die kommende Woche, falls eine Besichtigung vor Ort gewünscht ist</li>
-                            <li>Fotos können Sie danach in der E-Mail anhängen</li>
+                        <p class="inquiry-note" data-i18n="contact.inquiry.intro">Füllen Sie kurz aus, worum es geht. Die Webseite speichert nichts und sendet nichts automatisch. Beim Klick öffnet sich nur Ihr E-Mail-Programm mit einer vorbereiteten Nachricht.</p>
+                        <ul class="inquiry-checklist" aria-label="Was für die erste Einschätzung hilft" data-i18n-aria-label="contact.inquiry.checklist.aria">
+                            <li data-i18n="contact.inquiry.checklist.measurements">Maße oder grobe Raumgröße</li>
+                            <li data-i18n="contact.inquiry.checklist.location">Ort oder Stadtteil im Großraum München</li>
+                            <li data-i18n="contact.inquiry.checklist.appointments">Zwei Terminvorschläge für die kommende Woche, falls eine Besichtigung vor Ort gewünscht ist</li>
+                            <li data-i18n="contact.inquiry.checklist.photos">Fotos können Sie danach in der E-Mail anhängen</li>
                         </ul>
-                        <p class="inquiry-note small"><strong>Kostenlos und unverbindlich:</strong> Die erste Besichtigung und Ersteinschätzung ist kostenlos. Danach besprechen wir Planung, Angebot und nächste Schritte transparent mit Ihnen.</p>
+                        <p class="inquiry-note small" data-i18n="contact.inquiry.freeNote"><strong>Kostenlos und unverbindlich:</strong> Die erste Besichtigung und Ersteinschätzung ist kostenlos. Danach besprechen wir Planung, Angebot und nächste Schritte transparent mit Ihnen.</p>
 
-                        <label for="inq-name">Name</label>
-                        <input id="inq-name" name="name" type="text" autocomplete="name" placeholder="Ihr Name">
+                        <label for="inq-name" data-i18n="contact.inquiry.name.label">Name</label>
+                        <input id="inq-name" name="name" type="text" autocomplete="name" placeholder="Ihr Name" data-i18n-placeholder="contact.inquiry.name.placeholder">
 
-                        <label for="inq-phone">Telefon</label>
-                        <input id="inq-phone" name="phone" type="tel" autocomplete="tel" placeholder="Für Rückruf, falls gewünscht">
+                        <label for="inq-phone" data-i18n="contact.inquiry.phone.label">Telefon</label>
+                        <input id="inq-phone" name="phone" type="tel" autocomplete="tel" placeholder="Für Rückruf, falls gewünscht" data-i18n-placeholder="contact.inquiry.phone.placeholder">
 
-                        <label for="inq-email">E-Mail</label>
-                        <input id="inq-email" name="email" type="email" autocomplete="email" placeholder="name@example.de">
+                        <label for="inq-email" data-i18n="contact.inquiry.email.label">E-Mail</label>
+                        <input id="inq-email" name="email" type="email" autocomplete="email" placeholder="name@example.de" data-i18n-placeholder="contact.inquiry.email.placeholder">
 
                         <fieldset class="project-template-fieldset">
-                            <legend>Projektart</legend>
-                            <p class="inquiry-note small">Wählen Sie eine Vorlage oder schreiben Sie unten Ihre eigene Projektart.</p>
-                            <input id="inq-type-value" type="hidden" name="type" value="Maßmöbel / Einbauschrank">
-                            <div class="project-template-grid" role="group" aria-label="Projektart Vorlagen">
-                                <button type="button" class="project-template-btn active" data-project-type="Maßmöbel / Einbauschrank">Maßmöbel / Einbauschrank</button>
-                                <button type="button" class="project-template-btn" data-project-type="Küche nach Maß">Küche nach Maß</button>
-                                <button type="button" class="project-template-btn" data-project-type="Parkett verlegen">Parkett verlegen</button>
-                                <button type="button" class="project-template-btn" data-project-type="Parkett schleifen">Parkett schleifen</button>
-                                <button type="button" class="project-template-btn" data-project-type="Holzterrasse">Holzterrasse</button>
-                                <button type="button" class="project-template-btn" data-project-type="Holztreppe">Holztreppe</button>
-                                <button type="button" class="project-template-btn" data-project-type="Badmöbel nach Maß">Badmöbel nach Maß</button>
-                                <button type="button" class="project-template-btn" data-project-type="Innenausbau / Wandverkleidung">Innenausbau / Wandverkleidung</button>
-                                <button type="button" class="project-template-btn" data-project-type="Reparatur / Restaurierung">Reparatur / Restaurierung</button>
-                                <button type="button" class="project-template-btn" data-project-type="Beratung / Aufmaß vor Ort">Beratung / Aufmaß vor Ort</button>
+                            <legend data-i18n="contact.inquiry.type.legend">Projektart</legend>
+                            <p class="inquiry-note small" data-i18n="contact.inquiry.type.help">Wählen Sie eine Vorlage oder schreiben Sie unten Ihre eigene Projektart.</p>
+                            <input id="inq-type-value" type="hidden" name="type" value="Maßmöbel / Einbauschrank" data-i18n-value="contact.inquiry.type.customFurniture">
+                            <div class="project-template-grid" role="group" aria-label="Projektart Vorlagen" data-i18n-aria-label="contact.inquiry.type.templatesAria">
+                                <button type="button" class="project-template-btn active" data-project-type="Maßmöbel / Einbauschrank" data-i18n="contact.inquiry.type.customFurniture" data-i18n-data-project-type="contact.inquiry.type.customFurniture">Maßmöbel / Einbauschrank</button>
+                                <button type="button" class="project-template-btn" data-project-type="Küche nach Maß" data-i18n="contact.inquiry.type.kitchen" data-i18n-data-project-type="contact.inquiry.type.kitchen">Küche nach Maß</button>
+                                <button type="button" class="project-template-btn" data-project-type="Parkett verlegen" data-i18n="contact.inquiry.type.parquetInstall" data-i18n-data-project-type="contact.inquiry.type.parquetInstall">Parkett verlegen</button>
+                                <button type="button" class="project-template-btn" data-project-type="Parkett schleifen" data-i18n="contact.inquiry.type.parquetSand" data-i18n-data-project-type="contact.inquiry.type.parquetSand">Parkett schleifen</button>
+                                <button type="button" class="project-template-btn" data-project-type="Holzterrasse" data-i18n="contact.inquiry.type.terrace" data-i18n-data-project-type="contact.inquiry.type.terrace">Holzterrasse</button>
+                                <button type="button" class="project-template-btn" data-project-type="Holztreppe" data-i18n="contact.inquiry.type.stairs" data-i18n-data-project-type="contact.inquiry.type.stairs">Holztreppe</button>
+                                <button type="button" class="project-template-btn" data-project-type="Badmöbel nach Maß" data-i18n="contact.inquiry.type.bathroomFurniture" data-i18n-data-project-type="contact.inquiry.type.bathroomFurniture">Badmöbel nach Maß</button>
+                                <button type="button" class="project-template-btn" data-project-type="Innenausbau / Wandverkleidung" data-i18n="contact.inquiry.type.interior" data-i18n-data-project-type="contact.inquiry.type.interior">Innenausbau / Wandverkleidung</button>
+                                <button type="button" class="project-template-btn" data-project-type="Reparatur / Restaurierung" data-i18n="contact.inquiry.type.repair" data-i18n-data-project-type="contact.inquiry.type.repair">Reparatur / Restaurierung</button>
+                                <button type="button" class="project-template-btn" data-project-type="Beratung / Aufmaß vor Ort" data-i18n="contact.inquiry.type.consultation" data-i18n-data-project-type="contact.inquiry.type.consultation">Beratung / Aufmaß vor Ort</button>
                             </div>
                         </fieldset>
 
-                        <label for="inq-custom-type">Eigene Projektart</label>
-                        <input id="inq-custom-type" name="custom-type" type="text" placeholder="Wenn nichts passt: eigene Projektart eintragen">
+                        <label for="inq-custom-type" data-i18n="contact.inquiry.customType.label">Eigene Projektart</label>
+                        <input id="inq-custom-type" name="custom-type" type="text" placeholder="Wenn nichts passt: eigene Projektart eintragen" data-i18n-placeholder="contact.inquiry.customType.placeholder">
 
-                        <label for="inq-location">Ort / Stadtteil</label>
-                        <input id="inq-location" name="location" type="text" placeholder="z. B. München, Unterhaching, Ottobrunn">
+                        <label for="inq-location" data-i18n="contact.inquiry.location.label">Ort / Stadtteil</label>
+                        <input id="inq-location" name="location" type="text" placeholder="z. B. München, Unterhaching, Ottobrunn" data-i18n-placeholder="contact.inquiry.location.placeholder">
 
-                        <label for="inq-appointment-1">Terminvorschlag 1 für Besichtigung</label>
-                        <input id="inq-appointment-1" name="appointment-1" type="text" placeholder="z. B. Dienstag nächste Woche, 17:30 Uhr">
+                        <label for="inq-appointment-1" data-i18n="contact.inquiry.appointment1.label">Terminvorschlag 1 für Besichtigung</label>
+                        <input id="inq-appointment-1" name="appointment-1" type="text" placeholder="z. B. Dienstag nächste Woche, 17:30 Uhr" data-i18n-placeholder="contact.inquiry.appointment1.placeholder">
 
-                        <label for="inq-appointment-2">Terminvorschlag 2 für Besichtigung</label>
-                        <input id="inq-appointment-2" name="appointment-2" type="text" placeholder="z. B. Donnerstag nächste Woche, 8:30 Uhr">
-                        <p class="inquiry-note small">Wenn Sie eine Besichtigung wünschen, nennen Sie bitte zwei passende Zeiten für die kommende Woche. Wir prüfen den Kalender und bestätigen einen Termin persönlich oder schlagen eine Alternative vor.</p>
+                        <label for="inq-appointment-2" data-i18n="contact.inquiry.appointment2.label">Terminvorschlag 2 für Besichtigung</label>
+                        <input id="inq-appointment-2" name="appointment-2" type="text" placeholder="z. B. Donnerstag nächste Woche, 8:30 Uhr" data-i18n-placeholder="contact.inquiry.appointment2.placeholder">
+                        <p class="inquiry-note small" data-i18n="contact.inquiry.appointmentNote">Wenn Sie eine Besichtigung wünschen, nennen Sie bitte zwei passende Zeiten für die kommende Woche. Wir prüfen den Kalender und bestätigen einen Termin persönlich oder schlagen eine Alternative vor.</p>
 
-                        <label for="inq-message">Kurze Beschreibung</label>
-                        <textarea id="inq-message" name="message" rows="5" placeholder="Was soll gebaut, repariert oder geplant werden? Maße, Materialwunsch oder Fotos können Sie danach in der E-Mail anhängen."></textarea>
+                        <label for="inq-message" data-i18n="contact.inquiry.message.label">Kurze Beschreibung</label>
+                        <textarea id="inq-message" name="message" rows="5" placeholder="Was soll gebaut, repariert oder geplant werden? Maße, Materialwunsch oder Fotos können Sie danach in der E-Mail anhängen." data-i18n-placeholder="contact.inquiry.message.placeholder"></textarea>
 
-                        <button type="submit" class="btn btn-secondary btn-full">E-Mail mit Anfrage öffnen</button>
-                        <p class="inquiry-note small">Für Fotos: Nach dem Öffnen der E-Mail einfach Bilder als Anhang hinzufügen. Falls sich kein E-Mail-Programm öffnet, kopieren Sie die Angaben und senden Sie sie an <a href="mailto:info@ef-sinn.de">info@ef-sinn.de</a> oder rufen Sie direkt an: <a href="tel:+4917687186451">+49 176 8718 6451</a>.</p>
+                        <button type="submit" class="btn btn-secondary btn-full" data-i18n="contact.inquiry.submit">E-Mail mit Anfrage öffnen</button>
+                        <p class="inquiry-note small" data-i18n="contact.inquiry.fallback">Für Fotos: Nach dem Öffnen der E-Mail einfach Bilder als Anhang hinzufügen. Falls sich kein E-Mail-Programm öffnet, kopieren Sie die Angaben und senden Sie sie an <a href="mailto:info@ef-sinn.de">info@ef-sinn.de</a> oder rufen Sie direkt an: <a href="tel:+4917687186451">+49 176 8718 6451</a>.</p>
                     </form>
                 </div>
             </div>
@@ -209,26 +209,26 @@
         <div class="container">
             <div class="map-panel">
                 <div class="map-copy">
-                    <p class="section-kicker">Anfahrt</p>
-                    <h2 class="section-title" id="map-title">ef-sinn in Google Maps öffnen</h2>
-                    <p>Aus Datenschutzgründen laden wir keine eingebettete Google-Karte automatisch. Sie entscheiden selbst, ob Sie Google Maps öffnen möchten.</p>
+                    <p class="section-kicker" data-i18n="contact.map.kicker">Anfahrt</p>
+                    <h2 class="section-title" id="map-title" data-i18n="contact.map.title">ef-sinn in Google Maps öffnen</h2>
+                    <p data-i18n="contact.map.privacy">Aus Datenschutzgründen laden wir keine eingebettete Google-Karte automatisch. Sie entscheiden selbst, ob Sie Google Maps öffnen möchten.</p>
                 </div>
                 <div class="map-card-grid">
                     <a class="map-link-card" href="https://www.google.com/maps/search/?api=1&query=Germeringer%20Weg%203C%2C%2081245%20M%C3%BCnchen" target="_blank" rel="noopener noreferrer">
-                        <strong>Werkstatt in Google Maps öffnen</strong>
+                        <strong data-i18n="contact.map.workshop">Werkstatt in Google Maps öffnen</strong>
                         <span>Germeringer Weg 3C, 81245 München</span>
                     </a>
                     <a class="map-link-card" href="https://www.google.com/maps/dir/?api=1&destination=Germeringer%20Weg%203C%2C%2081245%20M%C3%BCnchen" target="_blank" rel="noopener noreferrer">
-                        <strong>Route zur Werkstatt</strong>
-                        <span>Navigation mit Google Maps starten</span>
+                        <strong data-i18n="contact.map.workshopRoute">Route zur Werkstatt</strong>
+                        <span data-i18n="contact.map.startNavigation">Navigation mit Google Maps starten</span>
                     </a>
                     <a class="map-link-card" href="https://www.google.com/maps/place/Karampas+Marios+Schreiner/@48.0614642,11.6225179,17z/data=!4m15!1m8!3m7!1s0x479dde1d7d1f100b:0x29a2266afd1d6e90!2sSchmorellstra%C3%9Fe+6,+82008+Unterhaching!3b1!8m2!3d48.0614642!4d11.6225179!16s%2Fg%2F11bw43gftg!3m5!1s0x479ddfd8a7c23f5d:0x9be312f23d14055!8m2!3d48.0614877!4d11.6225611!16s%2Fg%2F11fslfmjk3" target="_blank" rel="noopener noreferrer">
-                        <strong>Büro / Google-Unternehmensprofil öffnen</strong>
+                        <strong data-i18n="contact.map.office">Büro / Google-Unternehmensprofil öffnen</strong>
                         <span>Karampas Marios Schreiner · Schmorellstraße 6, 82008 Unterhaching</span>
                     </a>
                     <a class="map-link-card" href="https://www.google.com/maps/dir/?api=1&destination=Karampas%20Marios%20Schreiner%2C%20Schmorellstra%C3%9Fe%206%2C%2082008%20Unterhaching" target="_blank" rel="noopener noreferrer">
-                        <strong>Route zum Büro</strong>
-                        <span>Navigation zum Google-Unternehmensprofil starten</span>
+                        <strong data-i18n="contact.map.officeRoute">Route zum Büro</strong>
+                        <span data-i18n="contact.map.startOfficeNavigation">Navigation zum Google-Unternehmensprofil starten</span>
                     </a>
                 </div>
             </div>
@@ -243,13 +243,13 @@
                     <h3 class="footer-title">ef-sinn</h3>
                     <p class="footer-text">
                         <span data-i18n="footer.tagline">Qualität und Handwerkskunst seit Jahren.<br>Ihr Partner für maßgefertigte Holzarbeiten.</span><br><br>
-                        <strong>Büro:</strong> Schmorellstraße 6, 82008 Unterhaching<br>
-                        <strong>Werkstatt:</strong> Germeringer Weg 3C, 81245 München
+                        <strong data-i18n="footer.office.label">Büro:</strong> Schmorellstraße 6, 82008 Unterhaching<br>
+                        <strong data-i18n="footer.workshop.label">Werkstatt:</strong> Germeringer Weg 3C, 81245 München
                     </p>
                 </div>
                 
                 <div class="footer-column">
-                    <h3 class="footer-title">Navigation</h3>
+                    <h3 class="footer-title" data-i18n="footer.nav">Navigation</h3>
                     <ul class="footer-links">
                         <li><a href="index.html" data-i18n="nav.home">Start</a></li>
                         <li><a href="about.html" data-i18n="nav.about">Über uns</a></li>
@@ -260,10 +260,10 @@
                 </div>
                 
                 <div class="footer-column">
-                    <h3 class="footer-title">Rechtliches</h3>
+                    <h3 class="footer-title" data-i18n="footer.legal">Rechtliches</h3>
                     <ul class="footer-links">
-                        <li><a href="impressum.html">Impressum</a></li>
-                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                        <li><a href="impressum.html" data-i18n="footer.imprint">Impressum</a></li>
+                        <li><a href="datenschutz.html" data-i18n="footer.privacy">Datenschutz</a></li>
                     </ul>
                 </div>
             </div>
@@ -290,42 +290,53 @@
         });
       });
       if(templateBtns[0]) templateBtns[0].setAttribute('aria-pressed', 'true');
+      function syncSelectedProjectType(){
+        var active = form.querySelector('.project-template-btn.active');
+        if(active && typeValueInput) typeValueInput.value = active.getAttribute('data-project-type') || '';
+      }
+      document.addEventListener('efSinn:i18nApplied', syncSelectedProjectType);
+      syncSelectedProjectType();
 
       form.addEventListener('submit', function(e){
         e.preventDefault();
         var get = function(id){ var el=document.getElementById(id); return el ? el.value.trim() : ''; };
+        var t = function(key, fallback){
+          var state = window.EFSINN_I18N || {};
+          var dict = state.dict || {};
+          return dict[key] || fallback;
+        };
         var selectedType = get('inq-type-value');
-        var typeValue = get('inq-custom-type') || selectedType || 'Schreinerprojekt';
-        var subject = 'Projektanfrage ef-sinn: ' + typeValue;
+        var typeValue = get('inq-custom-type') || selectedType || t('contact.inquiry.defaultProject','Schreinerprojekt');
+        var subject = t('contact.mail.subjectPrefix','Projektanfrage ef-sinn: ') + typeValue;
         var body = [
-          'Hallo ef-sinn,',
+          t('contact.mail.greeting','Hallo ef-sinn,'),
           '',
-          'ich möchte eine Anfrage für folgendes Projekt senden:',
+          t('contact.mail.intro','ich möchte eine Anfrage für folgendes Projekt senden:'),
           '',
-          'Name: ' + get('inq-name'),
-          'Telefon: ' + get('inq-phone'),
-          'E-Mail: ' + get('inq-email'),
-          'Projektart: ' + typeValue,
-          'Ort / Stadtteil: ' + get('inq-location'),
-          'Terminvorschlag 1 für Besichtigung: ' + get('inq-appointment-1'),
-          'Terminvorschlag 2 für Besichtigung: ' + get('inq-appointment-2'),
+          t('contact.mail.name','Name: ') + get('inq-name'),
+          t('contact.mail.phone','Telefon: ') + get('inq-phone'),
+          t('contact.mail.email','E-Mail: ') + get('inq-email'),
+          t('contact.mail.projectType','Projektart: ') + typeValue,
+          t('contact.mail.location','Ort / Stadtteil: ') + get('inq-location'),
+          t('contact.mail.appointment1','Terminvorschlag 1 für Besichtigung: ') + get('inq-appointment-1'),
+          t('contact.mail.appointment2','Terminvorschlag 2 für Besichtigung: ') + get('inq-appointment-2'),
           '',
-          'Beschreibung:',
+          t('contact.mail.description','Beschreibung:'),
           get('inq-message'),
           '',
-          'Hinweis: Ich habe gelesen, dass die erste Besichtigung und Ersteinschätzung kostenlos und unverbindlich ist.',
-          'Bitte prüfen Sie meine Terminvorschläge und melden Sie sich für eine kostenlose Erstberatung bei mir.',
+          t('contact.mail.freeNote','Hinweis: Ich habe gelesen, dass die erste Besichtigung und Ersteinschätzung kostenlos und unverbindlich ist.'),
+          t('contact.mail.nextStep','Bitte prüfen Sie meine Terminvorschläge und melden Sie sich für eine kostenlose Erstberatung bei mir.'),
           '',
-          'Viele Grüße'
+          t('contact.mail.regards','Viele Grüße')
         ].join('\n');
         window.location.href = 'mailto:info@ef-sinn.de?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
       });
     })();
     </script>
 
-    <div class="mobile-contact-bar" aria-label="Schnellkontakt mobil">
-        <a href="tel:+4917687186451" class="mobile-contact-call">Anrufen</a>
-        <a href="contact.html#anfrage-assistent" class="mobile-contact-request">Projekt anfragen</a>
+    <div class="mobile-contact-bar" aria-label="Schnellkontakt mobil" data-i18n-aria-label="mobile.quickContact">
+        <a href="tel:+4917687186451" class="mobile-contact-call" data-i18n="mobile.call">Anrufen</a>
+        <a href="contact.html#anfrage-assistent" class="mobile-contact-request" data-i18n="mobile.request">Projekt anfragen</a>
     </div>
 </body>
 </html>

@@ -19,7 +19,7 @@
 
   function load(lang,cb){
     var x=new XMLHttpRequest();
-    x.open('GET',prefix()+'i18n/'+lang+'.json?v=20260520');
+    x.open('GET',prefix()+'i18n/'+lang+'.json?v=20260605');
     x.onload=function(){if(x.status===200){try{cb(JSON.parse(x.responseText))}catch(e){cb({})}}else cb({})};
     x.onerror=function(){cb({})};
     x.send();
@@ -27,17 +27,40 @@
 
   function apply(dict,lang){
     document.documentElement.lang=lang;
+    window.EFSINN_I18N={lang:lang,dict:dict};
+
+    function val(key){return key&&dict[key]?dict[key]:null}
+
     var els=document.querySelectorAll('[data-i18n]');
     for(var i=0;i<els.length;i++){
       var k=els[i].getAttribute('data-i18n');
-      if(dict[k]){
-        if(els[i].tagName==='INPUT'||els[i].tagName==='TEXTAREA'){
-          els[i].placeholder=dict[k];
+      var v=val(k);
+      if(v){
+        if((els[i].tagName==='INPUT'||els[i].tagName==='TEXTAREA')&&!els[i].hasAttribute('data-i18n-text')){
+          els[i].placeholder=v;
         } else {
-          els[i].innerHTML=dict[k];
+          els[i].innerHTML=v;
         }
       }
     }
+
+    var attrMap=[
+      ['data-i18n-placeholder','placeholder'],
+      ['data-i18n-aria-label','aria-label'],
+      ['data-i18n-title','title'],
+      ['data-i18n-value','value'],
+      ['data-i18n-data-project-type','data-project-type']
+    ];
+    for(var a=0;a<attrMap.length;a++){
+      var found=document.querySelectorAll('['+attrMap[a][0]+']');
+      for(var j=0;j<found.length;j++){
+        var ak=found[j].getAttribute(attrMap[a][0]);
+        var av=val(ak);
+        if(av) found[j].setAttribute(attrMap[a][1],av);
+      }
+    }
+
+    document.dispatchEvent(new CustomEvent('efSinn:i18nApplied',{detail:{lang:lang,dict:dict}}));
   }
 
   function switcher(cur){
