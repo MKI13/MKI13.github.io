@@ -1820,6 +1820,17 @@ img {
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 980px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .project-template-grid {
+        grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+    }
+}
+
 @media (max-width: 768px) {
     :root {
         --container-padding: 1rem;
@@ -2412,6 +2423,7 @@ img {
     font-weight: 700;
     line-height: 1.35;
     text-align: left;
+    overflow-wrap: anywhere;
 }
 
 .project-template-btn:hover,
