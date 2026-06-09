@@ -538,8 +538,8 @@
   "nav.callAria": "Call ef-sinn by phone",
   "mobile.quickContact": "Mobile quick contact",
   "portfolio.search.kicker": "Reference search",
-  "portfolio.search.title": "Which project are you looking for?",
-  "portfolio.search.text": "Search for furniture making, built-in wardrobes, bathroom furniture, parquet, terraces, stairs or Munich. The project cards show matching examples and lead directly to an inquiry.",
+  "portfolio.search.title": "Which category are you looking for?",
+  "portfolio.search.text": "Choose a fixed category. The page then shows all matching references — without free text input and without duplicate category buttons.",
   "portfolio.search.label": "Search project",
   "portfolio.search.placeholder": "e.g. built-in wardrobe, bathroom furniture, parquet, terrace Munich",
   "portfolio.search.chipsAria": "Common search terms",
@@ -689,5 +689,15 @@
   "portfolio.legacy.p20.material": "wood, clear-lacquered",
   "portfolio.legacy.p20.caption": "Completed reference in Munich. The project shows precise carpentry, a harmonious wood appearance and a practical solution for everyday use.",
   "portfolio.legacy.p20.text": "Material: wood, clear-lacquered. The focus is on clean joints, calm lines and durable execution. Exact construction details can be refined with Marios before final publication.",
-  "portfolio.legacy.p20.alt": "Clear-lacquered wooden kitchen – Munich – EF-Sinn reference project"
+  "portfolio.legacy.p20.alt": "Clear-lacquered wooden kitchen – Munich – EF-Sinn reference project",
+  "portfolio.categorySelect.label": "Select category",
+  "portfolio.categorySelect.aria": "Select project category",
+  "portfolio.categorySelect.all": "All projects",
+  "portfolio.categorySelect.treppen": "Stairs",
+  "portfolio.categorySelect.terrassen": "Terraces & balconies",
+  "portfolio.categorySelect.moebel": "Furniture & bathroom furniture",
+  "portfolio.categorySelect.kuechen": "Kitchens",
+  "portfolio.categorySelect.parkett": "Parquet & flooring",
+  "portfolio.categorySelect.innenausbau": "Interior work & wall cladding",
+  "portfolio.categorySelect.aussenbau": "Outdoor work & garden houses"
 }
