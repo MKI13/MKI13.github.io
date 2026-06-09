@@ -50,8 +50,8 @@ html {
 }
 
 body {
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 
-                 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Helvetica Neue', 
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+                 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Helvetica Neue',
                  Arial, sans-serif;
     line-height: 1.6;
     color: #2c2c2c;
@@ -94,22 +94,22 @@ textarea {
     --color-background: #ffffff;     /* Weiß */
     --color-background-alt: #f4f5f7; /* Kühles Hellgrau */
     --color-border: #d8d8da;         /* Silber (Logo-Stahl) */
-    
+
     /* Abstände */
     --spacing-xs: 0.5rem;
     --spacing-sm: 1rem;
     --spacing-md: 2rem;
     --spacing-lg: 4rem;
     --spacing-xl: 6rem;
-    
+
     /* Container */
     --container-width: 1200px;
     --container-padding: 2rem;
-    
+
     /* Transitions */
     --transition-speed: 0.3s;
     --transition-timing: cubic-bezier(0.4, 0, 0.2, 1);
-    
+
     /* Shadows */
     --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
@@ -211,7 +211,7 @@ textarea {
         animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
     }
-    
+
     html {
         scroll-behavior: auto;
     }
@@ -314,7 +314,7 @@ textarea {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: 
+    background-image:
         radial-gradient(circle at 20% 80%, rgba(212, 160, 16, 0.15) 0%, transparent 50%),
         radial-gradient(circle at 80% 20%, rgba(60, 200, 240, 0.1) 0%, transparent 50%);
     opacity: 1;
@@ -1852,11 +1852,11 @@ img {
     .nav-link {
         padding: 0.25rem 0.2rem;
     }
-    
+
     .hero {
         min-height: 500px;
     }
-    
+
     .intro-grid,
     .about-grid,
     .contact-grid,
@@ -1866,7 +1866,7 @@ img {
         grid-template-columns: 1fr;
         gap: var(--spacing-md);
     }
-    
+
     .services-grid,
     .values-grid,
     .strength-grid {
@@ -1896,7 +1896,7 @@ img {
         margin: -2rem 1rem 0;
         width: auto;
     }
-    
+
     .portfolio-grid {
         grid-template-columns: 1fr;
     }
@@ -1904,17 +1904,17 @@ img {
         grid-column: span 1;
         grid-row: span 1;
     }
-    
+
     .process-timeline::before {
         left: 20px;
     }
-    
+
     .timeline-marker {
         width: 40px;
         height: 40px;
         font-size: 1.125rem;
     }
-    
+
     .footer-grid {
         grid-template-columns: 1fr;
     }
@@ -1961,19 +1961,19 @@ img {
     .service-detail-header {
         padding: 15rem 0 2.5rem;
     }
-    
+
     .logo a {
         font-size: 1.25rem;
     }
-    
+
     .hero-title {
         font-size: 2rem;
     }
-    
+
     .hero-subtitle {
         font-size: 1rem;
     }
-    
+
     .btn {
         padding: 0.875rem 1.5rem;
     }
@@ -1988,12 +1988,12 @@ img {
     .scroll-indicator {
         display: none;
     }
-    
+
     body {
         color: black;
         background: white;
     }
-    
+
     .hero {
         page-break-after: always;
     }
@@ -2113,7 +2113,7 @@ img {
         --color-text: #000000;
         --color-border: #333333;
     }
-    
+
     .btn {
         border-width: 3px;
     }
@@ -2299,6 +2299,33 @@ img {
     color: var(--color-primary);
 }
 
+
+.portfolio-category-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+}
+
+.portfolio-category-btn {
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    padding: 0.55rem 0.95rem;
+    background: var(--color-background-alt);
+    color: var(--color-text);
+    cursor: pointer;
+    font-weight: 700;
+    font: inherit;
+    transition: all 0.2s ease;
+}
+
+.portfolio-category-btn:hover,
+.portfolio-category-btn:focus,
+.portfolio-category-btn.active {
+    border-color: var(--color-primary);
+    color: white;
+    background: var(--color-primary);
+}
+
 .project-request {
     margin-top: 1.25rem;
     padding-top: 1rem;
@@ -2377,7 +2404,34 @@ img {
         color: var(--color-primary-dark);
     }
 
-    .project-request {
+
+.portfolio-category-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.55rem;
+}
+
+.portfolio-category-btn {
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    padding: 0.55rem 0.95rem;
+    background: var(--color-background-alt);
+    color: var(--color-text);
+    cursor: pointer;
+    font-weight: 700;
+    font: inherit;
+    transition: all 0.2s ease;
+}
+
+.portfolio-category-btn:hover,
+.portfolio-category-btn:focus,
+.portfolio-category-btn.active {
+    border-color: var(--color-primary);
+    color: white;
+    background: var(--color-primary);
+}
+
+.project-request {
         align-items: stretch;
     }
 

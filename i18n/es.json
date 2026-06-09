@@ -539,7 +539,7 @@
   "mobile.quickContact": "Contacto rápido móvil",
   "portfolio.search.kicker": "Búsqueda de referencias",
   "portfolio.search.title": "¿Qué categoría busca?",
-  "portfolio.search.text": "Elija una categoría fija. La página muestra entonces todas las referencias adecuadas — sin entrada de texto libre y sin botones de categoría duplicados.",
+  "portfolio.search.text": "Toque una categoría fija. La página muestra todas las referencias adecuadas — sin entrada de texto libre y con una sola fila de botones.",
   "portfolio.search.label": "Buscar proyecto",
   "portfolio.search.placeholder": "p. ej. armario empotrado, mueble de baño, parquet, terraza Múnich",
   "portfolio.search.chipsAria": "Términos de búsqueda frecuentes",
@@ -699,5 +699,7 @@
   "portfolio.categorySelect.kuechen": "Cocinas",
   "portfolio.categorySelect.parkett": "Parquet y suelos",
   "portfolio.categorySelect.innenausbau": "Interiorismo y revestimientos de pared",
-  "portfolio.categorySelect.aussenbau": "Exteriores y casetas de jardín"
+  "portfolio.categorySelect.aussenbau": "Exteriores y casetas de jardín",
+  "portfolio.categoryButtons.aria": "Categorías de proyecto",
+  "contact.inquiry.type.outdoor": "Exteriores / caseta de jardín"
 }
