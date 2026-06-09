@@ -539,7 +539,7 @@
   "mobile.quickContact": "Schnellkontakt mobil",
   "portfolio.search.kicker": "Referenzsuche",
   "portfolio.search.title": "Welche Kategorie suchen Sie?",
-  "portfolio.search.text": "Wählen Sie eine feste Kategorie. Die Seite zeigt dann alle passenden Referenzen — ohne freie Texteingabe und ohne doppelte Kategorie-Buttons.",
+  "portfolio.search.text": "Tippen Sie auf eine feste Kategorie. Die Seite zeigt alle passenden Referenzen — ohne freie Texteingabe und nur mit einer Button-Reihe.",
   "portfolio.search.label": "Projekt suchen",
   "portfolio.search.placeholder": "z. B. Einbauschrank, Badmöbel, Parkett, Terrasse München",
   "portfolio.search.chipsAria": "Häufige Suchbegriffe",
@@ -699,5 +699,7 @@
   "portfolio.categorySelect.kuechen": "Küchen",
   "portfolio.categorySelect.parkett": "Parkett & Böden",
   "portfolio.categorySelect.innenausbau": "Innenausbau & Wandverkleidung",
-  "portfolio.categorySelect.aussenbau": "Außenbau & Gartenhaus"
+  "portfolio.categorySelect.aussenbau": "Außenbau & Gartenhaus",
+  "portfolio.categoryButtons.aria": "Projektkategorien",
+  "contact.inquiry.type.outdoor": "Außenbau / Gartenhaus"
 }

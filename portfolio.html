@@ -20,7 +20,7 @@
     <meta property="og:locale" content="de_DE">
     <meta property="og:site_name" content="ef-sinn">
     <title>Portfolio & Referenzen – ef-sinn Schreiner Werkstatt München</title>
-    <link rel="stylesheet" href="styles.css?v=20260609">
+    <link rel="stylesheet" href="styles.css?v=20260609c">
     <style>
         /* ===== PORTFOLIO PAGE SPECIFIC STYLES ===== */
 
@@ -848,19 +848,19 @@
                 <div>
                     <p class="section-kicker" data-i18n="portfolio.search.kicker">Referenzsuche</p>
                     <h2 id="portfolio-search-title" data-i18n="portfolio.search.title">Welche Kategorie suchen Sie?</h2>
-                    <p data-i18n="portfolio.search.text">Wählen Sie eine feste Kategorie. Die Seite zeigt dann alle passenden Referenzen — ohne freie Texteingabe und ohne doppelte Kategorie-Buttons.</p>
+                    <p data-i18n="portfolio.search.text">Tippen Sie auf eine feste Kategorie. Die Seite zeigt alle passenden Referenzen — ohne freie Texteingabe und nur mit einer Button-Reihe.</p>
                 </div>
-                <label class="portfolio-search-label" for="portfolio-category-select" data-i18n="portfolio.categorySelect.label">Kategorie auswählen</label>
-                <select id="portfolio-category-select" class="portfolio-search-input" aria-label="Projektkategorie auswählen" data-i18n-aria-label="portfolio.categorySelect.aria">
-                    <option value="all" data-i18n="portfolio.categorySelect.all">Alle Projekte</option>
-                    <option value="treppen" data-i18n="portfolio.categorySelect.treppen">Treppen</option>
-                    <option value="terrassen" data-i18n="portfolio.categorySelect.terrassen">Terrassen & Balkon</option>
-                    <option value="moebel" data-i18n="portfolio.categorySelect.moebel">Möbel & Badmöbel</option>
-                    <option value="kuechen" data-i18n="portfolio.categorySelect.kuechen">Küchen</option>
-                    <option value="parkett" data-i18n="portfolio.categorySelect.parkett">Parkett & Böden</option>
-                    <option value="innenausbau" data-i18n="portfolio.categorySelect.innenausbau">Innenausbau & Wandverkleidung</option>
-                    <option value="aussenbau" data-i18n="portfolio.categorySelect.aussenbau">Außenbau & Gartenhaus</option>
-                </select>
+                <div class="portfolio-search-label" id="portfolio-category-label" data-i18n="portfolio.categorySelect.label">Kategorie auswählen</div>
+                <div class="portfolio-category-buttons" role="group" aria-labelledby="portfolio-category-label" data-i18n-aria-label="portfolio.categoryButtons.aria">
+                    <button type="button" class="portfolio-category-btn active" data-filter="all" aria-pressed="true" data-i18n="portfolio.categorySelect.all">Alle Projekte</button>
+                    <button type="button" class="portfolio-category-btn" data-filter="treppen" aria-pressed="false" data-i18n="portfolio.categorySelect.treppen">Treppen</button>
+                    <button type="button" class="portfolio-category-btn" data-filter="terrassen" aria-pressed="false" data-i18n="portfolio.categorySelect.terrassen">Terrassen & Balkon</button>
+                    <button type="button" class="portfolio-category-btn" data-filter="moebel" aria-pressed="false" data-i18n="portfolio.categorySelect.moebel">Möbel & Badmöbel</button>
+                    <button type="button" class="portfolio-category-btn" data-filter="kuechen" aria-pressed="false" data-i18n="portfolio.categorySelect.kuechen">Küchen</button>
+                    <button type="button" class="portfolio-category-btn" data-filter="parkett" aria-pressed="false" data-i18n="portfolio.categorySelect.parkett">Parkett & Böden</button>
+                    <button type="button" class="portfolio-category-btn" data-filter="innenausbau" aria-pressed="false" data-i18n="portfolio.categorySelect.innenausbau">Innenausbau & Wandverkleidung</button>
+                    <button type="button" class="portfolio-category-btn" data-filter="aussenbau" aria-pressed="false" data-i18n="portfolio.categorySelect.aussenbau">Außenbau & Gartenhaus</button>
+                </div>
             </div>
         </div>
     </section>
@@ -875,7 +875,7 @@
         <div class="container">
 
             <!-- Project 1: Holztreppe I -->
-            <article class="project-card" data-category="treppen" data-categories="treppen">
+            <article class="project-card" data-category="treppen" data-categories="treppen" data-request-type="stairs">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
@@ -925,13 +925,13 @@
                 </div>
 
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=stairs#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
             <!-- Project 2: Holztreppe II -->
-            <article class="project-card" data-category="treppen" data-categories="treppen">
+            <article class="project-card" data-category="treppen" data-categories="treppen" data-request-type="stairs">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
@@ -981,13 +981,13 @@
                 </div>
 
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=stairs#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
             <!-- Project 3: Holzterrasse I -->
-            <article class="project-card" data-category="terrassen" data-categories="terrassen aussenbau">
+            <article class="project-card" data-category="terrassen" data-categories="terrassen aussenbau" data-request-type="terrace">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
@@ -1037,13 +1037,13 @@
                 </div>
 
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=terrace#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
             <!-- Project 4: Holzterrasse II -->
-            <article class="project-card" data-category="terrassen" data-categories="terrassen aussenbau">
+            <article class="project-card" data-category="terrassen" data-categories="terrassen aussenbau" data-request-type="terrace">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
@@ -1093,13 +1093,13 @@
                 </div>
 
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=terrace#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
             <!-- Project 5: Massivholztisch -->
-            <article class="project-card" data-category="moebel" data-categories="moebel">
+            <article class="project-card" data-category="moebel" data-categories="moebel" data-request-type="customFurniture">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
@@ -1149,13 +1149,13 @@
                 </div>
 
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=customFurniture#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
             <!-- Project 6: Badmöbel -->
-            <article class="project-card" data-category="moebel" data-categories="moebel innenausbau">
+            <article class="project-card" data-category="moebel" data-categories="moebel innenausbau" data-request-type="bathroomFurniture">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
@@ -1205,13 +1205,13 @@
                 </div>
 
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=bathroomFurniture#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
             <!-- Project 7: Akustik-Designpaneel -->
-            <article class="project-card" data-category="innenausbau" data-categories="innenausbau">
+            <article class="project-card" data-category="innenausbau" data-categories="innenausbau" data-request-type="interior">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
@@ -1261,13 +1261,13 @@
                 </div>
 
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=interior#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
             <!-- Project 8: Nischenregal -->
-            <article class="project-card" data-category="innenausbau" data-categories="innenausbau moebel">
+            <article class="project-card" data-category="innenausbau" data-categories="innenausbau moebel" data-request-type="customFurniture">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
@@ -1321,13 +1321,13 @@
                 </div>
 
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=customFurniture#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
             <!-- Project 9: Garderobe mit Sitzbank -->
-            <article class="project-card" data-category="innenausbau" data-categories="innenausbau moebel">
+            <article class="project-card" data-category="innenausbau" data-categories="innenausbau moebel" data-request-type="customFurniture">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
@@ -1385,14 +1385,14 @@
                 </div>
 
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=customFurniture#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
 
             <!-- Project 10: Parkettboden -->
-            <article class="project-card" data-category="innenausbau" data-categories="parkett innenausbau">
+            <article class="project-card" data-category="innenausbau" data-categories="parkett innenausbau" data-request-type="parquetInstall">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
@@ -1449,7 +1449,7 @@
                     </div>
                 </div>
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.p10.request">Parkett-Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=parquetInstall#anfrage-assistent" data-i18n="portfolio.p10.request">Parkett-Projekt anfragen</a>
                     <span data-i18n="portfolio.p10.requestNote">Fotos vom Boden helfen bei der ersten Einschätzung.</span>
                 </div>
             </article>
@@ -1461,7 +1461,7 @@
                 <h2 class="legacy-reference-title" data-i18n="portfolio.legacy.title">20 echte Referenzen aus Holzbau Karampas</h2>
                 <p data-i18n="portfolio.legacy.text">Diese Auswahl zeigt ausgeführte Terrassen-, Balkon-, Wandverkleidungs-, Gartenhaus- und Küchenprojekte. Die Bilder wurden nur dezent für ein einheitliches Webseitenbild vorbereitet.</p>
             </div>
-            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen aussenbau">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen aussenbau" data-request-type="terrace">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1492,12 +1492,12 @@
                     <p class="desc-text" data-i18n="portfolio.legacy.p01.text">Die Stufenanlage wurde so ausgeführt, dass sie nicht nur als Zugang, sondern auch als Sitzfläche und Gestaltungselement funktioniert.</p>
                 </div>
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=terrace#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen aussenbau">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen aussenbau" data-request-type="terrace">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1528,12 +1528,12 @@
                     <p class="desc-text" data-i18n="portfolio.legacy.p02.text">Die klare Kantenführung zeigt die handwerkliche Genauigkeit bei sichtbaren Anschlussdetails.</p>
                 </div>
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=terrace#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen aussenbau">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen aussenbau" data-request-type="terrace">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1564,12 +1564,12 @@
                     <p class="desc-text" data-i18n="portfolio.legacy.p03.text">Die reduzierte Gestaltung lässt die Holzfläche ruhig wirken und stärkt die Architektur des Hauses.</p>
                 </div>
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=terrace#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen aussenbau">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen aussenbau" data-request-type="terrace">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1600,12 +1600,12 @@
                     <p class="desc-text" data-i18n="portfolio.legacy.p04.text">Die Fläche wurde als langlebige und pflegefähige Outdoor-Zone für den Alltag gestaltet.</p>
                 </div>
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=terrace#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen aussenbau">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen aussenbau" data-request-type="terrace">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1636,12 +1636,12 @@
                     <p class="desc-text" data-i18n="portfolio.legacy.p05.text">Solche Detailpunkte entscheiden über den hochwertigen Gesamteindruck einer Terrasse.</p>
                 </div>
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=terrace#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen balkon aussenbau">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen balkon aussenbau" data-request-type="terrace">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1672,12 +1672,12 @@
                     <p class="desc-text" data-i18n="portfolio.legacy.p06.text">Die Dielen verleihen dem Balkon mehr Wärme und Nutzqualität, ohne die klare Architektur zu stören.</p>
                 </div>
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=terrace#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen balkon aussenbau">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen balkon aussenbau" data-request-type="terrace">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1708,12 +1708,12 @@
                     <p class="desc-text" data-i18n="portfolio.legacy.p07.text">Die Fläche wirkt hochwertig und macht auch kleine Außenbereiche wohnlicher.</p>
                 </div>
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=terrace#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen balkon aussenbau">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen balkon aussenbau" data-request-type="terrace">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1744,12 +1744,12 @@
                     <p class="desc-text" data-i18n="portfolio.legacy.p08.text">Die Aufnahme eignet sich gut, um Materialqualität, Fugenbild und präzise Ausführung sichtbar zu machen.</p>
                 </div>
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=terrace#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen aussenbau">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen aussenbau" data-request-type="terrace">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1780,12 +1780,12 @@
                     <p class="desc-text" data-i18n="portfolio.legacy.p09.text">Die Ausführung verbindet praktische Nutzung mit einer warmen, hochwertigen Außenwirkung.</p>
                 </div>
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=terrace#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen aussenbau">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen aussenbau" data-request-type="terrace">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1816,12 +1816,12 @@
                     <p class="desc-text" data-i18n="portfolio.legacy.p10.text">Das helle Holz und die ruhige Form schaffen einen freundlichen, gepflegten Eindruck.</p>
                 </div>
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=terrace#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen aussenbau">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen aussenbau" data-request-type="terrace">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1852,12 +1852,12 @@
                     <p class="desc-text" data-i18n="portfolio.legacy.p11.text">Die dunklere Holzfarbe setzt einen starken Akzent zur hellen Fassade und zum Garten.</p>
                 </div>
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=terrace#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen aussenbau">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen aussenbau" data-request-type="terrace">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1888,12 +1888,12 @@
                     <p class="desc-text" data-i18n="portfolio.legacy.p12.text">Die Stufenausbildung verbindet Gestaltung, Komfort und robuste Alltagstauglichkeit.</p>
                 </div>
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=terrace#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen innenausbau aussenbau">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen innenausbau aussenbau" data-request-type="outdoor">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1924,12 +1924,12 @@
                     <p class="desc-text" data-i18n="portfolio.legacy.p13.text">Die Kombination aus Terrassenfläche und Fassadendetail wirkt architektonisch und sehr hochwertig.</p>
                 </div>
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=outdoor#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen innenausbau aussenbau">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen innenausbau aussenbau" data-request-type="outdoor">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1960,12 +1960,12 @@
                     <p class="desc-text" data-i18n="portfolio.legacy.p14.text">Die Wandverkleidung schafft Sichtschutz, Struktur und eine klare Verbindung zur Terrasse.</p>
                 </div>
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=outdoor#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen innenausbau aussenbau">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen innenausbau aussenbau" data-request-type="outdoor">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1996,12 +1996,12 @@
                     <p class="desc-text" data-i18n="portfolio.legacy.p15.text">Die präzisen Anschlüsse zeigen, wie wichtig Planung und saubere Montage bei Außenverkleidungen sind.</p>
                 </div>
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=outdoor#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen innenausbau aussenbau">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen innenausbau aussenbau" data-request-type="outdoor">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -2032,12 +2032,12 @@
                     <p class="desc-text" data-i18n="portfolio.legacy.p16.text">Die klare rechteckige Fläche wirkt aufgeräumt und eignet sich sehr gut für Sitzgruppe und Alltag.</p>
                 </div>
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=outdoor#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen innenausbau aussenbau">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen innenausbau aussenbau" data-request-type="outdoor">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -2068,12 +2068,12 @@
                     <p class="desc-text" data-i18n="portfolio.legacy.p17.text">Das Bild zeigt, wie Holz, Licht und lange Linien einen Außenbereich besonders hochwertig wirken lassen.</p>
                 </div>
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=outdoor#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="moebel" data-categories="moebel aussenbau">
+            <article class="project-card legacy-reference-card" data-category="moebel" data-categories="moebel aussenbau" data-request-type="outdoor">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -2104,12 +2104,12 @@
                     <p class="desc-text" data-i18n="portfolio.legacy.p18.text">Die Verkleidung wertet technische oder funktionale Elemente sichtbar auf und fügt sie in die Außenanlage ein.</p>
                 </div>
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=outdoor#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="innenausbau" data-categories="aussenbau">
+            <article class="project-card legacy-reference-card" data-category="innenausbau" data-categories="aussenbau" data-request-type="outdoor">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -2140,12 +2140,12 @@
                     <p class="desc-text" data-i18n="portfolio.legacy.p19.text">Die Holzoberfläche und die reduzierte Ausführung passen gut in Garten- und Außenbereiche.</p>
                 </div>
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=outdoor#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="moebel" data-categories="kuechen moebel innenausbau">
+            <article class="project-card legacy-reference-card" data-category="moebel" data-categories="kuechen moebel innenausbau" data-request-type="kitchen">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -2176,7 +2176,7 @@
                     <p class="desc-text" data-i18n="portfolio.legacy.p20.text">Die Küche zeigt, dass EF-Sinn nicht nur Außenbereiche, sondern auch hochwertige Innenausbauten und Küchen umsetzt.</p>
                 </div>
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <a class="btn btn-secondary btn-small" href="contact.html?project=kitchen#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
                     <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
@@ -2355,14 +2355,14 @@
         </div>
     </footer>
 
-    <script src="assets/js/i18n.js?v=20260609b"></script>
+    <script src="assets/js/i18n.js?v=20260609c"></script>
     <script>
     /* ===== Portfolio Page Interactions ===== */
     (function() {
         'use strict';
 
-        /* --- Fixed Category Select --- */
-        var categorySelect = document.getElementById('portfolio-category-select');
+        /* --- Fixed Category Buttons --- */
+        var categoryBtns = document.querySelectorAll('.portfolio-category-btn[data-filter]');
         var projectCards = document.querySelectorAll('.project-card[data-category], .project-card[data-categories]');
         var countEl = document.getElementById('visible-count');
         var activeFilter = 'all';
@@ -2371,8 +2371,16 @@
             return (card.getAttribute('data-categories') || card.getAttribute('data-category') || '').split(/\s+/).filter(Boolean);
         }
 
+        function setActiveFilter(filter) {
+            activeFilter = filter || 'all';
+            categoryBtns.forEach(function(btn) {
+                var isActive = btn.getAttribute('data-filter') === activeFilter;
+                btn.classList.toggle('active', isActive);
+                btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+            });
+        }
+
         function applyFilters() {
-            activeFilter = categorySelect ? categorySelect.value : 'all';
             var visible = 0;
             projectCards.forEach(function(card) {
                 var categories = cardCategories(card);
@@ -2387,10 +2395,14 @@
             if (countEl) countEl.textContent = visible;
         }
 
-        if (categorySelect) {
-            categorySelect.addEventListener('change', applyFilters);
-        }
+        categoryBtns.forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                setActiveFilter(btn.getAttribute('data-filter'));
+                applyFilters();
+            });
+        });
 
+        setActiveFilter('all');
         applyFilters();
 
         /* --- Scroll Reveal (Intersection Observer) --- */

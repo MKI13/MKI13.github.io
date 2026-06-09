@@ -539,7 +539,7 @@
   "mobile.quickContact": "Mobile quick contact",
   "portfolio.search.kicker": "Reference search",
   "portfolio.search.title": "Which category are you looking for?",
-  "portfolio.search.text": "Choose a fixed category. The page then shows all matching references — without free text input and without duplicate category buttons.",
+  "portfolio.search.text": "Tap a fixed category. The page shows all matching references — without free text input and with only one row of buttons.",
   "portfolio.search.label": "Search project",
   "portfolio.search.placeholder": "e.g. built-in wardrobe, bathroom furniture, parquet, terrace Munich",
   "portfolio.search.chipsAria": "Common search terms",
@@ -699,5 +699,7 @@
   "portfolio.categorySelect.kuechen": "Kitchens",
   "portfolio.categorySelect.parkett": "Parquet & flooring",
   "portfolio.categorySelect.innenausbau": "Interior work & wall cladding",
-  "portfolio.categorySelect.aussenbau": "Outdoor work & garden houses"
+  "portfolio.categorySelect.aussenbau": "Outdoor work & garden houses",
+  "portfolio.categoryButtons.aria": "Project categories",
+  "contact.inquiry.type.outdoor": "Outdoor work / garden house"
 }

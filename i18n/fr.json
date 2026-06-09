@@ -539,7 +539,7 @@
   "mobile.quickContact": "Contact rapide mobile",
   "portfolio.search.kicker": "Recherche de références",
   "portfolio.search.title": "Quelle catégorie recherchez-vous ?",
-  "portfolio.search.text": "Choisissez une catégorie fixe. La page affiche ensuite toutes les références correspondantes — sans saisie libre et sans boutons de catégorie en double.",
+  "portfolio.search.text": "Touchez une catégorie fixe. La page affiche toutes les références correspondantes — sans saisie libre et avec une seule rangée de boutons.",
   "portfolio.search.label": "Rechercher un projet",
   "portfolio.search.placeholder": "p. ex. placard intégré, meuble de salle de bains, parquet, terrasse Munich",
   "portfolio.search.chipsAria": "Termes de recherche fréquents",
@@ -699,5 +699,7 @@
   "portfolio.categorySelect.kuechen": "Cuisines",
   "portfolio.categorySelect.parkett": "Parquet et sols",
   "portfolio.categorySelect.innenausbau": "Aménagement intérieur et bardage mural",
-  "portfolio.categorySelect.aussenbau": "Extérieur et abris de jardin"
+  "portfolio.categorySelect.aussenbau": "Extérieur et abris de jardin",
+  "portfolio.categoryButtons.aria": "Catégories de projets",
+  "contact.inquiry.type.outdoor": "Extérieur / abri de jardin"
 }

@@ -539,7 +539,7 @@
   "mobile.quickContact": "Γρήγορη επικοινωνία για κινητά",
   "portfolio.search.kicker": "Αναζήτηση έργων",
   "portfolio.search.title": "Ποια κατηγορία ψάχνετε;",
-  "portfolio.search.text": "Επιλέξτε μια σταθερή κατηγορία. Η σελίδα εμφανίζει όλες τις σχετικές αναφορές — χωρίς ελεύθερη πληκτρολόγηση και χωρίς διπλά κουμπιά κατηγορίας.",
+  "portfolio.search.text": "Πατήστε μια σταθερή κατηγορία. Η σελίδα εμφανίζει όλες τις σχετικές αναφορές — χωρίς ελεύθερη πληκτρολόγηση και μόνο με μία σειρά κουμπιών.",
   "portfolio.search.label": "Αναζήτηση έργου",
   "portfolio.search.placeholder": "π.χ. εντοιχισμένη ντουλάπα, έπιπλο μπάνιου, παρκέ, βεράντα Μόναχο",
   "portfolio.search.chipsAria": "Συχνές λέξεις αναζήτησης",
@@ -699,5 +699,7 @@
   "portfolio.categorySelect.kuechen": "Κουζίνες",
   "portfolio.categorySelect.parkett": "Παρκέ και δάπεδα",
   "portfolio.categorySelect.innenausbau": "Εσωτερικές εργασίες και επενδύσεις τοίχων",
-  "portfolio.categorySelect.aussenbau": "Εξωτερικές εργασίες και σπιτάκια κήπου"
+  "portfolio.categorySelect.aussenbau": "Εξωτερικές εργασίες και σπιτάκια κήπου",
+  "portfolio.categoryButtons.aria": "Κατηγορίες έργων",
+  "contact.inquiry.type.outdoor": "Εξωτερικές εργασίες / σπιτάκι κήπου"
 }
