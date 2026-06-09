@@ -667,6 +667,46 @@
             to { opacity: 1; }
         }
 
+
+        /* Legacy Holzbau Karampas references */
+        .legacy-reference-card {
+            border: 1px solid rgba(14, 74, 110, 0.10);
+        }
+        .legacy-reference-card .project-card-header {
+            padding-bottom: 0.6rem;
+        }
+        .legacy-reference-card .project-gallery-grid img {
+            height: 320px;
+            object-fit: cover;
+        }
+        .legacy-reference-card .project-description {
+            padding-bottom: 1rem;
+        }
+        .legacy-reference-card .desc-text {
+            min-height: 4.8em;
+        }
+        .legacy-reference-intro {
+            max-width: 820px;
+            margin: 1.5rem auto 2.5rem;
+            text-align: center;
+            color: var(--color-text-light);
+            line-height: 1.8;
+            scroll-margin-top: 120px;
+        }
+        .legacy-reference-kicker {
+            color: var(--color-primary);
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        .legacy-reference-title {
+            color: var(--color-text);
+            font-size: clamp(1.8rem, 4vw, 2.6rem);
+            margin: 0 0 0.75rem;
+        }
+
         /* Responsive */
         @media (max-width: 768px) {
             .portfolio-hero {
@@ -806,19 +846,19 @@
         <div class="container">
             <div class="portfolio-search-panel">
                 <div>
-                    <p class="section-kicker">Referenzsuche</p>
-                    <h2 id="portfolio-search-title">Welches Projekt suchen Sie?</h2>
-                    <p>Suchen Sie nach Möbelbau, Einbauschrank, Badmöbel, Parkett, Terrasse, Treppe oder München. Die Projektkarten zeigen passende Beispiele und führen direkt zur Anfrage.</p>
+                    <p class="section-kicker" data-i18n="portfolio.search.kicker">Referenzsuche</p>
+                    <h2 id="portfolio-search-title" data-i18n="portfolio.search.title">Welches Projekt suchen Sie?</h2>
+                    <p data-i18n="portfolio.search.text">Suchen Sie nach Möbelbau, Einbauschrank, Badmöbel, Parkett, Terrasse, Treppe oder München. Die Projektkarten zeigen passende Beispiele und führen direkt zur Anfrage.</p>
                 </div>
-                <label class="portfolio-search-label" for="portfolio-search">Projekt suchen</label>
-                <input id="portfolio-search" class="portfolio-search-input" type="search" placeholder="z. B. Einbauschrank, Badmöbel, Parkett, Terrasse München" autocomplete="off">
-                <div class="portfolio-search-chips" aria-label="Häufige Suchbegriffe">
-                    <button type="button" data-search-term="Einbauschrank">Einbauschrank</button>
-                    <button type="button" data-search-term="Badmöbel">Badmöbel</button>
-                    <button type="button" data-search-term="Parkett">Parkett</button>
-                    <button type="button" data-search-term="Terrasse">Terrasse</button>
-                    <button type="button" data-search-term="Treppe">Treppe</button>
-                    <button type="button" data-search-term="München">München</button>
+                <label class="portfolio-search-label" for="portfolio-search" data-i18n="portfolio.search.label">Projekt suchen</label>
+                <input id="portfolio-search" class="portfolio-search-input" type="search" placeholder="z. B. Einbauschrank, Badmöbel, Parkett, Terrasse München" data-i18n-placeholder="portfolio.search.placeholder" autocomplete="off">
+                <div class="portfolio-search-chips" aria-label="Häufige Suchbegriffe" data-i18n-aria-label="portfolio.search.chipsAria">
+                    <button type="button" data-search-term="Einbauschrank" data-i18n="portfolio.search.chip.cabinet">Einbauschrank</button>
+                    <button type="button" data-search-term="Badmöbel" data-i18n="portfolio.search.chip.bath">Badmöbel</button>
+                    <button type="button" data-search-term="Parkett" data-i18n="portfolio.search.chip.parquet">Parkett</button>
+                    <button type="button" data-search-term="Terrasse" data-i18n="portfolio.search.chip.terrace">Terrasse</button>
+                    <button type="button" data-search-term="Treppe" data-i18n="portfolio.search.chip.stairs">Treppe</button>
+                    <button type="button" data-search-term="München" data-i18n="portfolio.search.chip.munich">München</button>
                 </div>
             </div>
         </div>
@@ -833,7 +873,7 @@
             <button class="portfolio-page-filter" data-filter="moebel" data-i18n="home.portfolio.filter.moebel">Möbel</button>
             <button class="portfolio-page-filter" data-filter="innenausbau" data-i18n="home.portfolio.filter.innenausbau">Innenausbau</button>
         </div>
-        <div class="project-count"><span id="visible-count">10</span> <span data-i18n="portfolio.projects.count">Projekte</span></div>
+        <div class="project-count"><span id="visible-count">30</span> <span data-i18n="portfolio.projects.count">Projekte</span></div>
     </div>
 
     <!-- Projects -->
@@ -889,10 +929,10 @@
                         </ul>
                     </div>
                 </div>
-            
+
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent">Ähnliches Projekt anfragen</a>
-                    <span>Kurze Beschreibung genügt – wir melden uns persönlich.</span>
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
@@ -945,10 +985,10 @@
                         </ul>
                     </div>
                 </div>
-            
+
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent">Ähnliches Projekt anfragen</a>
-                    <span>Kurze Beschreibung genügt – wir melden uns persönlich.</span>
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
@@ -1001,10 +1041,10 @@
                         </ul>
                     </div>
                 </div>
-            
+
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent">Ähnliches Projekt anfragen</a>
-                    <span>Kurze Beschreibung genügt – wir melden uns persönlich.</span>
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
@@ -1057,10 +1097,10 @@
                         </ul>
                     </div>
                 </div>
-            
+
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent">Ähnliches Projekt anfragen</a>
-                    <span>Kurze Beschreibung genügt – wir melden uns persönlich.</span>
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
@@ -1113,10 +1153,10 @@
                         </ul>
                     </div>
                 </div>
-            
+
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent">Ähnliches Projekt anfragen</a>
-                    <span>Kurze Beschreibung genügt – wir melden uns persönlich.</span>
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
@@ -1169,10 +1209,10 @@
                         </ul>
                     </div>
                 </div>
-            
+
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent">Ähnliches Projekt anfragen</a>
-                    <span>Kurze Beschreibung genügt – wir melden uns persönlich.</span>
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
@@ -1225,10 +1265,10 @@
                         </ul>
                     </div>
                 </div>
-            
+
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent">Ähnliches Projekt anfragen</a>
-                    <span>Kurze Beschreibung genügt – wir melden uns persönlich.</span>
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
@@ -1285,10 +1325,10 @@
                         </ul>
                     </div>
                 </div>
-            
+
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent">Ähnliches Projekt anfragen</a>
-                    <span>Kurze Beschreibung genügt – wir melden uns persönlich.</span>
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
@@ -1349,10 +1389,10 @@
                         </ul>
                     </div>
                 </div>
-            
+
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent">Ähnliches Projekt anfragen</a>
-                    <span>Kurze Beschreibung genügt – wir melden uns persönlich.</span>
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
@@ -1361,19 +1401,19 @@
             <article class="project-card" data-category="innenausbau">
                 <div class="project-card-header">
                     <div>
-                        <div class="project-label">Referenzprojekt</div>
-                        <h2>Parkettboden verlegen & schleifen</h2>
+                        <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
+                        <h2 data-i18n="portfolio.p10.title">Parkettboden verlegen & schleifen</h2>
                         <div class="project-divider"></div>
                     </div>
                 </div>
                 <div class="project-meta-grid">
                     <div class="project-meta-chip">
-                        <div class="chip-label">Projektart</div>
-                        <div class="chip-value">Parkettboden München</div>
+                        <div class="chip-label" data-i18n="portfolio.meta.type">Projektart</div>
+                        <div class="chip-value" data-i18n="portfolio.p10.meta1">Parkettboden München</div>
                     </div>
                     <div class="project-meta-chip">
-                        <div class="chip-label">Leistung</div>
-                        <div class="chip-value">Verlegen · Schleifen · Ölen</div>
+                        <div class="chip-label" data-i18n="portfolio.meta.service">Leistung</div>
+                        <div class="chip-value" data-i18n="portfolio.p10.meta2">Verlegen · Schleifen · Ölen</div>
                     </div>
                 </div>
                 <div class="project-gallery">
@@ -1393,30 +1433,757 @@
                     </div>
                 </div>
                 <div class="project-description">
-                    <div class="caption">Warmer Holzboden mit sauberem Abschluss an Wand, Tür und Sockelleiste</div>
-                    <p class="desc-text">Parkett ist einer der stärksten Suchbegriffe für lokale Schreinerarbeiten. Diese Referenz zeigt die typische Arbeit: Untergrund prüfen, Dielen oder Stäbe sauber verlegen, Übergänge exakt ausführen und die Oberfläche je nach Nutzung schleifen, ölen oder versiegeln.</p>
+                    <div class="caption" data-i18n="portfolio.p10.caption">Warmer Holzboden mit sauberem Abschluss an Wand, Tür und Sockelleiste</div>
+                    <p class="desc-text" data-i18n="portfolio.p10.desc">Parkett ist einer der stärksten Suchbegriffe für lokale Schreinerarbeiten. Diese Referenz zeigt die typische Arbeit: Untergrund prüfen, Dielen oder Stäbe sauber verlegen, Übergänge exakt ausführen und die Oberfläche je nach Nutzung schleifen, ölen oder versiegeln.</p>
                 </div>
                 <div class="project-features">
                     <div class="feature-box">
-                        <h4>Leistung</h4>
+                        <h4 data-i18n="portfolio.meta.service">Leistung</h4>
                         <ul>
-                            <li>Parkett verlegen</li>
-                            <li>Parkett schleifen</li>
-                            <li>Sockelleisten & Anschlüsse</li>
+                            <li data-i18n="portfolio.p10.feat1.li1">Parkett verlegen</li>
+                            <li data-i18n="portfolio.p10.feat1.li2">Parkett schleifen</li>
+                            <li data-i18n="portfolio.p10.feat1.li3">Sockelleisten & Anschlüsse</li>
                         </ul>
                     </div>
                     <div class="feature-box">
-                        <h4>Geeignet für</h4>
+                        <h4 data-i18n="portfolio.p10.feat2.title">Geeignet für</h4>
                         <ul>
-                            <li>Wohnungen & Häuser</li>
-                            <li>Renovierung</li>
-                            <li>Innenausbau in München</li>
+                            <li data-i18n="portfolio.p10.feat2.li1">Wohnungen & Häuser</li>
+                            <li data-i18n="portfolio.p10.feat2.li2">Renovierung</li>
+                            <li data-i18n="portfolio.p10.feat2.li3">Innenausbau in München</li>
                         </ul>
                     </div>
                 </div>
                 <div class="project-request">
-                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent">Parkett-Projekt anfragen</a>
-                    <span>Fotos vom Boden helfen bei der ersten Einschätzung.</span>
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.p10.request">Parkett-Projekt anfragen</a>
+                    <span data-i18n="portfolio.p10.requestNote">Fotos vom Boden helfen bei der ersten Einschätzung.</span>
+                </div>
+            </article>
+
+
+            <!-- Legacy Holzbau Karampas References -->
+            <div class="legacy-reference-intro" id="ausgefuehrte-referenzen">
+                <div class="legacy-reference-kicker" data-i18n="portfolio.legacy.kicker">Weitere ausgeführte Arbeiten</div>
+                <h2 class="legacy-reference-title" data-i18n="portfolio.legacy.title">20 echte Referenzen aus Holzbau Karampas</h2>
+                <p data-i18n="portfolio.legacy.text">Diese Auswahl zeigt ausgeführte Terrassen-, Balkon-, Wandverkleidungs-, Gartenhaus- und Küchenprojekte. Die Bilder wurden nur dezent für ein einheitliches Webseitenbild vorbereitet.</p>
+            </div>
+            <article class="project-card legacy-reference-card" data-category="terrassen">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
+                        <h2 data-i18n="portfolio.legacy.p01.title">Garapa-Holzterrasse mit Sitz- und Liegestufen</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.location">Ort</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p01.location">Westpark München</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.material">Material</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p01.material">Garapa-Terrassendielen</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid single">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/referenzen/holzbau-karampas/cards/01-garapa-terrasse-sitzstufen-westpark-muenchen-card.jpg" alt="Garapa-Holzterrasse mit Sitz- und Liegestufen in Westpark München – EF-Sinn Referenzprojekt" data-i18n-alt="portfolio.legacy.p01.alt" loading="lazy">
+                            <span class="img-zoom-icon">✦</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption" data-i18n="portfolio.legacy.p01.caption">Eine großzügige Holzterrasse mit integrierten Sitz- und Liegestufen verbindet Garten, Fassade und Außenbereich zu einem ruhigen Aufenthaltsort.</div>
+                    <p class="desc-text" data-i18n="portfolio.legacy.p01.text">Die Stufenanlage wurde so ausgeführt, dass sie nicht nur als Zugang, sondern auch als Sitzfläche und Gestaltungselement funktioniert.</p>
+                </div>
+                <div class="project-request">
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
+                </div>
+            </article>
+
+            <article class="project-card legacy-reference-card" data-category="terrassen">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
+                        <h2 data-i18n="portfolio.legacy.p02.title">Garapa-Sitzstufen im Terrassenbereich</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.location">Ort</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p02.location">Westpark München</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.material">Material</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p02.material">Garapa</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid single">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/referenzen/holzbau-karampas/cards/02-garapa-sitzstufen-detail-westpark-muenchen-card.jpg" alt="Garapa-Sitzstufen im Terrassenbereich in Westpark München – EF-Sinn Referenzprojekt" data-i18n-alt="portfolio.legacy.p02.alt" loading="lazy">
+                            <span class="img-zoom-icon">✦</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption" data-i18n="portfolio.legacy.p02.caption">Detailaufnahme der präzise gearbeiteten Sitzstufen mit sauberer Dielenführung und harmonischem Übergang zum Garten.</div>
+                    <p class="desc-text" data-i18n="portfolio.legacy.p02.text">Die klare Kantenführung zeigt die handwerkliche Genauigkeit bei sichtbaren Anschlussdetails.</p>
+                </div>
+                <div class="project-request">
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
+                </div>
+            </article>
+
+            <article class="project-card legacy-reference-card" data-category="terrassen">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
+                        <h2 data-i18n="portfolio.legacy.p03.title">Teak-Holzterrasse am Wohnhaus</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.location">Ort</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p03.location">München</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.material">Material</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p03.material">Teak-Terrassendielen</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid single">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/referenzen/holzbau-karampas/cards/03-teak-terrasse-wohnhaus-muenchen-card.jpg" alt="Teak-Holzterrasse am Wohnhaus in München – EF-Sinn Referenzprojekt" data-i18n-alt="portfolio.legacy.p03.alt" loading="lazy">
+                            <span class="img-zoom-icon">✦</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption" data-i18n="portfolio.legacy.p03.caption">Helle Teak-Terrasse als hochwertiger Übergang zwischen Wohnraum, Glasfassade und Gartenfläche.</div>
+                    <p class="desc-text" data-i18n="portfolio.legacy.p03.text">Die reduzierte Gestaltung lässt die Holzfläche ruhig wirken und stärkt die Architektur des Hauses.</p>
+                </div>
+                <div class="project-request">
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
+                </div>
+            </article>
+
+            <article class="project-card legacy-reference-card" data-category="terrassen">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
+                        <h2 data-i18n="portfolio.legacy.p04.title">Teak-Gartenterrasse mit klarer Flächenwirkung</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.location">Ort</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p04.location">München</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.material">Material</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p04.material">Teak</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid single">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/referenzen/holzbau-karampas/cards/04-teak-gartenterrasse-muenchen-card.jpg" alt="Teak-Gartenterrasse mit klarer Flächenwirkung in München – EF-Sinn Referenzprojekt" data-i18n-alt="portfolio.legacy.p04.alt" loading="lazy">
+                            <span class="img-zoom-icon">✦</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption" data-i18n="portfolio.legacy.p04.caption">Sauber verlegte Gartenterrasse mit gleichmäßiger Dielenstruktur und wohnlicher Außenwirkung.</div>
+                    <p class="desc-text" data-i18n="portfolio.legacy.p04.text">Die Fläche wurde als langlebige und pflegefähige Outdoor-Zone für den Alltag gestaltet.</p>
+                </div>
+                <div class="project-request">
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
+                </div>
+            </article>
+
+            <article class="project-card legacy-reference-card" data-category="terrassen">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
+                        <h2 data-i18n="portfolio.legacy.p05.title">Teak-Terrasse mit sauberem Randabschluss</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.location">Ort</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p05.location">München</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.material">Material</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p05.material">Teak</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid single">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/referenzen/holzbau-karampas/cards/05-teak-terrasse-kanten-detail-muenchen-card.jpg" alt="Teak-Terrasse mit sauberem Randabschluss in München – EF-Sinn Referenzprojekt" data-i18n-alt="portfolio.legacy.p05.alt" loading="lazy">
+                            <span class="img-zoom-icon">✦</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption" data-i18n="portfolio.legacy.p05.caption">Detail eines präzise ausgeführten Randabschlusses mit ruhiger Fugen- und Dielenoptik.</div>
+                    <p class="desc-text" data-i18n="portfolio.legacy.p05.text">Solche Detailpunkte entscheiden über den hochwertigen Gesamteindruck einer Terrasse.</p>
+                </div>
+                <div class="project-request">
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
+                </div>
+            </article>
+
+            <article class="project-card legacy-reference-card" data-category="terrassen">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
+                        <h2 data-i18n="portfolio.legacy.p06.title">Teak-Holzbelag für Balkon</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.location">Ort</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p06.location">Sendlinger Tor, München</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.material">Material</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p06.material">Teak</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid single">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/referenzen/holzbau-karampas/cards/06-teak-balkon-sendlinger-tor-muenchen-card.jpg" alt="Teak-Holzbelag für Balkon in Sendlinger Tor, München – EF-Sinn Referenzprojekt" data-i18n-alt="portfolio.legacy.p06.alt" loading="lazy">
+                            <span class="img-zoom-icon">✦</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption" data-i18n="portfolio.legacy.p06.caption">Holzbelag für einen Balkon im urbanen Umfeld mit sauberer Anpassung an Geländer, Fassade und Entwässerung.</div>
+                    <p class="desc-text" data-i18n="portfolio.legacy.p06.text">Die Dielen verleihen dem Balkon mehr Wärme und Nutzqualität, ohne die klare Architektur zu stören.</p>
+                </div>
+                <div class="project-request">
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
+                </div>
+            </article>
+
+            <article class="project-card legacy-reference-card" data-category="terrassen">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
+                        <h2 data-i18n="portfolio.legacy.p07.title">Teak-Balkonfläche mit warmer Holzoptik</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.location">Ort</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p07.location">München</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.material">Material</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p07.material">Teak</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid single">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/referenzen/holzbau-karampas/cards/07-teak-balkon-sonne-muenchen-card.jpg" alt="Teak-Balkonfläche mit warmer Holzoptik in München – EF-Sinn Referenzprojekt" data-i18n-alt="portfolio.legacy.p07.alt" loading="lazy">
+                            <span class="img-zoom-icon">✦</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption" data-i18n="portfolio.legacy.p07.caption">Warme Holzoberfläche für einen Balkon mit ruhiger, durchgehender Dielenführung.</div>
+                    <p class="desc-text" data-i18n="portfolio.legacy.p07.text">Die Fläche wirkt hochwertig und macht auch kleine Außenbereiche wohnlicher.</p>
+                </div>
+                <div class="project-request">
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
+                </div>
+            </article>
+
+            <article class="project-card legacy-reference-card" data-category="terrassen">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
+                        <h2 data-i18n="portfolio.legacy.p08.title">Teak-Dielenbelag im Detail</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.location">Ort</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p08.location">München</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.material">Material</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p08.material">Teak</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid single">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/referenzen/holzbau-karampas/cards/08-teak-balkon-dielen-detail-muenchen-card.jpg" alt="Teak-Dielenbelag im Detail in München – EF-Sinn Referenzprojekt" data-i18n-alt="portfolio.legacy.p08.alt" loading="lazy">
+                            <span class="img-zoom-icon">✦</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption" data-i18n="portfolio.legacy.p08.caption">Detailansicht der gleichmäßigen Dielenverlegung mit hochwertiger Holzstruktur.</div>
+                    <p class="desc-text" data-i18n="portfolio.legacy.p08.text">Die Aufnahme eignet sich gut, um Materialqualität, Fugenbild und präzise Ausführung sichtbar zu machen.</p>
+                </div>
+                <div class="project-request">
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
+                </div>
+            </article>
+
+            <article class="project-card legacy-reference-card" data-category="terrassen">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
+                        <h2 data-i18n="portfolio.legacy.p09.title">Teak-Gartenterrasse am Haus</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.location">Ort</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p09.location">München</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.material">Material</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p09.material">Teak</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid single">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/referenzen/holzbau-karampas/cards/09-teak-gartenterrasse-schattig-muenchen-card.jpg" alt="Teak-Gartenterrasse am Haus in München – EF-Sinn Referenzprojekt" data-i18n-alt="portfolio.legacy.p09.alt" loading="lazy">
+                            <span class="img-zoom-icon">✦</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption" data-i18n="portfolio.legacy.p09.caption">Funktionale Gartenterrasse mit ruhigem Holzbild und sauberer Einbindung an den Wohnbereich.</div>
+                    <p class="desc-text" data-i18n="portfolio.legacy.p09.text">Die Ausführung verbindet praktische Nutzung mit einer warmen, hochwertigen Außenwirkung.</p>
+                </div>
+                <div class="project-request">
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
+                </div>
+            </article>
+
+            <article class="project-card legacy-reference-card" data-category="terrassen">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
+                        <h2 data-i18n="portfolio.legacy.p10.title">Teak-Gartenterrasse im Grünen</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.location">Ort</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p10.location">München</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.material">Material</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p10.material">Teak</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid single">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/referenzen/holzbau-karampas/cards/10-teak-gartenterrasse-gruenbereich-muenchen-card.jpg" alt="Teak-Gartenterrasse im Grünen in München – EF-Sinn Referenzprojekt" data-i18n-alt="portfolio.legacy.p10.alt" loading="lazy">
+                            <span class="img-zoom-icon">✦</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption" data-i18n="portfolio.legacy.p10.caption">Terrassenfläche, die sich natürlich in den Garten einfügt und den Außenbereich klar nutzbar macht.</div>
+                    <p class="desc-text" data-i18n="portfolio.legacy.p10.text">Das helle Holz und die ruhige Form schaffen einen freundlichen, gepflegten Eindruck.</p>
+                </div>
+                <div class="project-request">
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
+                </div>
+            </article>
+
+            <article class="project-card legacy-reference-card" data-category="terrassen">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
+                        <h2 data-i18n="portfolio.legacy.p11.title">Cumaru-Holzterrasse mit Sitzstufen</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.location">Ort</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p11.location">Weßling / Starnberg</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.material">Material</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p11.material">Cumaru</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid single">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/referenzen/holzbau-karampas/cards/11-cumaru-terrasse-sitzstufen-wessling-starnberg-card.jpg" alt="Cumaru-Holzterrasse mit Sitzstufen in Weßling / Starnberg – EF-Sinn Referenzprojekt" data-i18n-alt="portfolio.legacy.p11.alt" loading="lazy">
+                            <span class="img-zoom-icon">✦</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption" data-i18n="portfolio.legacy.p11.caption">Hochwertige Cumaru-Terrasse mit umlaufendem Stufen- und Sitzbereich am modernen Wohnhaus.</div>
+                    <p class="desc-text" data-i18n="portfolio.legacy.p11.text">Die dunklere Holzfarbe setzt einen starken Akzent zur hellen Fassade und zum Garten.</p>
+                </div>
+                <div class="project-request">
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
+                </div>
+            </article>
+
+            <article class="project-card legacy-reference-card" data-category="terrassen">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
+                        <h2 data-i18n="portfolio.legacy.p12.title">Cumaru-Sitzstufen und Terrassenkante</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.location">Ort</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p12.location">Weßling / Starnberg</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.material">Material</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p12.material">Cumaru</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid single">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/referenzen/holzbau-karampas/cards/12-cumaru-sitzstufen-detail-wessling-starnberg-card.jpg" alt="Cumaru-Sitzstufen und Terrassenkante in Weßling / Starnberg – EF-Sinn Referenzprojekt" data-i18n-alt="portfolio.legacy.p12.alt" loading="lazy">
+                            <span class="img-zoom-icon">✦</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption" data-i18n="portfolio.legacy.p12.caption">Detail einer massiven, sauber ausgebildeten Sitzstufe mit klarer Terrassenkante.</div>
+                    <p class="desc-text" data-i18n="portfolio.legacy.p12.text">Die Stufenausbildung verbindet Gestaltung, Komfort und robuste Alltagstauglichkeit.</p>
+                </div>
+                <div class="project-request">
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
+                </div>
+            </article>
+
+            <article class="project-card legacy-reference-card" data-category="terrassen">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
+                        <h2 data-i18n="portfolio.legacy.p13.title">Greenwood-Terrasse mit Wandverkleidung</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.location">Ort</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p13.location">Grünwald / München</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.material">Material</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p13.material">Greenwood</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid single">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/referenzen/holzbau-karampas/cards/13-greenwood-terrasse-wandverkleidung-gruenwald-card.jpg" alt="Greenwood-Terrasse mit Wandverkleidung in Grünwald / München – EF-Sinn Referenzprojekt" data-i18n-alt="portfolio.legacy.p13.alt" loading="lazy">
+                            <span class="img-zoom-icon">✦</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption" data-i18n="portfolio.legacy.p13.caption">Großzügiges Außenprojekt mit Terrasse und abgestimmter Wandverkleidung am Wohnhaus.</div>
+                    <p class="desc-text" data-i18n="portfolio.legacy.p13.text">Die Kombination aus Terrassenfläche und Fassadendetail wirkt architektonisch und sehr hochwertig.</p>
+                </div>
+                <div class="project-request">
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
+                </div>
+            </article>
+
+            <article class="project-card legacy-reference-card" data-category="terrassen">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
+                        <h2 data-i18n="portfolio.legacy.p14.title">Greenwood-Wandverkleidung am Außenbereich</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.location">Ort</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p14.location">Grünwald / München</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.material">Material</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p14.material">Greenwood</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid single">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/referenzen/holzbau-karampas/cards/14-greenwood-wandverkleidung-gruenwald-card.jpg" alt="Greenwood-Wandverkleidung am Außenbereich in Grünwald / München – EF-Sinn Referenzprojekt" data-i18n-alt="portfolio.legacy.p14.alt" loading="lazy">
+                            <span class="img-zoom-icon">✦</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption" data-i18n="portfolio.legacy.p14.caption">Vertikale Holzverkleidung als ruhiger, warmer Akzent im Außenbereich.</div>
+                    <p class="desc-text" data-i18n="portfolio.legacy.p14.text">Die Wandverkleidung schafft Sichtschutz, Struktur und eine klare Verbindung zur Terrasse.</p>
+                </div>
+                <div class="project-request">
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
+                </div>
+            </article>
+
+            <article class="project-card legacy-reference-card" data-category="terrassen">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
+                        <h2 data-i18n="portfolio.legacy.p15.title">Greenwood-Verkleidung mit sauberem oberen Abschluss</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.location">Ort</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p15.location">Grünwald / München</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.material">Material</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p15.material">Greenwood</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid single">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/referenzen/holzbau-karampas/cards/15-greenwood-attika-detail-gruenwald-card.jpg" alt="Greenwood-Verkleidung mit sauberem oberen Abschluss in Grünwald / München – EF-Sinn Referenzprojekt" data-i18n-alt="portfolio.legacy.p15.alt" loading="lazy">
+                            <span class="img-zoom-icon">✦</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption" data-i18n="portfolio.legacy.p15.caption">Detailaufnahme einer passgenauen Holzverkleidung mit klarer Linienführung am Gebäude.</div>
+                    <p class="desc-text" data-i18n="portfolio.legacy.p15.text">Die präzisen Anschlüsse zeigen, wie wichtig Planung und saubere Montage bei Außenverkleidungen sind.</p>
+                </div>
+                <div class="project-request">
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
+                </div>
+            </article>
+
+            <article class="project-card legacy-reference-card" data-category="terrassen">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
+                        <h2 data-i18n="portfolio.legacy.p16.title">Greenwood-Gartenterrasse</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.location">Ort</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p16.location">München</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.material">Material</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p16.material">Greenwood</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid single">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/referenzen/holzbau-karampas/cards/16-greenwood-gartenterrasse-muenchen-card.jpg" alt="Greenwood-Gartenterrasse in München – EF-Sinn Referenzprojekt" data-i18n-alt="portfolio.legacy.p16.alt" loading="lazy">
+                            <span class="img-zoom-icon">✦</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption" data-i18n="portfolio.legacy.p16.caption">Kompakte Gartenterrasse als gepflegter Aufenthaltsbereich direkt am Haus.</div>
+                    <p class="desc-text" data-i18n="portfolio.legacy.p16.text">Die klare rechteckige Fläche wirkt aufgeräumt und eignet sich sehr gut für Sitzgruppe und Alltag.</p>
+                </div>
+                <div class="project-request">
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
+                </div>
+            </article>
+
+            <article class="project-card legacy-reference-card" data-category="terrassen">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
+                        <h2 data-i18n="portfolio.legacy.p17.title">Douglasien-Terrasse mit Abendbeleuchtung</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.location">Ort</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p17.location">Domagkstraße, München</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.material">Material</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p17.material">Douglasie</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid single">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/referenzen/holzbau-karampas/cards/17-douglasie-terrasse-nachtbeleuchtung-domagkstrasse-muenchen-card.jpg" alt="Douglasien-Terrasse mit Abendbeleuchtung in Domagkstraße, München – EF-Sinn Referenzprojekt" data-i18n-alt="portfolio.legacy.p17.alt" loading="lazy">
+                            <span class="img-zoom-icon">✦</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption" data-i18n="portfolio.legacy.p17.caption">Atmosphärische Terrassenfläche mit integrierter Wirkung bei Nacht und warmem Holzton.</div>
+                    <p class="desc-text" data-i18n="portfolio.legacy.p17.text">Das Bild zeigt, wie Holz, Licht und lange Linien einen Außenbereich besonders hochwertig wirken lassen.</p>
+                </div>
+                <div class="project-request">
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
+                </div>
+            </article>
+
+            <article class="project-card legacy-reference-card" data-category="moebel">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
+                        <h2 data-i18n="portfolio.legacy.p18.title">Pflanzkübel-Verkleidung aus Teakholz</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.location">Ort</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p18.location">München</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.material">Material</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p18.material">Teak</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid single">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/referenzen/holzbau-karampas/cards/18-teak-pflanzkuebel-verkleidung-muenchen-card.jpg" alt="Pflanzkübel-Verkleidung aus Teakholz in München – EF-Sinn Referenzprojekt" data-i18n-alt="portfolio.legacy.p18.alt" loading="lazy">
+                            <span class="img-zoom-icon">✦</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption" data-i18n="portfolio.legacy.p18.caption">Maßgefertigte Holzverkleidung für große Pflanzkübel mit sauberer Unterkonstruktion und klarer Optik.</div>
+                    <p class="desc-text" data-i18n="portfolio.legacy.p18.text">Die Verkleidung wertet technische oder funktionale Elemente sichtbar auf und fügt sie in die Außenanlage ein.</p>
+                </div>
+                <div class="project-request">
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
+                </div>
+            </article>
+
+            <article class="project-card legacy-reference-card" data-category="innenausbau">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
+                        <h2 data-i18n="portfolio.legacy.p19.title">Gartenhaus aus Douglasie</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.location">Ort</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p19.location">München</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.material">Material</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p19.material">Douglasie</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid single">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/referenzen/holzbau-karampas/cards/19-gartenhaus-douglasie-muenchen-card.jpg" alt="Gartenhaus aus Douglasie in München – EF-Sinn Referenzprojekt" data-i18n-alt="portfolio.legacy.p19.alt" loading="lazy">
+                            <span class="img-zoom-icon">✦</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption" data-i18n="portfolio.legacy.p19.caption">Kompaktes Gartenhaus mit natürlicher Holzoptik und klarer, funktionaler Form.</div>
+                    <p class="desc-text" data-i18n="portfolio.legacy.p19.text">Die Holzoberfläche und die reduzierte Ausführung passen gut in Garten- und Außenbereiche.</p>
+                </div>
+                <div class="project-request">
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
+                </div>
+            </article>
+
+            <article class="project-card legacy-reference-card" data-category="moebel">
+                <div class="project-card-header">
+                    <div>
+                        <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
+                        <h2 data-i18n="portfolio.legacy.p20.title">Farblos lackierte Holzküche</h2>
+                        <div class="project-divider"></div>
+                    </div>
+                </div>
+                <div class="project-meta-grid">
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.location">Ort</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p20.location">München</div>
+                    </div>
+                    <div class="project-meta-chip">
+                        <div class="chip-label" data-i18n="portfolio.meta.material">Material</div>
+                        <div class="chip-value" data-i18n="portfolio.legacy.p20.material">Holz, farblos lackiert</div>
+                    </div>
+                </div>
+                <div class="project-gallery">
+                    <div class="project-gallery-grid single">
+                        <div class="project-img-wrap" data-lightbox>
+                            <img src="bilder/referenzen/holzbau-karampas/cards/20-kueche-farblos-lackiert-muenchen-card.jpg" alt="Farblos lackierte Holzküche in München – EF-Sinn Referenzprojekt" data-i18n-alt="portfolio.legacy.p20.alt" loading="lazy">
+                            <span class="img-zoom-icon">✦</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-description">
+                    <div class="caption" data-i18n="portfolio.legacy.p20.caption">Individuelle Küche mit warmem Holzbild, funktionaler Aufteilung und wohnlichem Charakter.</div>
+                    <p class="desc-text" data-i18n="portfolio.legacy.p20.text">Die Küche zeigt, dass EF-Sinn nicht nur Außenbereiche, sondern auch hochwertige Innenausbauten und Küchen umsetzt.</p>
+                </div>
+                <div class="project-request">
+                    <a class="btn btn-secondary btn-small" href="contact.html#anfrage-assistent" data-i18n="portfolio.request.similar">Ähnliches Projekt anfragen</a>
+                    <span data-i18n="portfolio.request.note">Kurze Beschreibung genügt – wir melden uns persönlich.</span>
                 </div>
             </article>
 
@@ -1567,7 +2334,7 @@
                         <strong>Werkstatt:</strong> Germeringer Weg 3C, 81245 München
                     </p>
                 </div>
-                
+
                 <div class="footer-column">
                     <h3 class="footer-title" data-i18n="footer.nav">Navigation</h3>
                     <ul class="footer-links">
@@ -1578,7 +2345,7 @@
                         <li><a href="contact.html" data-i18n="nav.contact">Kontakt</a></li>
                     </ul>
                 </div>
-                
+
                 <div class="footer-column">
                     <h3 class="footer-title" data-i18n="footer.legal">Rechtliches</h3>
                     <ul class="footer-links">
@@ -1587,14 +2354,14 @@
                     </ul>
                 </div>
             </div>
-            
+
             <div class="footer-bottom">
                 <p><span data-i18n="footer.copyright">© 2026 ef-sinn. Alle Rechte vorbehalten.</span></p>
             </div>
         </div>
     </footer>
 
-    <script src="assets/js/i18n.js"></script>
+    <script src="assets/js/i18n.js?v=20260609"></script>
     <script>
     /* ===== Portfolio Page Interactions ===== */
     (function() {
@@ -1644,12 +2411,14 @@
         chipBtns.forEach(function(btn) {
             btn.addEventListener('click', function() {
                 if (searchInput) {
-                    searchInput.value = btn.getAttribute('data-search-term');
+                    searchInput.value = (btn.textContent || btn.getAttribute('data-search-term') || '').trim();
                     searchInput.focus();
                 }
                 applyFilters();
             });
         });
+
+        applyFilters();
 
         /* --- Scroll Reveal (Intersection Observer) --- */
         if ('IntersectionObserver' in window) {

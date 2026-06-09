@@ -19,7 +19,7 @@
 
   function load(lang,cb){
     var x=new XMLHttpRequest();
-    x.open('GET',prefix()+'i18n/'+lang+'.json?v=20260605');
+    x.open('GET',prefix()+'i18n/'+lang+'.json?v=20260609');
     x.onload=function(){if(x.status===200){try{cb(JSON.parse(x.responseText))}catch(e){cb({})}}else cb({})};
     x.onerror=function(){cb({})};
     x.send();
@@ -48,6 +48,7 @@
       ['data-i18n-placeholder','placeholder'],
       ['data-i18n-aria-label','aria-label'],
       ['data-i18n-title','title'],
+      ['data-i18n-alt','alt'],
       ['data-i18n-value','value'],
       ['data-i18n-data-project-type','data-project-type']
     ];
