@@ -538,8 +538,8 @@
   "nav.callAria": "Llamar a ef-sinn por teléfono",
   "mobile.quickContact": "Contacto rápido móvil",
   "portfolio.search.kicker": "Búsqueda de referencias",
-  "portfolio.search.title": "¿Qué proyecto busca?",
-  "portfolio.search.text": "Busque muebles a medida, armarios empotrados, muebles de baño, parquet, terrazas, escaleras o Múnich. Las tarjetas de proyectos muestran ejemplos adecuados y llevan directamente a la consulta.",
+  "portfolio.search.title": "¿Qué categoría busca?",
+  "portfolio.search.text": "Elija una categoría fija. La página muestra entonces todas las referencias adecuadas — sin entrada de texto libre y sin botones de categoría duplicados.",
   "portfolio.search.label": "Buscar proyecto",
   "portfolio.search.placeholder": "p. ej. armario empotrado, mueble de baño, parquet, terraza Múnich",
   "portfolio.search.chipsAria": "Términos de búsqueda frecuentes",
@@ -689,5 +689,15 @@
   "portfolio.legacy.p20.material": "madera con barniz transparente",
   "portfolio.legacy.p20.caption": "Referencia realizada en Múnich. El proyecto muestra carpintería precisa, una apariencia de madera armoniosa y una solución práctica para el uso diario.",
   "portfolio.legacy.p20.text": "Material: madera con barniz transparente. El enfoque está en uniones limpias, líneas tranquilas y una ejecución duradera. Los detalles constructivos exactos pueden ajustarse con Marios antes de la publicación final.",
-  "portfolio.legacy.p20.alt": "Cocina de madera con barniz transparente – Múnich – proyecto de referencia de EF-Sinn"
+  "portfolio.legacy.p20.alt": "Cocina de madera con barniz transparente – Múnich – proyecto de referencia de EF-Sinn",
+  "portfolio.categorySelect.label": "Seleccionar categoría",
+  "portfolio.categorySelect.aria": "Seleccionar categoría de proyecto",
+  "portfolio.categorySelect.all": "Todos los proyectos",
+  "portfolio.categorySelect.treppen": "Escaleras",
+  "portfolio.categorySelect.terrassen": "Terrazas y balcones",
+  "portfolio.categorySelect.moebel": "Muebles y muebles de baño",
+  "portfolio.categorySelect.kuechen": "Cocinas",
+  "portfolio.categorySelect.parkett": "Parquet y suelos",
+  "portfolio.categorySelect.innenausbau": "Interiorismo y revestimientos de pared",
+  "portfolio.categorySelect.aussenbau": "Exteriores y casetas de jardín"
 }

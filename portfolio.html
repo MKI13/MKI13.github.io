@@ -20,7 +20,7 @@
     <meta property="og:locale" content="de_DE">
     <meta property="og:site_name" content="ef-sinn">
     <title>Portfolio & Referenzen – ef-sinn Schreiner Werkstatt München</title>
-    <link rel="stylesheet" href="styles.css?v=20260605">
+    <link rel="stylesheet" href="styles.css?v=20260609">
     <style>
         /* ===== PORTFOLIO PAGE SPECIFIC STYLES ===== */
 
@@ -847,32 +847,26 @@
             <div class="portfolio-search-panel">
                 <div>
                     <p class="section-kicker" data-i18n="portfolio.search.kicker">Referenzsuche</p>
-                    <h2 id="portfolio-search-title" data-i18n="portfolio.search.title">Welches Projekt suchen Sie?</h2>
-                    <p data-i18n="portfolio.search.text">Suchen Sie nach Möbelbau, Einbauschrank, Badmöbel, Parkett, Terrasse, Treppe oder München. Die Projektkarten zeigen passende Beispiele und führen direkt zur Anfrage.</p>
+                    <h2 id="portfolio-search-title" data-i18n="portfolio.search.title">Welche Kategorie suchen Sie?</h2>
+                    <p data-i18n="portfolio.search.text">Wählen Sie eine feste Kategorie. Die Seite zeigt dann alle passenden Referenzen — ohne freie Texteingabe und ohne doppelte Kategorie-Buttons.</p>
                 </div>
-                <label class="portfolio-search-label" for="portfolio-search" data-i18n="portfolio.search.label">Projekt suchen</label>
-                <input id="portfolio-search" class="portfolio-search-input" type="search" placeholder="z. B. Einbauschrank, Badmöbel, Parkett, Terrasse München" data-i18n-placeholder="portfolio.search.placeholder" autocomplete="off">
-                <div class="portfolio-search-chips" aria-label="Häufige Suchbegriffe" data-i18n-aria-label="portfolio.search.chipsAria">
-                    <button type="button" data-search-term="Einbauschrank" data-i18n="portfolio.search.chip.cabinet">Einbauschrank</button>
-                    <button type="button" data-search-term="Badmöbel" data-i18n="portfolio.search.chip.bath">Badmöbel</button>
-                    <button type="button" data-search-term="Parkett" data-i18n="portfolio.search.chip.parquet">Parkett</button>
-                    <button type="button" data-search-term="Terrasse" data-i18n="portfolio.search.chip.terrace">Terrasse</button>
-                    <button type="button" data-search-term="Treppe" data-i18n="portfolio.search.chip.stairs">Treppe</button>
-                    <button type="button" data-search-term="München" data-i18n="portfolio.search.chip.munich">München</button>
-                </div>
+                <label class="portfolio-search-label" for="portfolio-category-select" data-i18n="portfolio.categorySelect.label">Kategorie auswählen</label>
+                <select id="portfolio-category-select" class="portfolio-search-input" aria-label="Projektkategorie auswählen" data-i18n-aria-label="portfolio.categorySelect.aria">
+                    <option value="all" data-i18n="portfolio.categorySelect.all">Alle Projekte</option>
+                    <option value="treppen" data-i18n="portfolio.categorySelect.treppen">Treppen</option>
+                    <option value="terrassen" data-i18n="portfolio.categorySelect.terrassen">Terrassen & Balkon</option>
+                    <option value="moebel" data-i18n="portfolio.categorySelect.moebel">Möbel & Badmöbel</option>
+                    <option value="kuechen" data-i18n="portfolio.categorySelect.kuechen">Küchen</option>
+                    <option value="parkett" data-i18n="portfolio.categorySelect.parkett">Parkett & Böden</option>
+                    <option value="innenausbau" data-i18n="portfolio.categorySelect.innenausbau">Innenausbau & Wandverkleidung</option>
+                    <option value="aussenbau" data-i18n="portfolio.categorySelect.aussenbau">Außenbau & Gartenhaus</option>
+                </select>
             </div>
         </div>
     </section>
 
-    <!-- Filter -->
+    <!-- Project Count -->
     <div class="container">
-        <div class="portfolio-page-filters">
-            <button class="portfolio-page-filter active" data-filter="all" data-i18n="home.portfolio.filter.all">Alle</button>
-            <button class="portfolio-page-filter" data-filter="treppen" data-i18n="home.portfolio.filter.treppen">Treppen</button>
-            <button class="portfolio-page-filter" data-filter="terrassen" data-i18n="home.portfolio.filter.terrassen">Terrassen</button>
-            <button class="portfolio-page-filter" data-filter="moebel" data-i18n="home.portfolio.filter.moebel">Möbel</button>
-            <button class="portfolio-page-filter" data-filter="innenausbau" data-i18n="home.portfolio.filter.innenausbau">Innenausbau</button>
-        </div>
         <div class="project-count"><span id="visible-count">30</span> <span data-i18n="portfolio.projects.count">Projekte</span></div>
     </div>
 
@@ -881,7 +875,7 @@
         <div class="container">
 
             <!-- Project 1: Holztreppe I -->
-            <article class="project-card" data-category="treppen">
+            <article class="project-card" data-category="treppen" data-categories="treppen">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
@@ -937,7 +931,7 @@
             </article>
 
             <!-- Project 2: Holztreppe II -->
-            <article class="project-card" data-category="treppen">
+            <article class="project-card" data-category="treppen" data-categories="treppen">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
@@ -993,7 +987,7 @@
             </article>
 
             <!-- Project 3: Holzterrasse I -->
-            <article class="project-card" data-category="terrassen">
+            <article class="project-card" data-category="terrassen" data-categories="terrassen aussenbau">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
@@ -1049,7 +1043,7 @@
             </article>
 
             <!-- Project 4: Holzterrasse II -->
-            <article class="project-card" data-category="terrassen">
+            <article class="project-card" data-category="terrassen" data-categories="terrassen aussenbau">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
@@ -1105,7 +1099,7 @@
             </article>
 
             <!-- Project 5: Massivholztisch -->
-            <article class="project-card" data-category="moebel">
+            <article class="project-card" data-category="moebel" data-categories="moebel">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
@@ -1161,7 +1155,7 @@
             </article>
 
             <!-- Project 6: Badmöbel -->
-            <article class="project-card" data-category="moebel">
+            <article class="project-card" data-category="moebel" data-categories="moebel innenausbau">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
@@ -1217,7 +1211,7 @@
             </article>
 
             <!-- Project 7: Akustik-Designpaneel -->
-            <article class="project-card" data-category="innenausbau">
+            <article class="project-card" data-category="innenausbau" data-categories="innenausbau">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
@@ -1273,7 +1267,7 @@
             </article>
 
             <!-- Project 8: Nischenregal -->
-            <article class="project-card" data-category="innenausbau">
+            <article class="project-card" data-category="innenausbau" data-categories="innenausbau moebel">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
@@ -1333,7 +1327,7 @@
             </article>
 
             <!-- Project 9: Garderobe mit Sitzbank -->
-            <article class="project-card" data-category="innenausbau">
+            <article class="project-card" data-category="innenausbau" data-categories="innenausbau moebel">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
@@ -1398,7 +1392,7 @@
 
 
             <!-- Project 10: Parkettboden -->
-            <article class="project-card" data-category="innenausbau">
+            <article class="project-card" data-category="innenausbau" data-categories="parkett innenausbau">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.label.reference">Referenzprojekt</div>
@@ -1467,7 +1461,7 @@
                 <h2 class="legacy-reference-title" data-i18n="portfolio.legacy.title">20 echte Referenzen aus Holzbau Karampas</h2>
                 <p data-i18n="portfolio.legacy.text">Diese Auswahl zeigt ausgeführte Terrassen-, Balkon-, Wandverkleidungs-, Gartenhaus- und Küchenprojekte. Die Bilder wurden nur dezent für ein einheitliches Webseitenbild vorbereitet.</p>
             </div>
-            <article class="project-card legacy-reference-card" data-category="terrassen">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen aussenbau">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1503,7 +1497,7 @@
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen aussenbau">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1539,7 +1533,7 @@
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen aussenbau">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1575,7 +1569,7 @@
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen aussenbau">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1611,7 +1605,7 @@
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen aussenbau">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1647,7 +1641,7 @@
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen balkon aussenbau">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1683,7 +1677,7 @@
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen balkon aussenbau">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1719,7 +1713,7 @@
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen balkon aussenbau">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1755,7 +1749,7 @@
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen aussenbau">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1791,7 +1785,7 @@
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen aussenbau">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1827,7 +1821,7 @@
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen aussenbau">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1863,7 +1857,7 @@
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen aussenbau">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1899,7 +1893,7 @@
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen innenausbau aussenbau">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1935,7 +1929,7 @@
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen innenausbau aussenbau">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -1971,7 +1965,7 @@
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen innenausbau aussenbau">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -2007,7 +2001,7 @@
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen innenausbau aussenbau">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -2043,7 +2037,7 @@
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="terrassen">
+            <article class="project-card legacy-reference-card" data-category="terrassen" data-categories="terrassen innenausbau aussenbau">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -2079,7 +2073,7 @@
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="moebel">
+            <article class="project-card legacy-reference-card" data-category="moebel" data-categories="moebel aussenbau">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -2115,7 +2109,7 @@
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="innenausbau">
+            <article class="project-card legacy-reference-card" data-category="innenausbau" data-categories="aussenbau">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -2151,7 +2145,7 @@
                 </div>
             </article>
 
-            <article class="project-card legacy-reference-card" data-category="moebel">
+            <article class="project-card legacy-reference-card" data-category="moebel" data-categories="kuechen moebel innenausbau">
                 <div class="project-card-header">
                     <div>
                         <div class="project-label" data-i18n="portfolio.legacy.label">Ausgeführte Referenz</div>
@@ -2361,31 +2355,29 @@
         </div>
     </footer>
 
-    <script src="assets/js/i18n.js?v=20260609"></script>
+    <script src="assets/js/i18n.js?v=20260609b"></script>
     <script>
     /* ===== Portfolio Page Interactions ===== */
     (function() {
         'use strict';
 
-        /* --- Category Filter + Search --- */
-        var filterBtns = document.querySelectorAll('.portfolio-page-filter');
-        var projectCards = document.querySelectorAll('.project-card[data-category]');
+        /* --- Fixed Category Select --- */
+        var categorySelect = document.getElementById('portfolio-category-select');
+        var projectCards = document.querySelectorAll('.project-card[data-category], .project-card[data-categories]');
         var countEl = document.getElementById('visible-count');
-        var searchInput = document.getElementById('portfolio-search');
-        var chipBtns = document.querySelectorAll('[data-search-term]');
         var activeFilter = 'all';
 
-        function normalize(value) {
-            return (value || '').toLowerCase().replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss');
+        function cardCategories(card) {
+            return (card.getAttribute('data-categories') || card.getAttribute('data-category') || '').split(/\s+/).filter(Boolean);
         }
 
         function applyFilters() {
-            var q = normalize(searchInput ? searchInput.value : '');
+            activeFilter = categorySelect ? categorySelect.value : 'all';
             var visible = 0;
             projectCards.forEach(function(card) {
-                var categoryMatch = activeFilter === 'all' || card.getAttribute('data-category') === activeFilter;
-                var textMatch = !q || normalize(card.textContent).indexOf(q) !== -1;
-                if (categoryMatch && textMatch) {
+                var categories = cardCategories(card);
+                var categoryMatch = activeFilter === 'all' || categories.indexOf(activeFilter) !== -1;
+                if (categoryMatch) {
                     card.removeAttribute('data-hidden');
                     visible++;
                 } else {
@@ -2395,28 +2387,9 @@
             if (countEl) countEl.textContent = visible;
         }
 
-        filterBtns.forEach(function(btn) {
-            btn.addEventListener('click', function() {
-                filterBtns.forEach(function(b) { b.classList.remove('active'); });
-                btn.classList.add('active');
-                activeFilter = btn.getAttribute('data-filter');
-                applyFilters();
-            });
-        });
-
-        if (searchInput) {
-            searchInput.addEventListener('input', applyFilters);
+        if (categorySelect) {
+            categorySelect.addEventListener('change', applyFilters);
         }
-
-        chipBtns.forEach(function(btn) {
-            btn.addEventListener('click', function() {
-                if (searchInput) {
-                    searchInput.value = (btn.textContent || btn.getAttribute('data-search-term') || '').trim();
-                    searchInput.focus();
-                }
-                applyFilters();
-            });
-        });
 
         applyFilters();
 

@@ -538,8 +538,8 @@
   "nav.callAria": "Chiamare ef-sinn al telefono",
   "mobile.quickContact": "Contatto rapido mobile",
   "portfolio.search.kicker": "Ricerca referenze",
-  "portfolio.search.title": "Che progetto sta cercando?",
-  "portfolio.search.text": "Cerchi falegnameria su misura, armadi a muro, mobili bagno, parquet, terrazze, scale o Monaco. Le schede progetto mostrano esempi adatti e portano direttamente alla richiesta.",
+  "portfolio.search.title": "Quale categoria sta cercando?",
+  "portfolio.search.text": "Scelga una categoria fissa. La pagina mostra poi tutte le referenze corrispondenti — senza inserimento libero di testo e senza pulsanti categoria doppi.",
   "portfolio.search.label": "Cerca progetto",
   "portfolio.search.placeholder": "ad es. armadio a muro, mobile bagno, parquet, terrazza Monaco",
   "portfolio.search.chipsAria": "Termini di ricerca frequenti",
@@ -689,5 +689,15 @@
   "portfolio.legacy.p20.material": "legno verniciato trasparente",
   "portfolio.legacy.p20.caption": "Referenza realizzata a Monaco. Il progetto mostra lavorazione precisa, aspetto armonioso del legno e una soluzione pratica per l’uso quotidiano.",
   "portfolio.legacy.p20.text": "Materiale: legno verniciato trasparente. Il focus è su giunti puliti, linee tranquille ed esecuzione durevole. I dettagli costruttivi esatti potranno essere affinati con Marios prima della pubblicazione finale.",
-  "portfolio.legacy.p20.alt": "Cucina in legno con verniciatura trasparente – Monaco – progetto di riferimento EF-Sinn"
+  "portfolio.legacy.p20.alt": "Cucina in legno con verniciatura trasparente – Monaco – progetto di riferimento EF-Sinn",
+  "portfolio.categorySelect.label": "Seleziona categoria",
+  "portfolio.categorySelect.aria": "Seleziona categoria progetto",
+  "portfolio.categorySelect.all": "Tutti i progetti",
+  "portfolio.categorySelect.treppen": "Scale",
+  "portfolio.categorySelect.terrassen": "Terrazze e balconi",
+  "portfolio.categorySelect.moebel": "Mobili e mobili bagno",
+  "portfolio.categorySelect.kuechen": "Cucine",
+  "portfolio.categorySelect.parkett": "Parquet e pavimenti",
+  "portfolio.categorySelect.innenausbau": "Interni e rivestimenti parete",
+  "portfolio.categorySelect.aussenbau": "Esterni e casette da giardino"
 }

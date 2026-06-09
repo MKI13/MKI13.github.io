@@ -538,8 +538,8 @@
   "nav.callAria": "Appeler ef-sinn par téléphone",
   "mobile.quickContact": "Contact rapide mobile",
   "portfolio.search.kicker": "Recherche de références",
-  "portfolio.search.title": "Quel projet recherchez-vous ?",
-  "portfolio.search.text": "Recherchez meubles sur mesure, placard intégré, meuble de salle de bains, parquet, terrasse, escalier ou Munich. Les cartes de projets montrent des exemples adaptés et mènent directement à la demande.",
+  "portfolio.search.title": "Quelle catégorie recherchez-vous ?",
+  "portfolio.search.text": "Choisissez une catégorie fixe. La page affiche ensuite toutes les références correspondantes — sans saisie libre et sans boutons de catégorie en double.",
   "portfolio.search.label": "Rechercher un projet",
   "portfolio.search.placeholder": "p. ex. placard intégré, meuble de salle de bains, parquet, terrasse Munich",
   "portfolio.search.chipsAria": "Termes de recherche fréquents",
@@ -689,5 +689,15 @@
   "portfolio.legacy.p20.material": "bois verni incolore",
   "portfolio.legacy.p20.caption": "Référence réalisée à Munich. Le projet montre une menuiserie précise, un aspect bois harmonieux et une solution pratique au quotidien.",
   "portfolio.legacy.p20.text": "Matériau : bois verni incolore. L’accent est mis sur des raccords propres, des lignes calmes et une exécution durable. Les détails techniques exacts pourront être précisés avec Marios avant la publication finale.",
-  "portfolio.legacy.p20.alt": "Cuisine en bois vernie incolore – Munich – projet de référence EF-Sinn"
+  "portfolio.legacy.p20.alt": "Cuisine en bois vernie incolore – Munich – projet de référence EF-Sinn",
+  "portfolio.categorySelect.label": "Choisir une catégorie",
+  "portfolio.categorySelect.aria": "Choisir une catégorie de projet",
+  "portfolio.categorySelect.all": "Tous les projets",
+  "portfolio.categorySelect.treppen": "Escaliers",
+  "portfolio.categorySelect.terrassen": "Terrasses et balcons",
+  "portfolio.categorySelect.moebel": "Meubles et meubles de salle de bains",
+  "portfolio.categorySelect.kuechen": "Cuisines",
+  "portfolio.categorySelect.parkett": "Parquet et sols",
+  "portfolio.categorySelect.innenausbau": "Aménagement intérieur et bardage mural",
+  "portfolio.categorySelect.aussenbau": "Extérieur et abris de jardin"
 }

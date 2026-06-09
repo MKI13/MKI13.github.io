@@ -538,8 +538,8 @@
   "nav.callAria": "ef-sinn telefonisch kontaktieren",
   "mobile.quickContact": "Schnellkontakt mobil",
   "portfolio.search.kicker": "Referenzsuche",
-  "portfolio.search.title": "Welches Projekt suchen Sie?",
-  "portfolio.search.text": "Suchen Sie nach Möbelbau, Einbauschrank, Badmöbel, Parkett, Terrasse, Treppe oder München. Die Projektkarten zeigen passende Beispiele und führen direkt zur Anfrage.",
+  "portfolio.search.title": "Welche Kategorie suchen Sie?",
+  "portfolio.search.text": "Wählen Sie eine feste Kategorie. Die Seite zeigt dann alle passenden Referenzen — ohne freie Texteingabe und ohne doppelte Kategorie-Buttons.",
   "portfolio.search.label": "Projekt suchen",
   "portfolio.search.placeholder": "z. B. Einbauschrank, Badmöbel, Parkett, Terrasse München",
   "portfolio.search.chipsAria": "Häufige Suchbegriffe",
@@ -689,5 +689,15 @@
   "portfolio.legacy.p20.material": "Holz, farblos lackiert",
   "portfolio.legacy.p20.caption": "Individuelle Küche mit warmem Holzbild, funktionaler Aufteilung und wohnlichem Charakter.",
   "portfolio.legacy.p20.text": "Die Küche zeigt, dass EF-Sinn nicht nur Außenbereiche, sondern auch hochwertige Innenausbauten und Küchen umsetzt.",
-  "portfolio.legacy.p20.alt": "Farblos lackierte Holzküche in München – EF-Sinn Referenzprojekt"
+  "portfolio.legacy.p20.alt": "Farblos lackierte Holzküche in München – EF-Sinn Referenzprojekt",
+  "portfolio.categorySelect.label": "Kategorie auswählen",
+  "portfolio.categorySelect.aria": "Projektkategorie auswählen",
+  "portfolio.categorySelect.all": "Alle Projekte",
+  "portfolio.categorySelect.treppen": "Treppen",
+  "portfolio.categorySelect.terrassen": "Terrassen & Balkon",
+  "portfolio.categorySelect.moebel": "Möbel & Badmöbel",
+  "portfolio.categorySelect.kuechen": "Küchen",
+  "portfolio.categorySelect.parkett": "Parkett & Böden",
+  "portfolio.categorySelect.innenausbau": "Innenausbau & Wandverkleidung",
+  "portfolio.categorySelect.aussenbau": "Außenbau & Gartenhaus"
 }
