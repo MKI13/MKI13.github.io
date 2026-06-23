@@ -1,8 +1,12 @@
 (function(){
   var LANGS=[
-    {code:'de',flag:'🇩🇪'},{code:'en',flag:'🇬🇧'},{code:'fr',flag:'🇫🇷'},
-    {code:'el',flag:'🇬🇷'},{code:'it',flag:'🇮🇹'},{code:'es',flag:'🇪🇸'},
-    {code:'de-AT',flag:'🇦🇹'}
+    {code:'de',flag:'🇩🇪',labelKey:'lang.de.label',fallbackLabel:'Deutsch auswählen'},
+    {code:'en',flag:'🇬🇧',labelKey:'lang.en.label',fallbackLabel:'Englisch auswählen'},
+    {code:'fr',flag:'🇫🇷',labelKey:'lang.fr.label',fallbackLabel:'Französisch auswählen'},
+    {code:'el',flag:'🇬🇷',labelKey:'lang.el.label',fallbackLabel:'Griechisch auswählen'},
+    {code:'it',flag:'🇮🇹',labelKey:'lang.it.label',fallbackLabel:'Italienisch auswählen'},
+    {code:'es',flag:'🇪🇸',labelKey:'lang.es.label',fallbackLabel:'Spanisch auswählen'},
+    {code:'de-AT',flag:'🇦🇹',labelKey:'lang.de-AT.label',fallbackLabel:'Deutsch Österreich auswählen'}
   ];
   var CODES=LANGS.map(function(l){return l.code});
 
@@ -19,7 +23,7 @@
 
   function load(lang,cb){
     var x=new XMLHttpRequest();
-    x.open('GET',prefix()+'i18n/'+lang+'.json?v=20260620b');
+    x.open('GET',prefix()+'i18n/'+lang+'.json?v=20260623-growth');
     x.onload=function(){if(x.status===200){try{cb(JSON.parse(x.responseText))}catch(e){cb({})}}else cb({})};
     x.onerror=function(){cb({})};
     x.send();
@@ -144,8 +148,29 @@
 
     loadBaseGerman(function(base){
       applyFallbackTranslations(dict,lang,base);
+      updateLanguageButtonLabels();
       document.dispatchEvent(new CustomEvent('efSinn:i18nApplied',{detail:{lang:lang,dict:dict}}));
     });
+  }
+
+  function languageLabel(langDef){
+    var current=window.EFSINN_I18N&&window.EFSINN_I18N.dict;
+    return current&&current[langDef.labelKey]?current[langDef.labelKey]:langDef.fallbackLabel;
+  }
+
+  function updateLanguageButtonLabels(){
+    var buttons=document.querySelectorAll('#lang-sw .lang-btn');
+    for(var i=0;i<buttons.length;i++){
+      var code=buttons[i].getAttribute('data-lang-code');
+      for(var j=0;j<LANGS.length;j++){
+        if(LANGS[j].code===code){
+          var label=languageLabel(LANGS[j]);
+          buttons[i].title=label;
+          buttons[i].setAttribute('aria-label',label);
+          break;
+        }
+      }
+    }
   }
 
   function switcher(cur){
@@ -169,8 +194,9 @@
         var b=document.createElement('button');
         b.type='button';
         b.textContent=l.flag;
-        b.title=l.code;
-        b.setAttribute('aria-label','Language '+l.code);
+        b.title=languageLabel(l);
+        b.setAttribute('aria-label',languageLabel(l));
+        b.setAttribute('data-lang-code',l.code);
         b.className='lang-btn'+(l.code===cur?' lang-btn-active':'');
         b.addEventListener('click',function(){
           localStorage.setItem('site_lang',l.code);
