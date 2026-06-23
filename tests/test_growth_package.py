@@ -72,6 +72,35 @@ class GrowthPackageTest(unittest.TestCase):
         self.assertIn('Kleine Schreinerarbeiten', de['home.smalljobs.title'])
         self.assertIn('Fotos', de['home.smalljobs.text'])
 
+
+    def test_critic_blockers_are_fixed_for_legal_phone_and_a11y(self):
+        files = [p for p in ROOT.rglob('*') if p.is_file() and p.suffix in {'.html', '.json', '.js'}]
+        all_text = '\n'.join(p.read_text(encoding='utf-8') for p in files)
+        self.assertNotIn('tel:+491****6451', all_text)
+        self.assertNotIn('+491****6451', all_text)
+        self.assertIn('tel:+4917687186451', all_text)
+        script = (ROOT / 'assets/js/i18n.js').read_text(encoding='utf-8')
+        self.assertIn('aria-pressed', script)
+        self.assertIn('data-i18n-content', script)
+        for page in ['impressum.html', 'datenschutz.html']:
+            html = (ROOT / page).read_text(encoding='utf-8')
+            self.assertIn('data-i18n-content', html)
+            self.assertRegex(html, r'<title data-i18n="legal\.(imprint|privacy)\.pageTitle">')
+
+    def test_legal_body_language_residue_removed_after_critic(self):
+        english_phrases = ['This notice explains', 'The website operator is responsible', 'You provide data when', 'Consumer dispute resolution']
+        for lang in ['de', 'de-AT', 'fr', 'it', 'es', 'el']:
+            data = load(lang)
+            body = data['legal.privacy.body'] + data['legal.imprint.body']
+            for phrase in english_phrases:
+                self.assertNotIn(phrase, body, f'{lang} still contains English legal residue: {phrase}')
+        for lang in LANGS:
+            data = load(lang)
+            self.assertIn('legal.imprint.pageTitle', data)
+            self.assertIn('legal.privacy.pageTitle', data)
+            self.assertIn('legal.imprint.metaDescription', data)
+            self.assertIn('legal.privacy.metaDescription', data)
+
     def test_design_styles_include_premium_sections(self):
         css = (ROOT / 'styles.css').read_text(encoding='utf-8')
         self.assertIn('.small-jobs-section', css)

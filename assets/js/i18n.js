@@ -90,7 +90,7 @@
       }
     }
 
-    var attrNames=['aria-label','title','placeholder','alt','value'];
+    var attrNames=['aria-label','title','placeholder','alt','value','content'];
     var all=document.querySelectorAll('*');
     for(var i=0;i<all.length;i++){
       var el=all[i];
@@ -135,6 +135,7 @@
       ['data-i18n-title','title'],
       ['data-i18n-alt','alt'],
       ['data-i18n-value','value'],
+      ['data-i18n-content','content'],
       ['data-i18n-data-project-type','data-project-type']
     ];
     for(var a=0;a<attrMap.length;a++){
@@ -167,6 +168,7 @@
           var label=languageLabel(LANGS[j]);
           buttons[i].title=label;
           buttons[i].setAttribute('aria-label',label);
+          buttons[i].setAttribute('aria-pressed', code===window.EFSINN_I18N.lang?'true':'false');
           break;
         }
       }
@@ -197,13 +199,15 @@
         b.title=languageLabel(l);
         b.setAttribute('aria-label',languageLabel(l));
         b.setAttribute('data-lang-code',l.code);
+        b.setAttribute('aria-pressed',l.code===cur?'true':'false');
         b.className='lang-btn'+(l.code===cur?' lang-btn-active':'');
         b.addEventListener('click',function(){
           localStorage.setItem('site_lang',l.code);
           load(l.code,function(d){apply(d,l.code)});
           var bs=bar.querySelectorAll('.lang-btn');
-          for(var j=0;j<bs.length;j++) bs[j].classList.remove('lang-btn-active');
+          for(var j=0;j<bs.length;j++){bs[j].classList.remove('lang-btn-active');bs[j].setAttribute('aria-pressed','false');}
           b.classList.add('lang-btn-active');
+          b.setAttribute('aria-pressed','true');
         });
         bar.appendChild(b);
       })(LANGS[i]);
