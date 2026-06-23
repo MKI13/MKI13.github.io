@@ -101,6 +101,22 @@ class GrowthPackageTest(unittest.TestCase):
             self.assertIn('legal.imprint.metaDescription', data)
             self.assertIn('legal.privacy.metaDescription', data)
 
+
+    def test_marketing_copy_avoids_overclaims_and_free_visit_promise(self):
+        files = [p for p in list(ROOT.glob('*.html')) + list((ROOT / 'leistungen').glob('*.html')) + list((ROOT / 'i18n').glob('*.json'))]
+        all_text = '\n'.join(p.read_text(encoding='utf-8') for p in files)
+        forbidden = [
+            'Kreativität kennt keine Grenzen',
+            'erste Besichtigung und Ersteinschätzung ist kostenlos',
+            'höchster Präzision',
+            'höchste handwerkliche Qualität',
+            'Kostenlose Beratung',
+        ]
+        for phrase in forbidden:
+            self.assertNotIn(phrase, all_text)
+        self.assertIn('kurze Einschätzung anhand von Fotos', all_text)
+        self.assertIn('passende Lösung entsteht', all_text)
+
     def test_design_styles_include_premium_sections(self):
         css = (ROOT / 'styles.css').read_text(encoding='utf-8')
         self.assertIn('.small-jobs-section', css)
