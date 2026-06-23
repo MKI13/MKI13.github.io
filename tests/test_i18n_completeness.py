@@ -12,6 +12,8 @@ MAIN_PAGES = [
     'portfolio.html',
     'schreiner-muenchen.html',
     '404.html',
+    'impressum.html',
+    'datenschutz.html',
     'leistungen/innenausbau.html',
     'leistungen/kuechen.html',
     'leistungen/moebelbau.html',
