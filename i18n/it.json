@@ -69,13 +69,13 @@
   "footer.tagline": "Qualità e maestria artigianale da anni.<br>Il tuo partner per lavori in legno su misura.",
   "about.hero.title": "Chi siamo",
   "about.hero.subtitle": "Una passione per il legno, un amore per i dettagli",
-  "about.s1.title": "Artigianato con cuore e mente",
-  "about.s1.p1": "Come falegname artigiano qualificato, porto anni di esperienza e passione per il mestiere. Nel mio laboratorio nascono pezzi in legno unici che combinano perfettamente funzionalità ed estetica.",
+  "about.s1.title": "Marios Karampas – titolare e falegname qualificato",
+  "about.s1.p1": "Sono Marios Karampas, titolare di ef-sinn e falegname qualificato. Nel mio laboratorio realizzo lavori in legno che uniscono funzionalità, sensibilità per i materiali ed esecuzione accurata.",
   "about.s1.p2": "Ogni progetto è per me una nuova sfida e un'opportunità per esaltare la bellezza naturale del legno. Dal primo schizzo fino al montaggio finale, accompagno personalmente ogni fase.",
   "about.s1.p3": "La qualità è la mia priorità assoluta. Lavoro esclusivamente con materiali di alta qualità e tecniche tradizionali, combinati con metodi moderni per ottenere risultati duraturi e senza tempo.",
   "about.values.title": "I nostri valori",
   "about.values.v1.title": "Qualità",
-  "about.values.v1.desc": "I più alti standard artigianali e un'attenta selezione dei materiali garantiscono risultati duraturi che resistono per generazioni.",
+  "about.values.v1.desc": "Un’esecuzione accurata e una scelta adeguata dei materiali creano risultati durevoli nell’uso quotidiano.",
   "about.values.v2.title": "Individualità",
   "about.values.v2.desc": "Ogni progetto è unico. Ascoltiamo, consigliamo onestamente e realizziamo i tuoi desideri personali con precisione.",
   "about.values.v3.title": "Sostenibilità",
@@ -985,5 +985,8 @@
   "legal.imprint.pageTitle": "Note legali - ef-sinn",
   "legal.privacy.pageTitle": "Informativa sulla privacy - ef-sinn",
   "legal.imprint.metaDescription": "Note legali di ef-sinn ai sensi del § 5 TMG",
-  "legal.privacy.metaDescription": "Informativa sulla privacy di ef-sinn - informazioni sul trattamento dei dati"
+  "legal.privacy.metaDescription": "Informativa sulla privacy di ef-sinn - informazioni sul trattamento dei dati",
+  "about.owner.badge": "Titolare: Marios Karampas",
+  "about.portrait.alt": "Marios Karampas, titolare di ef-sinn e falegname qualificato a Monaco",
+  "about.pageTitle": "Chi siamo – Marios Karampas, titolare di ef-sinn | Falegname a Monaco"
 }

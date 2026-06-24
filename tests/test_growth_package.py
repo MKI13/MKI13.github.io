@@ -116,6 +116,15 @@ class GrowthPackageTest(unittest.TestCase):
             self.assertNotIn(phrase, all_text)
         self.assertIn('kurze Einschätzung anhand von Fotos', all_text)
         self.assertIn('passende Lösung entsteht', all_text)
+    def test_about_page_names_marios_karampas_as_owner(self):
+        html = (ROOT / 'about.html').read_text(encoding='utf-8')
+        de = load('de')
+        self.assertIn('about.owner.badge', html)
+        self.assertIn('Marios Karampas – Inhaber und Schreiner-Geselle', html)
+        self.assertIn('Ich bin Marios Karampas, Inhaber von ef-sinn', de['about.s1.p1'])
+        self.assertIn('Inhaber: Marios Karampas', de['about.owner.badge'])
+        self.assertIn('"@type": "Person"', html)
+        self.assertIn('"name": "Marios Karampas"', html)
 
     def test_design_styles_include_premium_sections(self):
         css = (ROOT / 'styles.css').read_text(encoding='utf-8')

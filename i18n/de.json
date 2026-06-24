@@ -69,13 +69,13 @@
   "footer.tagline": "Qualität und Handwerkskunst seit Jahren.<br>Ihr Partner für maßgefertigte Holzarbeiten.",
   "about.hero.title": "Über uns",
   "about.hero.subtitle": "Leidenschaft für Holz, Liebe zum Detail",
-  "about.s1.title": "Handwerk mit Herz und Verstand",
-  "about.s1.p1": "Als ausgebildeter Schreiner-Geselle bringe ich jahrelange Erfahrung und Leidenschaft für das Handwerk mit. In meiner Werkstatt entstehen einzigartige Holzarbeiten, die Funktionalität und Ästhetik perfekt vereinen.",
+  "about.s1.title": "Marios Karampas – Inhaber und Schreiner-Geselle",
+  "about.s1.p1": "Ich bin Marios Karampas, Inhaber von ef-sinn und ausgebildeter Schreiner-Geselle. In meiner Werkstatt entstehen Holzarbeiten, die Funktionalität, Materialgefühl und saubere Ausführung verbinden.",
   "about.s1.p2": "Jedes Projekt ist für mich eine neue Herausforderung und Möglichkeit, die natürliche Schönheit des Holzes zur Geltung zu bringen. Von der ersten Skizze bis zur finalen Montage begleite ich jeden Schritt persönlich.",
   "about.s1.p3": "Qualität steht bei mir an erster Stelle. Ich arbeite ausschließlich mit hochwertigen Materialien und traditionellen Techniken, kombiniert mit modernen Methoden, um langlebige und zeitlose Ergebnisse zu erzielen.",
   "about.values.title": "Unsere Werte",
   "about.values.v1.title": "Qualität",
-  "about.values.v1.desc": "Höchste handwerkliche Standards und sorgfältige Materialauswahl garantieren langlebige Ergebnisse, die Generationen überdauern.",
+  "about.values.v1.desc": "Sorgfältige Ausführung und passende Materialauswahl sorgen für langlebige Ergebnisse im Alltag.",
   "about.values.v2.title": "Individualität",
   "about.values.v2.desc": "Jedes Projekt ist einzigartig. Wir hören zu, beraten ehrlich und setzen Ihre persönlichen Wünsche präzise um.",
   "about.values.v3.title": "Nachhaltigkeit",
@@ -985,5 +985,8 @@
   "legal.imprint.pageTitle": "Impressum - ef-sinn",
   "legal.privacy.pageTitle": "Datenschutzerklärung - ef-sinn",
   "legal.imprint.metaDescription": "Impressum von ef-sinn - gesetzliche Angaben gemäß § 5 TMG",
-  "legal.privacy.metaDescription": "Datenschutzerklärung von ef-sinn - Informationen zur Datenverarbeitung gemäß DSGVO"
+  "legal.privacy.metaDescription": "Datenschutzerklärung von ef-sinn - Informationen zur Datenverarbeitung gemäß DSGVO",
+  "about.owner.badge": "Inhaber: Marios Karampas",
+  "about.portrait.alt": "Marios Karampas, Inhaber von ef-sinn und Schreiner-Geselle in München",
+  "about.pageTitle": "Über uns – Marios Karampas, Inhaber von ef-sinn | Schreiner München"
 }
