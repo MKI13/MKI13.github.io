@@ -69,13 +69,13 @@
   "footer.tagline": "Quality and craftsmanship for years.<br>Your partner for custom woodwork.",
   "about.hero.title": "About us",
   "about.hero.subtitle": "A passion for wood, a love for detail",
-  "about.s1.title": "Craftsmanship with heart and mind",
-  "about.s1.p1": "As a trained journeyman carpenter, I bring years of experience and passion for the craft. In my workshop, unique woodwork pieces are created that perfectly combine functionality and aesthetics.",
+  "about.s1.title": "Marios Karampas – owner and journeyman carpenter",
+  "about.s1.p1": "I am Marios Karampas, owner of ef-sinn and a trained journeyman carpenter. In my workshop I create woodwork that combines function, a feel for materials and careful execution.",
   "about.s1.p2": "Every project is a new challenge and an opportunity to bring out the natural beauty of wood. From the first sketch to the final assembly, I personally accompany every step.",
   "about.s1.p3": "Quality is my top priority. I work exclusively with high-quality materials and traditional techniques, combined with modern methods to achieve durable and timeless results.",
   "about.values.title": "Our Values",
   "about.values.v1.title": "Quality",
-  "about.values.v1.desc": "The highest craftsmanship standards and careful material selection guarantee long-lasting results that endure for generations.",
+  "about.values.v1.desc": "Careful workmanship and suitable material selection create long-lasting results for everyday use.",
   "about.values.v2.title": "Individuality",
   "about.values.v2.desc": "Every project is unique. We listen, advise honestly and implement your personal wishes with precision.",
   "about.values.v3.title": "Sustainability",
@@ -985,5 +985,8 @@
   "legal.imprint.pageTitle": "Imprint - ef-sinn",
   "legal.privacy.pageTitle": "Privacy Policy - ef-sinn",
   "legal.imprint.metaDescription": "Imprint of ef-sinn - legal information according to § 5 TMG",
-  "legal.privacy.metaDescription": "Privacy policy of ef-sinn - information on data processing"
+  "legal.privacy.metaDescription": "Privacy policy of ef-sinn - information on data processing",
+  "about.owner.badge": "Owner: Marios Karampas",
+  "about.portrait.alt": "Marios Karampas, owner of ef-sinn and journeyman carpenter in Munich",
+  "about.pageTitle": "About us – Marios Karampas, owner of ef-sinn | Carpenter in Munich"
 }

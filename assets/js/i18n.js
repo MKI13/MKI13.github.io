@@ -23,7 +23,7 @@
 
   function load(lang,cb){
     var x=new XMLHttpRequest();
-    x.open('GET',prefix()+'i18n/'+lang+'.json?v=20260623-growth');
+    x.open('GET',prefix()+'i18n/'+lang+'.json?v=20260624-owner');
     x.onload=function(){if(x.status===200){try{cb(JSON.parse(x.responseText))}catch(e){cb({})}}else cb({})};
     x.onerror=function(){cb({})};
     x.send();

@@ -69,13 +69,13 @@
   "footer.tagline": "Calidad y maestría artesanal desde hace años.<br>Tu socio para trabajos en madera a medida.",
   "about.hero.title": "Nosotros",
   "about.hero.subtitle": "Pasión por la madera, amor por el detalle",
-  "about.s1.title": "Artesanía con corazón y mente",
-  "about.s1.p1": "Como carpintero artesano cualificado, aporto años de experiencia y pasión por el oficio. En mi taller nacen piezas de madera únicas que combinan perfectamente funcionalidad y estética.",
+  "about.s1.title": "Marios Karampas – propietario y carpintero oficial",
+  "about.s1.p1": "Soy Marios Karampas, propietario de ef-sinn y carpintero oficial formado. En mi taller realizo trabajos en madera que combinan funcionalidad, sensibilidad por los materiales y una ejecución cuidada.",
   "about.s1.p2": "Cada proyecto es para mí un nuevo desafío y una oportunidad para realzar la belleza natural de la madera. Desde el primer boceto hasta el montaje final, acompaño personalmente cada paso.",
   "about.s1.p3": "La calidad es mi máxima prioridad. Trabajo exclusivamente con materiales de alta calidad y técnicas tradicionales, combinadas con métodos modernos para lograr resultados duraderos e intemporales.",
   "about.values.title": "Nuestros valores",
   "about.values.v1.title": "Calidad",
-  "about.values.v1.desc": "Los más altos estándares artesanales y una cuidadosa selección de materiales garantizan resultados duraderos que perduran por generaciones.",
+  "about.values.v1.desc": "Una ejecución cuidadosa y una selección adecuada de materiales crean resultados duraderos para el uso diario.",
   "about.values.v2.title": "Individualidad",
   "about.values.v2.desc": "Cada proyecto es único. Escuchamos, asesoramos honestamente y realizamos tus deseos personales con precisión.",
   "about.values.v3.title": "Sostenibilidad",
@@ -985,5 +985,8 @@
   "legal.imprint.pageTitle": "Aviso legal - ef-sinn",
   "legal.privacy.pageTitle": "Política de privacidad - ef-sinn",
   "legal.imprint.metaDescription": "Aviso legal de ef-sinn según § 5 TMG",
-  "legal.privacy.metaDescription": "Política de privacidad de ef-sinn - información sobre el tratamiento de datos"
+  "legal.privacy.metaDescription": "Política de privacidad de ef-sinn - información sobre el tratamiento de datos",
+  "about.owner.badge": "Propietario: Marios Karampas",
+  "about.portrait.alt": "Marios Karampas, propietario de ef-sinn y carpintero oficial en Múnich",
+  "about.pageTitle": "Sobre nosotros – Marios Karampas, propietario de ef-sinn | Carpintero en Múnich"
 }

@@ -69,13 +69,13 @@
   "footer.tagline": "Qualité et savoir-faire artisanal depuis des années.<br>Votre partenaire pour les travaux sur bois sur mesure.",
   "about.hero.title": "À propos",
   "about.hero.subtitle": "Une passion pour le bois, un amour du détail",
-  "about.s1.title": "L'artisanat avec cœur et raison",
-  "about.s1.p1": "En tant que compagnon menuisier qualifié, j'apporte des années d'expérience et de passion pour le métier. Dans mon atelier, des pièces en bois uniques naissent qui allient parfaitement fonctionnalité et esthétique.",
+  "about.s1.title": "Marios Karampas – propriétaire et menuisier compagnon",
+  "about.s1.p1": "Je suis Marios Karampas, propriétaire de ef-sinn et menuisier compagnon formé. Dans mon atelier, je réalise des ouvrages en bois qui associent fonction, sens du matériau et exécution soignée.",
   "about.s1.p2": "Chaque projet est pour moi un nouveau défi et une opportunité de mettre en valeur la beauté naturelle du bois. Du premier croquis jusqu'au montage final, j'accompagne personnellement chaque étape.",
   "about.s1.p3": "La qualité est ma priorité absolue. Je travaille exclusivement avec des matériaux de haute qualité et des techniques traditionnelles, combinées à des méthodes modernes pour obtenir des résultats durables et intemporels.",
   "about.values.title": "Nos valeurs",
   "about.values.v1.title": "Qualité",
-  "about.values.v1.desc": "Les plus hauts standards artisanaux et une sélection rigoureuse des matériaux garantissent des résultats durables qui traversent les générations.",
+  "about.values.v1.desc": "Une exécution soignée et un choix de matériaux adapté assurent des résultats durables au quotidien.",
   "about.values.v2.title": "Individualité",
   "about.values.v2.desc": "Chaque projet est unique. Nous écoutons, conseillons honnêtement et mettons en œuvre vos souhaits personnels avec précision.",
   "about.values.v3.title": "Durabilité",
@@ -985,5 +985,8 @@
   "legal.imprint.pageTitle": "Mentions légales - ef-sinn",
   "legal.privacy.pageTitle": "Politique de confidentialité - ef-sinn",
   "legal.imprint.metaDescription": "Mentions légales d’ef-sinn selon le § 5 TMG",
-  "legal.privacy.metaDescription": "Politique de confidentialité d’ef-sinn - informations sur le traitement des données"
+  "legal.privacy.metaDescription": "Politique de confidentialité d’ef-sinn - informations sur le traitement des données",
+  "about.owner.badge": "Propriétaire : Marios Karampas",
+  "about.portrait.alt": "Marios Karampas, propriétaire de ef-sinn et menuisier compagnon à Munich",
+  "about.pageTitle": "À propos – Marios Karampas, propriétaire de ef-sinn | Menuisier à Munich"
 }
