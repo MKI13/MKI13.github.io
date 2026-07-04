@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="styles.css?v=20260605">
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
     <header class="header" role="banner">
         <nav class="navbar" role="navigation" aria-label="Hauptnavigation" data-i18n-aria-label="nav.mainAria">
             <div class="container nav-container">
@@ -19,8 +20,9 @@
                 </div>
                 <ul class="nav-menu">
                     <li><a href="index.html" class="nav-link">Start</a></li>
+                    <li><a href="index.html#leistungen" class="nav-link" data-i18n="nav.services">Leistungen</a></li>
                     <li><a href="about.html" class="nav-link">Über uns</a></li>
-                    <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
+                    <li><a href="portfolio.html" class="nav-link" data-i18n="nav.portfolio">Referenzen</a></li>
                     <li><a href="contact.html" class="nav-link">Kontakt</a></li>
                 </ul>
                 <div class="nav-actions" aria-label="Schnellkontakt" data-i18n-aria-label="nav.quickContact">
@@ -31,7 +33,7 @@
         </nav>
     </header>
 
-    <main>
+    <main id="main-content" tabindex="-1">
         <section class="page-header">
             <div class="container">
                 <h1 class="page-title fade-in">Seite nicht gefunden</h1>
@@ -69,7 +71,7 @@
                     <ul class="footer-links">
                         <li><a href="index.html">Start</a></li>
                         <li><a href="about.html">Über uns</a></li>
-                        <li><a href="portfolio.html">Portfolio</a></li>
+                        <li><a href="portfolio.html">Referenzen</a></li>
                         <li><a href="contact.html">Kontakt</a></li>
                     </ul>
                 </div>

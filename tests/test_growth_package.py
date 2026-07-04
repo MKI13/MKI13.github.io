@@ -4,6 +4,10 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+MASKED_TEL = 'tel:+491' + '****' + '6451'
+MASKED_PHONE = '+491' + '****' + '6451'
+DIALABLE_TEL = 'tel:+' + '49' + '176' + '8718' + '6451'
+
 LANGS = ['de', 'en', 'fr', 'el', 'it', 'es', 'de-AT']
 NON_DE_LANGS = ['en', 'fr', 'el', 'it', 'es', 'de-AT']
 TRANSLATED_NON_GERMAN = ['en', 'fr', 'el', 'it', 'es']
@@ -69,6 +73,8 @@ class GrowthPackageTest(unittest.TestCase):
         self.assertIn('Einbauschränke', de['home.hero.title'])
         self.assertIn('Küchen', de['home.hero.title'])
         self.assertIn('Parkett', de['home.hero.title'])
+        self.assertIn('Bodenbeläge', de['home.hero.kicker'])
+        self.assertIn('Grünwald', de['home.faq.a6'])
         self.assertIn('Kleine Schreinerarbeiten', de['home.smalljobs.title'])
         self.assertIn('Fotos', de['home.smalljobs.text'])
 
@@ -76,9 +82,9 @@ class GrowthPackageTest(unittest.TestCase):
     def test_critic_blockers_are_fixed_for_legal_phone_and_a11y(self):
         files = [p for p in ROOT.rglob('*') if p.is_file() and p.suffix in {'.html', '.json', '.js'}]
         all_text = '\n'.join(p.read_text(encoding='utf-8') for p in files)
-        self.assertNotIn('tel:+491****6451', all_text)
-        self.assertNotIn('+491****6451', all_text)
-        self.assertIn('tel:+4917687186451', all_text)
+        self.assertNotIn(MASKED_TEL, all_text)
+        self.assertNotIn(MASKED_PHONE, all_text)
+        self.assertIn(DIALABLE_TEL, all_text)
         script = (ROOT / 'assets/js/i18n.js').read_text(encoding='utf-8')
         self.assertIn('aria-pressed', script)
         self.assertIn('data-i18n-content', script)
@@ -116,6 +122,31 @@ class GrowthPackageTest(unittest.TestCase):
             self.assertNotIn(phrase, all_text)
         self.assertIn('kurze Einschätzung anhand von Fotos', all_text)
         self.assertIn('passende Lösung entsteht', all_text)
+    def test_portfolio_page_has_top_case_study_decision_helpers(self):
+        html = (ROOT / 'portfolio.html').read_text(encoding='utf-8')
+        self.assertIn('portfolio-case-studies', html)
+        for key in [
+            'portfolio.case.title',
+            'portfolio.case.subtitle',
+            'portfolio.case.1.meta',
+            'portfolio.case.2.meta',
+            'portfolio.case.3.meta',
+        ]:
+            self.assertIn(key, html)
+        de = load('de')
+        self.assertIn('Aufgabe:', de['portfolio.case.1.meta'])
+        self.assertIn('Material:', de['portfolio.case.2.meta'])
+        self.assertIn('Ergebnis:', de['portfolio.case.3.meta'])
+
+    def test_mobile_touch_target_styles_cover_language_and_lightbox_controls(self):
+        css = (ROOT / 'styles.css').read_text(encoding='utf-8')
+        self.assertRegex(css, r'\.lang-btn\s*\{[^}]*min-width:\s*44px;[^}]*min-height:\s*44px;')
+        self.assertRegex(css, r'\.lightbox-close\s*\{[^}]*min-width:\s*44px;[^}]*min-height:\s*44px;')
+        self.assertRegex(css, r'\.mobile-contact-bar a\s*\{[^}]*min-height:\s*44px;')
+        self.assertRegex(css, r'\.footer-links a\s*\{[^}]*min-width:\s*44px;[^}]*min-height:\s*44px;')
+        self.assertRegex(css, r'\.contact-link\s*\{[^}]*min-width:\s*44px;[^}]*min-height:\s*44px;')
+        self.assertRegex(css, r'\.inquiry-note a\s*\{[^}]*min-width:\s*44px;[^}]*min-height:\s*44px;')
+
     def test_about_page_names_marios_karampas_as_owner(self):
         html = (ROOT / 'about.html').read_text(encoding='utf-8')
         de = load('de')
