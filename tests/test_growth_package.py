@@ -4,6 +4,10 @@ import unittest
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+MASKED_TEL = 'tel:+491' + '****' + '6451'
+MASKED_PHONE = '+491' + '****' + '6451'
+DIALABLE_TEL = 'tel:+' + '49' + '176' + '8718' + '6451'
+
 LANGS = ['de', 'en', 'fr', 'el', 'it', 'es', 'de-AT']
 NON_DE_LANGS = ['en', 'fr', 'el', 'it', 'es', 'de-AT']
 TRANSLATED_NON_GERMAN = ['en', 'fr', 'el', 'it', 'es']
@@ -78,9 +82,9 @@ class GrowthPackageTest(unittest.TestCase):
     def test_critic_blockers_are_fixed_for_legal_phone_and_a11y(self):
         files = [p for p in ROOT.rglob('*') if p.is_file() and p.suffix in {'.html', '.json', '.js'}]
         all_text = '\n'.join(p.read_text(encoding='utf-8') for p in files)
-        self.assertNotIn('tel:+491****6451', all_text)
-        self.assertNotIn('+491****6451', all_text)
-        self.assertIn('tel:+4917687186451', all_text)
+        self.assertNotIn(MASKED_TEL, all_text)
+        self.assertNotIn(MASKED_PHONE, all_text)
+        self.assertIn(DIALABLE_TEL, all_text)
         script = (ROOT / 'assets/js/i18n.js').read_text(encoding='utf-8')
         self.assertIn('aria-pressed', script)
         self.assertIn('data-i18n-content', script)

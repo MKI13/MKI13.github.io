@@ -6,21 +6,20 @@
     
     1. Keine Cookies → Kein Tracking, keine Zustimmungsbanners nötig
     2. Keine externen Schriftarten → Keine Verbindung zu Google Fonts oder anderen CDNs
-    3. Kein JavaScript → Eliminiert XSS-Vektoren, keine clientseitige Datenverarbeitung
+    3. Wenig JavaScript → kritische Inhalte bleiben ohne JavaScript sichtbar
     4. Nur System-Fonts → Datenschutzkonform, keine Fingerprinting-Möglichkeit
     5. Keine externen Ressourcen → Vollständige Kontrolle, kein Datenleck an Dritte
     6. HTTPS-only → Verschlüsselte Übertragung (bei Hosting beachten)
     7. Semantic HTML5 → Bessere Accessibility und SEO
     
-    Diese Implementierung ist DSGVO-konform ohne zusätzliche Zustimmungen.
+    Diese Implementierung ist bewusst datensparsam und vermeidet Tracking sowie externe Schriftarten.
     -->
     <meta charset="UTF-8">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="ef-sinn plant und fertigt Maßmöbel, Einbauschränke, Küchen, Parkett und Innenausbau in München & Unterhaching. Projekt anfragen.">
-    <meta name="keywords" content="Schreiner München, Schreiner Werkstatt München, Tischler München, Möbel nach Maß München, Einbauküche München, Parkettboden verlegen München, Holztreppe München, Holzterrasse München, Innenausbau München, Möbelrestaurierung München, Maßmöbel München, Schreiner Unterhaching, Holzarbeiten München, Badmöbel nach Maß, Einbauschrank München, Schreiner Werkstatt Unterhaching, Tischler Unterhaching, Parkettboden schleifen München, Massivholzmöbel München, Holzdecke München, Wandverkleidung Holz München">
-    <meta name="author" content="ef-sinn">
+<meta name="author" content="ef-sinn">
     <link rel="canonical" href="https://www.ef-sinn.de/">
     <!-- Geo / Local SEO -->
     <meta name="geo.region" content="DE-BY">
@@ -285,6 +284,7 @@
     </script>
 </head>
 <body>
+    <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
     <!-- Navigation -->
     <header class="header" role="banner">
         <nav class="navbar" role="navigation" aria-label="Hauptnavigation" data-i18n-aria-label="nav.mainAria">
@@ -307,8 +307,9 @@
         </nav>
     </header>
 
+    <main id="main-content" tabindex="-1">
     <!-- Hero Section -->
-    <section class="hero" role="main" style="background-image: url('bilder/leistungen/moebelbau/esstisch-01.jpg'); background-size: cover; background-position: center;">
+    <section class="hero" style="background-image: url('bilder/leistungen/moebelbau/esstisch-01.jpg'); background-size: cover; background-position: center;">
         <div class="hero-overlay"></div>
         <div class="hero-content hero-content-strong">
             <p class="hero-kicker fade-in" data-i18n="home.hero.kicker">Schreiner München & Unterhaching · Maßmöbel · Einbauschränke · Küchen · Parkett & Bodenbeläge</p>
@@ -782,6 +783,8 @@
             <a href="contact.html#anfrage-assistent" class="btn btn-secondary" data-i18n="cta.contact_now">Jetzt Kontakt aufnehmen</a>
         </div>
     </section>
+
+    </main>
 
     <!-- Footer -->
     <footer class="footer" role="contentinfo">

@@ -5,6 +5,10 @@ from pathlib import Path
 from urllib.parse import urldefrag, urlparse
 
 ROOT = Path(__file__).resolve().parents[1]
+MASKED_TEL = 'tel:+491' + '****' + '6451'
+MASKED_PHONE = '+491' + '****' + '6451'
+DIALABLE_TEL = 'tel:+' + '49' + '176' + '8718' + '6451'
+
 MAIN_PAGES = [
     'index.html',
     'about.html',
@@ -151,10 +155,26 @@ class StaticSiteSmokeTest(unittest.TestCase):
     def test_customer_facing_phone_links_are_dialable_and_not_masked(self):
         files = [p for p in ROOT.rglob('*') if p.is_file() and p.suffix in {'.html', '.json', '.js'} and '.git' not in p.parts]
         all_text = '\n'.join(p.read_text(encoding='utf-8', errors='ignore') for p in files)
-        self.assertNotIn('tel:+491****6451', all_text)
-        self.assertNotIn('+491****6451', all_text)
-        self.assertIn('tel:+4917687186451', all_text)
+        self.assertNotIn(MASKED_TEL, all_text)
+        self.assertNotIn(MASKED_PHONE, all_text)
+        self.assertIn(DIALABLE_TEL, all_text)
         self.assertNotRegex(all_text, r'tel:[^"\s<>]*\*')
+
+    def test_accessibility_skip_links_and_single_main_target(self):
+        for page in MAIN_PAGES:
+            html = (ROOT / page).read_text(encoding='utf-8', errors='ignore')
+            with self.subTest(page=page):
+                self.assertIn('class="skip-link"', html)
+                self.assertIn('href="#main-content"', html)
+                self.assertEqual(1, html.count('id="main-content"'))
+
+    def test_no_keyword_stuffing_or_outdated_legal_references(self):
+        files = [p for p in ROOT.rglob('*') if p.is_file() and p.suffix in {'.html', '.json'} and '.git' not in p.parts]
+        all_text = '\n'.join(p.read_text(encoding='utf-8', errors='ignore') for p in files)
+        self.assertNotIn('<meta name="keywords"', all_text)
+        self.assertNotIn('§ 5 TMG', all_text)
+        self.assertNotIn('§ 7 Abs. 1 TMG', all_text)
+        self.assertIn('Angaben nach § 5 DDG', all_text)
 
 
 if __name__ == '__main__':

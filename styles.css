@@ -136,6 +136,36 @@ textarea {
     opacity: 0;
 }
 
+
+.skip-link {
+    position: absolute;
+    left: 1rem;
+    top: 0.75rem;
+    transform: translateY(-160%);
+    z-index: 2000;
+    padding: 0.75rem 1rem;
+    border-radius: 999px;
+    background: var(--color-primary-dark);
+    color: #ffffff;
+    font-weight: 700;
+    box-shadow: var(--shadow-md);
+}
+
+.skip-link:focus {
+    transform: translateY(0);
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+:focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 3px;
+}
+
+main:focus {
+    outline: none;
+}
+
 /* ===== ANIMATIONEN ===== */
 @keyframes fadeIn {
     from {
@@ -505,9 +535,11 @@ textarea {
 }
 
 .page-title {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-size: clamp(2rem, 5vw, 3.5rem);
     color: var(--color-primary);
     margin-bottom: 1rem;
+    overflow-wrap: anywhere;
+    hyphens: auto;
 }
 
 .page-subtitle {
@@ -2595,6 +2627,12 @@ img {
 .legal-copy h3 { color: var(--color-secondary); margin: 1.5rem 0 0.5rem; }
 .legal-copy h4 { color: var(--color-text); margin: 1rem 0 0.5rem; }
 .legal-copy p { margin-bottom: 1rem; }
+.legal-copy p,
+.legal-copy li,
+.legal-copy a {
+    overflow-wrap: anywhere;
+    word-break: normal;
+}
 .legal-copy a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 0.18em; }
 .legal-source { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--color-border); color: var(--color-text-light); font-size: 0.875rem; }
 @media (max-width: 900px) { .small-jobs-card, .premium-trust-grid, .portfolio-case-grid { grid-template-columns: 1fr; } .small-jobs-card .btn { width: 100%; } }
