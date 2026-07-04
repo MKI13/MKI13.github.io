@@ -69,6 +69,8 @@ class GrowthPackageTest(unittest.TestCase):
         self.assertIn('Einbauschränke', de['home.hero.title'])
         self.assertIn('Küchen', de['home.hero.title'])
         self.assertIn('Parkett', de['home.hero.title'])
+        self.assertIn('Bodenbeläge', de['home.hero.kicker'])
+        self.assertIn('Grünwald', de['home.faq.a6'])
         self.assertIn('Kleine Schreinerarbeiten', de['home.smalljobs.title'])
         self.assertIn('Fotos', de['home.smalljobs.text'])
 
@@ -116,6 +118,31 @@ class GrowthPackageTest(unittest.TestCase):
             self.assertNotIn(phrase, all_text)
         self.assertIn('kurze Einschätzung anhand von Fotos', all_text)
         self.assertIn('passende Lösung entsteht', all_text)
+    def test_portfolio_page_has_top_case_study_decision_helpers(self):
+        html = (ROOT / 'portfolio.html').read_text(encoding='utf-8')
+        self.assertIn('portfolio-case-studies', html)
+        for key in [
+            'portfolio.case.title',
+            'portfolio.case.subtitle',
+            'portfolio.case.1.meta',
+            'portfolio.case.2.meta',
+            'portfolio.case.3.meta',
+        ]:
+            self.assertIn(key, html)
+        de = load('de')
+        self.assertIn('Aufgabe:', de['portfolio.case.1.meta'])
+        self.assertIn('Material:', de['portfolio.case.2.meta'])
+        self.assertIn('Ergebnis:', de['portfolio.case.3.meta'])
+
+    def test_mobile_touch_target_styles_cover_language_and_lightbox_controls(self):
+        css = (ROOT / 'styles.css').read_text(encoding='utf-8')
+        self.assertRegex(css, r'\.lang-btn\s*\{[^}]*min-width:\s*44px;[^}]*min-height:\s*44px;')
+        self.assertRegex(css, r'\.lightbox-close\s*\{[^}]*min-width:\s*44px;[^}]*min-height:\s*44px;')
+        self.assertRegex(css, r'\.mobile-contact-bar a\s*\{[^}]*min-height:\s*44px;')
+        self.assertRegex(css, r'\.footer-links a\s*\{[^}]*min-width:\s*44px;[^}]*min-height:\s*44px;')
+        self.assertRegex(css, r'\.contact-link\s*\{[^}]*min-width:\s*44px;[^}]*min-height:\s*44px;')
+        self.assertRegex(css, r'\.inquiry-note a\s*\{[^}]*min-width:\s*44px;[^}]*min-height:\s*44px;')
+
     def test_about_page_names_marios_karampas_as_owner(self):
         html = (ROOT / 'about.html').read_text(encoding='utf-8')
         de = load('de')
