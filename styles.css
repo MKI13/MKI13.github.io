@@ -1,41 +1,6 @@
-/*
-===========================================
-EF-SINN - STYLESHEET
-===========================================
-
-SICHERHEITS- UND DATENSCHUTZ-ARCHITEKTUR:
-
-1. KEINE EXTERNEN RESSOURCEN
-   - Keine @import von Google Fonts oder CDNs
-   - Keine url() zu externen Servern
-   - Keine externe Icon-Bibliotheken
-   → Verhindert: Tracking, DSGVO-Probleme, Abhängigkeiten
-
-2. NUR SYSTEM-FONTS
-   - font-family nutzt nur vorinstallierte Schriften
-   - Fallback-Kette für Cross-Platform-Kompatibilität
-   → Verhindert: Fingerprinting, externe Requests
-
-3. CSS-ONLY ANIMATIONEN
-   - Keine JavaScript-Abhängigkeit
-   - Performant durch Hardware-Beschleunigung
-   - Respektiert prefers-reduced-motion
-   → Vorteil: Sicherheit, Accessibility, Performance
-
-4. WCAG AA KONFORMITÄT
-   - Kontrastverhältnis ≥ 4.5:1 für Text
-   - Fokus-Indikatoren für Tastaturnavigation
-   - Semantische Hierarchie
-   → Vorteil: Accessibility, SEO, Usability
-
-5. PROGRESSIVE ENHANCEMENT
-   - Funktioniert ohne CSS (reines HTML)
-   - Keine kritischen Features in ::before/::after
-   - Mobile-First Responsive Design
-   → Vorteil: Robustheit, Performance
-
-===========================================
-*/
+/* EF-Sinn: local assets and system fonts, responsive layout and keyboard focus.
+   Motion respects prefers-reduced-motion. These implementation choices are not
+   a privacy, security or accessibility certification. */
 
 /* ===== CSS RESET ===== */
 * {
@@ -2636,3 +2601,55 @@ img {
 .legal-copy a { color: var(--color-primary); text-decoration: underline; text-underline-offset: 0.18em; }
 .legal-source { margin-top: 3rem; padding-top: 2rem; border-top: 1px solid var(--color-border); color: var(--color-text-light); font-size: 0.875rem; }
 @media (max-width: 900px) { .small-jobs-card, .premium-trust-grid, .portfolio-case-grid { grid-template-columns: 1fr; } .small-jobs-card .btn { width: 100%; } }
+
+/* Inquiry review: local-only draft, accessible fallbacks, no claim of delivery. */
+.inquiry-preview[hidden], #inquiry-long-note[hidden] { display: none !important; }
+.inquiry-preview { margin-top: 1.5rem; padding: clamp(1rem, 3vw, 1.5rem); border: 1px solid #cbbda7; border-radius: 12px; background: #faf8f4; min-width: 0; }
+.inquiry-preview h3 { margin: 0 0 0.75rem; color: #26352a; }
+.inquiry-preview textarea { width: 100%; box-sizing: border-box; min-height: 18rem; resize: vertical; font: inherit; line-height: 1.5; }
+.inquiry-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: 1rem; }
+.inquiry-actions .btn { white-space: normal; min-height: 44px; text-align: center; }
+.inquiry-alternative { border: 1px solid #56694f; background: transparent; color: #2a3d2c; }
+.inquiry-alternative:hover { background: #edf1e9; }
+.inquiry-status:not(:empty) { padding: 1rem; border-left: 3px solid #526746; background: #f3f5ef; }
+.inquiry-form button:disabled { opacity: 0.6; cursor: not-allowed; }
+.inquiry-form input, .inquiry-form textarea { scroll-margin-top: 13rem; }
+.inquiry-preview:focus { outline: 3px solid #526746; outline-offset: 3px; }
+@media (max-width: 600px) { .inquiry-actions .btn { width: 100%; } .inquiry-preview { padding: 1rem; } }
+
+/* Keep long headings and form fieldsets inside narrow grid tracks. */
+.contact-grid > *, .project-template-fieldset { min-width: 0; }
+.contact-info .section-title { overflow-wrap: anywhere; hyphens: auto; }
+.inquiry-form input, .inquiry-form textarea { min-width: 0; max-width: 100%; box-sizing: border-box; }
+
+/* Native modal supplies keyboard containment and an inert page behind the image. */
+.portfolio-lightbox:not([open]) { display: none; }
+.portfolio-lightbox[open] { display: flex; inset: 0; width: 100vw; height: 100vh; max-width: none; max-height: none; margin: 0; padding: 0; border: 0; }
+.portfolio-lightbox .lb-close { background: transparent; border: 0; min-width: 44px; min-height: 44px; }
+.portfolio-lightbox .lb-close:focus-visible { outline: 3px solid white; outline-offset: 3px; }
+.project-img-wrap[role="button"]:focus-visible { outline: 3px solid #526746; outline-offset: 3px; }
+
+/* The opening content must never be clipped by a fixed viewport-height hero. */
+.hero { height: auto; min-height: min(48rem, 100svh); padding: 3rem 0 5rem; }
+.hero-title { font-size: clamp(1.8rem, 4.3vw, 3.3rem); }
+.hero-subtitle { color: white; opacity: 1; }
+.hero .fade-in, .hero .fade-in-delay, .hero .fade-in-delay-2 { animation: none; opacity: 1; transform: none; }
+@media (max-width: 600px) {
+    .hero { min-height: 0; padding: 1.5rem 0 4rem; }
+    .hero-content { padding: 1rem; }
+    .hero-title { line-height: 1.2; letter-spacing: -0.025em; }
+    .hero-subtitle { font-size: 1rem; line-height: 1.6; }
+    .hero-kicker { font-size: 0.78rem; border-radius: 12px; }
+    .hero-microcopy, .hero-trust { font-size: 0.9rem; }
+}
+
+/* Functional controls and image dialogs are visible immediately, at full contrast. */
+.portfolio-lightbox[open] { animation: none; opacity: 1; }
+.inquiry-form .btn-secondary { background: #106890; border-color: #106890; color: #fff; }
+
+/* Do not paint a touch highlight from the underlying thumbnail above its modal. */
+.project-img-wrap[role="button"], .portfolio-lightbox .lb-close { -webkit-tap-highlight-color: transparent; }
+
+/* German compounds must also fit wider fallback fonts on other operating systems. */
+h1, h2, h3, h4 { overflow-wrap: anywhere; hyphens: auto; }
+.intro-grid > *, .service-detail-grid > *, .service-card, .strength-card { min-width: 0; }

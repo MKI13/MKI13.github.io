@@ -1,0 +1,45 @@
+name: Website Quality
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  static-and-browser:
+    name: Static checks and Chromium audit
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: qa/package-lock.json
+      - name: Static regression tests and syntax
+        run: |
+          python3 -m unittest discover -s tests -v
+          node --check assets/js/i18n.js
+          node --check assets/js/inquiry.js
+          node --check qa/browser-audit.mjs
+          git diff --check
+      - name: Install isolated audit dependencies
+        run: npm ci --prefix qa --ignore-scripts
+      - name: Audit test dependencies
+        run: npm audit --prefix qa --audit-level=moderate
+      - name: Install Chromium in the CI runner
+        working-directory: qa
+        run: npx playwright install --with-deps chromium
+      - name: Functional and visual browser checks
+        run: npm test --prefix qa
+      - name: Retain audit report and screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: website-quality-${{ github.sha }}
+          path: .qa-results/
+          include-hidden-files: true
+          if-no-files-found: warn
+          retention-days: 30

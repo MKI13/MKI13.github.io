@@ -1,0 +1,2086 @@
+{
+  "generator": "scripts/optimize_images.py",
+  "quality": 85,
+  "originals_retained": true,
+  "images": {
+    "assets/icons/icon-innenausbau.png": {
+      "sha256": "2d875e23095bed59d6b34fd2097d28ece3efa220f92dc42f870da1a2ddc67b70",
+      "original_bytes": 120269,
+      "width": 512,
+      "height": 512,
+      "icon": true,
+      "variants": [
+        {
+          "width": 64,
+          "height": 64,
+          "path": "assets/optimized/icon-innenausbau-2d875e23-64.webp",
+          "bytes": 1890
+        },
+        {
+          "width": 128,
+          "height": 128,
+          "path": "assets/optimized/icon-innenausbau-2d875e23-128.webp",
+          "bytes": 4016
+        },
+        {
+          "width": 256,
+          "height": 256,
+          "path": "assets/optimized/icon-innenausbau-2d875e23-256.webp",
+          "bytes": 7128
+        }
+      ]
+    },
+    "assets/icons/icon-kueche.png": {
+      "sha256": "a85dc400f2323d46f3dded35473b804c3f7c0763a8a0673aadded66083997ade",
+      "original_bytes": 40507,
+      "width": 512,
+      "height": 512,
+      "icon": true,
+      "variants": [
+        {
+          "width": 64,
+          "height": 64,
+          "path": "assets/optimized/icon-kueche-a85dc400-64.webp",
+          "bytes": 1288
+        },
+        {
+          "width": 128,
+          "height": 128,
+          "path": "assets/optimized/icon-kueche-a85dc400-128.webp",
+          "bytes": 2332
+        },
+        {
+          "width": 256,
+          "height": 256,
+          "path": "assets/optimized/icon-kueche-a85dc400-256.webp",
+          "bytes": 3802
+        }
+      ]
+    },
+    "assets/icons/icon-moebelbau.png": {
+      "sha256": "64e4fc7a94fbb8a3a1936be340b8c3ee249b633747e3556082e8f4495404a393",
+      "original_bytes": 30139,
+      "width": 512,
+      "height": 512,
+      "icon": true,
+      "variants": [
+        {
+          "width": 64,
+          "height": 64,
+          "path": "assets/optimized/icon-moebelbau-64e4fc7a-64.webp",
+          "bytes": 676
+        },
+        {
+          "width": 128,
+          "height": 128,
+          "path": "assets/optimized/icon-moebelbau-64e4fc7a-128.webp",
+          "bytes": 1258
+        },
+        {
+          "width": 256,
+          "height": 256,
+          "path": "assets/optimized/icon-moebelbau-64e4fc7a-256.webp",
+          "bytes": 2306
+        }
+      ]
+    },
+    "assets/icons/icon-reparatur.png": {
+      "sha256": "9d2f2294a29a4ea6872059078c5471ef347f8cc26441e589c6d0d28f8392990f",
+      "original_bytes": 40158,
+      "width": 512,
+      "height": 512,
+      "icon": true,
+      "variants": [
+        {
+          "width": 64,
+          "height": 64,
+          "path": "assets/optimized/icon-reparatur-9d2f2294-64.webp",
+          "bytes": 2862
+        },
+        {
+          "width": 128,
+          "height": 128,
+          "path": "assets/optimized/icon-reparatur-9d2f2294-128.webp",
+          "bytes": 6946
+        },
+        {
+          "width": 256,
+          "height": 256,
+          "path": "assets/optimized/icon-reparatur-9d2f2294-256.webp",
+          "bytes": 15170
+        }
+      ]
+    },
+    "assets/icons/icon-terrasse.png": {
+      "sha256": "5ce50ed0c3fe24b8b56e12230eeb5615ec64ccdaf44c35f04f1a6010df1c9154",
+      "original_bytes": 40674,
+      "width": 512,
+      "height": 512,
+      "icon": true,
+      "variants": [
+        {
+          "width": 64,
+          "height": 64,
+          "path": "assets/optimized/icon-terrasse-5ce50ed0-64.webp",
+          "bytes": 930
+        },
+        {
+          "width": 128,
+          "height": 128,
+          "path": "assets/optimized/icon-terrasse-5ce50ed0-128.webp",
+          "bytes": 1594
+        },
+        {
+          "width": 256,
+          "height": 256,
+          "path": "assets/optimized/icon-terrasse-5ce50ed0-256.webp",
+          "bytes": 2522
+        }
+      ]
+    },
+    "assets/icons/icon-treppe.png": {
+      "sha256": "3dc8df3cffa3e541c0971ba7440652cdeaeed1117cddb4afda610a16262b267a",
+      "original_bytes": 20956,
+      "width": 512,
+      "height": 512,
+      "icon": true,
+      "variants": [
+        {
+          "width": 64,
+          "height": 64,
+          "path": "assets/optimized/icon-treppe-3dc8df3c-64.webp",
+          "bytes": 2398
+        },
+        {
+          "width": 128,
+          "height": 128,
+          "path": "assets/optimized/icon-treppe-3dc8df3c-128.webp",
+          "bytes": 4996
+        },
+        {
+          "width": 256,
+          "height": 256,
+          "path": "assets/optimized/icon-treppe-3dc8df3c-256.webp",
+          "bytes": 9500
+        }
+      ]
+    },
+    "assets/logo-ef-sinn.png": {
+      "sha256": "b9defa4fe22bc9d914b5b895916f7ec981a0d2aeb16fbd40f95ed395fb931e39",
+      "original_bytes": 752624,
+      "width": 784,
+      "height": 710,
+      "icon": true,
+      "variants": [
+        {
+          "width": 64,
+          "height": 58,
+          "path": "assets/optimized/logo-ef-sinn-b9defa4f-64.webp",
+          "bytes": 4738
+        },
+        {
+          "width": 128,
+          "height": 116,
+          "path": "assets/optimized/logo-ef-sinn-b9defa4f-128.webp",
+          "bytes": 12490
+        },
+        {
+          "width": 256,
+          "height": 232,
+          "path": "assets/optimized/logo-ef-sinn-b9defa4f-256.webp",
+          "bytes": 34230
+        }
+      ]
+    },
+    "bilder/intro/tisch-holz.jpg": {
+      "sha256": "631b9a521d061f612bd7b8f21e1aeb9654b5520fbbcdfe9c9f40675ce4aada74",
+      "original_bytes": 81824,
+      "width": 1279,
+      "height": 720,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 270,
+          "path": "assets/optimized/tisch-holz-631b9a52-480.webp",
+          "bytes": 8450
+        },
+        {
+          "width": 960,
+          "height": 540,
+          "path": "assets/optimized/tisch-holz-631b9a52-960.webp",
+          "bytes": 20250
+        },
+        {
+          "width": 1279,
+          "height": 720,
+          "path": "assets/optimized/tisch-holz-631b9a52-1279.webp",
+          "bytes": 30574
+        }
+      ]
+    },
+    "bilder/leistungen/innenausbau/innenausbau-details.jpg": {
+      "sha256": "83f9243c1e6da1b1dd3f6877660457de58b78308299105d255895f3586923fd4",
+      "original_bytes": 206830,
+      "width": 2106,
+      "height": 1626,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 371,
+          "path": "assets/optimized/innenausbau-details-83f9243c-480.webp",
+          "bytes": 7524
+        },
+        {
+          "width": 960,
+          "height": 741,
+          "path": "assets/optimized/innenausbau-details-83f9243c-960.webp",
+          "bytes": 18162
+        },
+        {
+          "width": 1600,
+          "height": 1235,
+          "path": "assets/optimized/innenausbau-details-83f9243c-1600.webp",
+          "bytes": 35152
+        }
+      ]
+    },
+    "bilder/leistungen/innenausbau/innenausbau-garderobe-flur.jpg": {
+      "sha256": "010d9e7bf1207c811af4d642c13749f71866ba781f34a5aa1ed6f008cd448b03",
+      "original_bytes": 367205,
+      "width": 1772,
+      "height": 2656,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 719,
+          "path": "assets/optimized/innenausbau-garderobe-flur-010d9e7b-480.webp",
+          "bytes": 11358
+        },
+        {
+          "width": 960,
+          "height": 1439,
+          "path": "assets/optimized/innenausbau-garderobe-flur-010d9e7b-960.webp",
+          "bytes": 32766
+        },
+        {
+          "width": 1600,
+          "height": 2398,
+          "path": "assets/optimized/innenausbau-garderobe-flur-010d9e7b-1600.webp",
+          "bytes": 70230
+        }
+      ]
+    },
+    "bilder/leistungen/innenausbau/innenausbau-garderobe-schublade.jpg": {
+      "sha256": "582aeb509a582b6ef2698502a3dbdbdaf50b22169e6fc73d833e636431b217d5",
+      "original_bytes": 594353,
+      "width": 1384,
+      "height": 3226,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 1119,
+          "path": "assets/optimized/innenausbau-garderobe-schublade-582aeb50-480.webp",
+          "bytes": 25860
+        },
+        {
+          "width": 960,
+          "height": 2238,
+          "path": "assets/optimized/innenausbau-garderobe-schublade-582aeb50-960.webp",
+          "bytes": 87908
+        },
+        {
+          "width": 1384,
+          "height": 3226,
+          "path": "assets/optimized/innenausbau-garderobe-schublade-582aeb50-1384.webp",
+          "bytes": 180710
+        }
+      ]
+    },
+    "bilder/leistungen/innenausbau/innenausbau-ladenbau.jpg": {
+      "sha256": "118f42ac362cbfd893ed08b737a7332f5a55b52ea02cd7c16a6d7d1b7b486704",
+      "original_bytes": 567719,
+      "width": 1784,
+      "height": 2152,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 579,
+          "path": "assets/optimized/innenausbau-ladenbau-118f42ac-480.webp",
+          "bytes": 34160
+        },
+        {
+          "width": 960,
+          "height": 1158,
+          "path": "assets/optimized/innenausbau-ladenbau-118f42ac-960.webp",
+          "bytes": 102790
+        },
+        {
+          "width": 1600,
+          "height": 1930,
+          "path": "assets/optimized/innenausbau-ladenbau-118f42ac-1600.webp",
+          "bytes": 203714
+        }
+      ]
+    },
+    "bilder/leistungen/innenausbau/innenausbau-parkettboden-tueren.jpg": {
+      "sha256": "bfdbac6da7cdef24f7f825d77e1174e1dc9fd4986abbf522d39d310763f609b5",
+      "original_bytes": 913042,
+      "width": 1800,
+      "height": 4000,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 1067,
+          "path": "assets/optimized/innenausbau-parkettboden-tueren-bfdbac6d-480.webp",
+          "bytes": 29856
+        },
+        {
+          "width": 960,
+          "height": 2133,
+          "path": "assets/optimized/innenausbau-parkettboden-tueren-bfdbac6d-960.webp",
+          "bytes": 95458
+        },
+        {
+          "width": 1600,
+          "height": 3556,
+          "path": "assets/optimized/innenausbau-parkettboden-tueren-bfdbac6d-1600.webp",
+          "bytes": 221458
+        }
+      ]
+    },
+    "bilder/leistungen/innenausbau/innenausbau-regal.jpg": {
+      "sha256": "1d73f052b98441320e705891589d5bad5114fcc9a71dd207bb447bdbfe669e30",
+      "original_bytes": 200070,
+      "width": 1024,
+      "height": 1536,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 720,
+          "path": "assets/optimized/innenausbau-regal-1d73f052-480.webp",
+          "bytes": 16086
+        },
+        {
+          "width": 960,
+          "height": 1440,
+          "path": "assets/optimized/innenausbau-regal-1d73f052-960.webp",
+          "bytes": 47436
+        },
+        {
+          "width": 1024,
+          "height": 1536,
+          "path": "assets/optimized/innenausbau-regal-1d73f052-1024.webp",
+          "bytes": 56138
+        }
+      ]
+    },
+    "bilder/leistungen/innenausbau/parkettboden-details.jpg": {
+      "sha256": "81ea5b13d5216c4926b03fe6f2d752003aef0826f6677d92ab29310929fc9f9b",
+      "original_bytes": 788532,
+      "width": 1800,
+      "height": 4000,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 1067,
+          "path": "assets/optimized/parkettboden-details-81ea5b13-480.webp",
+          "bytes": 24914
+        },
+        {
+          "width": 960,
+          "height": 2133,
+          "path": "assets/optimized/parkettboden-details-81ea5b13-960.webp",
+          "bytes": 77258
+        },
+        {
+          "width": 1600,
+          "height": 3556,
+          "path": "assets/optimized/parkettboden-details-81ea5b13-1600.webp",
+          "bytes": 178664
+        }
+      ]
+    },
+    "bilder/leistungen/innenausbau/parkettboden-innenausbau.jpg": {
+      "sha256": "86406e4f1f3d230948d53f00a49f6aeb91fb3cf0295f4ca3a866100697f23e2b",
+      "original_bytes": 1035251,
+      "width": 1800,
+      "height": 4000,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 1067,
+          "path": "assets/optimized/parkettboden-innenausbau-86406e4f-480.webp",
+          "bytes": 36168
+        },
+        {
+          "width": 960,
+          "height": 2133,
+          "path": "assets/optimized/parkettboden-innenausbau-86406e4f-960.webp",
+          "bytes": 118174
+        },
+        {
+          "width": 1600,
+          "height": 3556,
+          "path": "assets/optimized/parkettboden-innenausbau-86406e4f-1600.webp",
+          "bytes": 269542
+        }
+      ]
+    },
+    "bilder/leistungen/innenausbau/parkettboden-mit-tueren.jpg": {
+      "sha256": "8fbe958caa38d5be6798be7da947c7a39c289192c9f47fb72a5bc1b783d238c7",
+      "original_bytes": 966600,
+      "width": 1800,
+      "height": 4000,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 1067,
+          "path": "assets/optimized/parkettboden-mit-tueren-8fbe958c-480.webp",
+          "bytes": 31920
+        },
+        {
+          "width": 960,
+          "height": 2133,
+          "path": "assets/optimized/parkettboden-mit-tueren-8fbe958c-960.webp",
+          "bytes": 96460
+        },
+        {
+          "width": 1600,
+          "height": 3556,
+          "path": "assets/optimized/parkettboden-mit-tueren-8fbe958c-1600.webp",
+          "bytes": 234414
+        }
+      ]
+    },
+    "bilder/leistungen/innenausbau/parkettboden-verfuegung.jpg": {
+      "sha256": "8a4bdf1cfca550827759ac0212a9183550e32185164a72468f8f9a5968ae4988",
+      "original_bytes": 1042389,
+      "width": 1800,
+      "height": 4000,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 1067,
+          "path": "assets/optimized/parkettboden-verfuegung-8a4bdf1c-480.webp",
+          "bytes": 38428
+        },
+        {
+          "width": 960,
+          "height": 2133,
+          "path": "assets/optimized/parkettboden-verfuegung-8a4bdf1c-960.webp",
+          "bytes": 116378
+        },
+        {
+          "width": 1600,
+          "height": 3556,
+          "path": "assets/optimized/parkettboden-verfuegung-8a4bdf1c-1600.webp",
+          "bytes": 282118
+        }
+      ]
+    },
+    "bilder/leistungen/innenausbau/parkettboden-verlegung.jpg": {
+      "sha256": "58357ff728eb273cfe4d6ce83314f5197cc417d7f58d8a14c3d683ae1f45cfad",
+      "original_bytes": 1027436,
+      "width": 1800,
+      "height": 4000,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 1067,
+          "path": "assets/optimized/parkettboden-verlegung-58357ff7-480.webp",
+          "bytes": 26924
+        },
+        {
+          "width": 960,
+          "height": 2133,
+          "path": "assets/optimized/parkettboden-verlegung-58357ff7-960.webp",
+          "bytes": 89986
+        },
+        {
+          "width": 1600,
+          "height": 3556,
+          "path": "assets/optimized/parkettboden-verlegung-58357ff7-1600.webp",
+          "bytes": 247100
+        }
+      ]
+    },
+    "bilder/leistungen/innenausbau/parkettboden-weisse-sockelleisten.jpg": {
+      "sha256": "43d16bab65e04d5ef7191cd1a9a7ddc5122676b91143b7960f288dda13551bc3",
+      "original_bytes": 1053649,
+      "width": 1800,
+      "height": 4000,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 1067,
+          "path": "assets/optimized/parkettboden-weisse-sockelleisten-43d16bab-480.webp",
+          "bytes": 49932
+        },
+        {
+          "width": 960,
+          "height": 2133,
+          "path": "assets/optimized/parkettboden-weisse-sockelleisten-43d16bab-960.webp",
+          "bytes": 164628
+        },
+        {
+          "width": 1600,
+          "height": 3556,
+          "path": "assets/optimized/parkettboden-weisse-sockelleisten-43d16bab-1600.webp",
+          "bytes": 330744
+        }
+      ]
+    },
+    "bilder/leistungen/moebelbau/esstisch-01.jpg": {
+      "sha256": "2001cdb46f07d752299163ffaeccd98285456fc2524ed6a96d1a76d6f42ca6e1",
+      "original_bytes": 35383,
+      "width": 1600,
+      "height": 720,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 216,
+          "path": "assets/optimized/esstisch-01-2001cdb4-480.webp",
+          "bytes": 5306
+        },
+        {
+          "width": 960,
+          "height": 432,
+          "path": "assets/optimized/esstisch-01-2001cdb4-960.webp",
+          "bytes": 12890
+        },
+        {
+          "width": 1600,
+          "height": 720,
+          "path": "assets/optimized/esstisch-01-2001cdb4-1600.webp",
+          "bytes": 25424
+        }
+      ]
+    },
+    "bilder/leistungen/moebelbau/esstisch-02.jpg": {
+      "sha256": "16157492230e0d202288911a27a0481b997ab078650a2b5ddc5402608ca51d44",
+      "original_bytes": 35925,
+      "width": 1600,
+      "height": 720,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 216,
+          "path": "assets/optimized/esstisch-02-16157492-480.webp",
+          "bytes": 5082
+        },
+        {
+          "width": 960,
+          "height": 432,
+          "path": "assets/optimized/esstisch-02-16157492-960.webp",
+          "bytes": 12218
+        },
+        {
+          "width": 1600,
+          "height": 720,
+          "path": "assets/optimized/esstisch-02-16157492-1600.webp",
+          "bytes": 23218
+        }
+      ]
+    },
+    "bilder/leistungen/moebelbau/esstisch-03.jpg": {
+      "sha256": "94fe39b042d36ce22110dfcd22b2b4f1ef73d3d4f24b1c4be75572b819e1ef41",
+      "original_bytes": 52223,
+      "width": 1600,
+      "height": 720,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 216,
+          "path": "assets/optimized/esstisch-03-94fe39b0-480.webp",
+          "bytes": 9466
+        },
+        {
+          "width": 960,
+          "height": 432,
+          "path": "assets/optimized/esstisch-03-94fe39b0-960.webp",
+          "bytes": 23000
+        },
+        {
+          "width": 1600,
+          "height": 720,
+          "path": "assets/optimized/esstisch-03-94fe39b0-1600.webp",
+          "bytes": 43222
+        }
+      ]
+    },
+    "bilder/leistungen/terrassen/holzterrasse-cumaruholz.jpg": {
+      "sha256": "b12379e1848aaa09dae750dd13c489564c62eefdd40d50810c79b78a6146a3e6",
+      "original_bytes": 1777361,
+      "width": 1080,
+      "height": 2220,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 987,
+          "path": "assets/optimized/holzterrasse-cumaruholz-b12379e1-480.webp",
+          "bytes": 107000
+        },
+        {
+          "width": 960,
+          "height": 1973,
+          "path": "assets/optimized/holzterrasse-cumaruholz-b12379e1-960.webp",
+          "bytes": 318582
+        },
+        {
+          "width": 1080,
+          "height": 2220,
+          "path": "assets/optimized/holzterrasse-cumaruholz-b12379e1-1080.webp",
+          "bytes": 379438
+        }
+      ]
+    },
+    "bilder/leistungen/terrassen/holzterrasse-douglasie-2.jpg": {
+      "sha256": "28e55fbbdee569b9b83d04639d4887badae7e7b5682660dfce49f73c39bc2f80",
+      "original_bytes": 150642,
+      "width": 1200,
+      "height": 720,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 288,
+          "path": "assets/optimized/holzterrasse-douglasie-2-28e55fbb-480.webp",
+          "bytes": 34976
+        },
+        {
+          "width": 960,
+          "height": 576,
+          "path": "assets/optimized/holzterrasse-douglasie-2-28e55fbb-960.webp",
+          "bytes": 99038
+        },
+        {
+          "width": 1200,
+          "height": 720,
+          "path": "assets/optimized/holzterrasse-douglasie-2-28e55fbb-1200.webp",
+          "bytes": 132910
+        }
+      ]
+    },
+    "bilder/leistungen/terrassen/holzterrasse-douglasie-3.jpg": {
+      "sha256": "a04a69adfe1f00c64e5abed98baac02fc4fb8d7fe9f0165e3ba7efc49b14643d",
+      "original_bytes": 167245,
+      "width": 1200,
+      "height": 720,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 288,
+          "path": "assets/optimized/holzterrasse-douglasie-3-a04a69ad-480.webp",
+          "bytes": 40054
+        },
+        {
+          "width": 960,
+          "height": 576,
+          "path": "assets/optimized/holzterrasse-douglasie-3-a04a69ad-960.webp",
+          "bytes": 114742
+        },
+        {
+          "width": 1200,
+          "height": 720,
+          "path": "assets/optimized/holzterrasse-douglasie-3-a04a69ad-1200.webp",
+          "bytes": 154082
+        }
+      ]
+    },
+    "bilder/leistungen/terrassen/holzterrasse-douglasie.jpg": {
+      "sha256": "08896d50a4662c78ea8d8ab539c39e89f48014beef3b70685b5bf62a63e4f142",
+      "original_bytes": 123049,
+      "width": 1200,
+      "height": 720,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 288,
+          "path": "assets/optimized/holzterrasse-douglasie-08896d50-480.webp",
+          "bytes": 24962
+        },
+        {
+          "width": 960,
+          "height": 576,
+          "path": "assets/optimized/holzterrasse-douglasie-08896d50-960.webp",
+          "bytes": 72752
+        },
+        {
+          "width": 1200,
+          "height": 720,
+          "path": "assets/optimized/holzterrasse-douglasie-08896d50-1200.webp",
+          "bytes": 103006
+        }
+      ]
+    },
+    "bilder/leistungen/terrassen/holzterrasse-garapaholz-01.jpg": {
+      "sha256": "3ee85a32048975ec77c01dbeafe46fccea2a19b7667ae3b7fe7db73bbe56c901",
+      "original_bytes": 152401,
+      "width": 1200,
+      "height": 720,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 288,
+          "path": "assets/optimized/holzterrasse-garapaholz-01-3ee85a32-480.webp",
+          "bytes": 35018
+        },
+        {
+          "width": 960,
+          "height": 576,
+          "path": "assets/optimized/holzterrasse-garapaholz-01-3ee85a32-960.webp",
+          "bytes": 99970
+        },
+        {
+          "width": 1200,
+          "height": 720,
+          "path": "assets/optimized/holzterrasse-garapaholz-01-3ee85a32-1200.webp",
+          "bytes": 132518
+        }
+      ]
+    },
+    "bilder/leistungen/terrassen/holzterrasse-garapaholz-02.jpg": {
+      "sha256": "e9db83f89d88823d2df9f1a91a838c2721f84bf8e7196c3d23dcd416a12f7406",
+      "original_bytes": 355220,
+      "width": 1200,
+      "height": 584,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 234,
+          "path": "assets/optimized/holzterrasse-garapaholz-02-e9db83f8-480.webp",
+          "bytes": 31696
+        },
+        {
+          "width": 960,
+          "height": 467,
+          "path": "assets/optimized/holzterrasse-garapaholz-02-e9db83f8-960.webp",
+          "bytes": 100234
+        },
+        {
+          "width": 1200,
+          "height": 584,
+          "path": "assets/optimized/holzterrasse-garapaholz-02-e9db83f8-1200.webp",
+          "bytes": 144968
+        }
+      ]
+    },
+    "bilder/leistungen/terrassen/holzterrasse-garapaholz-03.jpg": {
+      "sha256": "f373f124ab7e9bdf344e069d66d0ded1d8c6c6723f384b9ec029edb93b1af18d",
+      "original_bytes": 252596,
+      "width": 1200,
+      "height": 720,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 288,
+          "path": "assets/optimized/holzterrasse-garapaholz-03-f373f124-480.webp",
+          "bytes": 57332
+        },
+        {
+          "width": 960,
+          "height": 576,
+          "path": "assets/optimized/holzterrasse-garapaholz-03-f373f124-960.webp",
+          "bytes": 195068
+        },
+        {
+          "width": 1200,
+          "height": 720,
+          "path": "assets/optimized/holzterrasse-garapaholz-03-f373f124-1200.webp",
+          "bytes": 261764
+        }
+      ]
+    },
+    "bilder/leistungen/terrassen/holzterrasse-garapaholz-04.jpg": {
+      "sha256": "26339cac80d4df99540a9e34da965420f9803dbb42a7772070c0a3680d7dca8b",
+      "original_bytes": 272208,
+      "width": 1200,
+      "height": 635,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 254,
+          "path": "assets/optimized/holzterrasse-garapaholz-04-26339cac-480.webp",
+          "bytes": 51092
+        },
+        {
+          "width": 960,
+          "height": 508,
+          "path": "assets/optimized/holzterrasse-garapaholz-04-26339cac-960.webp",
+          "bytes": 187256
+        },
+        {
+          "width": 1200,
+          "height": 635,
+          "path": "assets/optimized/holzterrasse-garapaholz-04-26339cac-1200.webp",
+          "bytes": 275220
+        }
+      ]
+    },
+    "bilder/leistungen/terrassen/holzterrasse-garapaholz-05.jpg": {
+      "sha256": "03f103c2989e12763a58879e161be90f57f14599977994bfe632d5bc004082de",
+      "original_bytes": 5265219,
+      "width": 4608,
+      "height": 3456,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 360,
+          "path": "assets/optimized/holzterrasse-garapaholz-05-03f103c2-480.webp",
+          "bytes": 21548
+        },
+        {
+          "width": 960,
+          "height": 720,
+          "path": "assets/optimized/holzterrasse-garapaholz-05-03f103c2-960.webp",
+          "bytes": 83356
+        },
+        {
+          "width": 1600,
+          "height": 1200,
+          "path": "assets/optimized/holzterrasse-garapaholz-05-03f103c2-1600.webp",
+          "bytes": 221418
+        }
+      ]
+    },
+    "bilder/leistungen/terrassen/holzterrasse-garapaholz-06.jpg": {
+      "sha256": "96b1bb670f97912edf8f6fc11be1bbf9b05b42c4975afaee78dd5aa08717b0d0",
+      "original_bytes": 5632225,
+      "width": 3456,
+      "height": 4608,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 640,
+          "path": "assets/optimized/holzterrasse-garapaholz-06-96b1bb67-480.webp",
+          "bytes": 49384
+        },
+        {
+          "width": 960,
+          "height": 1280,
+          "path": "assets/optimized/holzterrasse-garapaholz-06-96b1bb67-960.webp",
+          "bytes": 181366
+        },
+        {
+          "width": 1600,
+          "height": 2133,
+          "path": "assets/optimized/holzterrasse-garapaholz-06-96b1bb67-1600.webp",
+          "bytes": 459846
+        }
+      ]
+    },
+    "bilder/leistungen/terrassen/holzterrasse-garapaholz-07.jpg": {
+      "sha256": "c61606ba7ed697cf22b3af36c26c64a188a3c8ecd58a706419e81be67efe9a18",
+      "original_bytes": 5219729,
+      "width": 3456,
+      "height": 4608,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 640,
+          "path": "assets/optimized/holzterrasse-garapaholz-07-c61606ba-480.webp",
+          "bytes": 45728
+        },
+        {
+          "width": 960,
+          "height": 1280,
+          "path": "assets/optimized/holzterrasse-garapaholz-07-c61606ba-960.webp",
+          "bytes": 138206
+        },
+        {
+          "width": 1600,
+          "height": 2133,
+          "path": "assets/optimized/holzterrasse-garapaholz-07-c61606ba-1600.webp",
+          "bytes": 334710
+        }
+      ]
+    },
+    "bilder/leistungen/terrassen/holzterrasse-garapaholz-08.jpg": {
+      "sha256": "28f8099673b2b7bbafee7966577c90c61d38b498ef57ae7895c73b3990c66544",
+      "original_bytes": 5893659,
+      "width": 3456,
+      "height": 4608,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 640,
+          "path": "assets/optimized/holzterrasse-garapaholz-08-28f80996-480.webp",
+          "bytes": 61842
+        },
+        {
+          "width": 960,
+          "height": 1280,
+          "path": "assets/optimized/holzterrasse-garapaholz-08-28f80996-960.webp",
+          "bytes": 207736
+        },
+        {
+          "width": 1600,
+          "height": 2133,
+          "path": "assets/optimized/holzterrasse-garapaholz-08-28f80996-1600.webp",
+          "bytes": 493162
+        }
+      ]
+    },
+    "bilder/leistungen/terrassen/holzterrasse-garapaholz-09.jpg": {
+      "sha256": "1330202489bb5f2f629b128d65baee6262b1b441ab960189f9ee022162470e4d",
+      "original_bytes": 5803778,
+      "width": 4608,
+      "height": 3456,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 360,
+          "path": "assets/optimized/holzterrasse-garapaholz-09-13302024-480.webp",
+          "bytes": 29648
+        },
+        {
+          "width": 960,
+          "height": 720,
+          "path": "assets/optimized/holzterrasse-garapaholz-09-13302024-960.webp",
+          "bytes": 107130
+        },
+        {
+          "width": 1600,
+          "height": 1200,
+          "path": "assets/optimized/holzterrasse-garapaholz-09-13302024-1600.webp",
+          "bytes": 282576
+        }
+      ]
+    },
+    "bilder/leistungen/terrassen/holzterrasse-garapaholz-10.jpg": {
+      "sha256": "abec909c9bf0f9ed3b8bc2ead4aa909c908e757e5bcfd5ccdeda8e5fe0d4e28e",
+      "original_bytes": 1670141,
+      "width": 2220,
+      "height": 1080,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 234,
+          "path": "assets/optimized/holzterrasse-garapaholz-10-abec909c-480.webp",
+          "bytes": 27032
+        },
+        {
+          "width": 960,
+          "height": 467,
+          "path": "assets/optimized/holzterrasse-garapaholz-10-abec909c-960.webp",
+          "bytes": 85798
+        },
+        {
+          "width": 1600,
+          "height": 778,
+          "path": "assets/optimized/holzterrasse-garapaholz-10-abec909c-1600.webp",
+          "bytes": 188174
+        }
+      ]
+    },
+    "bilder/leistungen/terrassen/holzterrasse-garapaholz-11.jpg": {
+      "sha256": "9c69e8eef51a417795d5e9f4075620d9bee133ea5e3afc61d4754ba42bc4418d",
+      "original_bytes": 2322298,
+      "width": 2220,
+      "height": 1080,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 234,
+          "path": "assets/optimized/holzterrasse-garapaholz-11-9c69e8ee-480.webp",
+          "bytes": 44742
+        },
+        {
+          "width": 960,
+          "height": 467,
+          "path": "assets/optimized/holzterrasse-garapaholz-11-9c69e8ee-960.webp",
+          "bytes": 172574
+        },
+        {
+          "width": 1600,
+          "height": 778,
+          "path": "assets/optimized/holzterrasse-garapaholz-11-9c69e8ee-1600.webp",
+          "bytes": 430320
+        }
+      ]
+    },
+    "bilder/leistungen/terrassen/holzterrasse-teak-01.jpg": {
+      "sha256": "974fd12bb4f1b17c7013d0ff070faceceea5ec02a9630519d96f9774ba0cd460",
+      "original_bytes": 425890,
+      "width": 1200,
+      "height": 720,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 288,
+          "path": "assets/optimized/holzterrasse-teak-01-974fd12b-480.webp",
+          "bytes": 39764
+        },
+        {
+          "width": 960,
+          "height": 576,
+          "path": "assets/optimized/holzterrasse-teak-01-974fd12b-960.webp",
+          "bytes": 142786
+        },
+        {
+          "width": 1200,
+          "height": 720,
+          "path": "assets/optimized/holzterrasse-teak-01-974fd12b-1200.webp",
+          "bytes": 213212
+        }
+      ]
+    },
+    "bilder/leistungen/terrassen/holzterrasse-teak-02.jpg": {
+      "sha256": "2dd8b08d7d24747d1d0849dd39fed695a9dfe357cb921b7d245ddf22bf906863",
+      "original_bytes": 191864,
+      "width": 1200,
+      "height": 720,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 288,
+          "path": "assets/optimized/holzterrasse-teak-02-2dd8b08d-480.webp",
+          "bytes": 46368
+        },
+        {
+          "width": 960,
+          "height": 576,
+          "path": "assets/optimized/holzterrasse-teak-02-2dd8b08d-960.webp",
+          "bytes": 141626
+        },
+        {
+          "width": 1200,
+          "height": 720,
+          "path": "assets/optimized/holzterrasse-teak-02-2dd8b08d-1200.webp",
+          "bytes": 187468
+        }
+      ]
+    },
+    "bilder/leistungen/terrassen/holzterrasse-teak-03.jpg": {
+      "sha256": "61d78490558e6c33a3167c6dc8df7e6faecc6953a6846535bcf4e14fb4b807c1",
+      "original_bytes": 2861006,
+      "width": 2688,
+      "height": 1520,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 271,
+          "path": "assets/optimized/holzterrasse-teak-03-61d78490-480.webp",
+          "bytes": 35196
+        },
+        {
+          "width": 960,
+          "height": 543,
+          "path": "assets/optimized/holzterrasse-teak-03-61d78490-960.webp",
+          "bytes": 128190
+        },
+        {
+          "width": 1600,
+          "height": 905,
+          "path": "assets/optimized/holzterrasse-teak-03-61d78490-1600.webp",
+          "bytes": 308764
+        }
+      ]
+    },
+    "bilder/leistungen/terrassen/holzterrasse-teak-04.jpg": {
+      "sha256": "63ffa58e5dd2217aac337df1c34646152753cda8d4ceecca9cbe2f716fa3a477",
+      "original_bytes": 2537609,
+      "width": 2688,
+      "height": 1520,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 271,
+          "path": "assets/optimized/holzterrasse-teak-04-63ffa58e-480.webp",
+          "bytes": 26944
+        },
+        {
+          "width": 960,
+          "height": 543,
+          "path": "assets/optimized/holzterrasse-teak-04-63ffa58e-960.webp",
+          "bytes": 105702
+        },
+        {
+          "width": 1600,
+          "height": 905,
+          "path": "assets/optimized/holzterrasse-teak-04-63ffa58e-1600.webp",
+          "bytes": 272424
+        }
+      ]
+    },
+    "bilder/leistungen/terrassen/holzterrasse-teak-05.jpg": {
+      "sha256": "7a908838ae2feaf7d2ea7449c1b14cf0906622051c54703eb00d0587923c5b71",
+      "original_bytes": 1254568,
+      "width": 2688,
+      "height": 1520,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 271,
+          "path": "assets/optimized/holzterrasse-teak-05-7a908838-480.webp",
+          "bytes": 23248
+        },
+        {
+          "width": 960,
+          "height": 543,
+          "path": "assets/optimized/holzterrasse-teak-05-7a908838-960.webp",
+          "bytes": 68872
+        },
+        {
+          "width": 1600,
+          "height": 905,
+          "path": "assets/optimized/holzterrasse-teak-05-7a908838-1600.webp",
+          "bytes": 155178
+        }
+      ]
+    },
+    "bilder/leistungen/terrassen/holzterrasse-teak-06.jpg": {
+      "sha256": "ddacab93846f1ff2102e0388c250cb46a233554749a9184413f39e30fa4c0506",
+      "original_bytes": 2571095,
+      "width": 2688,
+      "height": 1520,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 271,
+          "path": "assets/optimized/holzterrasse-teak-06-ddacab93-480.webp",
+          "bytes": 28978
+        },
+        {
+          "width": 960,
+          "height": 543,
+          "path": "assets/optimized/holzterrasse-teak-06-ddacab93-960.webp",
+          "bytes": 97814
+        },
+        {
+          "width": 1600,
+          "height": 905,
+          "path": "assets/optimized/holzterrasse-teak-06-ddacab93-1600.webp",
+          "bytes": 233006
+        }
+      ]
+    },
+    "bilder/leistungen/terrassen/holzterrasse-thermo-esche.jpg": {
+      "sha256": "58dc1bd24516913586a50779904b6e66c3430ad1b51220ef8a909d8b0da031e3",
+      "original_bytes": 2540090,
+      "width": 2688,
+      "height": 1520,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 271,
+          "path": "assets/optimized/holzterrasse-thermo-esche-58dc1bd2-480.webp",
+          "bytes": 28948
+        },
+        {
+          "width": 960,
+          "height": 543,
+          "path": "assets/optimized/holzterrasse-thermo-esche-58dc1bd2-960.webp",
+          "bytes": 101230
+        },
+        {
+          "width": 1600,
+          "height": 905,
+          "path": "assets/optimized/holzterrasse-thermo-esche-58dc1bd2-1600.webp",
+          "bytes": 239710
+        }
+      ]
+    },
+    "bilder/portfolio/akustik-panel-01.jpg": {
+      "sha256": "4e624d1a77866c24a3deff049fc2e464bc4b3ed934f2de634f11171642ca8548",
+      "original_bytes": 132932,
+      "width": 720,
+      "height": 1280,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 853,
+          "path": "assets/optimized/akustik-panel-01-4e624d1a-480.webp",
+          "bytes": 44292
+        },
+        {
+          "width": 720,
+          "height": 1280,
+          "path": "assets/optimized/akustik-panel-01-4e624d1a-720.webp",
+          "bytes": 88470
+        }
+      ]
+    },
+    "bilder/portfolio/badmoebel-01.jpg": {
+      "sha256": "438e8e62886b72bac9a2407b51b40a44569717e9ad34961eb1bbc11a833eae87",
+      "original_bytes": 102541,
+      "width": 899,
+      "height": 1599,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 854,
+          "path": "assets/optimized/badmoebel-01-438e8e62-480.webp",
+          "bytes": 36064
+        },
+        {
+          "width": 899,
+          "height": 1599,
+          "path": "assets/optimized/badmoebel-01-438e8e62-899.webp",
+          "bytes": 79908
+        }
+      ]
+    },
+    "bilder/portfolio/garderobe-bank-01.jpg": {
+      "sha256": "e75e29458702f6b354a54401950930b11e01f30377a9f1ef670fd1ba03a48b2d",
+      "original_bytes": 62302,
+      "width": 549,
+      "height": 1280,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 1119,
+          "path": "assets/optimized/garderobe-bank-01-e75e2945-480.webp",
+          "bytes": 25946
+        },
+        {
+          "width": 549,
+          "height": 1280,
+          "path": "assets/optimized/garderobe-bank-01-e75e2945-549.webp",
+          "bytes": 35726
+        }
+      ]
+    },
+    "bilder/portfolio/garderobe-nische-01.jpg": {
+      "sha256": "6a6041af9f6f8bedd94147cdb0b2bd13dc1223c13d6512d7124bb5534147ee99",
+      "original_bytes": 85751,
+      "width": 853,
+      "height": 1280,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 720,
+          "path": "assets/optimized/garderobe-nische-01-6a6041af-480.webp",
+          "bytes": 16978
+        },
+        {
+          "width": 853,
+          "height": 1280,
+          "path": "assets/optimized/garderobe-nische-01-6a6041af-853.webp",
+          "bytes": 42000
+        }
+      ]
+    },
+    "bilder/portfolio/garderobe-nische-02.jpg": {
+      "sha256": "451b7c941cae8bb110d9dc07c524bb35f4bd0f9b42a73578088bad00b7ca0bf1",
+      "original_bytes": 64254,
+      "width": 1280,
+      "height": 988,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 370,
+          "path": "assets/optimized/garderobe-nische-02-451b7c94-480.webp",
+          "bytes": 8260
+        },
+        {
+          "width": 960,
+          "height": 741,
+          "path": "assets/optimized/garderobe-nische-02-451b7c94-960.webp",
+          "bytes": 19974
+        },
+        {
+          "width": 1280,
+          "height": 988,
+          "path": "assets/optimized/garderobe-nische-02-451b7c94-1280.webp",
+          "bytes": 29976
+        }
+      ]
+    },
+    "bilder/portfolio/garderobe-schrank-01.jpg": {
+      "sha256": "3808ee044a224d1f18732d4102ee9b34e1fc90f1bda157574a9d40d7ee7314ba",
+      "original_bytes": 59275,
+      "width": 854,
+      "height": 1280,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 719,
+          "path": "assets/optimized/garderobe-schrank-01-3808ee04-480.webp",
+          "bytes": 11778
+        },
+        {
+          "width": 854,
+          "height": 1280,
+          "path": "assets/optimized/garderobe-schrank-01-3808ee04-854.webp",
+          "bytes": 28830
+        }
+      ]
+    },
+    "bilder/portfolio/garderobe-schrank-innen-01.jpg": {
+      "sha256": "f1592eec299fac08acfa8bd5c99ef809f56044db9cd37f25e656a2285e401ede",
+      "original_bytes": 71985,
+      "width": 576,
+      "height": 1280,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 1067,
+          "path": "assets/optimized/garderobe-schrank-innen-01-f1592eec-480.webp",
+          "bytes": 29644
+        },
+        {
+          "width": 576,
+          "height": 1280,
+          "path": "assets/optimized/garderobe-schrank-innen-01-f1592eec-576.webp",
+          "bytes": 40598
+        }
+      ]
+    },
+    "bilder/portfolio/terrasse-01.jpg": {
+      "sha256": "87176fc3381c0d38958976b83e367bc4f0b2f88fdaa24e56202e50cb226c6004",
+      "original_bytes": 212324,
+      "width": 720,
+      "height": 1600,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 1067,
+          "path": "assets/optimized/terrasse-01-87176fc3-480.webp",
+          "bytes": 137724
+        },
+        {
+          "width": 720,
+          "height": 1600,
+          "path": "assets/optimized/terrasse-01-87176fc3-720.webp",
+          "bytes": 264726
+        }
+      ]
+    },
+    "bilder/portfolio/terrasse-02.jpg": {
+      "sha256": "39abbdf6a564cf5ffcd096d5b9a4f80d409dc4b87703ab98f4019f71d272c921",
+      "original_bytes": 205428,
+      "width": 1600,
+      "height": 720,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 216,
+          "path": "assets/optimized/terrasse-02-39abbdf6-480.webp",
+          "bytes": 27962
+        },
+        {
+          "width": 960,
+          "height": 432,
+          "path": "assets/optimized/terrasse-02-39abbdf6-960.webp",
+          "bytes": 111234
+        },
+        {
+          "width": 1600,
+          "height": 720,
+          "path": "assets/optimized/terrasse-02-39abbdf6-1600.webp",
+          "bytes": 262346
+        }
+      ]
+    },
+    "bilder/portfolio/tisch-holz.jpg": {
+      "sha256": "631b9a521d061f612bd7b8f21e1aeb9654b5520fbbcdfe9c9f40675ce4aada74",
+      "original_bytes": 81824,
+      "width": 1279,
+      "height": 720,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 270,
+          "path": "assets/optimized/tisch-holz-631b9a52-480.webp",
+          "bytes": 8450
+        },
+        {
+          "width": 960,
+          "height": 540,
+          "path": "assets/optimized/tisch-holz-631b9a52-960.webp",
+          "bytes": 20250
+        },
+        {
+          "width": 1279,
+          "height": 720,
+          "path": "assets/optimized/tisch-holz-631b9a52-1279.webp",
+          "bytes": 30574
+        }
+      ]
+    },
+    "bilder/portfolio/treppe-01.jpg": {
+      "sha256": "bee011f4f84cf2e5596fe960d1a97ceb2a308a0abc8bfcb362bab0fc26bd7af9",
+      "original_bytes": 74340,
+      "width": 720,
+      "height": 1600,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 1067,
+          "path": "assets/optimized/treppe-01-bee011f4-480.webp",
+          "bytes": 26442
+        },
+        {
+          "width": 720,
+          "height": 1600,
+          "path": "assets/optimized/treppe-01-bee011f4-720.webp",
+          "bytes": 49408
+        }
+      ]
+    },
+    "bilder/portfolio/treppe-02.jpg": {
+      "sha256": "eab620d2ab8684538d1e60b17a40302d745f71035632d31d3208e41cf2f915d7",
+      "original_bytes": 85130,
+      "width": 720,
+      "height": 1262,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 841,
+          "path": "assets/optimized/treppe-02-eab620d2-480.webp",
+          "bytes": 23032
+        },
+        {
+          "width": 720,
+          "height": 1262,
+          "path": "assets/optimized/treppe-02-eab620d2-720.webp",
+          "bytes": 45602
+        }
+      ]
+    },
+    "bilder/portfolio/werkstatt-innen-01.jpg": {
+      "sha256": "65355eb0ec3aad883e833cf0484d223b86f439152333f3d664784e369aff85e5",
+      "original_bytes": 41502,
+      "width": 1600,
+      "height": 720,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 216,
+          "path": "assets/optimized/werkstatt-innen-01-65355eb0-480.webp",
+          "bytes": 6480
+        },
+        {
+          "width": 960,
+          "height": 432,
+          "path": "assets/optimized/werkstatt-innen-01-65355eb0-960.webp",
+          "bytes": 15098
+        },
+        {
+          "width": 1600,
+          "height": 720,
+          "path": "assets/optimized/werkstatt-innen-01-65355eb0-1600.webp",
+          "bytes": 30076
+        }
+      ]
+    },
+    "bilder/portrait/portrait.jpg": {
+      "sha256": "7cbd070206872f061afd87f0481aefc1cce95f1f9fa72b635947b764e359f08e",
+      "original_bytes": 832121,
+      "width": 6000,
+      "height": 4000,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 320,
+          "path": "assets/optimized/portrait-7cbd0702-480.webp",
+          "bytes": 15268
+        },
+        {
+          "width": 960,
+          "height": 640,
+          "path": "assets/optimized/portrait-7cbd0702-960.webp",
+          "bytes": 39936
+        },
+        {
+          "width": 1600,
+          "height": 1067,
+          "path": "assets/optimized/portrait-7cbd0702-1600.webp",
+          "bytes": 83424
+        }
+      ]
+    },
+    "bilder/referenzen/holzbau-karampas/cards/01-garapa-terrasse-sitzstufen-westpark-muenchen-card.jpg": {
+      "sha256": "5d7a5cd949b0a40dbc8ad2cf1c1110b76f3705dee9cc0f6e70f0e83bd761f8bd",
+      "original_bytes": 303157,
+      "width": 1200,
+      "height": 800,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 320,
+          "path": "assets/optimized/01-garapa-terrasse-sitzstufen-westpark-muenchen-card-5d7a5cd9-480.webp",
+          "bytes": 61200
+        },
+        {
+          "width": 960,
+          "height": 640,
+          "path": "assets/optimized/01-garapa-terrasse-sitzstufen-westpark-muenchen-card-5d7a5cd9-960.webp",
+          "bytes": 207230
+        },
+        {
+          "width": 1200,
+          "height": 800,
+          "path": "assets/optimized/01-garapa-terrasse-sitzstufen-westpark-muenchen-card-5d7a5cd9-1200.webp",
+          "bytes": 294296
+        }
+      ]
+    },
+    "bilder/referenzen/holzbau-karampas/cards/02-garapa-sitzstufen-detail-westpark-muenchen-card.jpg": {
+      "sha256": "1e0580215123c1d64e6a6b212d09ceab7a7e771f55058f283f2b54e6c0e3bb92",
+      "original_bytes": 95439,
+      "width": 1200,
+      "height": 800,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 320,
+          "path": "assets/optimized/02-garapa-sitzstufen-detail-westpark-muenchen-card-1e058021-480.webp",
+          "bytes": 18628
+        },
+        {
+          "width": 960,
+          "height": 640,
+          "path": "assets/optimized/02-garapa-sitzstufen-detail-westpark-muenchen-card-1e058021-960.webp",
+          "bytes": 48372
+        },
+        {
+          "width": 1200,
+          "height": 800,
+          "path": "assets/optimized/02-garapa-sitzstufen-detail-westpark-muenchen-card-1e058021-1200.webp",
+          "bytes": 67080
+        }
+      ]
+    },
+    "bilder/referenzen/holzbau-karampas/cards/03-teak-terrasse-wohnhaus-muenchen-card.jpg": {
+      "sha256": "91b5485e64e9d84684a60181ddd4d4134100b30edf180ffc92711735c3842f5b",
+      "original_bytes": 210324,
+      "width": 1200,
+      "height": 800,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 320,
+          "path": "assets/optimized/03-teak-terrasse-wohnhaus-muenchen-card-91b5485e-480.webp",
+          "bytes": 34798
+        },
+        {
+          "width": 960,
+          "height": 640,
+          "path": "assets/optimized/03-teak-terrasse-wohnhaus-muenchen-card-91b5485e-960.webp",
+          "bytes": 118348
+        },
+        {
+          "width": 1200,
+          "height": 800,
+          "path": "assets/optimized/03-teak-terrasse-wohnhaus-muenchen-card-91b5485e-1200.webp",
+          "bytes": 174638
+        }
+      ]
+    },
+    "bilder/referenzen/holzbau-karampas/cards/04-teak-gartenterrasse-muenchen-card.jpg": {
+      "sha256": "d2432ed9e917999195cd29380d4f936e4b3257e68f585513db7c9a83ac6ccb88",
+      "original_bytes": 246668,
+      "width": 1200,
+      "height": 800,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 320,
+          "path": "assets/optimized/04-teak-gartenterrasse-muenchen-card-d2432ed9-480.webp",
+          "bytes": 41894
+        },
+        {
+          "width": 960,
+          "height": 640,
+          "path": "assets/optimized/04-teak-gartenterrasse-muenchen-card-d2432ed9-960.webp",
+          "bytes": 147578
+        },
+        {
+          "width": 1200,
+          "height": 800,
+          "path": "assets/optimized/04-teak-gartenterrasse-muenchen-card-d2432ed9-1200.webp",
+          "bytes": 218678
+        }
+      ]
+    },
+    "bilder/referenzen/holzbau-karampas/cards/05-teak-terrasse-kanten-detail-muenchen-card.jpg": {
+      "sha256": "4bcddd975f00cb1b01527ad8c970db4e2722874a8e86986acb39c04786c2f0f5",
+      "original_bytes": 212576,
+      "width": 1200,
+      "height": 800,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 320,
+          "path": "assets/optimized/05-teak-terrasse-kanten-detail-muenchen-card-4bcddd97-480.webp",
+          "bytes": 31912
+        },
+        {
+          "width": 960,
+          "height": 640,
+          "path": "assets/optimized/05-teak-terrasse-kanten-detail-muenchen-card-4bcddd97-960.webp",
+          "bytes": 122914
+        },
+        {
+          "width": 1200,
+          "height": 800,
+          "path": "assets/optimized/05-teak-terrasse-kanten-detail-muenchen-card-4bcddd97-1200.webp",
+          "bytes": 182548
+        }
+      ]
+    },
+    "bilder/referenzen/holzbau-karampas/cards/06-teak-balkon-sendlinger-tor-muenchen-card.jpg": {
+      "sha256": "3a9933c6b41e590214b6d3f2ceab0453fd312a0b27970cbb44f5c1c52435c09c",
+      "original_bytes": 132599,
+      "width": 1200,
+      "height": 800,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 320,
+          "path": "assets/optimized/06-teak-balkon-sendlinger-tor-muenchen-card-3a9933c6-480.webp",
+          "bytes": 13966
+        },
+        {
+          "width": 960,
+          "height": 640,
+          "path": "assets/optimized/06-teak-balkon-sendlinger-tor-muenchen-card-3a9933c6-960.webp",
+          "bytes": 49558
+        },
+        {
+          "width": 1200,
+          "height": 800,
+          "path": "assets/optimized/06-teak-balkon-sendlinger-tor-muenchen-card-3a9933c6-1200.webp",
+          "bytes": 76158
+        }
+      ]
+    },
+    "bilder/referenzen/holzbau-karampas/cards/07-teak-balkon-sonne-muenchen-card.jpg": {
+      "sha256": "1ebe9c7487e599f0d113c55f417d0a38bf91d2ceab75bf497642109bed9c1114",
+      "original_bytes": 132218,
+      "width": 1200,
+      "height": 800,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 320,
+          "path": "assets/optimized/07-teak-balkon-sonne-muenchen-card-1ebe9c74-480.webp",
+          "bytes": 22466
+        },
+        {
+          "width": 960,
+          "height": 640,
+          "path": "assets/optimized/07-teak-balkon-sonne-muenchen-card-1ebe9c74-960.webp",
+          "bytes": 57428
+        },
+        {
+          "width": 1200,
+          "height": 800,
+          "path": "assets/optimized/07-teak-balkon-sonne-muenchen-card-1ebe9c74-1200.webp",
+          "bytes": 76830
+        }
+      ]
+    },
+    "bilder/referenzen/holzbau-karampas/cards/08-teak-balkon-dielen-detail-muenchen-card.jpg": {
+      "sha256": "b0f89b730fb66510380891a62ebaf33473030a2bcbc18e8cd382d37bdfcc79bd",
+      "original_bytes": 178217,
+      "width": 1200,
+      "height": 800,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 320,
+          "path": "assets/optimized/08-teak-balkon-dielen-detail-muenchen-card-b0f89b73-480.webp",
+          "bytes": 29592
+        },
+        {
+          "width": 960,
+          "height": 640,
+          "path": "assets/optimized/08-teak-balkon-dielen-detail-muenchen-card-b0f89b73-960.webp",
+          "bytes": 87846
+        },
+        {
+          "width": 1200,
+          "height": 800,
+          "path": "assets/optimized/08-teak-balkon-dielen-detail-muenchen-card-b0f89b73-1200.webp",
+          "bytes": 130832
+        }
+      ]
+    },
+    "bilder/referenzen/holzbau-karampas/cards/09-teak-gartenterrasse-schattig-muenchen-card.jpg": {
+      "sha256": "cda0c2de59e91f357ad2f6e830b5020d59935c84072a1d52036dc3da423cac15",
+      "original_bytes": 154732,
+      "width": 1200,
+      "height": 800,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 320,
+          "path": "assets/optimized/09-teak-gartenterrasse-schattig-muenchen-card-cda0c2de-480.webp",
+          "bytes": 27724
+        },
+        {
+          "width": 960,
+          "height": 640,
+          "path": "assets/optimized/09-teak-gartenterrasse-schattig-muenchen-card-cda0c2de-960.webp",
+          "bytes": 78432
+        },
+        {
+          "width": 1200,
+          "height": 800,
+          "path": "assets/optimized/09-teak-gartenterrasse-schattig-muenchen-card-cda0c2de-1200.webp",
+          "bytes": 107122
+        }
+      ]
+    },
+    "bilder/referenzen/holzbau-karampas/cards/10-teak-gartenterrasse-gruenbereich-muenchen-card.jpg": {
+      "sha256": "dbd6353d91683f52ce47d2a29abdc19cd8366a60043f5967a407444a6692fb8e",
+      "original_bytes": 182018,
+      "width": 1200,
+      "height": 800,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 320,
+          "path": "assets/optimized/10-teak-gartenterrasse-gruenbereich-muenchen-card-dbd6353d-480.webp",
+          "bytes": 34918
+        },
+        {
+          "width": 960,
+          "height": 640,
+          "path": "assets/optimized/10-teak-gartenterrasse-gruenbereich-muenchen-card-dbd6353d-960.webp",
+          "bytes": 102194
+        },
+        {
+          "width": 1200,
+          "height": 800,
+          "path": "assets/optimized/10-teak-gartenterrasse-gruenbereich-muenchen-card-dbd6353d-1200.webp",
+          "bytes": 137838
+        }
+      ]
+    },
+    "bilder/referenzen/holzbau-karampas/cards/11-cumaru-terrasse-sitzstufen-wessling-starnberg-card.jpg": {
+      "sha256": "d19e3dce2c3d197f39c442318cfbd077a6580c30450ca71c262a9aedf6c08a39",
+      "original_bytes": 201359,
+      "width": 1200,
+      "height": 800,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 320,
+          "path": "assets/optimized/11-cumaru-terrasse-sitzstufen-wessling-starnberg-card-d19e3dce-480.webp",
+          "bytes": 33496
+        },
+        {
+          "width": 960,
+          "height": 640,
+          "path": "assets/optimized/11-cumaru-terrasse-sitzstufen-wessling-starnberg-card-d19e3dce-960.webp",
+          "bytes": 109134
+        },
+        {
+          "width": 1200,
+          "height": 800,
+          "path": "assets/optimized/11-cumaru-terrasse-sitzstufen-wessling-starnberg-card-d19e3dce-1200.webp",
+          "bytes": 152506
+        }
+      ]
+    },
+    "bilder/referenzen/holzbau-karampas/cards/12-cumaru-sitzstufen-detail-wessling-starnberg-card.jpg": {
+      "sha256": "6c7bbf796bb883fe07aa64e7d599998114a38bb60a1fb82a3b0f16c4562a9460",
+      "original_bytes": 145521,
+      "width": 1200,
+      "height": 800,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 320,
+          "path": "assets/optimized/12-cumaru-sitzstufen-detail-wessling-starnberg-card-6c7bbf79-480.webp",
+          "bytes": 24962
+        },
+        {
+          "width": 960,
+          "height": 640,
+          "path": "assets/optimized/12-cumaru-sitzstufen-detail-wessling-starnberg-card-6c7bbf79-960.webp",
+          "bytes": 74390
+        },
+        {
+          "width": 1200,
+          "height": 800,
+          "path": "assets/optimized/12-cumaru-sitzstufen-detail-wessling-starnberg-card-6c7bbf79-1200.webp",
+          "bytes": 102962
+        }
+      ]
+    },
+    "bilder/referenzen/holzbau-karampas/cards/13-greenwood-terrasse-wandverkleidung-gruenwald-card.jpg": {
+      "sha256": "e3bc660896f0a6041497d1893b43f580a2f75df84f16a4de770efa4529da870f",
+      "original_bytes": 223691,
+      "width": 1200,
+      "height": 800,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 320,
+          "path": "assets/optimized/13-greenwood-terrasse-wandverkleidung-gruenwald-card-e3bc6608-480.webp",
+          "bytes": 40408
+        },
+        {
+          "width": 960,
+          "height": 640,
+          "path": "assets/optimized/13-greenwood-terrasse-wandverkleidung-gruenwald-card-e3bc6608-960.webp",
+          "bytes": 137026
+        },
+        {
+          "width": 1200,
+          "height": 800,
+          "path": "assets/optimized/13-greenwood-terrasse-wandverkleidung-gruenwald-card-e3bc6608-1200.webp",
+          "bytes": 193708
+        }
+      ]
+    },
+    "bilder/referenzen/holzbau-karampas/cards/14-greenwood-wandverkleidung-gruenwald-card.jpg": {
+      "sha256": "f632548855cb5f84b5bd68922fb2046f82dfecb815978f05b8259e8b934a801a",
+      "original_bytes": 232158,
+      "width": 1200,
+      "height": 800,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 320,
+          "path": "assets/optimized/14-greenwood-wandverkleidung-gruenwald-card-f6325488-480.webp",
+          "bytes": 35964
+        },
+        {
+          "width": 960,
+          "height": 640,
+          "path": "assets/optimized/14-greenwood-wandverkleidung-gruenwald-card-f6325488-960.webp",
+          "bytes": 131976
+        },
+        {
+          "width": 1200,
+          "height": 800,
+          "path": "assets/optimized/14-greenwood-wandverkleidung-gruenwald-card-f6325488-1200.webp",
+          "bytes": 206020
+        }
+      ]
+    },
+    "bilder/referenzen/holzbau-karampas/cards/15-greenwood-attika-detail-gruenwald-card.jpg": {
+      "sha256": "6ede8caa9fd9a95ad085ca25da73688a872eca110f78d26429582e65ccccdfc1",
+      "original_bytes": 167152,
+      "width": 1200,
+      "height": 800,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 320,
+          "path": "assets/optimized/15-greenwood-attika-detail-gruenwald-card-6ede8caa-480.webp",
+          "bytes": 19696
+        },
+        {
+          "width": 960,
+          "height": 640,
+          "path": "assets/optimized/15-greenwood-attika-detail-gruenwald-card-6ede8caa-960.webp",
+          "bytes": 81304
+        },
+        {
+          "width": 1200,
+          "height": 800,
+          "path": "assets/optimized/15-greenwood-attika-detail-gruenwald-card-6ede8caa-1200.webp",
+          "bytes": 131632
+        }
+      ]
+    },
+    "bilder/referenzen/holzbau-karampas/cards/16-greenwood-gartenterrasse-muenchen-card.jpg": {
+      "sha256": "49a6cf3172807b4f347b11ef4a3c2332c4e5df13723c3b333820e82fdeaf0a17",
+      "original_bytes": 240337,
+      "width": 1200,
+      "height": 800,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 320,
+          "path": "assets/optimized/16-greenwood-gartenterrasse-muenchen-card-49a6cf31-480.webp",
+          "bytes": 34066
+        },
+        {
+          "width": 960,
+          "height": 640,
+          "path": "assets/optimized/16-greenwood-gartenterrasse-muenchen-card-49a6cf31-960.webp",
+          "bytes": 141208
+        },
+        {
+          "width": 1200,
+          "height": 800,
+          "path": "assets/optimized/16-greenwood-gartenterrasse-muenchen-card-49a6cf31-1200.webp",
+          "bytes": 223740
+        }
+      ]
+    },
+    "bilder/referenzen/holzbau-karampas/cards/17-douglasie-terrasse-nachtbeleuchtung-domagkstrasse-muenchen-card.jpg": {
+      "sha256": "aa1a8e53f8b66ee23c5d04c56fc292674664ecaec4c06f86d0d66ea19fc5be9c",
+      "original_bytes": 164417,
+      "width": 1200,
+      "height": 800,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 320,
+          "path": "assets/optimized/17-douglasie-terrasse-nachtbeleuchtung-domagkstrasse-muenchen-card-aa1a8e53-480.webp",
+          "bytes": 24482
+        },
+        {
+          "width": 960,
+          "height": 640,
+          "path": "assets/optimized/17-douglasie-terrasse-nachtbeleuchtung-domagkstrasse-muenchen-card-aa1a8e53-960.webp",
+          "bytes": 78624
+        },
+        {
+          "width": 1200,
+          "height": 800,
+          "path": "assets/optimized/17-douglasie-terrasse-nachtbeleuchtung-domagkstrasse-muenchen-card-aa1a8e53-1200.webp",
+          "bytes": 109988
+        }
+      ]
+    },
+    "bilder/referenzen/holzbau-karampas/cards/18-teak-pflanzkuebel-verkleidung-muenchen-card.jpg": {
+      "sha256": "bf24d3cda85ce223b0d5815251871598e27755faa25f0ff43c1da27370a80bbc",
+      "original_bytes": 208349,
+      "width": 1200,
+      "height": 800,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 320,
+          "path": "assets/optimized/18-teak-pflanzkuebel-verkleidung-muenchen-card-bf24d3cd-480.webp",
+          "bytes": 39634
+        },
+        {
+          "width": 960,
+          "height": 640,
+          "path": "assets/optimized/18-teak-pflanzkuebel-verkleidung-muenchen-card-bf24d3cd-960.webp",
+          "bytes": 119692
+        },
+        {
+          "width": 1200,
+          "height": 800,
+          "path": "assets/optimized/18-teak-pflanzkuebel-verkleidung-muenchen-card-bf24d3cd-1200.webp",
+          "bytes": 164738
+        }
+      ]
+    },
+    "bilder/referenzen/holzbau-karampas/cards/19-gartenhaus-douglasie-muenchen-card.jpg": {
+      "sha256": "84f33c7d6929a08c36c43c8fae3e8f11b59e0b541064ca6cec75ac64f2e3a705",
+      "original_bytes": 213102,
+      "width": 1200,
+      "height": 800,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 320,
+          "path": "assets/optimized/19-gartenhaus-douglasie-muenchen-card-84f33c7d-480.webp",
+          "bytes": 40350
+        },
+        {
+          "width": 960,
+          "height": 640,
+          "path": "assets/optimized/19-gartenhaus-douglasie-muenchen-card-84f33c7d-960.webp",
+          "bytes": 127608
+        },
+        {
+          "width": 1200,
+          "height": 800,
+          "path": "assets/optimized/19-gartenhaus-douglasie-muenchen-card-84f33c7d-1200.webp",
+          "bytes": 168538
+        }
+      ]
+    },
+    "bilder/referenzen/holzbau-karampas/cards/20-kueche-farblos-lackiert-muenchen-card.jpg": {
+      "sha256": "1f083272f28c732f3806b12de5008170546fbc8fc9b4bf86fe3d9599033c3624",
+      "original_bytes": 136182,
+      "width": 1200,
+      "height": 800,
+      "icon": false,
+      "variants": [
+        {
+          "width": 480,
+          "height": 320,
+          "path": "assets/optimized/20-kueche-farblos-lackiert-muenchen-card-1f083272-480.webp",
+          "bytes": 19398
+        },
+        {
+          "width": 960,
+          "height": 640,
+          "path": "assets/optimized/20-kueche-farblos-lackiert-muenchen-card-1f083272-960.webp",
+          "bytes": 57616
+        },
+        {
+          "width": 1200,
+          "height": 800,
+          "path": "assets/optimized/20-kueche-farblos-lackiert-muenchen-card-1f083272-1200.webp",
+          "bytes": 82064
+        }
+      ]
+    }
+  }
+}
