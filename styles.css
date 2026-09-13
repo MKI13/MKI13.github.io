@@ -1,41 +1,6 @@
-/*
-===========================================
-EF-SINN - STYLESHEET
-===========================================
-
-SICHERHEITS- UND DATENSCHUTZ-ARCHITEKTUR:
-
-1. KEINE EXTERNEN RESSOURCEN
-   - Keine @import von Google Fonts oder CDNs
-   - Keine url() zu externen Servern
-   - Keine externe Icon-Bibliotheken
-   → Verhindert: Tracking, DSGVO-Probleme, Abhängigkeiten
-
-2. NUR SYSTEM-FONTS
-   - font-family nutzt nur vorinstallierte Schriften
-   - Fallback-Kette für Cross-Platform-Kompatibilität
-   → Verhindert: Fingerprinting, externe Requests
-
-3. CSS-ONLY ANIMATIONEN
-   - Keine JavaScript-Abhängigkeit
-   - Performant durch Hardware-Beschleunigung
-   - Respektiert prefers-reduced-motion
-   → Vorteil: Sicherheit, Accessibility, Performance
-
-4. WCAG AA KONFORMITÄT
-   - Kontrastverhältnis ≥ 4.5:1 für Text
-   - Fokus-Indikatoren für Tastaturnavigation
-   - Semantische Hierarchie
-   → Vorteil: Accessibility, SEO, Usability
-
-5. PROGRESSIVE ENHANCEMENT
-   - Funktioniert ohne CSS (reines HTML)
-   - Keine kritischen Features in ::before/::after
-   - Mobile-First Responsive Design
-   → Vorteil: Robustheit, Performance
-
-===========================================
-*/
+/* EF-Sinn: local assets and system fonts, responsive layout and keyboard focus.
+   Motion respects prefers-reduced-motion. These implementation choices are not
+   a privacy, security or accessibility certification. */
 
 /* ===== CSS RESET ===== */
 * {
@@ -2684,3 +2649,7 @@ img {
 
 /* Do not paint a touch highlight from the underlying thumbnail above its modal. */
 .project-img-wrap[role="button"], .portfolio-lightbox .lb-close { -webkit-tap-highlight-color: transparent; }
+
+/* German compounds must also fit wider fallback fonts on other operating systems. */
+h1, h2, h3, h4 { overflow-wrap: anywhere; hyphens: auto; }
+.intro-grid > *, .service-detail-grid > *, .service-card, .strength-card { min-width: 0; }

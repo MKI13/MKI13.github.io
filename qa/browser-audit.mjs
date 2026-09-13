@@ -47,6 +47,11 @@ try {
         errors=[]; await ready(page,path);
         assert.deepEqual(errors,[],'JavaScript errors');
         const metrics=await page.evaluate(()=>({overflow:document.documentElement.scrollWidth-innerWidth,h1:document.querySelectorAll('h1').length,main:document.querySelectorAll('#main-content').length,broken:[...document.images].filter(image=>(image.currentSrc || image.getAttribute('src')) && image.complete && image.naturalWidth===0).map(image=>image.src)}));
+        if(metrics.overflow>1) {
+          const overflowElements=await page.evaluate(()=>[...document.querySelectorAll('body *')].map(e=>({tag:e.tagName,classes:e.className,text:e.innerText?.slice(0,90),right:e.getBoundingClientRect().right,transform:getComputedStyle(e).transform})).filter(e=>e.right>innerWidth+1).slice(0,12));
+          console.error(JSON.stringify({page:path,width,overflowElements}));
+          await page.screenshot({path:resolve(OUTPUT,`overflow-${width}-${path.replaceAll('/','-')}.png`)});
+        }
         assert.ok(metrics.overflow<=1,'Horizontal overflow: '+metrics.overflow+'px');
         assert.equal(metrics.h1,1); assert.equal(metrics.main,1); assert.deepEqual(metrics.broken,[]);
         if(path==='index.html') {
