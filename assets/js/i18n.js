@@ -10,8 +10,15 @@
   ];
   var CODES=LANGS.map(function(l){return l.code});
 
+  function storedLanguage(){
+    try { return localStorage.getItem('site_lang'); } catch(error) { return null; }
+  }
+  function rememberLanguage(code){
+    try { localStorage.setItem('site_lang',code); } catch(error) { /* Optional preference; never block the page. */ }
+  }
+
   function detect(){
-    var s=localStorage.getItem('site_lang');
+    var s=storedLanguage();
     if(s&&CODES.indexOf(s)>-1) return s;
     var n=(navigator.language||'de').toLowerCase();
     if(n.indexOf('de-at')===0) return 'de-AT';
@@ -21,12 +28,36 @@
 
   function prefix(){return location.pathname.indexOf('/leistungen/')>-1?'../':'./'}
 
+  var DICTIONARIES={};
+  var latestLanguageRequest=0;
   function load(lang,cb){
+    if(DICTIONARIES[lang]) { cb(DICTIONARIES[lang]); return; }
     var x=new XMLHttpRequest();
-    x.open('GET',prefix()+'i18n/'+lang+'.json?v=20260624-owner');
-    x.onload=function(){if(x.status===200){try{cb(JSON.parse(x.responseText))}catch(e){cb({})}}else cb({})};
-    x.onerror=function(){cb({})};
+    var finished=false;
+    function finish(value){
+      if(finished) return;
+      finished=true;
+      if(value) DICTIONARIES[lang]=value;
+      cb(value);
+    }
+    x.open('GET',prefix()+'i18n/'+lang+'.json?v=20260913-release');
+    x.timeout=10000;
+    x.onload=function(){
+      if(x.status!==200) { finish(null); return; }
+      try {
+        var value=JSON.parse(x.responseText);
+        finish(value && typeof value==='object' && !Array.isArray(value) ? value : null);
+      } catch(error) { finish(null); }
+    };
+    x.onerror=x.ontimeout=function(){finish(null)};
     x.send();
+  }
+  function activateLanguage(lang){
+    var request=++latestLanguageRequest;
+    load(lang,function(dict){
+      if(request!==latestLanguageRequest || !dict) return;
+      apply(dict,lang);
+    });
   }
 
   var BASE_GERMAN=null;
@@ -37,10 +68,10 @@
     BASE_WAITING.push(cb);
     if(BASE_WAITING.length>1) return;
     load('de',function(d){
-      BASE_GERMAN=d||{};
+      if(d) BASE_GERMAN=d;
       var waiting=BASE_WAITING.slice();
       BASE_WAITING=[];
-      for(var i=0;i<waiting.length;i++) waiting[i](BASE_GERMAN);
+      for(var i=0;i<waiting.length;i++) waiting[i](BASE_GERMAN||{});
     });
   }
 
@@ -148,6 +179,7 @@
     }
 
     loadBaseGerman(function(base){
+      if(!window.EFSINN_I18N || window.EFSINN_I18N.lang!==lang) return;
       applyFallbackTranslations(dict,lang,base);
       updateLanguageButtonLabels();
       document.dispatchEvent(new CustomEvent('efSinn:i18nApplied',{detail:{lang:lang,dict:dict}}));
@@ -169,6 +201,7 @@
           buttons[i].title=label;
           buttons[i].setAttribute('aria-label',label);
           buttons[i].setAttribute('aria-pressed', code===window.EFSINN_I18N.lang?'true':'false');
+          buttons[i].classList.toggle('lang-btn-active',code===window.EFSINN_I18N.lang);
           break;
         }
       }
@@ -202,12 +235,8 @@
         b.setAttribute('aria-pressed',l.code===cur?'true':'false');
         b.className='lang-btn'+(l.code===cur?' lang-btn-active':'');
         b.addEventListener('click',function(){
-          localStorage.setItem('site_lang',l.code);
-          load(l.code,function(d){apply(d,l.code)});
-          var bs=bar.querySelectorAll('.lang-btn');
-          for(var j=0;j<bs.length;j++){bs[j].classList.remove('lang-btn-active');bs[j].setAttribute('aria-pressed','false');}
-          b.classList.add('lang-btn-active');
-          b.setAttribute('aria-pressed','true');
+          rememberLanguage(l.code);
+          activateLanguage(l.code);
         });
         bar.appendChild(b);
       })(LANGS[i]);
@@ -219,9 +248,9 @@
 
   function boot(){
     var lang=detect();
-    localStorage.setItem('site_lang',lang);
-    switcher(lang);
-    if(lang!=='de'){load(lang,function(d){apply(d,lang)})}
+    window.EFSINN_I18N={lang:'de',dict:{}};
+    switcher('de');
+    activateLanguage(lang);
   }
 
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',boot);
