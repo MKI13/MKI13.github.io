@@ -34,6 +34,7 @@ try{
     await page.locator('#delivery-send').tap();
     await page.locator('#delivery-send').evaluate(button=>button.click());
     await state(page,'smtp_accepted');assert.equal(posts,1);
+    assert.equal(await page.locator('[data-delivery-preview-note]').getAttribute('data-i18n'),'delivery.smtp_accepted');
     assert.equal(await page.locator('#inq-name').inputValue(),'Website Test Müller');
     assert.equal(await page.locator('#delivery-send').isDisabled(),true);
     await page.locator('#delivery-status').scrollIntoViewIfNeeded();

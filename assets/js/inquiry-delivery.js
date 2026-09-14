@@ -27,6 +27,13 @@
   function display(key) {
     lastState = key;
     output.textContent = t(key) + (reference ? ' ' + t('reference') + ' ' + reference : '');
+    var previewNote = document.querySelector('[data-delivery-preview-note], [data-i18n="delivery.preview"]');
+    if (previewNote) {
+      var noteKey = ['sending', 'queued', 'processing', 'smtp_accepted', 'receipt_verified', 'uncertain', 'unknown'].indexOf(key) >= 0 ? key : 'preview';
+      previewNote.setAttribute('data-delivery-preview-note', 'true');
+      previewNote.setAttribute('data-i18n', 'delivery.' + noteKey);
+      previewNote.textContent = t(noteKey);
+    }
   }
   function lock(value) {
     if (value && !disabled.length) {

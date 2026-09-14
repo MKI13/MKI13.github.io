@@ -272,3 +272,19 @@ def test_expired_worker_cannot_send_after_another_worker_reclaims(env):
     assert env[4].get(new['id'])['state']=='transmitting'
     env[4].finish(new['id'],'smtp_accepted','',new['lease'])
     assert env[4].get(new['id'])['state']=='smtp_accepted'
+
+
+def test_real_exif_is_removed_and_orientation_is_applied(env):
+    fields,headers=prepare(env)
+    original=Image.new('RGB',(40,30),'white')
+    exif=Image.Exif();exif[274]=6;exif[270]='Synthetic private camera metadata'
+    buffer=io.BytesIO();original.save(buffer,format='JPEG',exif=exif)
+    fields['photos']=(io.BytesIO(buffer.getvalue()),'personal-filename.jpg')
+    assert submit(env,fields,headers).status_code==202
+    row=env[4].get(headers['Idempotency-Key'])
+    message=BytesParser(policy=policy.default).parsebytes(row['payload'])
+    attachment=list(message.iter_attachments())[0]
+    sanitized=Image.open(io.BytesIO(attachment.get_payload(decode=True)))
+    assert sanitized.size==(30,40)
+    assert not sanitized.getexif()
+    assert attachment.get_filename()=='foto-1.jpg'
