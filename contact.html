@@ -49,6 +49,7 @@
       ]
     }
     </script>
+    <link rel="stylesheet" href="assets/css/inquiry-delivery.css?v=issue16">
 </head>
 <body>
     <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
@@ -204,6 +205,13 @@
                         <label for="inq-message" data-i18n="contact.inquiry.message.label">Kurze Beschreibung</label>
                         <textarea required minlength="10" maxlength="5000" id="inq-message" name="message" rows="5" placeholder="Was soll gebaut, repariert oder geplant werden? Maße, Materialwunsch oder Fotos können Sie danach in der E-Mail anhängen." data-i18n-placeholder="contact.inquiry.message.placeholder"></textarea>
 
+                        <fieldset id="delivery-fields" class="delivery-fields" hidden>
+                            <legend data-i18n="delivery.title">Anfrage direkt an EF-Sinn senden</legend>
+                            <label for="delivery-photos" data-i18n="delivery.photos">Fotos (optional)</label>
+                            <input id="delivery-photos" type="file" multiple accept="image/jpeg,image/png,image/webp" aria-describedby="delivery-limits">
+                            <p id="delivery-limits" class="inquiry-note small" data-i18n="delivery.limits">Bis zu 5 Fotos: JPEG, PNG oder WebP, höchstens 4 MB pro Foto und 10 MB insgesamt.</p>
+                            <div class="delivery-honeypot" aria-hidden="true"><input id="delivery-website" type="text" tabindex="-1" autocomplete="off" aria-label="Leer lassen" data-i18n-aria-label="delivery.honeypot"></div>
+                        </fieldset>
                         <p class="inquiry-note small" data-i18n="contact.inquiry.requiredNote">Name und eine Beschreibung mit mindestens 10 Zeichen sind erforderlich. Alle weiteren Angaben sind freiwillig.</p>
                         <button type="submit" id="inq-review" class="btn btn-secondary btn-full" data-i18n="contact.inquiry.submit" disabled>Anfrage prüfen</button>
                         <noscript><p class="inquiry-note" data-i18n="contact.inquiry.noScript">Der Anfrage-Assistent benötigt JavaScript. Schreiben Sie bitte direkt an <a href="mailto:info@ef-sinn.de">info@ef-sinn.de</a> oder rufen Sie <a href="tel:+4917687186451">+49 176 8718 6451</a> an. Dieses Formular überträgt ohne JavaScript keine Eingaben.</p></noscript>
@@ -213,6 +221,12 @@
                             <label for="inquiry-preview-text" data-i18n="contact.inquiry.previewLabel">Vorbereitete Nachricht</label>
                             <textarea id="inquiry-preview-text" rows="12" readonly spellcheck="false"></textarea>
                             <p id="inquiry-long-note" class="inquiry-note" data-i18n="contact.inquiry.longNote" hidden>Diese Anfrage ist zu lang für eine zuverlässige Übergabe per E-Mail-Link. Kopieren oder speichern Sie den vollständigen Text und fügen Sie ihn in Ihre E-Mail ein. Der E-Mail-Button öffnet nur Empfänger und Betreff.</p>
+                            <div id="delivery-controls" class="delivery-controls" hidden>
+                                <label class="delivery-confirm-label"><input type="checkbox" id="delivery-confirm"><span data-i18n="delivery.confirm">Ich habe Angaben und Fotos geprüft und möchte sie jetzt an EF-Sinn übermitteln.</span></label>
+                                <p class="inquiry-note small" data-i18n="delivery.notice">Die Übermittlung startet erst mit diesem Button. Den Datenschutzhinweis finden Sie unterhalb des Formulars.</p>
+                                <button type="button" id="delivery-send" class="btn btn-secondary" data-i18n="delivery.send">Anfrage mit Fotos senden</button>
+                                <button type="button" id="delivery-check" class="btn inquiry-alternative" data-i18n="delivery.check" hidden>Status prüfen</button>
+                            </div>
                             <div class="inquiry-actions">
                                 <button type="button" id="inq-open-email" class="btn btn-secondary" data-i18n="contact.inquiry.openEmail">E-Mail öffnen</button>
                                 <button type="button" id="inq-copy" class="btn inquiry-alternative" data-i18n="contact.inquiry.copy">Text kopieren</button>
@@ -220,6 +234,7 @@
                                 <button type="button" id="inq-edit" class="btn inquiry-alternative" data-i18n="contact.inquiry.edit">Angaben bearbeiten</button>
                             </div>
                         </section>
+                        <p id="delivery-status" class="delivery-status inquiry-note" role="status" aria-live="polite" aria-atomic="true"></p>
                         <p id="inquiry-status" class="inquiry-note inquiry-status" role="status" aria-live="polite" aria-atomic="true"></p>
                         <p class="inquiry-note small"><a href="datenschutz.html" data-i18n="footer.privacy">Datenschutz</a></p>
                         <p class="inquiry-note small" data-i18n="contact.inquiry.fallback">Für Fotos: Nach dem Öffnen der E-Mail einfach Bilder als Anhang hinzufügen. Falls sich kein E-Mail-Programm öffnet, kopieren Sie die Angaben und senden Sie sie an <a href="mailto:info@ef-sinn.de" class="contact-link">info@ef-sinn.de</a> oder rufen Sie direkt an: <a href="tel:+4917687186451">+49 176 8718 6451</a>.</p>
@@ -302,7 +317,9 @@
     </footer>
     <script src="assets/js/i18n.js?v=20260914-review"></script>
 
-    <script src="assets/js/inquiry.js?v=20260914-review" defer></script>
+    <script src="assets/js/inquiry.js?v=issue16" defer></script>
+    <script src="assets/js/inquiry-delivery-config.js?v=issue16" defer></script>
+    <script src="assets/js/inquiry-delivery.js?v=issue16" defer></script>
 
 
     <div class="mobile-contact-bar" aria-label="Schnellkontakt mobil" data-i18n-aria-label="mobile.quickContact">

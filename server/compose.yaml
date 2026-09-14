@@ -1,0 +1,47 @@
+name: ef-sinn-inquiry
+x-service: &service
+  build: .
+  restart: unless-stopped
+  read_only: true
+  security_opt: [no-new-privileges:true]
+  cap_drop: [ALL]
+  tmpfs: ["/tmp:size=134217728,mode=1777"]
+  volumes: [inquiry-data:/var/lib/ef-sinn-inquiry]
+  secrets: [inquiry-key, smtp-token]
+  environment:
+    INQUIRY_ENABLED: "1"
+    INQUIRY_PUBLIC_URL: "https://${INQUIRY_PUBLIC_HOST:?Set the approved API hostname}"
+    INQUIRY_ALLOWED_ORIGINS: "https://www.ef-sinn.de,https://ef-sinn.de"
+    INQUIRY_DATA_DIR: /var/lib/ef-sinn-inquiry
+    INQUIRY_SECRET_FILE: /run/secrets/inquiry-key
+    SMTP_USERNAME: "${SMTP_USERNAME:?Set the approved Proton domain mailbox}"
+    SMTP_PASSWORD_FILE: /run/secrets/smtp-token
+    INQUIRY_TRUST_PROXY: "1"
+services:
+  api:
+    <<: *service
+    mem_limit: 768m
+    cpus: 1
+  worker:
+    <<: *service
+    command: [python, -m, inquiry_service.worker]
+    mem_limit: 256m
+    cpus: 0.5
+  https:
+    image: caddy:2-alpine
+    restart: unless-stopped
+    ports: ["443:443", "443:443/udp", "80:80"]
+    environment:
+      INQUIRY_PUBLIC_HOST: "${INQUIRY_PUBLIC_HOST:?Set the approved API hostname}"
+    volumes: ["./Caddyfile:/etc/caddy/Caddyfile:ro", "caddy-data:/data", "caddy-config:/config"]
+    depends_on: [api]
+    mem_limit: 128m
+secrets:
+  inquiry-key:
+    file: "${INQUIRY_SECRET_SOURCE:?Set path outside the repository}"
+  smtp-token:
+    file: "${SMTP_TOKEN_SOURCE:?Set path outside the repository}"
+volumes:
+  inquiry-data:
+  caddy-data:
+  caddy-config:

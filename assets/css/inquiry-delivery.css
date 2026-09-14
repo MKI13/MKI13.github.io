@@ -1,0 +1,9 @@
+[hidden].delivery-fields, [hidden].delivery-controls, #delivery-check[hidden] { display: none !important; }
+.delivery-fields, .delivery-controls { margin-block: 1.25rem; padding: 1rem; border: 1px solid #cbbda7; border-radius: 10px; min-width: 0; }
+.delivery-fields legend { font-weight: 700; padding-inline: .3rem; }
+.delivery-fields input[type="file"] { max-width: 100%; min-height: 44px; }
+.delivery-confirm-label { display: flex; align-items: flex-start; gap: .6rem; line-height: 1.5; }
+.delivery-confirm-label input { flex: 0 0 20px; width: 20px; height: 20px; margin-top: .2rem; }
+.delivery-controls .btn { white-space: normal; min-height: 44px; margin-top: .8rem; }
+.delivery-status:not(:empty) { padding: 1rem; border-left: 3px solid #106890; background: #edf5f8; overflow-wrap: anywhere; }
+.delivery-honeypot { position: absolute; width: 1px; height: 1px; clip-path: inset(50%); overflow: hidden; }

@@ -3,3 +3,13 @@ __pycache__/
 *.pyc
 .qa-results/
 .venv/
+
+# Private direct-delivery runtime files must never enter this public repository.
+server/.env
+server/data/
+server/secrets/
+*.sqlite3*
+*.eml
+*.pem
+*.key
+.pytest_cache/
