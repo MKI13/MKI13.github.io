@@ -40,7 +40,7 @@
       if(value) DICTIONARIES[lang]=value;
       cb(value);
     }
-    x.open('GET',prefix()+'i18n/'+lang+'.json?v=20260913-release');
+    x.open('GET',prefix()+'i18n/'+lang+'.json?v=20260914-review');
     x.timeout=10000;
     x.onload=function(){
       if(x.status!==200) { finish(null); return; }

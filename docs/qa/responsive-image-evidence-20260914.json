@@ -1,0 +1,432 @@
+[
+  {
+    "scenario": {
+      "width": 390,
+      "dpr": 2
+    },
+    "index": 0,
+    "source": "http://127.0.0.1:39591/assets/optimized/holzterrasse-cumaruholz-b12379e1-960.webp",
+    "width": 358,
+    "dpr": 2,
+    "sizes": "auto, (max-width: 768px) calc(100vw - 2rem), (max-width: 900px) calc((100vw - 6rem) / 2), (max-width: 1200px) calc((100vw - 8rem) / 3), 358px",
+    "variants": [
+      480,
+      960,
+      1080
+    ],
+    "selected": 960
+  },
+  {
+    "scenario": {
+      "width": 390,
+      "dpr": 2
+    },
+    "index": 5,
+    "source": "http://127.0.0.1:39591/assets/optimized/holzterrasse-garapaholz-02-e9db83f8-960.webp",
+    "width": 358,
+    "dpr": 2,
+    "sizes": "auto, (max-width: 768px) calc(100vw - 2rem), (max-width: 900px) calc((100vw - 6rem) / 2), (max-width: 1200px) calc((100vw - 8rem) / 3), 358px",
+    "variants": [
+      480,
+      960,
+      1200
+    ],
+    "selected": 960
+  },
+  {
+    "scenario": {
+      "width": 390,
+      "dpr": 2
+    },
+    "index": 10,
+    "source": "http://127.0.0.1:39591/assets/optimized/holzterrasse-garapaholz-07-c61606ba-960.webp",
+    "width": 358,
+    "dpr": 2,
+    "sizes": "auto, (max-width: 768px) calc(100vw - 2rem), (max-width: 900px) calc((100vw - 6rem) / 2), (max-width: 1200px) calc((100vw - 8rem) / 3), 358px",
+    "variants": [
+      480,
+      960,
+      1600
+    ],
+    "selected": 960
+  },
+  {
+    "scenario": {
+      "width": 390,
+      "dpr": 2
+    },
+    "index": 15,
+    "source": "http://127.0.0.1:39591/assets/optimized/holzterrasse-teak-01-974fd12b-960.webp",
+    "width": 358,
+    "dpr": 2,
+    "sizes": "auto, (max-width: 768px) calc(100vw - 2rem), (max-width: 900px) calc((100vw - 6rem) / 2), (max-width: 1200px) calc((100vw - 8rem) / 3), 358px",
+    "variants": [
+      480,
+      960,
+      1200
+    ],
+    "selected": 960
+  },
+  {
+    "scenario": {
+      "width": 390,
+      "dpr": 2
+    },
+    "index": 21,
+    "source": "http://127.0.0.1:39591/assets/optimized/holzterrasse-thermo-esche-58dc1bd2-960.webp",
+    "width": 358,
+    "dpr": 2,
+    "sizes": "auto, (max-width: 768px) calc(100vw - 2rem), (max-width: 900px) calc((100vw - 6rem) / 2), (max-width: 1200px) calc((100vw - 8rem) / 3), 358px",
+    "variants": [
+      480,
+      960,
+      1600
+    ],
+    "selected": 960
+  },
+  {
+    "scenario": {
+      "width": 820,
+      "dpr": 1
+    },
+    "index": 0,
+    "source": "http://127.0.0.1:39591/assets/optimized/holzterrasse-cumaruholz-b12379e1-480.webp",
+    "width": 362,
+    "dpr": 1,
+    "sizes": "auto, (max-width: 768px) calc(100vw - 2rem), (max-width: 900px) calc((100vw - 6rem) / 2), (max-width: 1200px) calc((100vw - 8rem) / 3), 358px",
+    "variants": [
+      480,
+      960,
+      1080
+    ],
+    "selected": 480
+  },
+  {
+    "scenario": {
+      "width": 820,
+      "dpr": 1
+    },
+    "index": 5,
+    "source": "http://127.0.0.1:39591/assets/optimized/holzterrasse-garapaholz-02-e9db83f8-480.webp",
+    "width": 362,
+    "dpr": 1,
+    "sizes": "auto, (max-width: 768px) calc(100vw - 2rem), (max-width: 900px) calc((100vw - 6rem) / 2), (max-width: 1200px) calc((100vw - 8rem) / 3), 358px",
+    "variants": [
+      480,
+      960,
+      1200
+    ],
+    "selected": 480
+  },
+  {
+    "scenario": {
+      "width": 820,
+      "dpr": 1
+    },
+    "index": 10,
+    "source": "http://127.0.0.1:39591/assets/optimized/holzterrasse-garapaholz-07-c61606ba-480.webp",
+    "width": 362,
+    "dpr": 1,
+    "sizes": "auto, (max-width: 768px) calc(100vw - 2rem), (max-width: 900px) calc((100vw - 6rem) / 2), (max-width: 1200px) calc((100vw - 8rem) / 3), 358px",
+    "variants": [
+      480,
+      960,
+      1600
+    ],
+    "selected": 480
+  },
+  {
+    "scenario": {
+      "width": 820,
+      "dpr": 1
+    },
+    "index": 15,
+    "source": "http://127.0.0.1:39591/assets/optimized/holzterrasse-teak-01-974fd12b-480.webp",
+    "width": 362,
+    "dpr": 1,
+    "sizes": "auto, (max-width: 768px) calc(100vw - 2rem), (max-width: 900px) calc((100vw - 6rem) / 2), (max-width: 1200px) calc((100vw - 8rem) / 3), 358px",
+    "variants": [
+      480,
+      960,
+      1200
+    ],
+    "selected": 480
+  },
+  {
+    "scenario": {
+      "width": 820,
+      "dpr": 1
+    },
+    "index": 21,
+    "source": "http://127.0.0.1:39591/assets/optimized/holzterrasse-thermo-esche-58dc1bd2-480.webp",
+    "width": 362,
+    "dpr": 1,
+    "sizes": "auto, (max-width: 768px) calc(100vw - 2rem), (max-width: 900px) calc((100vw - 6rem) / 2), (max-width: 1200px) calc((100vw - 8rem) / 3), 358px",
+    "variants": [
+      480,
+      960,
+      1600
+    ],
+    "selected": 480
+  },
+  {
+    "scenario": {
+      "width": 1440,
+      "dpr": 1
+    },
+    "index": 0,
+    "source": "http://127.0.0.1:39591/assets/optimized/holzterrasse-cumaruholz-b12379e1-480.webp",
+    "width": 357.328125,
+    "dpr": 1,
+    "sizes": "auto, (max-width: 768px) calc(100vw - 2rem), (max-width: 900px) calc((100vw - 6rem) / 2), (max-width: 1200px) calc((100vw - 8rem) / 3), 358px",
+    "variants": [
+      480,
+      960,
+      1080
+    ],
+    "selected": 480
+  },
+  {
+    "scenario": {
+      "width": 1440,
+      "dpr": 1
+    },
+    "index": 5,
+    "source": "http://127.0.0.1:39591/assets/optimized/holzterrasse-garapaholz-02-e9db83f8-480.webp",
+    "width": 357.328125,
+    "dpr": 1,
+    "sizes": "auto, (max-width: 768px) calc(100vw - 2rem), (max-width: 900px) calc((100vw - 6rem) / 2), (max-width: 1200px) calc((100vw - 8rem) / 3), 358px",
+    "variants": [
+      480,
+      960,
+      1200
+    ],
+    "selected": 480
+  },
+  {
+    "scenario": {
+      "width": 1440,
+      "dpr": 1
+    },
+    "index": 10,
+    "source": "http://127.0.0.1:39591/assets/optimized/holzterrasse-garapaholz-07-c61606ba-480.webp",
+    "width": 357.328125,
+    "dpr": 1,
+    "sizes": "auto, (max-width: 768px) calc(100vw - 2rem), (max-width: 900px) calc((100vw - 6rem) / 2), (max-width: 1200px) calc((100vw - 8rem) / 3), 358px",
+    "variants": [
+      480,
+      960,
+      1600
+    ],
+    "selected": 480
+  },
+  {
+    "scenario": {
+      "width": 1440,
+      "dpr": 1
+    },
+    "index": 15,
+    "source": "http://127.0.0.1:39591/assets/optimized/holzterrasse-teak-01-974fd12b-480.webp",
+    "width": 357.328125,
+    "dpr": 1,
+    "sizes": "auto, (max-width: 768px) calc(100vw - 2rem), (max-width: 900px) calc((100vw - 6rem) / 2), (max-width: 1200px) calc((100vw - 8rem) / 3), 358px",
+    "variants": [
+      480,
+      960,
+      1200
+    ],
+    "selected": 480
+  },
+  {
+    "scenario": {
+      "width": 1440,
+      "dpr": 1
+    },
+    "index": 21,
+    "source": "http://127.0.0.1:39591/assets/optimized/holzterrasse-thermo-esche-58dc1bd2-480.webp",
+    "width": 357.328125,
+    "dpr": 1,
+    "sizes": "auto, (max-width: 768px) calc(100vw - 2rem), (max-width: 900px) calc((100vw - 6rem) / 2), (max-width: 1200px) calc((100vw - 8rem) / 3), 358px",
+    "variants": [
+      480,
+      960,
+      1600
+    ],
+    "selected": 480
+  },
+  {
+    "scenario": {
+      "width": 1440,
+      "dpr": 2
+    },
+    "index": 0,
+    "source": "http://127.0.0.1:39591/assets/optimized/holzterrasse-cumaruholz-b12379e1-960.webp",
+    "width": 357.328125,
+    "dpr": 2,
+    "sizes": "auto, (max-width: 768px) calc(100vw - 2rem), (max-width: 900px) calc((100vw - 6rem) / 2), (max-width: 1200px) calc((100vw - 8rem) / 3), 358px",
+    "variants": [
+      480,
+      960,
+      1080
+    ],
+    "selected": 960
+  },
+  {
+    "scenario": {
+      "width": 1440,
+      "dpr": 2
+    },
+    "index": 5,
+    "source": "http://127.0.0.1:39591/assets/optimized/holzterrasse-garapaholz-02-e9db83f8-960.webp",
+    "width": 357.328125,
+    "dpr": 2,
+    "sizes": "auto, (max-width: 768px) calc(100vw - 2rem), (max-width: 900px) calc((100vw - 6rem) / 2), (max-width: 1200px) calc((100vw - 8rem) / 3), 358px",
+    "variants": [
+      480,
+      960,
+      1200
+    ],
+    "selected": 960
+  },
+  {
+    "scenario": {
+      "width": 1440,
+      "dpr": 2
+    },
+    "index": 10,
+    "source": "http://127.0.0.1:39591/assets/optimized/holzterrasse-garapaholz-07-c61606ba-960.webp",
+    "width": 357.328125,
+    "dpr": 2,
+    "sizes": "auto, (max-width: 768px) calc(100vw - 2rem), (max-width: 900px) calc((100vw - 6rem) / 2), (max-width: 1200px) calc((100vw - 8rem) / 3), 358px",
+    "variants": [
+      480,
+      960,
+      1600
+    ],
+    "selected": 960
+  },
+  {
+    "scenario": {
+      "width": 1440,
+      "dpr": 2
+    },
+    "index": 15,
+    "source": "http://127.0.0.1:39591/assets/optimized/holzterrasse-teak-01-974fd12b-960.webp",
+    "width": 357.328125,
+    "dpr": 2,
+    "sizes": "auto, (max-width: 768px) calc(100vw - 2rem), (max-width: 900px) calc((100vw - 6rem) / 2), (max-width: 1200px) calc((100vw - 8rem) / 3), 358px",
+    "variants": [
+      480,
+      960,
+      1200
+    ],
+    "selected": 960
+  },
+  {
+    "scenario": {
+      "width": 1440,
+      "dpr": 2
+    },
+    "index": 21,
+    "source": "http://127.0.0.1:39591/assets/optimized/holzterrasse-thermo-esche-58dc1bd2-960.webp",
+    "width": 357.328125,
+    "dpr": 2,
+    "sizes": "auto, (max-width: 768px) calc(100vw - 2rem), (max-width: 900px) calc((100vw - 6rem) / 2), (max-width: 1200px) calc((100vw - 8rem) / 3), 358px",
+    "variants": [
+      480,
+      960,
+      1600
+    ],
+    "selected": 960
+  },
+  {
+    "scenario": {
+      "width": 1440,
+      "dpr": 1,
+      "fallback": true
+    },
+    "index": 0,
+    "source": "http://127.0.0.1:39591/assets/optimized/holzterrasse-cumaruholz-b12379e1-480.webp",
+    "width": 357.328125,
+    "dpr": 1,
+    "sizes": "(max-width: 768px) calc(100vw - 2rem), (max-width: 900px) calc((100vw - 6rem) / 2), (max-width: 1200px) calc((100vw - 8rem) / 3), 358px",
+    "variants": [
+      480,
+      960,
+      1080
+    ],
+    "selected": 480
+  },
+  {
+    "scenario": {
+      "width": 1440,
+      "dpr": 1,
+      "fallback": true
+    },
+    "index": 5,
+    "source": "http://127.0.0.1:39591/assets/optimized/holzterrasse-garapaholz-02-e9db83f8-480.webp",
+    "width": 357.328125,
+    "dpr": 1,
+    "sizes": "(max-width: 768px) calc(100vw - 2rem), (max-width: 900px) calc((100vw - 6rem) / 2), (max-width: 1200px) calc((100vw - 8rem) / 3), 358px",
+    "variants": [
+      480,
+      960,
+      1200
+    ],
+    "selected": 480
+  },
+  {
+    "scenario": {
+      "width": 1440,
+      "dpr": 1,
+      "fallback": true
+    },
+    "index": 10,
+    "source": "http://127.0.0.1:39591/assets/optimized/holzterrasse-garapaholz-07-c61606ba-480.webp",
+    "width": 357.328125,
+    "dpr": 1,
+    "sizes": "(max-width: 768px) calc(100vw - 2rem), (max-width: 900px) calc((100vw - 6rem) / 2), (max-width: 1200px) calc((100vw - 8rem) / 3), 358px",
+    "variants": [
+      480,
+      960,
+      1600
+    ],
+    "selected": 480
+  },
+  {
+    "scenario": {
+      "width": 1440,
+      "dpr": 1,
+      "fallback": true
+    },
+    "index": 15,
+    "source": "http://127.0.0.1:39591/assets/optimized/holzterrasse-teak-01-974fd12b-480.webp",
+    "width": 357.328125,
+    "dpr": 1,
+    "sizes": "(max-width: 768px) calc(100vw - 2rem), (max-width: 900px) calc((100vw - 6rem) / 2), (max-width: 1200px) calc((100vw - 8rem) / 3), 358px",
+    "variants": [
+      480,
+      960,
+      1200
+    ],
+    "selected": 480
+  },
+  {
+    "scenario": {
+      "width": 1440,
+      "dpr": 1,
+      "fallback": true
+    },
+    "index": 21,
+    "source": "http://127.0.0.1:39591/assets/optimized/holzterrasse-thermo-esche-58dc1bd2-480.webp",
+    "width": 357.328125,
+    "dpr": 1,
+    "sizes": "(max-width: 768px) calc(100vw - 2rem), (max-width: 900px) calc((100vw - 6rem) / 2), (max-width: 1200px) calc((100vw - 8rem) / 3), 358px",
+    "variants": [
+      480,
+      960,
+      1600
+    ],
+    "selected": 480
+  }
+]
