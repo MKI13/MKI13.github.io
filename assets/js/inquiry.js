@@ -112,7 +112,9 @@
         event.preventDefault();
         showReview();
       });
-      form.addEventListener('input', function() {
+      form.addEventListener('input', function(event) {
+        // The explicit send confirmation belongs to the already reviewed draft.
+        if(event.target.closest && event.target.closest('#delivery-controls')) return;
         review.hidden = true;
         announce('');
       });

@@ -37,3 +37,7 @@ Nach dem Hinzufügen eigener Originalbilder und ihrer HTML-Verweise: `python3 sc
 ## Freigabe
 
 Änderungen über einen separaten Branch und Pull Request veröffentlichen. Erst mit bestandenen Prüfungen und erteilter Veröffentlichungsfreigabe nach `main` mergen; danach den tatsächlichen Pages-Build und die Live-Seite prüfen. Details: `DEPLOYMENT-GUIDE.md` und `GO-LIVE-CHECKLIST.md`.
+
+## Direktversand – Issue #16
+
+Implementierter Serverdienst, Browserintegration, Tests und Betriebsanleitung: `server/README.md`. Die öffentliche Konfiguration ist bis zur freigegebenen HTTPS-Bereitstellung und echten INBOX-Abnahme deaktiviert; die vorhandene E-Mail-Vorbereitung bleibt verwendbar. Keine Test-SMTP-Annahme als echte Zustellung ausgeben.

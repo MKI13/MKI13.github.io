@@ -1,0 +1,35 @@
+{
+  "checks": [
+    {
+      "name": "Explicit review confirmation is required before any upload",
+      "status": "PASS"
+    },
+    {
+      "name": "Double-click sends one real request through backend and TLS SMTP",
+      "status": "PASS"
+    },
+    {
+      "name": "Seven languages retain status, reference and user input",
+      "status": "PASS"
+    },
+    {
+      "name": "Lost HTTP response retries the same ID without a second email",
+      "status": "PASS"
+    },
+    {
+      "name": "Definitive SMTP rejection permits a deliberate fresh retry with a new challenge",
+      "status": "PASS"
+    },
+    {
+      "name": "Server rejects fake image bytes and preserves editable input",
+      "status": "PASS"
+    },
+    {
+      "name": "Offline backend leaves existing local enquiry preparation usable",
+      "status": "PASS"
+    }
+  ],
+  "passed": 7,
+  "failed": 0,
+  "external_delivery": false
+}

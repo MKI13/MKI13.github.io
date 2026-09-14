@@ -1,0 +1,64 @@
+name: Issue 16 Direct Delivery
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  delivery:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+          cache-dependency-path: qa/package-lock.json
+      - name: Install pinned server test dependencies
+        run: pip install --require-hashes -r server/requirements-test.txt
+      - name: Server regression tests
+        env:
+          PYTHONPATH: server
+        run: python -m pytest server/tests -q --tb=short
+      - name: Client syntax checks
+        run: |
+          node --check assets/js/inquiry-delivery.js
+          node --check assets/js/inquiry.js
+          node --check qa/direct-delivery-audit.mjs
+          git diff --check
+      - name: Install browser test dependencies
+        run: npm ci --prefix qa --ignore-scripts
+      - name: Install Chromium
+        working-directory: qa
+        run: npx playwright install --with-deps chromium
+      - name: Browser to local API to real TLS SMTP test sink
+        env:
+          PYTHONPATH: server
+        run: python server/tests/run_browser_integration.py
+      - name: Build production container without secrets or deployment
+        run: |
+          docker build -t ef-sinn-inquiry:ci server
+          docker run --rm --network none ef-sinn-inquiry:ci python -c "from inquiry_service.app import create_app; from inquiry_service.worker import tick; print('Production image imports OK')"
+      - name: Validate Compose without starting services
+        env:
+          INQUIRY_PUBLIC_HOST: api.example.invalid
+          SMTP_USERNAME: info@ef-sinn.de
+          INQUIRY_SECRET_SOURCE: /dev/null
+          SMTP_TOKEN_SOURCE: /dev/null
+        run: |
+          docker compose -f server/compose.yaml config --format json > /tmp/issue16-compose.json
+          python -c "import json; d=json.load(open('/tmp/issue16-compose.json'))['services']; assert [s['source'] for s in d['api']['secrets']]==['inquiry-key']; assert 'SMTP_PASSWORD_FILE' not in d['api']['environment']; assert {s['source'] for s in d['worker']['secrets']}=={'inquiry-key','smtp-token'}; print('API/worker secret isolation PASS')"
+      - name: Keep direct-delivery evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: issue-16-delivery-${{ github.sha }}
+          path: .qa-results/
+          include-hidden-files: true
+          retention-days: 30

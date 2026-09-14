@@ -8,7 +8,15 @@ Repository: `MKI13/MKI13.github.io`. **GitHub Pages veröffentlicht `main` aus `
 
 Die erneute Fertigstellung und Veröffentlichung nach bestandenen Tests wurden vom Inhaber freigegeben. Eine alte Chatnotiz zu Commit `e066bc7` ließ sich auf GitHub nicht verifizieren. Ausgangspunkt dieser tatsächlich implementierten Version ist `f39d5fff849e9bbcb2d03e4e26259a5c6cb5ef0d`; ältere behauptete Testergebnisse werden nicht übernommen.
 
-## Aktuelle Fortsetzung: Issue #18
+## Aktuelle Arbeit ausschließlich an Issue #16
+
+Arbeitszweig: `website/issue-16-direct-delivery`, Basis `11c45e3`. Serverdienst und optionale siebensprachige Browseroberfläche sind implementiert. Einstieg: `server/README.md`. Der Dienst enthält HTTP-Verarbeitung, serverseitige Bildprüfung/Neucodierung, eine transaktionale Warteschlange, geschützte Wiederholungen, TLS-SMTP und getrennte INBOX-Verifikation. Dies ist eine ausführbare Codebasis, aber noch kein aktivierter öffentlicher Versand.
+
+Im lokalen Integrationstest werden Browser, echte API und eine tatsächliche TLS-SMTP-Verbindung zum lokalen Testempfänger einschließlich Fotos und Antwortadresse geprüft. Keine externe Nachricht wurde versendet. Die vollständigen Prüfungen und die Produktionsgrenzen gehören in den zugehörigen Pull Request und unter `docs/qa/issue16-*`.
+
+**Produktionsabschluss noch offen:** Kein freigegebener öffentlicher Backendserver oder Website-SMTP-Zugang ist nachgewiesen. Die Website-Umgebung enthält keine entsprechenden SMTP-/Hosting-Variablen; vorhandene SSH-Aliase benennen Hermes-Rechner. Deshalb bleibt `assets/js/inquiry-delivery-config.js` deaktiviert. Vor Aktivierung sind Hosting, eigener SMTP-Token, echter Eingang einer freigegebenen Testanfrage und betriebsspezifische Datenschutzhinweise zu verifizieren. Erst danach #16 schließen. Keine anderen Projekte oder öffentlichen GEEKOM-Ports verändern.
+
+## Abgeschlossene Fortsetzung: Issue #18
 
 Die erhaltenen Änderungen auf `website/review-followup-20260914` wurden gegen den veröffentlichten Stand `9f60287` geprüft. Die zwei Review-Befunde aus PR #17 sind behoben: Bildgrößen nach tatsächlichem Layout und Pixeldichte, sowie die Beschreibung von Vorschau und ausdrücklicher E-Mail-Übergabe in allen sieben Sprachen.
 

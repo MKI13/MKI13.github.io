@@ -1,0 +1,5 @@
+**
+!requirements.txt
+!wsgi.py
+!inquiry_service/
+!inquiry_service/*.py

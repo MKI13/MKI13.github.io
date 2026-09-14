@@ -1,0 +1,7 @@
+{$INQUIRY_PUBLIC_HOST} {
+    request_body {
+        max_size 11MB
+    }
+    reverse_proxy api:8080
+    header Strict-Transport-Security "max-age=31536000"
+}

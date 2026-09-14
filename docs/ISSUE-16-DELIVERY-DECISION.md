@@ -1,6 +1,10 @@
 # Issue #16 – Entscheidung zum Direktversand
 
-Stand: 14. September 2026. **Vorprüfung abgeschlossen; Direktversand nicht aktiviert.**
+Stand: 14. September 2026. **Servercode und Browserintegration implementiert; öffentlicher Direktversand noch nicht aktiviert.**
+
+## Umsetzung dieser Fortsetzung
+
+Die zuvor vorgeschlagene Architektur liegt unter `server/` als ausführbarer Dienst mit Operator-Anleitung, gepinnten Abhängigkeiten und eigenem CI-Workflow vor. Die Browserintegration befindet sich in `assets/js/inquiry-delivery.js` und ist über eine getrennte Konfiguration abschaltbar. Lokale SMTP-Testempfänger und simulierte Netzfehler sind ausdrücklich keine Nachweise des tatsächlichen Proton-Eingangs. Produktionsaktivierung und Empfangsprüfung sind weiter offen.
 
 ## Verifizierter Ausgangspunkt
 
@@ -8,7 +12,7 @@ Die Webseite wird über GitHub Pages veröffentlicht. Der öffentliche DNS-Eintr
 
 GitHub Pages stellt statische Dateien bereit und ist kein Laufzeitserver für den Formularversand. Ein Proton-Postfach ist ebenfalls noch kein öffentliches Formular-Backend. Auf dem GEEKOM-PC werden für diese Aufgabe weder Ports ins Internet geöffnet noch bestehende Hermes- oder andere Projektprozesse als öffentlichen Empfangsserver umfunktioniert.
 
-## Empfohlene Architektur, noch nicht umgesetzt
+## Implementierte Architektur, öffentliche Bereitstellung noch offen
 
 Die Webseite bleibt auf GitHub Pages. Ein getrenntes, kleines HTTPS-Backend in der EU prüft Anfragen und Fotos serverseitig. Es führt eine begrenzte, dauerhafte Versandwarteschlange mit eindeutiger Anfragekennung; E-Mails werden über einen eigenen, nur für die Webseite erteilten SMTP-Zugang versendet. Das vorhandene Proton-Konto ist dafür zuerst zu prüfen, bevor ein weiterer Versanddienst beauftragt wird.
 
