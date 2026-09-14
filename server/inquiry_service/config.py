@@ -1,5 +1,5 @@
 """Explicit, fail-closed deployment configuration. Secrets are read from mounted files."""
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from pathlib import Path
 from urllib.parse import urlsplit
 import os
@@ -22,11 +22,11 @@ def secret_file(name: str, minimum: int) -> bytes:
 @dataclass(frozen=True)
 class Settings:
     data_dir: Path
-    secret: bytes
+    secret: bytes = field(repr=False)
     origins: tuple[str, ...]
     host: str
     smtp_user: str
-    smtp_password: str
+    smtp_password: str = field(repr=False)
     smtp_host: str = 'smtp.protonmail.ch'
     smtp_port: int = 587
     enabled: bool = False
@@ -44,7 +44,7 @@ class Settings:
     min_challenge_age: int = 2
 
     @classmethod
-    def from_env(cls):
+    def from_env(cls, *, require_smtp=False):
         public = urlsplit(os.environ.get('INQUIRY_PUBLIC_URL', ''))
         if public.scheme != 'https' or not public.hostname or public.username or public.path not in ('', '/') or public.query or public.fragment:
             raise ValueError('INQUIRY_PUBLIC_URL must be the dedicated HTTPS backend origin')
@@ -61,7 +61,7 @@ class Settings:
             data_dir=Path(os.environ.get('INQUIRY_DATA_DIR', '/var/lib/ef-sinn-inquiry')).resolve(),
             secret=secret_file('INQUIRY_SECRET_FILE', 32), origins=origins,
             host=public.netloc, smtp_user=username,
-            smtp_password=secret_file('SMTP_PASSWORD_FILE', 12).decode(),
+            smtp_password=secret_file('SMTP_PASSWORD_FILE', 12).decode() if require_smtp else '',
             enabled=enabled, trust_proxy=os.environ.get('INQUIRY_TRUST_PROXY', '0') == '1',
         )
         return cfg

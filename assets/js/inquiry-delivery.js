@@ -91,7 +91,7 @@
   function applyResult(result) {
     if (!pending || result.data.request_id !== pending.id || states.indexOf(result.data.state) < 0) throw new Error('unknown');
     pending.state = result.data.state; reference = pending.id; display(pending.state);
-    if (pending.state === 'failed') { pending = null; lock(false); }
+    if (pending.state === 'failed') { pending = null; challenge = null; lock(false); }
     refreshButtons();
     if (pending && ['queued', 'processing'].indexOf(pending.state) !== -1 && polls < 12) {
       clearTimeout(pollTimer);

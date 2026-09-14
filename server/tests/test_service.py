@@ -288,3 +288,28 @@ def test_real_exif_is_removed_and_orientation_is_applied(env):
     assert sanitized.size==(30,40)
     assert not sanitized.getexif()
     assert attachment.get_filename()=='foto-1.jpg'
+
+
+def test_api_configuration_never_reads_smtp_secret(env,monkeypatch,tmp_path):
+    key=tmp_path/'inquiry-key';key.write_bytes(b'x'*32)
+    monkeypatch.setenv('INQUIRY_PUBLIC_URL','https://api.ef-sinn.test')
+    monkeypatch.setenv('SMTP_USERNAME','info@ef-sinn.de')
+    monkeypatch.setenv('INQUIRY_SECRET_FILE',str(key))
+    monkeypatch.setenv('SMTP_PASSWORD_FILE',str(tmp_path/'must-not-be-readable-by-api'))
+    cfg=Settings.from_env()
+    assert cfg.smtp_password==''
+    with pytest.raises(OSError): Settings.from_env(require_smtp=True)
+
+
+def test_worker_requires_explicit_smtp_secret_and_values_are_not_repr(env,monkeypatch,tmp_path):
+    key=tmp_path/'inquiry-key';key.write_bytes(b'private-test-key-'*3)
+    smtp=tmp_path/'smtp-token';smtp.write_text('synthetic-worker-only-token')
+    monkeypatch.setenv('INQUIRY_PUBLIC_URL','https://api.ef-sinn.test')
+    monkeypatch.setenv('SMTP_USERNAME','info@ef-sinn.de')
+    monkeypatch.setenv('INQUIRY_SECRET_FILE',str(key))
+    monkeypatch.setenv('SMTP_PASSWORD_FILE',str(smtp))
+    cfg=Settings.from_env(require_smtp=True)
+    assert cfg.smtp_password=='synthetic-worker-only-token'
+    assert 'synthetic-worker-only-token' not in repr(cfg)
+    assert 'private-test-key' not in repr(cfg)
+    with pytest.raises(ValueError): SMTPTransport(replace(cfg,smtp_password=''))

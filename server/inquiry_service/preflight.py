@@ -12,7 +12,7 @@ def main():
     parser.add_argument('--smtp',action='store_true',help='Perform STARTTLS and AUTH only; no email is sent')
     args=parser.parse_args()
     try:
-        cfg=Settings.from_env();store=Store(cfg)
+        cfg=Settings.from_env(require_smtp=args.smtp);store=Store(cfg)
         report={'configuration':True,'worker_recent':store.healthy(),'free_disk_ok':shutil.disk_usage(cfg.data_dir).free>=256*1024*1024,
                 'queue_states':store.counters(),'smtp_auth_checked':False,'production_receipt_verified':False}
         if args.smtp:

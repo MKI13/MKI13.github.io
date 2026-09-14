@@ -17,6 +17,10 @@
       "status": "PASS"
     },
     {
+      "name": "Definitive SMTP rejection permits a deliberate fresh retry with a new challenge",
+      "status": "PASS"
+    },
+    {
       "name": "Server rejects fake image bytes and preserves editable input",
       "status": "PASS"
     },
@@ -25,7 +29,7 @@
       "status": "PASS"
     }
   ],
-  "passed": 6,
+  "passed": 7,
   "failed": 0,
   "external_delivery": false
 }

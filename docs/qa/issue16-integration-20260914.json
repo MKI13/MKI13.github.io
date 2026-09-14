@@ -1,7 +1,7 @@
 {
   "test": "Browser to real local HTTP API and TLS SMTP test sink",
   "external_messages_sent": 0,
-  "distinct_local_messages": 2,
+  "distinct_local_messages": 3,
   "duplicate_messages": 0,
   "message_body_reply_address_and_photos_verified": true,
   "production_inbox_verified": false

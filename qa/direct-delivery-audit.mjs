@@ -63,6 +63,15 @@ try{
     await retry.locator('#delivery-send').tap();await state(retry,'smtp_accepted');
     assert.equal(identifiers.length,2);assert.equal(identifiers[0],identifiers[1]);
   });
+  const rejected=await context.newPage();rejected.on('pageerror',e=>errors.push(e.message));
+  await check('Definitive SMTP rejection permits a deliberate fresh retry with a new challenge',async()=>{
+    const ids=[];rejected.on('request',r=>{if(r.method()==='POST')ids.push(r.headers()['idempotency-key']);});
+    await prepare(rejected,'INTEGRATION_REJECT_ONCE Diese synthetische Anfrage wird zuerst ausdrücklich abgelehnt.');
+    await rejected.locator('#delivery-confirm').check();await rejected.locator('#delivery-send').tap();
+    await state(rejected,'failed');assert.equal(await rejected.locator('#inq-name').isDisabled(),false);
+    await rejected.locator('#delivery-send').tap();await state(rejected,'smtp_accepted');
+    assert.equal(ids.length,2);assert.notEqual(ids[0],ids[1]);
+  });
   const invalid=await context.newPage();invalid.on('pageerror',e=>errors.push(e.message));
   await check('Server rejects fake image bytes and preserves editable input',async()=>{
     await prepare(invalid);await invalid.locator('#inq-edit').click();

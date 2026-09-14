@@ -6,6 +6,10 @@ Die Implementierung enthält echten HTTP-Empfang, serverseitige Foto-/Feldprüfu
 
 Die öffentliche Website bleibt bis zur vollständigen Produktionsabnahme beim bisherigen E-Mail-/Kopier-/Download-Verfahren. `assets/js/inquiry-delivery-config.js` steht absichtlich auf `enabled: false`. Fehlende Hosting- und SMTP-Zugänge werden nicht durch einen unsicheren öffentlichen GEEKOM-Endpunkt oder einen ungefragten neuen Anbieter ersetzt.
 
+## Trennung der Zugangsdaten
+
+Der öffentliche API-Container erhält ausschließlich den Anfrage-HMAC-Schlüssel. Der Proton-SMTP-Token wird nur in den getrennten Worker eingebunden. Die API-Konfiguration liest den SMTP-Token nicht. SMTP-Vorprüfung wird im Worker ausgeführt. Secret-Werte erscheinen nicht in der Darstellung des Konfigurationsobjekts.
+
 ## Aufbau
 
 `inquiry_service/app.py` nimmt Formulardaten entgegen. `validation.py` prüft alle Felder, Rückkontakt, Bildanzahl, Dateigrößen und tatsächlich decodierbare JPEG-/PNG-/WebP-Dateien. Bilder werden maximal 2000 Pixel groß neu als JPEG codiert; ursprüngliche Dateinamen und EXIF-Daten werden nicht übernommen. SVG, GIF, defekte Dateien und übergroße Pixelbilder werden abgelehnt.
@@ -42,7 +46,7 @@ Voraussetzungen: ein vom Inhaber freigegebener Server mit Docker/Compose, ein da
 1. Auf dem Zielserver zwei Dateien **außerhalb** des Repositorys bereitstellen: einen zufälligen HMAC-Schlüssel mit mindestens 32 Bytes und den gesonderten SMTP-Token. Kein Kontopasswort verwenden. Die Dateien müssen für UID/GID 10001 lesbar, für andere Nutzer unlesbar sein; z. B. Eigentümer 10001:10001, Modus 0400. Dateirechte sind besonders wichtig, weil Compose dateibasierte Secrets einbindet.
 2. `deployment.env.example` als private Umgebungsdatei auf dem Zielserver ausfüllen. Sie enthält nur Hostnamen, Mailadresse und Pfade, keine Tokenwerte. Den persistenten Datenbereich nicht in einen Webroot legen. Keine Hostports für API oder SQLite veröffentlichen; nach außen geht nur der HTTPS-Proxy.
 3. Aus `server/` prüfen und starten: `docker compose --env-file /sicherer/pfad/deployment.env config --quiet`, dann `docker compose --env-file /sicherer/pfad/deployment.env up -d --build`. Diese Befehle sind für den freigegebenen Server, **nicht** für den GEEKOM-Arbeitsrechner gedacht.
-4. Mit `docker compose ... exec api python -m inquiry_service.preflight --smtp` Konfiguration, Datenträger und SMTP-Authentifizierung prüfen. Das sendet noch keine Nachricht. `/healthz` muss erreichbar sein; ein fehlender Worker verhindert die Annahme neuer Anfragen.
+4. Mit `docker compose ... exec worker python -m inquiry_service.preflight --smtp` Konfiguration, Datenträger und SMTP-Authentifizierung prüfen. Das sendet noch keine Nachricht. `/healthz` muss erreichbar sein; ein fehlender Worker verhindert die Annahme neuer Anfragen.
 5. Erst die nachfolgende echte Abnahme durchführen und den betriebsspezifischen Datenschutzhinweis fertigstellen. Dann die Website-Konfiguration auf den geprüften HTTPS-Origin setzen, die entsprechenden Cache-Versionen aktualisieren und den veröffentlichten Browserablauf erneut testen.
 
 ## Echte Abnahme und Empfangsnachweis

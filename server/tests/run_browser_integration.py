@@ -57,7 +57,7 @@ def main():
         try:
             env={**os.environ,'ISSUE16_BASE_URL':front_url,'ISSUE16_PHOTO':str(photo)}
             subprocess.run(['node',str(ROOT/'qa/direct-delivery-audit.mjs')],env=env,check=True,timeout=180)
-            assert len(sink.messages)==2,f'Expected exactly 2 distinct emails, got {len(sink.messages)}'
+            assert len(sink.messages)==3,f'Expected exactly 3 distinct emails, got {len(sink.messages)}'
             for raw in sink.messages:
                 message=BytesParser(policy=policy.default).parsebytes(raw)
                 identifier=str(message['Message-ID']).strip('<>').split('@')[0]
@@ -66,7 +66,7 @@ def main():
                 assert matches(raw,identifier,json.loads(job['expected']))
                 assert len(list(message.iter_attachments()))==1
             report={'test':'Browser to real local HTTP API and TLS SMTP test sink','external_messages_sent':0,
-                    'distinct_local_messages':2,'duplicate_messages':0,'message_body_reply_address_and_photos_verified':True,
+                    'distinct_local_messages':3,'duplicate_messages':0,'message_body_reply_address_and_photos_verified':True,
                     'production_inbox_verified':False}
             output=ROOT/'.qa-results';output.mkdir(exist_ok=True)
             (output/'direct-delivery-integration.json').write_text(json.dumps(report,indent=2)+'\n')

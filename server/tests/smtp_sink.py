@@ -15,7 +15,7 @@ class Sink(socketserver.ThreadingTCPServer):
                        check=True,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
         self.context=ssl.SSLContext(ssl.PROTOCOL_TLS_SERVER);self.context.load_cert_chain(cert,key)
         self.client_context=ssl.create_default_context(cafile=str(cert))
-        self.messages=[];self.lock=threading.Lock()
+        self.messages=[];self.lock=threading.Lock();self.rejected_once=False
         super().__init__(('127.0.0.1',0),Handler)
 
 class Handler(socketserver.BaseRequestHandler):
@@ -50,8 +50,13 @@ class Handler(socketserver.BaseRequestHandler):
                         if chunk.startswith(b'..'): chunk=chunk[1:]
                         parts.append(chunk);size+=len(chunk)
                         if size>17*1024*1024: return
-                    with self.server.lock: self.server.messages.append(b''.join(parts))
-                    reply(b'250 accepted by local TEST SINK, not a real inbox')
+                    raw=b''.join(parts)
+                    with self.server.lock:
+                        reject=b'INTEGRATION_REJECT_ONCE' in raw and not self.server.rejected_once
+                        if reject: self.server.rejected_once=True
+                        else: self.server.messages.append(raw)
+                    if reject: reply(b'550 explicit test rejection, message NOT accepted')
+                    else: reply(b'250 accepted by local TEST SINK, not a real inbox')
                 elif verb==b'QUIT': reply(b'221 goodbye');break
                 elif verb in (b'NOOP',b'RSET'): reply(b'250 OK')
                 else: reply(b'500 unsupported')

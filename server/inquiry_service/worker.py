@@ -23,7 +23,7 @@ def tick(store,transport):
 
 
 def main():
-    cfg=Settings.from_env()
+    cfg=Settings.from_env(require_smtp=True)
     if not cfg.enabled: raise SystemExit('INQUIRY_ENABLED must be explicitly enabled for the worker')
     logging.basicConfig(level=logging.INFO,format='%(message)s')
     store=Store(cfg);transport=SMTPTransport(cfg)

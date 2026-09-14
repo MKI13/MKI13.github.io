@@ -6,6 +6,7 @@ from .config import RECIPIENT
 
 class SMTPTransport:
     def __init__(self,cfg,factory=smtplib.SMTP,context_factory=ssl.create_default_context):
+        if not cfg.smtp_password: raise ValueError("SMTP credentials are required by the worker transport")
         self.cfg,self.factory,self.context_factory=cfg,factory,context_factory
 
     def send(self,raw,before_data):

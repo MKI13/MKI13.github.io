@@ -51,7 +51,9 @@ jobs:
           SMTP_USERNAME: info@ef-sinn.de
           INQUIRY_SECRET_SOURCE: /dev/null
           SMTP_TOKEN_SOURCE: /dev/null
-        run: docker compose -f server/compose.yaml config --quiet
+        run: |
+          docker compose -f server/compose.yaml config --format json > /tmp/issue16-compose.json
+          python -c "import json; d=json.load(open('/tmp/issue16-compose.json'))['services']; assert [s['source'] for s in d['api']['secrets']]==['inquiry-key']; assert 'SMTP_PASSWORD_FILE' not in d['api']['environment']; assert {s['source'] for s in d['worker']['secrets']}=={'inquiry-key','smtp-token'}; print('API/worker secret isolation PASS')"
       - name: Keep direct-delivery evidence
         if: always()
         uses: actions/upload-artifact@v4
