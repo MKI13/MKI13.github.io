@@ -1,0 +1,282 @@
+{
+  "generated_at": "2026-09-14T09:17:33.646Z",
+  "base_url": "http://127.0.0.1:39591/",
+  "browser": "Chromium (Playwright 1.58.2)",
+  "passed": 67,
+  "failed": 0,
+  "notes": [
+    "SMTP delivery is not tested: website intentionally prepares email only.",
+    "Clipboard success and denial use simulated browser API responses; downloaded text is verified as a real file.",
+    "All form inputs are synthetic test data; mailto navigation is intercepted, not sent."
+  ],
+  "checks": [
+    {
+      "name": "Layout 360px index.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 360px about.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 360px contact.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 360px portfolio.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 360px schreiner-muenchen.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 360px impressum.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 360px datenschutz.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 360px 404.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 360px leistungen/innenausbau.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 360px leistungen/kuechen.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 360px leistungen/moebelbau.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 360px leistungen/restaurierung.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 360px leistungen/terrassen.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 360px leistungen/treppen.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 768px index.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 768px about.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 768px contact.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 768px portfolio.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 768px schreiner-muenchen.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 768px impressum.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 768px datenschutz.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 768px 404.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 768px leistungen/innenausbau.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 768px leistungen/kuechen.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 768px leistungen/moebelbau.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 768px leistungen/restaurierung.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 768px leistungen/terrassen.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 768px leistungen/treppen.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 1440px index.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 1440px about.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 1440px contact.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 1440px portfolio.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 1440px schreiner-muenchen.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 1440px impressum.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 1440px datenschutz.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 1440px 404.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 1440px leistungen/innenausbau.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 1440px leistungen/kuechen.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 1440px leistungen/moebelbau.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 1440px leistungen/restaurierung.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 1440px leistungen/terrassen.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Layout 1440px leistungen/treppen.html",
+      "status": "PASS"
+    },
+    {
+      "name": "Required fields block empty enquiry",
+      "status": "PASS"
+    },
+    {
+      "name": "Invalid optional email is rejected",
+      "status": "PASS"
+    },
+    {
+      "name": "Touch enquiry preview preserves dimensions and timeframe",
+      "status": "PASS"
+    },
+    {
+      "name": "Email handoff contains recipient and complete short draft",
+      "status": "PASS"
+    },
+    {
+      "name": "Clipboard success reports copying, never delivery (API simulated)",
+      "status": "PASS"
+    },
+    {
+      "name": "Clipboard denial selects entire text for manual copying (API simulated)",
+      "status": "PASS"
+    },
+    {
+      "name": "Text download contains the complete Unicode draft",
+      "status": "PASS"
+    },
+    {
+      "name": "All seven languages preserve entered content and selected project",
+      "status": "PASS"
+    },
+    {
+      "name": "Long enquiry is never truncated or passed through an oversized mailto",
+      "status": "PASS"
+    },
+    {
+      "name": "User HTML remains inert text in preview",
+      "status": "PASS"
+    },
+    {
+      "name": "Project links resolve aliases and unknown input safely",
+      "status": "PASS"
+    },
+    {
+      "name": "Portfolio image opens by keyboard and Escape restores focus",
+      "status": "PASS"
+    },
+    {
+      "name": "Portfolio image opens by touch and closes without a broken empty source",
+      "status": "PASS"
+    },
+    {
+      "name": "Portfolio category selection remains operable after closing a modal",
+      "status": "PASS"
+    },
+    {
+      "name": "Blocked browser storage does not break language switch or enquiry",
+      "status": "PASS"
+    },
+    {
+      "name": "Rapid language selection cannot be overwritten by a stale response",
+      "status": "PASS"
+    },
+    {
+      "name": "Failed language request keeps current language and controls usable",
+      "status": "PASS"
+    },
+    {
+      "name": "Without JavaScript, Enter cannot submit personal data or change the URL",
+      "status": "PASS"
+    },
+    {
+      "name": "Gallery selects appropriate images 390px DPR 2",
+      "status": "PASS"
+    },
+    {
+      "name": "Gallery selects appropriate images 820px DPR 1",
+      "status": "PASS"
+    },
+    {
+      "name": "Gallery selects appropriate images 1440px DPR 1",
+      "status": "PASS"
+    },
+    {
+      "name": "Gallery selects appropriate images 1440px DPR 2",
+      "status": "PASS"
+    },
+    {
+      "name": "Gallery selects appropriate images 1440px DPR 1 (explicit fallback forced)",
+      "status": "PASS"
+    },
+    {
+      "name": "Opening a reference modal upgrades a small thumbnail to a sharp large image",
+      "status": "PASS"
+    },
+    {
+      "name": "Live privacy body matches the reviewed flow in all seven languages",
+      "status": "PASS"
+    }
+  ]
+}

@@ -3,6 +3,7 @@
 from pathlib import Path
 import hashlib, json, os, re
 from PIL import Image, ImageOps
+from responsive_images import rewrite_sizes
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'assets/optimized'
 PAGES = sorted(ROOT.glob('*.html')) + sorted((ROOT / 'leistungen').glob('*.html'))
@@ -72,7 +73,7 @@ def main():
                 size = int(fixed[1]) if fixed else round(50 * info['width'] / info['height'])
                 attributes.append('sizes="' + str(size) + 'px"')
             else:
-                attributes.append('sizes="(max-width: 760px) 100vw, 80vw"')
+                attributes.append('sizes="(max-width: 768px) calc(100vw - 2rem), (max-width: 1200px) calc(100vw - 4rem), 1136px"')
             for name, value in [('width', info['width']), ('height', info['height']), ('decoding', 'async')]:
                 if not re.search(r'\b' + name + '=', tag):
                     attributes.append(name + '="' + str(value) + '"')
@@ -87,7 +88,7 @@ def main():
             url = Path(os.path.relpath(ROOT / variant['path'], page.parent)).as_posix()
             return "background-image: url('" + url + "')"
         text = IMAGE.sub(replace_image, page.read_text())
-        page.write_text(BACKGROUND.sub(replace_background, text))
+        page.write_text(rewrite_sizes(BACKGROUND.sub(replace_background, text)))
     manifest_path.write_text(json.dumps({'generator': 'scripts/optimize_images.py', 'quality': 85, 'originals_retained': True, 'images': images}, ensure_ascii=False, indent=2) + '\n')
     original_bytes = sum(i['original_bytes'] for i in images.values())
     webp_bytes = sum(i['variants'][-1]['bytes'] for i in images.values())

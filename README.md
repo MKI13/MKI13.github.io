@@ -26,13 +26,13 @@ npm ci --prefix qa
 cd qa && npx playwright install chromium && npm test
 ```
 
-Der Browser-Audit startet einen eigenen lokalen Server auf einem freien Port und beendet ihn anschließend. Ergebnisse und Screenshots liegen in `.qa-results/`. Er prüft alle 14 Seiten bei 360, 768 und 1440 Pixeln sowie Touch-Anfragen, sieben Sprachen, lange Texte, Downloads, blockierten Browser-Speicher und den Betrieb ohne JavaScript. Testeingaben sind künstlich; E-Mail-Links werden abgefangen und nicht versendet. Kopiererfolg und -ablehnung werden an der Browser-API simuliert. **Ein bestandener Browser-Audit beweist keine E-Mail-Zustellung.**
+Der Browser-Audit startet einen eigenen lokalen Server auf einem freien Port und beendet ihn anschließend. Ergebnisse und Screenshots liegen in `.qa-results/`. Er prüft tatsächliche Bilddateien bei verschiedenen Pixeldichten, explizite Rückfallgrößen und das Nachladen großer Dialogbilder. Er prüft alle 14 Seiten bei 360, 768 und 1440 Pixeln sowie Touch-Anfragen, sieben Sprachen, lange Texte, Downloads, blockierten Browser-Speicher und den Betrieb ohne JavaScript. Testeingaben sind künstlich; E-Mail-Links werden abgefangen und nicht versendet. Kopiererfolg und -ablehnung werden an der Browser-API simuliert. **Ein bestandener Browser-Audit beweist keine E-Mail-Zustellung.**
 
 Für einen rein lesenden Vergleich der veröffentlichten Seite kann `EFSINN_BASE_URL=https://www.ef-sinn.de/` gesetzt werden. Auch dabei versendet der Test keine Anfragen.
 
 ## Bildpflege
 
-Nach dem Hinzufügen eigener Originalbilder und ihrer HTML-Verweise: `python3 scripts/optimize_images.py` (Pillow erforderlich). Anschließend Änderungen visuell prüfen, Tests ausführen und Originale nicht löschen. Keine erfundenen Referenzen, Bewertungen oder Materialangaben ergänzen.
+Nach dem Hinzufügen eigener Originalbilder und ihrer HTML-Verweise: `python3 scripts/optimize_images.py` (Pillow erforderlich). Die Bildpflege wendet über `scripts/responsive_images.py` passende Layoutgrößen an; dieses Hilfsskript kann bei Layoutänderungen auch separat ohne Pillow ausgeführt werden. Anschließend Änderungen visuell prüfen, Tests ausführen und Originale nicht löschen. Keine erfundenen Referenzen, Bewertungen oder Materialangaben ergänzen.
 
 ## Freigabe
 

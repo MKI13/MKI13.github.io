@@ -214,6 +214,66 @@ try {
     assert.equal(p.url(),before); assert.deepEqual(posts,[]); assert.ok(!p.url().includes('PRIVATE_TEST_MARKER'));
     await p.screenshot({path:resolve(OUTPUT,'contact-no-javascript.png')}); await isolated.close();
   });
+  const imageEvidence=[];
+  for(const scenario of [{width:390,dpr:2},{width:820,dpr:1},{width:1440,dpr:1},{width:1440,dpr:2},{width:1440,dpr:1,fallback:true}]) {
+    await check(`Gallery selects appropriate images ${scenario.width}px DPR ${scenario.dpr}${scenario.fallback?' (explicit fallback forced)':''}`,async()=>{
+      const isolated=await browser.newContext({locale:'de-DE',viewport:{width:scenario.width,height:900},deviceScaleFactor:scenario.dpr,reducedMotion:'reduce'});
+      try {
+        const p=await isolated.newPage();
+        if(scenario.fallback) await p.route('**/leistungen/terrassen.html',async route=>{
+          const response=await route.fetch();
+          await route.fulfill({response,body:(await response.text()).replaceAll('sizes="auto, ','sizes="')});
+        });
+        await ready(p,'leistungen/terrassen.html');
+        const photos=p.locator('.service-gallery-grid img');
+        assert.ok(await photos.count()>10,'Real terrace gallery was not found');
+        for(const index of [0,5,10,15,21]) {
+          const photo=photos.nth(index);
+          await photo.scrollIntoViewIfNeeded();
+          await photo.evaluate(image=>image.decode());
+          const result=await photo.evaluate(image=>({source:image.currentSrc,width:image.getBoundingClientRect().width,dpr:devicePixelRatio,sizes:image.sizes,variants:image.srcset.split(',').map(candidate=>Number(candidate.trim().split(/\s+/).at(-1).replace('w',''))).sort((a,b)=>a-b)}));
+          const selected=Number(result.source.match(/-(\d+)\.webp(?:\?|$)/)?.[1]);
+          const expected=result.variants.find(size=>size>=Math.ceil(result.width*result.dpr)) || result.variants.at(-1);
+          assert.equal(selected,expected,JSON.stringify(result));
+          if(scenario.width===1440 && scenario.dpr===1) assert.equal(selected,480,'Desktop thumbnail unnecessarily downloads a large image');
+          imageEvidence.push({scenario,index,...result,selected});
+        }
+        if(scenario.width===1440 && scenario.dpr===1 && !scenario.fallback) await p.screenshot({path:resolve(OUTPUT,'gallery-responsive-desktop.png')});
+      } finally { await isolated.close(); }
+    });
+  }
+  await check('Opening a reference modal upgrades a small thumbnail to a sharp large image',async()=>{
+    const isolated=await browser.newContext({locale:'de-DE',viewport:{width:1440,height:1000},deviceScaleFactor:1,reducedMotion:'reduce'});
+    try {
+      const p=await isolated.newPage(); await ready(p,'portfolio.html');
+      const image=p.locator('.project-gallery-grid.triple img').first();
+      assert.equal(await image.count(),1,'Three-column reference was not found');
+      await image.scrollIntoViewIfNeeded(); await image.evaluate(e=>e.decode());
+      const small=await image.evaluate(e=>e.currentSrc);
+      await image.locator('..').click();
+      await p.locator('#lightbox-img').evaluate(e=>e.decode());
+      const big=await p.locator('#lightbox-img').evaluate(e=>e.currentSrc);
+      const smallWidth=Number(small.match(/-(\d+)\.webp/)?.[1]);
+      const bigWidth=Number(big.match(/-(\d+)\.webp/)?.[1]);
+      assert.ok(bigWidth>smallWidth,`Modal did not upgrade: ${small} -> ${big}`);
+      assert.equal(await p.locator('#portfolio-lightbox').evaluate(e=>e.open),true);
+      await p.screenshot({path:resolve(OUTPUT,'reference-large-desktop.png')});
+      await p.keyboard.press('Escape');
+    } finally {await isolated.close();}
+  });
+  await check('Live privacy body matches the reviewed flow in all seven languages',async()=>{
+    const isolated=await browser.newContext({locale:'de-DE'});
+    try {
+      const p=await isolated.newPage(); await ready(p,'datenschutz.html');
+      for(const language of ['de','de-AT','en','fr','el','it','es']) {
+        await p.locator(`[data-lang-code="${language}"]`).click();
+        await p.waitForFunction(code=>document.documentElement.getAttribute('data-i18n-fallback-done')===code,language);
+        const expected=JSON.parse(await readFile(resolve(ROOT,`i18n/${language}.json`),'utf8'))['legal.privacy.body'];
+        assert.equal(await p.locator('.legal-copy').innerHTML(),expected);
+      }
+    } finally {await isolated.close();}
+  });
+  await writeFile(resolve(OUTPUT,'responsive-image-evidence.json'),JSON.stringify(imageEvidence,null,2)+'\n');
 } finally {
   await browser.close(); await new Promise(done=>server.close(done));
 }
