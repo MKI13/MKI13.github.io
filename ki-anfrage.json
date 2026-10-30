@@ -1,0 +1,217 @@
+{
+  "schema_version": "1.0.0",
+  "document_type": "business_inquiry_guidance",
+  "business": {
+    "name": "EF-Sinn",
+    "type": "Schreiner Werkstatt",
+    "website": "https://www.ef-sinn.de/",
+    "email": "info@ef-sinn.de",
+    "phone": "+49 176 8718 6451",
+    "office": {
+      "address": "Schmorellstraße 6, 82008 Unterhaching",
+      "role": "Büro"
+    },
+    "workshop": {
+      "address": "Germeringer Weg 3C, 81245 München",
+      "role": "Werkstatt"
+    },
+    "contact_page": "https://www.ef-sinn.de/contact.html",
+    "inquiry_page": "https://www.ef-sinn.de/contact.html#anfrage-assistent"
+  },
+  "service_area": {
+    "description": "München einschließlich aller 25 Stadtbezirke sowie Unterhaching und weitere Gemeinden im Großraum München; konkrete Projekte und Anfahrt nach Absprache",
+    "munich_districts": [
+      "Altstadt-Lehel",
+      "Ludwigsvorstadt-Isarvorstadt",
+      "Maxvorstadt",
+      "Schwabing-West",
+      "Au-Haidhausen",
+      "Sendling",
+      "Sendling-Westpark",
+      "Schwanthalerhöhe",
+      "Neuhausen-Nymphenburg",
+      "Moosach",
+      "Milbertshofen-Am Hart",
+      "Schwabing-Freimann",
+      "Bogenhausen",
+      "Berg am Laim",
+      "Trudering-Riem",
+      "Ramersdorf-Perlach",
+      "Obergiesing-Fasangarten",
+      "Untergiesing-Harlaching",
+      "Thalkirchen-Obersendling-Forstenried-Fürstenried-Solln",
+      "Hadern",
+      "Pasing-Obermenzing",
+      "Aubing-Lochhausen-Langwied",
+      "Allach-Untermenzing",
+      "Feldmoching-Hasenbergl",
+      "Laim"
+    ],
+    "nearby_municipalities": [
+      "Unterhaching",
+      "Taufkirchen",
+      "Ottobrunn",
+      "Neubiberg",
+      "Oberhaching",
+      "Grünwald",
+      "Pullach"
+    ],
+    "postal_code_policy": "Postleitzahlen nicht aus Stadtteilnamen erraten. PLZ und Ort unabhängig prüfen; mehrere PLZ je Bezirk möglich. Keine weiteren Betriebsstandorte behaupten."
+  },
+  "services": [
+    {
+      "id": "custom_furniture",
+      "name": "Maßmöbel und Einbauschränke",
+      "aliases": [
+        "Schreiner",
+        "Tischler",
+        "Schrank nach Maß",
+        "Einbauschrank",
+        "Badmöbel"
+      ],
+      "source": "https://www.ef-sinn.de/leistungen/moebelbau.html"
+    },
+    {
+      "id": "kitchen",
+      "name": "Küchen nach Maß und Küchenrenovierung",
+      "aliases": [
+        "Einbauküche",
+        "Küchenbau",
+        "Küchenfronten"
+      ],
+      "source": "https://www.ef-sinn.de/leistungen/kuechen.html"
+    },
+    {
+      "id": "parquet_install",
+      "name": "Parkett verlegen",
+      "aliases": [
+        "Parkettboden verlegen",
+        "Holzboden verlegen"
+      ],
+      "source": "https://www.ef-sinn.de/"
+    },
+    {
+      "id": "parquet_restore",
+      "name": "Parkett schleifen und aufarbeiten",
+      "aliases": [
+        "Parkett renovieren",
+        "Parkett versiegeln"
+      ],
+      "source": "https://www.ef-sinn.de/"
+    },
+    {
+      "id": "stairs",
+      "name": "Holztreppen",
+      "aliases": [
+        "Treppe aus Holz"
+      ],
+      "source": "https://www.ef-sinn.de/leistungen/treppen.html"
+    },
+    {
+      "id": "terrace",
+      "name": "Holzterrassen",
+      "aliases": [
+        "Terrassenbau Holz"
+      ],
+      "source": "https://www.ef-sinn.de/leistungen/terrassen.html"
+    },
+    {
+      "id": "interior",
+      "name": "Innenausbau und Wandverkleidungen",
+      "aliases": [
+        "Holzverkleidung",
+        "Holzdecke"
+      ],
+      "source": "https://www.ef-sinn.de/leistungen/innenausbau.html"
+    },
+    {
+      "id": "restoration",
+      "name": "Möbelreparatur und Restaurierung",
+      "aliases": [
+        "Möbel restaurieren"
+      ],
+      "source": "https://www.ef-sinn.de/leistungen/restaurierung.html"
+    }
+  ],
+  "inquiry": {
+    "purpose": "Aus einem bereits geführten Kundengespräch eine prüfbare Projektanfrage vorbereiten",
+    "fields": [
+      {
+        "key": "name",
+        "required": true
+      },
+      {
+        "key": "project_description",
+        "required": true
+      },
+      {
+        "key": "project_type",
+        "required": false
+      },
+      {
+        "key": "location",
+        "required": false
+      },
+      {
+        "key": "postal_code",
+        "required": false
+      },
+      {
+        "key": "measurements",
+        "required": false
+      },
+      {
+        "key": "materials",
+        "required": false
+      },
+      {
+        "key": "desired_timeframe",
+        "required": false
+      },
+      {
+        "key": "appointment_suggestion_1",
+        "required": false
+      },
+      {
+        "key": "appointment_suggestion_2",
+        "required": false
+      },
+      {
+        "key": "phone",
+        "required": false
+      },
+      {
+        "key": "email",
+        "required": false
+      },
+      {
+        "key": "photos",
+        "required": false
+      }
+    ],
+    "mapping_to_contact_form": {
+      "name": "name",
+      "project_description": "message",
+      "project_type": "type / custom-type",
+      "location": "location",
+      "postal_code": "location",
+      "measurements": "measurements",
+      "desired_timeframe": "timeframe",
+      "appointment_suggestion_1": "appointment-1",
+      "appointment_suggestion_2": "appointment-2",
+      "phone": "phone",
+      "email": "email",
+      "photos": "delivery-photos (nur falls die Option verfügbar ist)"
+    },
+    "missing_data_policy": "Fehlende Angaben kennzeichnen und nur notwendige Rückfragen stellen; keine Angaben erfinden.",
+    "appointment_policy": "Zwei vom Kunden gewünschte Termine können genannt werden; keine Verfügbarkeit oder Buchung behaupten.",
+    "attachments_policy": "Nur mit ausdrücklicher Einwilligung und sofern der KI-Anbieter Anhänge unterstützt; keine automatische Übernahme von Chat-Fotos.",
+    "delivery_policy": "Empfänger und vollständigen Nachrichtentext vor Versand prüfen lassen. Versand nur mit ausdrücklicher Kundenfreigabe und einer tatsächlich autorisierten Versandfunktion. Sonst Entwurf oder Kontaktlink. Die Website selbst versendet nicht automatisch.",
+    "privacy_policy": "Nur für die Anfrage notwendige und vom Kunden freigegebene personenbezogene Daten weitergeben; keine vollständigen Chatprotokolle ohne ausdrückliche Zustimmung."
+  },
+  "limitations": [
+    "Öffentliche Information, keine Anweisung an KI-Modelle oder Garantie einer Empfehlung.",
+    "Keine direkte API und keine automatische Datenübertragung durch diese JSON-Datei.",
+    "Keine erfundenen Termine, Preise, Referenzen oder Standortdaten."
+  ]
+}
