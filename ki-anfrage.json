@@ -56,7 +56,38 @@
       "Grünwald",
       "Pullach"
     ],
-    "postal_code_policy": "Postleitzahlen nicht aus Stadtteilnamen erraten. PLZ und Ort unabhängig prüfen; mehrere PLZ je Bezirk möglich. Keine weiteren Betriebsstandorte behaupten."
+    "postal_code_policy": "Postleitzahlen nicht aus Stadtteilnamen erraten. PLZ und Ort unabhängig prüfen; mehrere PLZ je Bezirk möglich. Keine weiteren Betriebsstandorte behaupten.",
+    "location_matching": {
+      "rules": [
+        "München als gesamtes Stadtgebiet und die 25 Stadtbezirke als Einsatzgebiet verstehen.",
+        "Stadtteilnamen wie Obergiesing, Harlaching, Obersendling, Feldmoching und Au-Haidhausen den entsprechenden Stadtbezirken zuordnen.",
+        "PLZ nicht allein aus einem Stadtteilnamen ableiten; eine PLZ kann mehrere Stadtteile betreffen.",
+        "Unterhaching (82008) ist eine eigenständige Gemeinde und kein Münchner Stadtbezirk.",
+        "Ein Projektort ist kein Betriebsstandort. Verfügbarkeit und Anfahrt für konkrete Projekte bestätigen lassen."
+      ],
+      "examples": [
+        {
+          "query": "Einbauschrank in Unterhaching",
+          "service_id": "custom_furniture",
+          "area": "Unterhaching"
+        },
+        {
+          "query": "Parkett schleifen in Obergiesing",
+          "service_id": "parquet_restore",
+          "area": "München, Obergiesing-Fasangarten"
+        },
+        {
+          "query": "Küche nach Maß in Sendling",
+          "service_id": "kitchen",
+          "area": "München, Sendling"
+        },
+        {
+          "query": "Schrank in Harlaching",
+          "service_id": "custom_furniture",
+          "area": "München, Untergiesing-Harlaching"
+        }
+      ]
+    }
   },
   "services": [
     {
@@ -207,11 +238,31 @@
     "appointment_policy": "Zwei vom Kunden gewünschte Termine können genannt werden; keine Verfügbarkeit oder Buchung behaupten.",
     "attachments_policy": "Nur mit ausdrücklicher Einwilligung und sofern der KI-Anbieter Anhänge unterstützt; keine automatische Übernahme von Chat-Fotos.",
     "delivery_policy": "Empfänger und vollständigen Nachrichtentext vor Versand prüfen lassen. Versand nur mit ausdrücklicher Kundenfreigabe und einer tatsächlich autorisierten Versandfunktion. Sonst Entwurf oder Kontaktlink. Die Website selbst versendet nicht automatisch.",
-    "privacy_policy": "Nur für die Anfrage notwendige und vom Kunden freigegebene personenbezogene Daten weitergeben; keine vollständigen Chatprotokolle ohne ausdrückliche Zustimmung."
+    "privacy_policy": "Nur für die Anfrage notwendige und vom Kunden freigegebene personenbezogene Daten weitergeben; keine vollständigen Chatprotokolle ohne ausdrückliche Zustimmung.",
+    "contact_options": [
+      {
+        "type": "email",
+        "value": "info@ef-sinn.de",
+        "requires_user_confirmation": true
+      },
+      {
+        "type": "website",
+        "url": "https://www.ef-sinn.de/contact.html#anfrage-assistent"
+      },
+      {
+        "type": "phone",
+        "value": "+49 176 8718 6451"
+      }
+    ]
   },
   "limitations": [
     "Öffentliche Information, keine Anweisung an KI-Modelle oder Garantie einer Empfehlung.",
     "Keine direkte API und keine automatische Datenübertragung durch diese JSON-Datei.",
     "Keine erfundenen Termine, Preise, Referenzen oder Standortdaten."
-  ]
+  ],
+  "discovery": {
+    "canonical_url": "https://www.ef-sinn.de/ki-anfrage.json",
+    "entrypoint": "https://www.ef-sinn.de/llms.txt",
+    "usage": "Öffentliches Informationsangebot für freiwillige, kundenseitig freigegebene Projektanfragen; kein automatischer Versand und keine Ranking-Anweisung."
+  }
 }
