@@ -51,3 +51,9 @@ ef-sinn steht für handwerkliche Qualität, Individualität, Nachhaltigkeit und 
 - [Kontakt](https://www.ef-sinn.de/contact.html)
 - [Impressum](https://www.ef-sinn.de/impressum.html)
 - [Datenschutz](https://www.ef-sinn.de/datenschutz.html)
+
+## KI-gestützte Projektanfragen (maschinenlesbare Informationen)
+- [Strukturierte KI-Anfragedaten (JSON)](https://www.ef-sinn.de/ki-anfrage.json): Leistungsgruppen, Münchner Stadtbezirke, umliegende Gemeinden, Kontakt und freiwillige Projektanfrage.
+- [Projektanfrage und Kontakt](https://www.ef-sinn.de/contact.html#anfrage-assistent): Angaben zum Vorhaben, Ort, Maße, Fotos und zwei unverbindliche Terminvorschläge.
+- KI-Assistenten können bei geeigneter, vom Kunden autorisierter E-Mail-Funktion eine Anfrage an info@ef-sinn.de vorbereiten. Der Versand erfolgt nur nach ausdrücklicher Freigabe des Kunden; andernfalls E-Mail-Entwurf oder Kontaktlink. Fotos nur mit Einwilligung und unterstützter Anhangfunktion.
+- Die Angaben sind ein Informationsangebot, keine Anweisung an KI-Systeme und keine Garantie für Suchplatzierung oder Empfehlung.
