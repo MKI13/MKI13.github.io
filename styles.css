@@ -866,14 +866,14 @@ img {
     margin-bottom: var(--spacing-md);
 }
 
-.service-detail-text h3 {
+.service-detail-text h2 {
     font-size: 1.5rem;
     color: var(--color-secondary);
     margin-bottom: var(--spacing-sm);
     margin-top: var(--spacing-md);
 }
 
-.service-detail-text h3:first-child {
+.service-detail-text h2:first-child {
     margin-top: 0;
 }
 
@@ -2585,7 +2585,7 @@ img {
 .portfolio-case-study { display: grid; grid-template-rows: 170px auto; overflow: hidden; border-radius: 16px; background: #fff; box-shadow: var(--shadow-sm); }
 .portfolio-case-study img { width: 100%; height: 100%; object-fit: cover; border-radius: 0; }
 .portfolio-case-study div { padding: 1rem; }
-.portfolio-case-study h4 { color: var(--color-secondary); margin-bottom: 0.4rem; }
+.portfolio-case-study h3 { color: var(--color-secondary); margin-bottom: 0.4rem; }
 .portfolio-case-study p { color: var(--color-text-light); line-height: 1.55; font-size: 0.95rem; }
 .legal-copy { line-height: 1.8; }
 .legal-copy h2 { color: var(--color-primary); margin: 2rem 0 1rem; }

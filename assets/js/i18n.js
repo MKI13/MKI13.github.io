@@ -26,7 +26,7 @@
     return 'de';
   }
 
-  function prefix(){return location.pathname.indexOf('/leistungen/')>-1?'../':'./'}
+  var localeBase = new URL('../../i18n/', document.currentScript.src);
 
   var DICTIONARIES={};
   var latestLanguageRequest=0;
@@ -40,7 +40,7 @@
       if(value) DICTIONARIES[lang]=value;
       cb(value);
     }
-    x.open('GET',prefix()+'i18n/'+lang+'.json?v=20260914-review');
+    x.open('GET',new URL(lang+'.json?v=20261123', localeBase).href);
     x.timeout=10000;
     x.onload=function(){
       if(x.status!==200) { finish(null); return; }
