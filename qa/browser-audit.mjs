@@ -203,11 +203,13 @@ try {
       } finally { await page.close(); }
     });
   }
-  await check('Language choice persists within the tab only',async()=>{
-    const isolated = await browser.newContext({locale:'de-DE'});
+  await check('Greek browser starts in German and manual language choice stays within the tab',async()=>{
+    const isolated = await browser.newContext({locale:'el-GR'});
     try {
       const page = await isolated.newPage();
-      await ready(page);
+      await ready(page, 'index.html');
+      assert.equal(await page.locator('html').getAttribute('data-i18n-fallback-done'),'de');
+      assert.equal(await page.locator('.lang-btn-active').getAttribute('data-lang-code'),'de');
       await page.locator('[data-lang-code="el"]').click();
       await page.waitForFunction(()=>document.documentElement.lang === 'el');
       await ready(page, 'datenschutz.html#kontaktaufnahme');
@@ -215,8 +217,8 @@ try {
       assert.equal(await page.locator('#kontaktaufnahme').count(),1);
       assert.equal(await page.evaluate(()=>window.localStorage.getItem('site_lang')),null);
       const independent = await isolated.newPage();
-      await ready(independent);
-      await independent.waitForFunction(()=>document.documentElement.getAttribute('data-i18n-fallback-done') === 'de');
+      await ready(independent, 'index.html');
+      assert.equal(await independent.locator('html').getAttribute('data-i18n-fallback-done'),'de');
     } finally { await isolated.close(); }
   });
   await check('Blocked browser storage does not break language switch or enquiry',async()=>{
