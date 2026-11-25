@@ -191,8 +191,10 @@ try {
       const page = await browser.newPage({locale:'de-DE', viewport:{width:390,height:844}, isMobile:true, hasTouch:true});
       try {
         await ready(page,`leistungen/${service}.html`);
-        await page.locator('.service-reference a').first().tap();
-        assert.equal(new URL(page.url()).hash, '#'+reference);
+        await Promise.all([
+          page.waitForURL(new URL(`portfolio.html#${reference}`,base).href),
+          page.locator('.service-reference .home-text-link').tap(),
+        ]);
         const project = page.locator('#'+reference);
         assert.equal(await project.getAttribute('data-request-type'),category);
         await project.locator('.project-request a').tap();
