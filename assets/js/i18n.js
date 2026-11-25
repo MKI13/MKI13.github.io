@@ -17,15 +17,6 @@
     try { sessionStorage.setItem('site_lang',code); } catch(error) { /* Optional preference; never block the page. */ }
   }
 
-  function detect(){
-    var s=storedLanguage();
-    if(s&&CODES.indexOf(s)>-1) return s;
-    var n=(navigator.language||'de').toLowerCase();
-    if(n.indexOf('de-at')===0) return 'de-AT';
-    for(var i=0;i<CODES.length;i++){if(n.indexOf(CODES[i])===0) return CODES[i]}
-    return 'de';
-  }
-
   var localeBase = new URL('../../i18n/', document.currentScript.src);
 
   var DICTIONARIES={};
@@ -247,7 +238,8 @@
   }
 
   function boot(){
-    var lang=detect();
+    var selected=storedLanguage();
+    var lang=CODES.indexOf(selected)>-1?selected:'de';
     window.EFSINN_I18N={lang:'de',dict:{}};
     switcher('de');
     activateLanguage(lang);

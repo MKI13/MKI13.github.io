@@ -1,12 +1,16 @@
 # EF-Sinn Webseite – dauerhafter Arbeitsstand
 
-Stand: 25. November 2026 · Website-Version: `v2026.11.25` · Asset-Version: `20261125`
+Stand: 25. November 2026 · Website-Version: `v2026.11.25.1` · Sprachskript: `20261125.1`
 
 ## Zuerst lesen, wenn ein Chat endet
 
 Repository: `MKI13/MKI13.github.io`. **GitHub Pages veröffentlicht `main` aus `/` unter `https://www.ef-sinn.de/`.** Der zu Beginn vorgefundene Repository-Standardzweig war ein alter Designzweig; deshalb Produktionsstand immer ausdrücklich gegen `main` prüfen. Keine anderen Projekte auf dem GEEKOM-PC verändern.
 
 Die erneute Fertigstellung und Veröffentlichung nach bestandenen Tests wurden vom Inhaber freigegeben. Eine alte Chatnotiz zu Commit `e066bc7` ließ sich auf GitHub nicht verifizieren. Ausgangspunkt dieser tatsächlich implementierten Version ist `f39d5fff849e9bbcb2d03e4e26259a5c6cb5ef0d`; ältere behauptete Testergebnisse werden nicht übernommen.
+
+## Deutsch als Standardsprache
+
+Version `v2026.11.25.1` öffnet neue Tabs auf Deutsch, unabhängig von der Sprache des Browsers. Wer eine andere Sprache auswählt, behält sie beim Navigieren im selben Tab. Ein Browser-Test mit Einstellung `el-GR` prüft beide Wege. Das Sprachskript hat auf allen 14 Seiten eine neue Cache-Version. Für eine Rücknahme dieser Korrektur ist `v2026.11.25` der gesicherte vorherige Stand.
 
 ## Veröffentlichung und Rücksprung vom 25. November 2026
 
