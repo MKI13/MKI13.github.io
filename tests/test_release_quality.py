@@ -78,6 +78,6 @@ class ReleaseQualityTests(unittest.TestCase):
     def test_release_asset_versions_are_consistent(self):
         for page in PAGES:
             html=page.read_text()
-            self.assertNotRegex(html,r'(?:styles\.css|assets/js/i18n\.js)\?v=(?!20261123)[^"\s]+')
+            self.assertNotRegex(html,r'(?:styles\.css|assets/js/i18n\.js)\?v=(?!20261125)[^"\s]+')
 if __name__=='__main__':
     unittest.main()

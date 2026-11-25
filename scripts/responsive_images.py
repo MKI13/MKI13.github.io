@@ -5,6 +5,7 @@ import re
 
 LAYOUT_SIZES = {
     'home-hero': '(max-width: 900px) calc(100vw - 2rem), (max-width: 1250px) calc(55vw - 2.5rem), 660px',
+    'service-reference': '(max-width: 768px) calc(100vw - 2rem), (max-width: 1200px) calc((100vw - 4rem) * 0.42), 477px',
     'service-gallery': '(max-width: 768px) calc(100vw - 2rem), (max-width: 900px) calc((100vw - 6rem) / 2), (max-width: 1200px) calc((100vw - 8rem) / 3), 358px',
     'case-grid': '(max-width: 768px) calc(100vw - 2rem), (max-width: 900px) calc(100vw - 4rem), (max-width: 1200px) calc((100vw - 6rem) / 3), 368px',
     'half-content': '(max-width: 768px) calc(100vw - 2rem), (max-width: 1200px) calc((100vw - 8rem) / 2), 536px',
@@ -31,6 +32,8 @@ class ImageLayouts(HTMLParser):
         for classes in reversed(contexts):
             if 'home-hero-photo' in classes:
                 return 'home-hero'
+            if 'service-reference-photo' in classes:
+                return 'service-reference'
             if 'service-gallery-grid' in classes:
                 return 'service-gallery'
             if 'portfolio-case-grid' in classes:

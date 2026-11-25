@@ -182,6 +182,41 @@ try {
     assert.equal(await page.locator('.portfolio-category-btn[aria-pressed="true"]').count(),1);
   });
   await context.close();
+  for(const [service, reference, category] of [
+    ['moebelbau', 'referenz-einbaugarderobe', 'customFurniture'],
+    ['kuechen', 'referenz-holzkueche', 'kitchen'],
+    ['innenausbau', 'referenz-parkett', 'parquetInstall'],
+  ]) {
+    await check(`Service ${service} links to the matching reference and enquiry`, async()=>{
+      const page = await browser.newPage({locale:'de-DE', viewport:{width:390,height:844}, isMobile:true, hasTouch:true});
+      try {
+        await ready(page,`leistungen/${service}.html`);
+        await page.locator('.service-reference a').first().tap();
+        assert.equal(new URL(page.url()).hash, '#'+reference);
+        const project = page.locator('#'+reference);
+        assert.equal(await project.getAttribute('data-request-type'),category);
+        await project.locator('.project-request a').tap();
+        await page.locator(`[data-project-key="${category}"][aria-pressed="true"]`).waitFor();
+        assert.equal(new URL(page.url()).hash,'#anfrage-assistent');
+      } finally { await page.close(); }
+    });
+  }
+  await check('Language choice persists within the tab only',async()=>{
+    const isolated = await browser.newContext({locale:'de-DE'});
+    try {
+      const page = await isolated.newPage();
+      await ready(page);
+      await page.locator('[data-lang-code="el"]').click();
+      await page.waitForFunction(()=>document.documentElement.lang === 'el');
+      await ready(page, 'datenschutz.html#kontaktaufnahme');
+      await page.waitForFunction(()=>document.documentElement.lang === 'el');
+      assert.equal(await page.locator('#kontaktaufnahme').count(),1);
+      assert.equal(await page.evaluate(()=>window.localStorage.getItem('site_lang')),null);
+      const independent = await isolated.newPage();
+      await ready(independent);
+      await independent.waitForFunction(()=>document.documentElement.getAttribute('data-i18n-fallback-done') === 'de');
+    } finally { await isolated.close(); }
+  });
   await check('Blocked browser storage does not break language switch or enquiry',async()=>{
     const isolated=await browser.newContext({locale:'de-DE'});
     await isolated.addInitScript(()=>{Storage.prototype.getItem=function(){throw new DOMException('Denied','SecurityError');};Storage.prototype.setItem=function(){throw new DOMException('Denied','SecurityError');};});

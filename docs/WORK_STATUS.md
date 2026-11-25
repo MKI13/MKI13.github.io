@@ -1,12 +1,22 @@
 # EF-Sinn Webseite – dauerhafter Arbeitsstand
 
-Stand: 23. November 2026 · Asset-Version: `20261123`
+Stand: 25. November 2026 · Asset-Version: `20261125`
 
 ## Zuerst lesen, wenn ein Chat endet
 
 Repository: `MKI13/MKI13.github.io`. **GitHub Pages veröffentlicht `main` aus `/` unter `https://www.ef-sinn.de/`.** Der zu Beginn vorgefundene Repository-Standardzweig war ein alter Designzweig; deshalb Produktionsstand immer ausdrücklich gegen `main` prüfen. Keine anderen Projekte auf dem GEEKOM-PC verändern.
 
 Die erneute Fertigstellung und Veröffentlichung nach bestandenen Tests wurden vom Inhaber freigegeben. Eine alte Chatnotiz zu Commit `e066bc7` ließ sich auf GitHub nicht verifizieren. Ausgangspunkt dieser tatsächlich implementierten Version ist `f39d5fff849e9bbcb2d03e4e26259a5c6cb5ef0d`; ältere behauptete Testergebnisse werden nicht übernommen.
+
+## Sprachfassungen, Referenzen und Projektanfragen vom 25. November 2026
+
+- Die Projektanfrage erfasst Projektart, Beschreibung, Ort, Maße, Zeitraum und zwei optionale Termine sowie Kontaktdaten. Der Kunde prüft den Entwurf und versendet die E-Mail. Fotos können im E-Mail-Programm angehängt werden. Die sichtbare [KI-Anleitung](https://www.ef-sinn.de/contact.html#anfrage-mit-ki) und `ki-anfrage.json` erläutern die Vorbereitung und die passenden Formularfelder.
+- Maßmöbel, Küchen und Parkett zeigen je ein ausgeführtes Projekt aus den vorhandenen Referenzen. Der Projektverweis springt zum passenden Eintrag. Beide Seiten verlinken die Anfrage mit der passenden Projektart.
+- Sechs Sprachfassungen wurden eigenständig redigiert. Die Leistungen, Bedienelemente, Formularmeldungen, E-Mail-Texte und 20 ältere Referenzbeschreibungen wurden konkretisiert. Alle sieben Varianten haben denselben Schlüsselsatz und vollständige Rechtstexte.
+- Die Inhalte stehen als normale HTML-Texte auf der Website. Die Seitenadressen und kanonischen URLs werden beibehalten. Die Sitemap weist die wesentlichen Inhaltsänderungen aus. `llms.txt` und `ki-anfrage.json` ergänzen die öffentlichen Seiten und verweisen direkt auf Leistungen, Referenzen und Anfrage. Die Sprachumschaltung erfolgt innerhalb der bestehenden URLs. [Google Search Central](https://developers.google.com/search/docs/appearance/ai-features)
+- Die Datenschutzerklärung erläutert den Mailanbieter Proton, das Hosting und die sitzungsbezogene Sprachwahl. Das Impressum enthält die Umsatzsteuer-Identifikationsnummer. Die tatsächliche Datenverarbeitung nach Eingang von Anfragen und die einschlägigen Vertragsunterlagen müssen vor der öffentlichen Freigabe abgeglichen werden.
+
+Der Arbeitsstand wird über Pull Request #23 und die private Vorschau geprüft. Interaktiver Chromium-Test: die drei Wege von der Leistung zur Referenz und zur vorausgewählten Projektart, die sieben Fassungen der Kontaktseite sowie Ort, Maße, Zeitraum und beide Termine im E-Mail-Entwurf getestet. Die automatisierten Prüfberichte sind dem Pull Request zugeordnet.
 
 ## Website-Überarbeitung vom 23. November 2026
 

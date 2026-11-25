@@ -53,7 +53,7 @@ class ReviewFollowupTests(unittest.TestCase):
             'de-AT':['Vorschau','Zwischenablage','Textdatei','E-Mail selbst versenden'],
             'en':['preview','clipboard','text file','send the email yourself'],
             'fr':['aperçu','presse-papiers','fichier texte','envoyez vous-même'],
-            'el':['προεπισκόπηση','πρόχειρο','αρχείο κειμένου','στείλετε οι ίδιοι'],
+            'el':['προεπισκόπηση','πρόχειρο','αρχείο κειμένου','μόνο όταν στείλετε εσείς'],
             'it':['anteprima','appunti','file di testo','invia personalmente'],
             'es':['vista previa','portapapeles','archivo de texto','envía personalmente'],
         }

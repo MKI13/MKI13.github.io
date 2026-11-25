@@ -311,3 +311,87 @@ main section[id] { scroll-margin-top: 1rem; }
 @media (max-width: 768px) {
     html { scroll-padding-bottom: calc(4.5rem + env(safe-area-inset-bottom)); }
 }
+
+.service-reference {
+    padding: clamp(1.5rem, 4vw, 3rem) 0;
+}
+.service-reference-card {
+    display: grid;
+    grid-template-columns: minmax(0, 42fr) minmax(0, 58fr);
+    align-items: center;
+    background: var(--site-mist);
+    border: 1px solid var(--site-border);
+    border-radius: 0.4rem;
+    overflow: clip;
+}
+.service-reference-photo img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+.service-reference-copy {
+    min-width: 0;
+    padding: clamp(1.25rem, 4vw, 3rem);
+}
+.service-reference-copy .section-title {
+    display: block;
+    font-family: inherit;
+    font-size: 0.92rem;
+    letter-spacing: 0.06em;
+    font-weight: 750;
+    margin-bottom: 0.7rem;
+}
+.service-reference-copy .section-title::after {
+    content: none;
+}
+.service-reference-copy h3 {
+    font: 500 clamp(1.8rem, 4.5vw, 2.8rem)/1.12 var(--site-heading);
+    margin: 0 0 0.9rem;
+}
+.service-reference-copy p {
+    color: var(--site-muted);
+    max-width: 43ch;
+}
+.service-reference-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.65rem 1.1rem;
+    align-items: center;
+    margin-top: 1rem;
+}
+.service-reference-actions .btn {
+    white-space: normal;
+    text-align: center;
+}
+.project-card[id] {
+    scroll-margin-top: 1rem;
+}
+.project-card:target {
+    border-color: var(--site-blue);
+}
+.contact-ai-guide {
+    padding: 0 0 clamp(1.5rem, 4vw, 3rem);
+}
+.contact-ai-guide-inner {
+    padding: clamp(1.25rem, 4vw, 2.5rem);
+    border: 1px solid var(--site-border);
+    border-radius: 0.4rem;
+    background: var(--site-mist);
+}
+.contact-ai-guide-inner p {
+    max-width: 66ch;
+    margin-top: 0.5rem;
+}
+.strength-card h3 a {
+    color: var(--site-blue-dark);
+    text-decoration: underline;
+    text-underline-offset: 0.22em;
+}
+@media (max-width: 768px) {
+    .service-reference-card {
+        grid-template-columns: minmax(0, 1fr);
+    }
+    .service-reference-photo img {
+        aspect-ratio: 16 / 10;
+    }
+}

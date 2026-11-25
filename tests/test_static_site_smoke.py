@@ -129,7 +129,7 @@ class StaticSiteSmokeTest(unittest.TestCase):
     def test_legal_pages_have_static_no_javascript_fallback_text(self):
         required = {
             'impressum.html': ['Marios Karampas', 'Schmorellstraße', 'info@ef-sinn.de'],
-            'datenschutz.html': ['Datenschutz auf einen Blick', 'Verantwortlich', 'Keine Cookies'],
+            'datenschutz.html': ['Datenschutz auf einen Blick', 'Verantwortlich', 'Session Storage'],
         }
         for page, snippets in required.items():
             with self.subTest(page=page):
