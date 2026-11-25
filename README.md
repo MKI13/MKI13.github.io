@@ -14,7 +14,7 @@
 - `assets/js/inquiry.js`: lokale Anfragevorbereitung mit Prüfung, Vorschau, E-Mail-Link, Kopieren und Textdatei. **Kein serverseitiger Direktversand und keine Foto-Uploads.** Fotos werden erst im E-Mail-Programm angehängt.
 - `assets/optimized/`: responsive WebP-Kopien vorhandener eigener Bilder. Die Originale bleiben unverändert; `manifest.json` dokumentiert Herkunft, Prüfsummen und Größen.
 
-Es werden keine zusätzlichen Analyse-, Werbe- oder Formularanbieter eingebunden. Die Sprachpräferenz kann im Browser gespeichert werden; Anfragetexte werden vom Assistenten nicht in Browser-Speichern abgelegt. Hosting und Kontaktbearbeitung sind in der Datenschutzerklärung beschrieben. Diese technische Beschreibung ist keine rechtliche Konformitätsbescheinigung.
+Es werden keine zusätzlichen Analyse-, Werbe- oder Formularanbieter eingebunden. Die gewählte Sprache wird im aktuellen Browser-Tab für die Sitzung gespeichert; Anfragetexte werden vom Assistenten nicht in Browser-Speichern abgelegt. Hosting und Kontaktbearbeitung sind in der Datenschutzerklärung beschrieben. Diese technische Beschreibung ist keine rechtliche Konformitätsbescheinigung.
 
 ## Entwicklung und Prüfung
 

@@ -25,7 +25,8 @@
     <meta name="twitter:title" content="Kontakt – ef-sinn Schreiner Werkstatt München">
     <meta name="twitter:description" content="Erste Einschätzung für Maßmöbel, Parkettboden, Küchen & Innenausbau.">
     <title>Kontakt – ef-sinn | Schreiner Werkstatt München & Unterhaching</title>
-    <link rel="stylesheet" href="styles.css?v=20260914-review">
+    <link rel="stylesheet" href="styles.css?v=20261125">
+    <link rel="stylesheet" href="assets/css/site-design.css?v=20261125">
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -52,7 +53,7 @@
     <link rel="stylesheet" href="assets/css/inquiry-delivery.css?v=issue16">
 </head>
 <body>
-    <a class="skip-link" href="#main-content">Zum Inhalt springen</a>
+    <a class="skip-link" href="#main-content" data-i18n="nav.skip">Zum Inhalt springen</a>
     <!-- Navigation -->
     <header class="header" role="banner">
         <nav class="navbar" role="navigation" aria-label="Hauptnavigation" data-i18n-aria-label="nav.mainAria">
@@ -65,7 +66,7 @@
                     <li><a href="index.html#leistungen" class="nav-link" data-i18n="nav.services">Leistungen</a></li>
                     <li><a href="about.html" class="nav-link" data-i18n="nav.about">Über uns</a></li>
                     <li><a href="portfolio.html" class="nav-link" data-i18n="nav.portfolio">Referenzen</a></li>
-                    <li><a href="contact.html" class="nav-link active" data-i18n="nav.contact">Kontakt</a></li>
+                    <li><a href="contact.html" class="nav-link active" aria-current="page" data-i18n="nav.contact">Kontakt</a></li>
                 </ul>
                 <div class="nav-actions" aria-label="Schnellkontakt" data-i18n-aria-label="nav.quickContact">
                     <a href="tel:+4917687186451" class="nav-phone" aria-label="ef-sinn telefonisch kontaktieren" data-i18n-aria-label="nav.callAria">+49 176 8718 6451</a>
@@ -236,10 +237,19 @@
                         </section>
                         <p id="delivery-status" class="delivery-status inquiry-note" role="status" aria-live="polite" aria-atomic="true"></p>
                         <p id="inquiry-status" class="inquiry-note inquiry-status" role="status" aria-live="polite" aria-atomic="true"></p>
-                        <p class="inquiry-note small"><a href="datenschutz.html" data-i18n="footer.privacy">Datenschutz</a></p>
+                        <p class="inquiry-note small"><a href="datenschutz.html#kontaktaufnahme" data-i18n="contact.inquiry.privacyLink">Datenschutzhinweise zur Kontaktaufnahme</a></p>
                         <p class="inquiry-note small" data-i18n="contact.inquiry.fallback">Für Fotos: Nach dem Öffnen der E-Mail einfach Bilder als Anhang hinzufügen. Falls sich kein E-Mail-Programm öffnet, kopieren Sie die Angaben und senden Sie sie an <a href="mailto:info@ef-sinn.de" class="contact-link">info@ef-sinn.de</a> oder rufen Sie direkt an: <a href="tel:+4917687186451">+49 176 8718 6451</a>.</p>
                     </form>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-ai-guide" aria-labelledby="anfrage-mit-ki">
+        <div class="container">
+            <div class="contact-ai-guide-inner">
+                <h2 class="section-title" id="anfrage-mit-ki" data-i18n="contact.ai.title">Projektanfrage mit einem KI-Assistenten vorbereiten</h2>
+                <p data-i18n="contact.ai.text">Sie können einen KI-Assistenten bitten, aus Projektart, Ort, ungefähren Maßen, Materialwünschen und Zeitraum einen E-Mail-Entwurf zu erstellen. Geben Sie bei Parkett die Fläche in m² und bei Sockelleisten die Länge in laufenden Metern an, falls bekannt. Prüfen und versenden Sie die Nachricht anschließend selbst. Persönliche Kontaktdaten und Fotos können Sie direkt im E-Mail-Programm ergänzen.</p>
             </div>
         </div>
     </section>
@@ -315,7 +325,7 @@
             </div>
         </div>
     </footer>
-    <script src="assets/js/i18n.js?v=20260914-review"></script>
+    <script src="assets/js/i18n.js?v=20261125"></script>
 
     <script src="assets/js/inquiry.js?v=issue16" defer></script>
     <script src="assets/js/inquiry-delivery-config.js?v=issue16" defer></script>

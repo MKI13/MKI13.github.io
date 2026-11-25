@@ -90,7 +90,36 @@ def hardcoded_german_literals():
     return literals
 
 
+class LegalMarkupParser(HTMLParser):
+    def __init__(self, fragment):
+        super().__init__()
+        self.structure = []
+        self.feed(fragment)
+
+    def handle_starttag(self, tag, attrs):
+        self.structure.append((tag, sorted(attrs)))
+
+    def handle_endtag(self, tag):
+        self.structure.append((tag, None))
+
+
 class I18nCompletenessTest(unittest.TestCase):
+    def test_locales_keep_the_same_keys_and_full_legal_notices(self):
+        original = json.loads((ROOT / 'i18n/de.json').read_text())
+        legal = ['legal.privacy.body', 'legal.imprint.body']
+        for path in sorted((ROOT / 'i18n').glob('*.json')):
+            translated = json.loads(path.read_text())
+            with self.subTest(locale=path.stem):
+                self.assertEqual(set(original), set(translated))
+                for key in legal:
+                    self.assertEqual(
+                        LegalMarkupParser(original[key]).structure,
+                        LegalMarkupParser(translated[key]).structure,
+                        key,
+                    )
+                if path.stem == 'de-AT':
+                    self.assertEqual([original[key] for key in legal], [translated[key] for key in legal])
+
     def test_hardcoded_main_page_german_has_runtime_translation_source(self):
         de = json.loads((ROOT / 'i18n/de.json').read_text(encoding='utf-8'))
         reverse = {normalize(value): key for key, value in de.items() if isinstance(value, str)}

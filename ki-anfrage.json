@@ -1,5 +1,5 @@
 {
-  "schema_version": "1.0.0",
+  "schema_version": "1.1.0",
   "document_type": "business_inquiry_guidance",
   "business": {
     "name": "EF-Sinn",
@@ -16,7 +16,8 @@
       "role": "Werkstatt"
     },
     "contact_page": "https://www.ef-sinn.de/contact.html",
-    "inquiry_page": "https://www.ef-sinn.de/contact.html#anfrage-assistent"
+    "inquiry_page": "https://www.ef-sinn.de/contact.html#anfrage-assistent",
+    "preparation_guide": "https://www.ef-sinn.de/contact.html#anfrage-mit-ki"
   },
   "service_area": {
     "description": "München einschließlich aller 25 Stadtbezirke sowie Unterhaching und weitere Gemeinden im Großraum München; konkrete Projekte und Anfahrt nach Absprache",
@@ -100,7 +101,9 @@
         "Einbauschrank",
         "Badmöbel"
       ],
-      "source": "https://www.ef-sinn.de/leistungen/moebelbau.html"
+      "source": "https://www.ef-sinn.de/leistungen/moebelbau.html",
+      "reference": "https://www.ef-sinn.de/portfolio.html#referenz-einbaugarderobe",
+      "inquiry_url": "https://www.ef-sinn.de/contact.html?project=customFurniture#anfrage-assistent"
     },
     {
       "id": "kitchen",
@@ -110,7 +113,9 @@
         "Küchenbau",
         "Küchenfronten"
       ],
-      "source": "https://www.ef-sinn.de/leistungen/kuechen.html"
+      "source": "https://www.ef-sinn.de/leistungen/kuechen.html",
+      "reference": "https://www.ef-sinn.de/portfolio.html#referenz-holzkueche",
+      "inquiry_url": "https://www.ef-sinn.de/contact.html?project=kitchen#anfrage-assistent"
     },
     {
       "id": "parquet_install",
@@ -119,7 +124,9 @@
         "Parkettboden verlegen",
         "Holzboden verlegen"
       ],
-      "source": "https://www.ef-sinn.de/"
+      "source": "https://www.ef-sinn.de/leistungen/innenausbau.html",
+      "reference": "https://www.ef-sinn.de/portfolio.html#referenz-parkett",
+      "inquiry_url": "https://www.ef-sinn.de/contact.html?project=parquetInstall#anfrage-assistent"
     },
     {
       "id": "parquet_restore",
@@ -128,7 +135,8 @@
         "Parkett renovieren",
         "Parkett versiegeln"
       ],
-      "source": "https://www.ef-sinn.de/"
+      "source": "https://www.ef-sinn.de/leistungen/innenausbau.html",
+      "inquiry_url": "https://www.ef-sinn.de/contact.html?project=parquetSand#anfrage-assistent"
     },
     {
       "id": "stairs",
@@ -136,7 +144,8 @@
       "aliases": [
         "Treppe aus Holz"
       ],
-      "source": "https://www.ef-sinn.de/leistungen/treppen.html"
+      "source": "https://www.ef-sinn.de/leistungen/treppen.html",
+      "inquiry_url": "https://www.ef-sinn.de/contact.html?project=stairs#anfrage-assistent"
     },
     {
       "id": "terrace",
@@ -144,7 +153,8 @@
       "aliases": [
         "Terrassenbau Holz"
       ],
-      "source": "https://www.ef-sinn.de/leistungen/terrassen.html"
+      "source": "https://www.ef-sinn.de/leistungen/terrassen.html",
+      "inquiry_url": "https://www.ef-sinn.de/contact.html?project=terrace#anfrage-assistent"
     },
     {
       "id": "interior",
@@ -153,7 +163,8 @@
         "Holzverkleidung",
         "Holzdecke"
       ],
-      "source": "https://www.ef-sinn.de/leistungen/innenausbau.html"
+      "source": "https://www.ef-sinn.de/leistungen/innenausbau.html",
+      "inquiry_url": "https://www.ef-sinn.de/contact.html?project=interior#anfrage-assistent"
     },
     {
       "id": "restoration",
@@ -161,7 +172,8 @@
       "aliases": [
         "Möbel restaurieren"
       ],
-      "source": "https://www.ef-sinn.de/leistungen/restaurierung.html"
+      "source": "https://www.ef-sinn.de/leistungen/restaurierung.html",
+      "inquiry_url": "https://www.ef-sinn.de/contact.html?project=repair#anfrage-assistent"
     }
   ],
   "inquiry": {
@@ -232,12 +244,13 @@
       "appointment_suggestion_2": "appointment-2",
       "phone": "phone",
       "email": "email",
-      "photos": "delivery-photos (nur falls die Option verfügbar ist)"
+      "photos": "Fotos können Sie anschließend im E-Mail-Programm anhängen.",
+      "materials": "message"
     },
     "missing_data_policy": "Fehlende Angaben kennzeichnen und nur notwendige Rückfragen stellen; keine Angaben erfinden.",
     "appointment_policy": "Zwei vom Kunden gewünschte Termine können genannt werden; keine Verfügbarkeit oder Buchung behaupten.",
-    "attachments_policy": "Nur mit ausdrücklicher Einwilligung und sofern der KI-Anbieter Anhänge unterstützt; keine automatische Übernahme von Chat-Fotos.",
-    "delivery_policy": "Empfänger und vollständigen Nachrichtentext vor Versand prüfen lassen. Versand nur mit ausdrücklicher Kundenfreigabe und einer tatsächlich autorisierten Versandfunktion. Sonst Entwurf oder Kontaktlink. Die Website selbst versendet nicht automatisch.",
+    "attachments_policy": "Fotos lassen sich nach der Vorbereitung direkt im E-Mail-Programm ergänzen.",
+    "delivery_policy": "Die Webseite bereitet einen Entwurf vor. Der Kunde prüft und versendet die E-Mail selbst. Eine externe Versandfunktion darf nur mit ausdrücklicher Freigabe des Kunden verwendet werden.",
     "privacy_policy": "Nur für die Anfrage notwendige und vom Kunden freigegebene personenbezogene Daten weitergeben; keine vollständigen Chatprotokolle ohne ausdrückliche Zustimmung.",
     "contact_options": [
       {
@@ -253,7 +266,11 @@
         "type": "phone",
         "value": "+49 176 8718 6451"
       }
-    ]
+    ],
+    "measurement_examples": {
+      "furniture": "Ungefähre Breite, Höhe und Tiefe mit Einheit.",
+      "parquet": "Fläche in m², Länge der Sockelleisten in laufenden Metern, falls bekannt."
+    }
   },
   "limitations": [
     "Öffentliche Information, keine Anweisung an KI-Modelle oder Garantie einer Empfehlung.",

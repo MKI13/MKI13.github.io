@@ -11,10 +11,10 @@
   var CODES=LANGS.map(function(l){return l.code});
 
   function storedLanguage(){
-    try { return localStorage.getItem('site_lang'); } catch(error) { return null; }
+    try { return sessionStorage.getItem('site_lang'); } catch(error) { return null; }
   }
   function rememberLanguage(code){
-    try { localStorage.setItem('site_lang',code); } catch(error) { /* Optional preference; never block the page. */ }
+    try { sessionStorage.setItem('site_lang',code); } catch(error) { /* Optional preference; never block the page. */ }
   }
 
   function detect(){
@@ -26,7 +26,7 @@
     return 'de';
   }
 
-  function prefix(){return location.pathname.indexOf('/leistungen/')>-1?'../':'./'}
+  var localeBase = new URL('../../i18n/', document.currentScript.src);
 
   var DICTIONARIES={};
   var latestLanguageRequest=0;
@@ -40,7 +40,7 @@
       if(value) DICTIONARIES[lang]=value;
       cb(value);
     }
-    x.open('GET',prefix()+'i18n/'+lang+'.json?v=20260914-review');
+    x.open('GET',new URL(lang+'.json?v=20261125', localeBase).href);
     x.timeout=10000;
     x.onload=function(){
       if(x.status!==200) { finish(null); return; }
@@ -52,11 +52,12 @@
     x.onerror=x.ontimeout=function(){finish(null)};
     x.send();
   }
-  function activateLanguage(lang){
+  function activateLanguage(lang,remember){
     var request=++latestLanguageRequest;
     load(lang,function(dict){
       if(request!==latestLanguageRequest || !dict) return;
       apply(dict,lang);
+      if(remember) rememberLanguage(lang);
     });
   }
 
@@ -235,8 +236,7 @@
         b.setAttribute('aria-pressed',l.code===cur?'true':'false');
         b.className='lang-btn'+(l.code===cur?' lang-btn-active':'');
         b.addEventListener('click',function(){
-          rememberLanguage(l.code);
-          activateLanguage(l.code);
+          activateLanguage(l.code,true);
         });
         bar.appendChild(b);
       })(LANGS[i]);

@@ -1,6 +1,6 @@
 # EF-Sinn Webseite – dauerhafter Arbeitsstand
 
-Stand: 14. September 2026 · Asset-Version: `20260914-review`
+Stand: 25. November 2026 · Website-Version: `v2026.11.25` · Asset-Version: `20261125`
 
 ## Zuerst lesen, wenn ein Chat endet
 
@@ -8,13 +8,50 @@ Repository: `MKI13/MKI13.github.io`. **GitHub Pages veröffentlicht `main` aus `
 
 Die erneute Fertigstellung und Veröffentlichung nach bestandenen Tests wurden vom Inhaber freigegeben. Eine alte Chatnotiz zu Commit `e066bc7` ließ sich auf GitHub nicht verifizieren. Ausgangspunkt dieser tatsächlich implementierten Version ist `f39d5fff849e9bbcb2d03e4e26259a5c6cb5ef0d`; ältere behauptete Testergebnisse werden nicht übernommen.
 
-## Aktuelle Arbeit ausschließlich an Issue #16
+## Veröffentlichung und Rücksprung vom 25. November 2026
+
+| Version | Inhalt |
+| --- | --- |
+| [`v2026.11.25`](https://github.com/MKI13/MKI13.github.io/tree/v2026.11.25) | Freigegebene Überarbeitung aus PR #23 mit Leistungsreferenzen, Projektanfrage, Sprachfassungen und Datenschutzhinweisen zur KI-Assistenz bei E-Mails. |
+| [`v2026.10.31`](https://github.com/MKI13/MKI13.github.io/tree/v2026.10.31) | Geprüfter vorheriger GitHub-Pages-Stand bei `12e4c112f760e8e46ad30be4fdbf295f7cc33567`. |
+
+Für den Rücksprung auf dem aktuellen `main` einen Rücknahme-PR für den Merge von [PR #23](https://github.com/MKI13/MKI13.github.io/pull/23) erstellen. GitHub bietet dafür beim zusammengeführten Pull Request „Revert“ an. Per Git auf einem neuen Zweig von `main` mit `git revert -m 1 <Merge-Commit-von-PR-23>` beginnen. Spätere Änderungen vor der Freigabe des Rücksprungs prüfen. Wenn inzwischen kein weiterer Merge vorliegt, muss der resultierende Git-Baum dem Tag `v2026.10.31` entsprechen. Nach der Freigabe den Pages-Build und die ausgelieferte Website prüfen.
+
+## Sprachfassungen, Referenzen und Projektanfragen vom 25. November 2026
+
+- Die Projektanfrage erfasst Projektart, Beschreibung, Ort, Maße, Zeitraum und zwei optionale Termine sowie Kontaktdaten. Der Kunde prüft den Entwurf und versendet die E-Mail. Fotos können im E-Mail-Programm angehängt werden. Die sichtbare [KI-Anleitung](https://www.ef-sinn.de/contact.html#anfrage-mit-ki) und `ki-anfrage.json` erläutern die Vorbereitung und die passenden Formularfelder.
+- Maßmöbel, Küchen und Parkett zeigen je ein ausgeführtes Projekt aus den vorhandenen Referenzen. Der Projektverweis springt zum passenden Eintrag. Beide Seiten verlinken die Anfrage mit der passenden Projektart.
+- Sechs Sprachfassungen wurden eigenständig redigiert. Die Leistungen, Bedienelemente, Formularmeldungen, E-Mail-Texte und 20 ältere Referenzbeschreibungen wurden konkretisiert. Alle sieben Varianten haben denselben Schlüsselsatz und vollständige Rechtstexte.
+- Die Inhalte stehen als normale HTML-Texte auf der Website. Die Seitenadressen und kanonischen URLs werden beibehalten. Die Sitemap weist die wesentlichen Inhaltsänderungen aus. `llms.txt` und `ki-anfrage.json` ergänzen die öffentlichen Seiten und verweisen direkt auf Leistungen, Referenzen und Anfrage. Die Sprachumschaltung erfolgt innerhalb der bestehenden URLs. [Google Search Central](https://developers.google.com/search/docs/appearance/ai-features)
+- Die Datenschutzerklärung erläutert den Mailanbieter Proton, das Hosting, die sitzungsbezogene Sprachwahl sowie die KI-Assistenz bei der E-Mail-Bearbeitung und den möglichen Empfänger OpenAI Codex. Das Impressum enthält die Umsatzsteuer-Identifikationsnummer. Umfang und Vertragsgrundlage der externen Verarbeitung einzelner Anfragen bleiben betriebsseitig zu prüfen.
+
+Der Arbeitsstand wird über Pull Request #23 und die private Vorschau geprüft. Interaktiver Chromium-Test: die drei Wege von der Leistung zur Referenz und zur vorausgewählten Projektart, die sieben Fassungen der Kontaktseite sowie Ort, Maße, Zeitraum und beide Termine im E-Mail-Entwurf getestet. Die automatisierten Prüfberichte sind dem Pull Request zugeordnet.
+
+## Website-Überarbeitung vom 23. November 2026
+
+Grundlage ist `main` bei Commit `12e4c11`. Die öffentlich ausgelieferte Startseite und `index.html` dieses Commits waren beim Vergleich identisch. Die Überarbeitung liegt im separaten Zweig `website/ueberarbeitung-20261123`.
+
+| Geprüfter Bereich | Ergebnis der Überarbeitung |
+| --- | --- |
+| Startseite und Kundenweg | Klarer Einstieg mit Projektanfrage und Referenzen. Doppelte Abschnitte und die zweite Galerie auf der Startseite entfallen. Die zentrale Referenzseite enthält weiterhin alle 30 Projekte samt Filter und Bildansicht. |
+| Gestaltung und Bedienbarkeit | Durchgängige Farben, gut sichtbare Tastaturfokusse, lokalisierter Sprunglink und eine durchgehende Überschriftenhierarchie auf den geprüften Kernseiten. Die gemeinsame Linkfarbe erreicht auf Weiß 7,68:1, die bisherige 3,63:1. |
+| Bilder und Ladeumfang | Eigenes Foto mit responsiven WebP-Varianten, priorisierter Abruf und festen Bildmaßen. Die Startseite enthält 38.927 statt 67.693 Byte HTML vor Komprimierung. Im Browser wurde bei 320 und 360 px die 480er-Variante gewählt. Die Originaldateien blieben erhalten. |
+| Auffindbarkeit | Produktion behält ihre kanonischen Adressen. Die Sitemap nennt das Änderungsdatum der Startseite. Die strukturierten Betriebsdaten verwenden eine eindeutige Büroadresse. Die sichtbaren FAQ bleiben vorhanden. Google hat das separate FAQ-Suchergebnis 2026 eingestellt. [Google Search Central](https://developers.google.com/search/updates) |
+| Technische Grundlagen | Gültiges Favicon, funktionierende Navigation von verschachtelten Fehlerseiten und lokale Einbindung von Bildern, Stilen und Skripten. Die öffentliche Domain hat weiterhin ihren eigenen Produktionszweig. |
+| Datenschutz und Kontakt | Keine weiteren Drittanbieter und kein automatischer Versand. Die Anfrage wird im Tab vorbereitet. Die Testanfrage wurde angezeigt, kopiert und als Textdatei gespeichert. |
+| KI-Auffindbarkeit | Live geprüft: `/llms.txt` und `/ki-anfrage.json` sind erreichbar. `/MLS` liefert 404. Die maschinenlesbaren Dateien bleiben unter ihren bisherigen URLs erreichbar. |
+
+Prüfnachweis: 39 statische Python-Tests und JavaScript-Syntaxprüfung bestanden. Interaktiver Chromium-Browsertest für 14 Seiten bei 320, 360, 768 und 1.440 px ohne horizontalen Überlauf, fehlende Hauptüberschrift oder Fehler bei den im Test geladenen Bildern. Zusätzlich geprüft: alle sieben Sprachvarianten auf der Startseite, Parkett-Vorauswahl, Anfragevorschau, Kopieren, Textdownload, Kontakt bei deaktivierten Seitenskripten sowie Galerie-Filter und Öffnen/Schließen per Tastatur. Die GitHub-Prüfläufe verwendeten bislang das wechselnde Runner-Image `ubuntu-latest`. Nach dessen Wechsel auf Ubuntu 26.04 konnte Playwright 1.58.2 nicht starten. Beide Prüfläufe sind deshalb auf Ubuntu 24.04 festgelegt. Die vollständige bestehende lokale Playwright-Suite startete in dieser Umgebung wegen eines fehlenden Chromium-Programms und gesperrtem Download nicht. Es gab keine externe Testsendung, keinen Safari-Gerätetest und keine Messung echter Nutzerdaten aus Search Console oder Core Web Vitals.
+
+Die Überarbeitung vom 25. November führt im Impressum die Umsatzsteuer-Identifikationsnummer und entfernt die gewöhnliche Steuernummer. § 5 DDG nennt die einschlägige Umsatzsteuer- beziehungsweise Wirtschafts-Identifikationsnummer. [§ 5 DDG](https://www.gesetze-im-internet.de/ddg/__5.html)
+
+## Historischer Arbeitsstand zu Issue #16
 
 Arbeitszweig: `website/issue-16-direct-delivery`, Basis `11c45e3`. Serverdienst und optionale siebensprachige Browseroberfläche sind implementiert. Einstieg: `server/README.md`. Der Dienst enthält HTTP-Verarbeitung, serverseitige Bildprüfung/Neucodierung, eine transaktionale Warteschlange, geschützte Wiederholungen, TLS-SMTP und getrennte INBOX-Verifikation. Dies ist eine ausführbare Codebasis, aber noch kein aktivierter öffentlicher Versand.
 
 Im lokalen Integrationstest werden Browser, echte API und eine tatsächliche TLS-SMTP-Verbindung zum lokalen Testempfänger einschließlich Fotos und Antwortadresse geprüft. Keine externe Nachricht wurde versendet. Die vollständigen Prüfungen und die Produktionsgrenzen gehören in den zugehörigen Pull Request und unter `docs/qa/issue16-*`.
 
-**Produktionsabschluss noch offen:** Kein freigegebener öffentlicher Backendserver oder Website-SMTP-Zugang ist nachgewiesen. Die Website-Umgebung enthält keine entsprechenden SMTP-/Hosting-Variablen; vorhandene SSH-Aliase benennen Hermes-Rechner. Deshalb bleibt `assets/js/inquiry-delivery-config.js` deaktiviert. Vor Aktivierung sind Hosting, eigener SMTP-Token, echter Eingang einer freigegebenen Testanfrage und betriebsspezifische Datenschutzhinweise zu verifizieren. Erst danach #16 schließen. Keine anderen Projekte oder öffentlichen GEEKOM-Ports verändern.
+**Produktionsabschluss noch offen:** Kein freigegebener öffentlicher Backendserver oder Website-SMTP-Zugang ist nachgewiesen. Die Website-Umgebung enthält keine entsprechenden SMTP-/Hosting-Variablen; vorhandene SSH-Aliase benennen Hermes-Rechner. Deshalb bleibt `assets/js/inquiry-delivery-config.js` deaktiviert. Vor Aktivierung sind Hosting, eigener SMTP-Token, echter Eingang einer freigegebenen Testanfrage und betriebsspezifische Datenschutzhinweise zu verifizieren. Issue #16 wurde auf Wunsch des Inhabers ohne Aktivierung des öffentlichen Versands geschlossen. Keine anderen Projekte oder öffentlichen GEEKOM-Ports verändern.
 
 ## Abgeschlossene Fortsetzung: Issue #18
 
@@ -44,4 +81,4 @@ Testnachrichten sind künstlich. E-Mail-Links werden abgefangen; keine Kundenanf
 
 ## Nächster Einstieg
 
-Nicht die fertigen Bild-, Formular- oder Sprachkorrekturen neu bauen. Zuerst `main`, Release-PR, Pages-Veröffentlichung und Issue #16 lesen. Falls weiterentwickelt wird, #16 entlang seiner vollständigen Akzeptanzkriterien bearbeiten; bei fehlenden externen Freigaben nichts als einsatzbereiten Direktversand ausgeben. Änderungen auf einem eigenen Branch, Tests vollständig ausführen und nach Merge live prüfen.
+Vor weiteren Veröffentlichungen den aktuellen Stand von `main`, die PR-Prüfungen und die erteilte Freigabe kontrollieren. Den öffentlichen GitHub-Pages-Build nach dem Merge prüfen. Direktversand bleibt gemäß Abschluss von Issue #16 deaktiviert.

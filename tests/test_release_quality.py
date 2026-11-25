@@ -54,7 +54,9 @@ class ReleaseQualityTests(unittest.TestCase):
                 self.assertEqual('async',attributes['decoding'])
                 for candidate in attributes['srcset'].split(','):
                     value,descriptor=candidate.strip().rsplit(' ',1)
-                    self.assertTrue((page.parent/urlparse(value).path).is_file(),value)
+                    candidate = urlparse(value).path
+                    image = ROOT / candidate.lstrip('/') if candidate.startswith('/') else page.parent / candidate
+                    self.assertTrue(image.is_file(),value)
                     self.assertRegex(descriptor,r'^\d+w$')
     def test_image_originals_are_unchanged_and_derivatives_are_bounded(self):
         manifest=json.loads((ROOT/'assets/optimized/manifest.json').read_text())
@@ -76,6 +78,6 @@ class ReleaseQualityTests(unittest.TestCase):
     def test_release_asset_versions_are_consistent(self):
         for page in PAGES:
             html=page.read_text()
-            self.assertNotRegex(html,r'(?:styles\.css|assets/js/i18n\.js)\?v=(?!20260914-review)[^"\s]+')
+            self.assertNotRegex(html,r'(?:styles\.css|assets/js/i18n\.js)\?v=(?!20261125)[^"\s]+')
 if __name__=='__main__':
     unittest.main()

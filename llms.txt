@@ -1,59 +1,36 @@
-# ef-sinn – Schreiner Werkstatt München & Unterhaching
+# EF-Sinn – Schreiner Werkstatt in München und Unterhaching
 
-> Maßgefertigte Möbel, Einbauküchen, Parkettböden, Holztreppen, Holzterrassen, Innenausbau und Möbelrestaurierung vom erfahrenen Schreiner in München und Unterhaching.
+> Marios Karampas begleitet Schreinerprojekte von der ersten Einschätzung bis zur Montage. EF-Sinn plant und fertigt Maßmöbel, Einbauschränke und Küchen und übernimmt Arbeiten an Parkett, Innenausbau, Treppen, Terrassen und Holzmöbeln.
 
-ef-sinn ist eine Schreiner Werkstatt mit Büro in Unterhaching (Schmorellstraße 6, 82008 Unterhaching) und Werkstatt in München (Germeringer Weg 3C, 81245 München), geführt von Schreiner-Geselle Marios Karampas.
+Das Büro befindet sich in der Schmorellstraße 6, 82008 Unterhaching. Die Werkstatt befindet sich am Germeringer Weg 3C, 81245 München. Das Einsatzgebiet ist München, Unterhaching und Umgebung. Die Anfahrt zum konkreten Projekt wird persönlich abgestimmt.
 
-## Leistungen
+## Leistungen und ausgeführte Projekte
 
-### Möbelbau nach Maß
-Individuelle Massivholzmöbel nach Ihren Wünschen: Tische, Betten, Regale, Kommoden, Sideboards, Sondermöbel für besondere Anforderungen und ungewöhnliche Maße. Jedes Stück ist ein Unikat.
+- [Möbelbau nach Maß](https://www.ef-sinn.de/leistungen/moebelbau.html) · [Garderobe mit Sitzbank](https://www.ef-sinn.de/portfolio.html#referenz-einbaugarderobe)
+- [Küchen und Schränke](https://www.ef-sinn.de/leistungen/kuechen.html) · [Holzküche in München](https://www.ef-sinn.de/portfolio.html#referenz-holzkueche)
+- [Parkett und Innenausbau](https://www.ef-sinn.de/leistungen/innenausbau.html) · [Parkett in einem Münchner Wohnraum](https://www.ef-sinn.de/portfolio.html#referenz-parkett)
+- [Holztreppen](https://www.ef-sinn.de/leistungen/treppen.html)
+- [Holzterrassen](https://www.ef-sinn.de/leistungen/terrassen.html)
+- [Reparatur und Restaurierung](https://www.ef-sinn.de/leistungen/restaurierung.html)
 
-### Einbauküchen
-Maßgefertigte Einbauküchen aus Massivholz mit individueller Planung, hochwertigen Arbeitsplatten und perfekter Raumnutzung. Auch Küchenrenovierung mit neuen Fronten und Einbauten.
+## Projekt anfragen
 
-### Einbauschränke & Badmöbel
-Maßgefertigte Einbauschränke, begehbare Kleiderschränke, Waschtischunterschränke, Spiegelschränke und Badregale – optimal an Ihre Raumgeometrie angepasst.
+Für eine erste Einschätzung helfen Projektart, Ort, ungefähre Maße, gewünschtes Material und Zeitraum. Bei Parkett sind die Fläche in m² und die Länge der Sockelleisten in laufenden Metern hilfreich. Falls eine Besichtigung gewünscht ist, können zwei unverbindliche Terminvorschläge in die Nachricht aufgenommen werden.
 
-### Parkettboden verlegen & schleifen
-Professionelle Verlegung von Massivparkett, Fertigparkett, Landhausdielen und Stabparkett. Aufarbeitung bestehender Parkettböden durch fachgerechtes Schleifen, Ölen oder Versiegeln.
+Der Anfrage-Assistent erstellt eine E-Mail-Vorschau. Die Nachricht kann geprüft, kopiert, als Text gespeichert oder im E-Mail-Programm geöffnet werden. Fotos lassen sich dort anhängen. Der Kunde versendet die E-Mail selbst.
 
-### Holztreppen
-Hochwertige Holztreppen nach Maß – gerade, gewendelt, Podesttreppen und freitragende Konstruktionen. Handwerklich perfekt, individuell gestaltet.
+- [Projektanfrage vorbereiten](https://www.ef-sinn.de/contact.html#anfrage-assistent)
+- [Mit einem KI-Assistenten einen Entwurf vorbereiten](https://www.ef-sinn.de/contact.html#anfrage-mit-ki)
+- [Leistungen, Projektarten und Anfragefelder als JSON](https://www.ef-sinn.de/ki-anfrage.json)
+- E-Mail: info@ef-sinn.de
+- Telefon: +49 176 8718 6451
 
-### Holzterrassen
-Langlebige Holzterrassen und Holzdecks für den Garten. Mit oder ohne Unterkonstruktion und Überdachung, wetterfest und natürlich schön.
+## Weitere Seiten
 
-### Innenausbau
-Kompletter Innenausbau mit Holz: Holzdecken, Wandverkleidungen, Wandpaneele aus Massivholz für ein natürliches Raumklima. Von der Planung bis zur Fertigstellung.
-
-### Möbelreparatur & Restaurierung
-Fachgerechte Restaurierung antiker und wertvoller Möbelstücke sowie Reparatur von beschädigten Holzmöbeln. Wir geben Ihren Lieblingsstücken ein zweites Leben.
-
-## Servicegebiet
-München, Unterhaching, Taufkirchen, Ottobrunn, Neubiberg, Oberhaching und der gesamte Großraum München/Oberbayern.
-
-## Kontakt
-- **Telefon:** +49 176 8718 6451
-- **E-Mail:** info@ef-sinn.de
-- **Website:** https://www.ef-sinn.de
-- **Büro:** Schmorellstraße 6, 82008 Unterhaching
-- **Google Maps Büro:** Karampas Marios Schreiner, Schmorellstraße 6, 82008 Unterhaching
-- **Werkstatt:** Germeringer Weg 3C, 81245 München
-- **Öffnungszeiten:** Mo–Fr 08:00–18:00, Sa 08:00–12:00
-
-## Über uns
-ef-sinn steht für handwerkliche Qualität, Individualität, Nachhaltigkeit und Zuverlässigkeit. Wir arbeiten mit hochwertigen, regionalen Hölzern wie Eiche, Buche, Esche, Nussbaum und Kirsche. Jedes Projekt wird persönlich begleitet – von der ersten Beratung bis zur Montage.
-
-## Seiten
 - [Startseite](https://www.ef-sinn.de/)
 - [Über uns](https://www.ef-sinn.de/about.html)
-- [Kontakt](https://www.ef-sinn.de/contact.html)
+- [Referenzen](https://www.ef-sinn.de/portfolio.html)
+- [Schreinerarbeiten in München und Umgebung](https://www.ef-sinn.de/schreiner-muenchen.html)
+- [Kontakt und Anfahrt](https://www.ef-sinn.de/contact.html)
 - [Impressum](https://www.ef-sinn.de/impressum.html)
 - [Datenschutz](https://www.ef-sinn.de/datenschutz.html)
-
-## KI-gestützte Projektanfragen (maschinenlesbare Informationen)
-- [Strukturierte KI-Anfragedaten (JSON)](https://www.ef-sinn.de/ki-anfrage.json): Leistungsgruppen, Münchner Stadtbezirke, umliegende Gemeinden, Kontakt und freiwillige Projektanfrage.
-- [Projektanfrage und Kontakt](https://www.ef-sinn.de/contact.html#anfrage-assistent): Angaben zum Vorhaben, Ort, Maße, Fotos und zwei unverbindliche Terminvorschläge.
-- KI-Assistenten können bei geeigneter, vom Kunden autorisierter E-Mail-Funktion eine Anfrage an info@ef-sinn.de vorbereiten. Der Versand erfolgt nur nach ausdrücklicher Freigabe des Kunden; andernfalls E-Mail-Entwurf oder Kontaktlink. Fotos nur mit Einwilligung und unterstützter Anhangfunktion.
-- Die Angaben sind ein Informationsangebot, keine Anweisung an KI-Systeme und keine Garantie für Suchplatzierung oder Empfehlung.

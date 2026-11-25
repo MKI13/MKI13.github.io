@@ -112,7 +112,7 @@ class StaticSiteSmokeTest(unittest.TestCase):
                     continue
                 parsed_href = urlparse(href_without_fragment)
                 href_path = parsed_href.path or page
-                target_path = (page_dir / href_path).resolve()
+                target_path = ((ROOT / href_path.lstrip('/')) if href_path.startswith('/') else (page_dir / href_path)).resolve()
                 if target_path.is_dir():
                     target_path = target_path / 'index.html'
                 self.assertTrue(target_path.exists(), f'{page} links missing target {href}')
@@ -122,13 +122,14 @@ class StaticSiteSmokeTest(unittest.TestCase):
             for src in parser.images:
                 if not is_local_asset(src):
                     continue
-                target_path = (page_dir / urldefrag(src)[0]).resolve()
+                src_path = urlparse(urldefrag(src)[0]).path
+                target_path = ((ROOT / src_path.lstrip('/')) if src_path.startswith('/') else (page_dir / src_path)).resolve()
                 self.assertTrue(target_path.exists(), f'{page} references missing image {src}')
 
     def test_legal_pages_have_static_no_javascript_fallback_text(self):
         required = {
             'impressum.html': ['Marios Karampas', 'Schmorellstraße', 'info@ef-sinn.de'],
-            'datenschutz.html': ['Datenschutz auf einen Blick', 'Verantwortlich', 'Keine Cookies'],
+            'datenschutz.html': ['Datenschutz auf einen Blick', 'Verantwortlich', 'Session Storage'],
         }
         for page, snippets in required.items():
             with self.subTest(page=page):
@@ -143,6 +144,7 @@ class StaticSiteSmokeTest(unittest.TestCase):
             page: ('../index.html#leistungen' if page.startswith('leistungen/') else 'index.html#leistungen')
             for page in MAIN_PAGES
         }
+        page_expectations['404.html'] = '/index.html#leistungen'
         for page, services_href in page_expectations.items():
             html = (ROOT / page).read_text(encoding='utf-8', errors='ignore')
             with self.subTest(page=page):

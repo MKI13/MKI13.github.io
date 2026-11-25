@@ -4,17 +4,21 @@
 User-agent: *
 Allow: /
 
-# AI Crawler explizit erlauben
-User-agent: GPTBot
+# Crawler für Suchergebnisse und vom Nutzer gestartete Aufrufe
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
-User-agent: Google-Extended
+User-agent: PerplexityBot
 Allow: /
 
-User-agent: PerplexityBot
+# Weitere bisher erlaubte Crawler und Produktsteuerungen
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
 Allow: /
 
 User-agent: ClaudeBot
