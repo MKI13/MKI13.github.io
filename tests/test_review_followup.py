@@ -67,6 +67,15 @@ class ReviewFollowupTests(unittest.TestCase):
         self.assertIsNotNone(match)
         data=json.loads((ROOT/'i18n/de.json').read_text())
         self.assertEqual(data['legal.privacy.body'],match[1])
+    def test_privacy_notices_include_ai_email_processing(self):
+        for path in sorted((ROOT / 'i18n').glob('*.json')):
+            with self.subTest(locale=path.stem):
+                body = json.loads(path.read_text(encoding='utf-8'))['legal.privacy.body']
+                contact = re.search(r'<h2 id="kontaktaufnahme">(.*?)(?=<h2>)', body, re.S)
+                self.assertIsNotNone(contact)
+                for value in ('ki-unterstuetzte-e-mail-bearbeitung', 'Hermes', 'OpenAI Codex',
+                              'https://openai.com/policies/eu-privacy-policy/'):
+                    self.assertIn(value, contact[1])
     def test_image_pipeline_applies_layout_sizes_on_every_run(self):
         source=(ROOT/'scripts/optimize_images.py').read_text()
         self.assertIn('from responsive_images import rewrite_sizes',source)
